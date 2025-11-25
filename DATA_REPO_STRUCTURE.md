@@ -63,6 +63,7 @@ This file is loaded lazily when a user selects a specific year/paper. It contain
 2. **Push the files** described above to the `main` branch.
 3. **Get the Base URL**:
    - Use GitHub Raw: `https://raw.githubusercontent.com/<username>/<repo>/main`
+   - like: `https://raw.githubusercontent.com/Tinnci/tabularpractice-data/repo/main` for this repo
    - Or use GitHub Pages: Enable Pages in settings, then use `https://<username>.github.io/<repo>`
 4. **Configure App**:
    - Open TabularPractice Settings.
