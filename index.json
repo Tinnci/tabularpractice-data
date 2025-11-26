@@ -126,7 +126,8 @@
       "jia-she-jian-yan"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2025/assets/10_q_thumb.png"
   },
   {
     "id": "math1-2025-11",
@@ -138,7 +139,8 @@
       "han-shu-ji-xian-de-ji-suan"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2025/assets/11_q_thumb.png"
   },
   {
     "id": "math1-2025-12",
@@ -202,7 +204,8 @@
       "sui-ji-shi-jian-he-gai-lv"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2025/assets/16_q_thumb.png"
   },
   {
     "id": "math1-2025-17",
@@ -227,7 +230,8 @@
       "yi-jie-fei-qi-ci-xian-xing-wei-fen-fang-cheng"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2025/assets/18_q_thumb.png"
   },
   {
     "id": "math1-2025-19",
@@ -239,7 +243,8 @@
       "wei-fen-zhong-zhi-ding-li"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2025/assets/19_q_thumb.png"
   },
   {
     "id": "math1-2025-20",
@@ -303,7 +308,8 @@
       "di-er-lei-qu-mian-ji-fen"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2024/assets/02_q_thumb.png"
   },
   {
     "id": "math1-2024-03",
@@ -354,7 +360,8 @@
       "xiang-liang-zu-de-xian-xing-xiang-guan-xing"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2024/assets/06_q_thumb.png"
   },
   {
     "id": "math1-2024-07",
@@ -444,7 +451,8 @@
       "fu-li-ye-ji-shu"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2024/assets/13_q_thumb.png"
   },
   {
     "id": "math1-2024-14",
@@ -521,7 +529,8 @@
       "tai-le-gong-shi"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2024/assets/19_q_thumb.png"
   },
   {
     "id": "math1-2024-20",
@@ -624,7 +633,8 @@
       "ju-zhen-de-zhi"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2023/assets/05_q_thumb.png"
   },
   {
     "id": "math1-2023-06",
@@ -701,7 +711,8 @@
       "que-ding-ji-xian-zhong-de-can-shu"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2023/assets/11_q_thumb.png"
   },
   {
     "id": "math1-2023-12",
@@ -908,7 +919,8 @@
       "ju-zhen-de-xiang-si-yu-xiang-si-dui-jiao-hua"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2022/assets/05_q_thumb.png"
   },
   {
     "id": "math1-2022-06",
@@ -1258,7 +1270,8 @@
       "jia-she-jian-yan"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2021/assets/10_q_thumb.png"
   },
   {
     "id": "math1-2021-11",
@@ -1296,7 +1309,8 @@
       "qi-ta-fang-cheng"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2021/assets/13_q_thumb.png"
   },
   {
     "id": "math1-2021-14",
@@ -1477,7 +1491,8 @@
       "ju-zhen-de-yun-suan-yu-bian-huan"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2020/assets/05_q_thumb.png"
   },
   {
     "id": "math1-2020-06",
@@ -1515,7 +1530,8 @@
       "da-shu-ding-lv-he-zhong-xin-ji-xian-ding-li"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2020/assets/08_q_thumb.png"
   },
   {
     "id": "math1-2020-09",
@@ -1722,7 +1738,8 @@
       "que-ding-ji-xian-zhong-de-can-shu"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2019/assets/01_q_thumb.png"
   },
   {
     "id": "math1-2019-02",
@@ -1955,7 +1972,8 @@
       "zhong-ji-fen-de-ying-yong"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2019/assets/19_q_thumb.png"
   },
   {
     "id": "math1-2019-20",
@@ -1993,7 +2011,8 @@
       "er-wei-sui-ji-bian-liang-ji-qi-fen-bu"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2019/assets/22_q_thumb.png"
   },
   {
     "id": "math1-2019-23",
@@ -2057,7 +2076,8 @@
       "ding-ji-fen-de-gai-nian-xing-zhi-ji-ji-he-yi-yi"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2018/assets/04_q_thumb.png"
   },
   {
     "id": "math1-2018-05",
@@ -2290,7 +2310,8 @@
       "xie-fang-cha-yu-xiang-guan-xi-shu"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2018/assets/22_q_thumb.png"
   },
   {
     "id": "math1-2018-23",
@@ -2510,7 +2531,8 @@
       "ding-ji-fen-de-gai-nian-xing-zhi-ji-ji-he-yi-yi"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2017/assets/16_q_thumb.png"
   },
   {
     "id": "math1-2017-17",
@@ -3003,7 +3025,8 @@
       "xie-fang-cha-yu-xiang-guan-xi-shu"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2015/assets/08_q_thumb.png"
   },
   {
     "id": "math1-2015-09",
@@ -3210,7 +3233,8 @@
       "qu-xian-de-ao-tu-xing-guai-dian-ji-jian-jin-xian"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2014/assets/01_q_thumb.png"
   },
   {
     "id": "math1-2014-02",
@@ -3300,7 +3324,8 @@
       "shu-xue-qi-wang-yu-fang-cha"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2014/assets/08_q_thumb.png"
   },
   {
     "id": "math1-2014-09",
@@ -3312,7 +3337,8 @@
       "duo-yuan-han-shu-wei-fen-xue-de-ji-he-ying-yong"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2014/assets/09_q_thumb.png"
   },
   {
     "id": "math1-2014-10",
@@ -3727,7 +3753,8 @@
       "wei-fen-zhong-zhi-ding-li"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2013/assets/18_q_thumb.png"
   },
   {
     "id": "math1-2013-19",
@@ -3791,7 +3818,8 @@
       "ju-gu-ji-he-zui-da-si-ran-gu-ji"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2013/assets/23_q_thumb.png"
   },
   {
     "id": "math1-2012-01",
@@ -3946,7 +3974,8 @@
       "di-yi-lei-qu-mian-ji-fen"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2012/assets/12_q_thumb.png"
   },
   {
     "id": "math1-2012-13",
@@ -3997,7 +4026,8 @@
       "duo-yuan-han-shu-de-ji-zhi-wen-ti"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2012/assets/16_q_thumb.png"
   },
   {
     "id": "math1-2012-17",
@@ -4035,7 +4065,8 @@
       "di-er-lei-qu-xian-ji-fen"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2012/assets/19_q_thumb.png"
   },
   {
     "id": "math1-2012-20",
@@ -4424,7 +4455,8 @@
       "fan-chang-ji-fen-de-ji-suan-yu-lian-san-xing"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2010/assets/03_q_thumb.png"
   },
   {
     "id": "math1-2010-04",
@@ -4774,7 +4806,8 @@
       "shu-xue-qi-wang-yu-fang-cha"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2009/assets/07_q_thumb.png"
   },
   {
     "id": "math1-2009-08",
@@ -4786,7 +4819,8 @@
       "er-wei-sui-ji-bian-liang-ji-qi-fen-bu"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2009/assets/08_q_thumb.png"
   },
   {
     "id": "math1-2009-09",
@@ -4850,7 +4884,8 @@
       "te-zheng-zhi-yu-te-zheng-xiang-liang"
     ],
     "subject": "math",
-    "category": "math1"
+    "category": "math1",
+    "contentImgThumb": "/papers/math1-2009/assets/13_q_thumb.png"
   },
   {
     "id": "math1-2009-14",
