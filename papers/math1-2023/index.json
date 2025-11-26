@@ -21,7 +21,8 @@
       "answer": "B",
       "tagNames": [
         "曲线的凹凸性、拐点及渐近线"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/01_q_thumb.png"
     },
     "math1-2023-02": {
       "id": "math1-2023-02",
@@ -42,7 +43,8 @@
       "answer": "C",
       "tagNames": [
         "常系数齐次线性微分方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/02_q_thumb.png"
     },
     "math1-2023-03": {
       "id": "math1-2023-03",
@@ -63,7 +65,8 @@
       "answer": null,
       "tagNames": [
         "导数与微分的概念"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/03_q_thumb.png"
     },
     "math1-2023-04": {
       "id": "math1-2023-04",
@@ -84,7 +87,8 @@
       "answer": null,
       "tagNames": [
         "常数项级数敛散性的判定"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/04_q_thumb.png"
     },
     "math1-2023-05": {
       "id": "math1-2023-05",
@@ -126,7 +130,8 @@
       "answer": "D",
       "tagNames": [
         "矩阵的相似与相似对角化"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/06_q_thumb.png"
     },
     "math1-2023-07": {
       "id": "math1-2023-07",
@@ -147,7 +152,8 @@
       "answer": "D",
       "tagNames": [
         "向量组之间的线性表示"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/07_q_thumb.png"
     },
     "math1-2023-08": {
       "id": "math1-2023-08",
@@ -168,7 +174,8 @@
       "answer": "C",
       "tagNames": [
         "数学期望与方差"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/08_q_thumb.png"
     },
     "math1-2023-09": {
       "id": "math1-2023-09",
@@ -189,7 +196,8 @@
       "answer": "D",
       "tagNames": [
         "数理统计的基本概念"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/09_q_thumb.png"
     },
     "math1-2023-10": {
       "id": "math1-2023-10",
@@ -210,7 +218,8 @@
       "answer": "A",
       "tagNames": [
         "估计量的无偏性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/10_q_thumb.png"
     },
     "math1-2023-11": {
       "id": "math1-2023-11",
@@ -252,7 +261,8 @@
       "answer": null,
       "tagNames": [
         "多元函数微分学的几何应用"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/12_q_thumb.png"
     },
     "math1-2023-13": {
       "id": "math1-2023-13",
@@ -273,7 +283,8 @@
       "answer": null,
       "tagNames": [
         "傅里叶级数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/13_q_thumb.png"
     },
     "math1-2023-14": {
       "id": "math1-2023-14",
@@ -294,7 +305,8 @@
       "answer": null,
       "tagNames": [
         "定积分的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/14_q_thumb.png"
     },
     "math1-2023-15": {
       "id": "math1-2023-15",
@@ -315,7 +327,8 @@
       "answer": null,
       "tagNames": [
         "向量内积与向量正交"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/15_q_thumb.png"
     },
     "math1-2023-16": {
       "id": "math1-2023-16",
@@ -336,7 +349,8 @@
       "answer": null,
       "tagNames": [
         "随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/16_q_thumb.png"
     },
     "math1-2023-17": {
       "id": "math1-2023-17",
@@ -357,7 +371,8 @@
       "answer": null,
       "tagNames": [
         "微分方程的应用"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/17_q_thumb.png"
     },
     "math1-2023-18": {
       "id": "math1-2023-18",
@@ -378,7 +393,8 @@
       "answer": null,
       "tagNames": [
         "多元函数的极值问题"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/18_q_thumb.png"
     },
     "math1-2023-19": {
       "id": "math1-2023-19",
@@ -399,7 +415,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲面积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/19_q_thumb.png"
     },
     "math1-2023-20": {
       "id": "math1-2023-20",
@@ -420,7 +437,8 @@
       "answer": null,
       "tagNames": [
         "泰勒公式"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/20_q_thumb.png"
     },
     "math1-2023-21": {
       "id": "math1-2023-21",
@@ -441,7 +459,8 @@
       "answer": null,
       "tagNames": [
         "二次型"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/21_q_thumb.png"
     },
     "math1-2023-22": {
       "id": "math1-2023-22",
@@ -462,7 +481,8 @@
       "answer": null,
       "tagNames": [
         "协方差与相关系数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/22_q_thumb.png"
     }
   },
   "tags": [

@@ -21,7 +21,8 @@
       "answer": "D",
       "tagNames": [
         "导数与微分的概念"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/01_q_thumb.png"
     },
     "math1-2018-02": {
       "id": "math1-2018-02",
@@ -42,7 +43,8 @@
       "answer": "B",
       "tagNames": [
         "多元函数微分学的几何应用"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/02_q_thumb.png"
     },
     "math1-2018-03": {
       "id": "math1-2018-03",
@@ -63,7 +65,8 @@
       "answer": "B",
       "tagNames": [
         "幂级数的和函数及幂级数展开式"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/03_q_thumb.png"
     },
     "math1-2018-04": {
       "id": "math1-2018-04",
@@ -105,7 +108,8 @@
       "answer": "A",
       "tagNames": [
         "矩阵的相似与相似对角化"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/05_q_thumb.png"
     },
     "math1-2018-06": {
       "id": "math1-2018-06",
@@ -126,7 +130,8 @@
       "answer": "A",
       "tagNames": [
         "矩阵的秩"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/06_q_thumb.png"
     },
     "math1-2018-07": {
       "id": "math1-2018-07",
@@ -147,7 +152,8 @@
       "answer": "A",
       "tagNames": [
         "随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/07_q_thumb.png"
     },
     "math1-2018-08": {
       "id": "math1-2018-08",
@@ -168,7 +174,8 @@
       "answer": "D",
       "tagNames": [
         "假设检验"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/08_q_thumb.png"
     },
     "math1-2018-09": {
       "id": "math1-2018-09",
@@ -189,7 +196,8 @@
       "answer": null,
       "tagNames": [
         "确定极限中的参数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/09_q_thumb.png"
     },
     "math1-2018-10": {
       "id": "math1-2018-10",
@@ -210,7 +218,8 @@
       "answer": null,
       "tagNames": [
         "导数的几何意义"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/10_q_thumb.png"
     },
     "math1-2018-11": {
       "id": "math1-2018-11",
@@ -231,7 +240,8 @@
       "answer": null,
       "tagNames": [
         "旋度的定义"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/11_q_thumb.png"
     },
     "math1-2018-12": {
       "id": "math1-2018-12",
@@ -252,7 +262,8 @@
       "answer": null,
       "tagNames": [
         "第一类曲线积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/12_q_thumb.png"
     },
     "math1-2018-13": {
       "id": "math1-2018-13",
@@ -273,7 +284,8 @@
       "answer": null,
       "tagNames": [
         "特征值与特征向量"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/13_q_thumb.png"
     },
     "math1-2018-14": {
       "id": "math1-2018-14",
@@ -294,7 +306,8 @@
       "answer": null,
       "tagNames": [
         "随机事件和概率"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/14_q_thumb.png"
     },
     "math1-2018-15": {
       "id": "math1-2018-15",
@@ -315,7 +328,8 @@
       "answer": null,
       "tagNames": [
         "不定积分的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/15_q_thumb.png"
     },
     "math1-2018-16": {
       "id": "math1-2018-16",
@@ -336,7 +350,8 @@
       "answer": null,
       "tagNames": [
         "多元函数的极值问题"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/16_q_thumb.png"
     },
     "math1-2018-17": {
       "id": "math1-2018-17",
@@ -357,7 +372,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲面积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/17_q_thumb.png"
     },
     "math1-2018-18": {
       "id": "math1-2018-18",
@@ -378,7 +394,8 @@
       "answer": null,
       "tagNames": [
         "一阶非齐次线性微分方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/18_q_thumb.png"
     },
     "math1-2018-19": {
       "id": "math1-2018-19",
@@ -399,7 +416,8 @@
       "answer": null,
       "tagNames": [
         "数列敛散性的判定"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/19_q_thumb.png"
     },
     "math1-2018-20": {
       "id": "math1-2018-20",
@@ -420,7 +438,8 @@
       "answer": null,
       "tagNames": [
         "二次型"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/20_q_thumb.png"
     },
     "math1-2018-21": {
       "id": "math1-2018-21",
@@ -441,7 +460,8 @@
       "answer": null,
       "tagNames": [
         "线性方程组"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/21_q_thumb.png"
     },
     "math1-2018-22": {
       "id": "math1-2018-22",
@@ -483,7 +503,8 @@
       "answer": null,
       "tagNames": [
         "矩估计和最大似然估计"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/23_q_thumb.png"
     }
   },
   "tags": [

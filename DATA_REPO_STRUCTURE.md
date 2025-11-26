@@ -34,6 +34,7 @@ Master index loaded on initial page load.
     "number": 1,                // Question number
     "type": "choice",           // "choice" | "fill" | "answer"
     "tags": ["han-shu-ji-xian"],// Array of tag IDs (Natural Language)
+    "contentImgThumb": "/papers/math1-2025/assets/01_q_thumb.png", // [New] Thumbnail path
     "year": 2025,
     "subject": "math",
     "category": "math1"

@@ -42,7 +42,8 @@
       "answer": "D",
       "tagNames": [
         "曲线的凹凸性、拐点及渐近线"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/02_q_thumb.png"
     },
     "math1-2014-03": {
       "id": "math1-2014-03",
@@ -63,7 +64,8 @@
       "answer": "D",
       "tagNames": [
         "交换积分次序与坐标系之间的转化"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/03_q_thumb.png"
     },
     "math1-2014-04": {
       "id": "math1-2014-04",
@@ -84,7 +86,8 @@
       "answer": null,
       "tagNames": [
         "定积分的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/04_q_thumb.png"
     },
     "math1-2014-05": {
       "id": "math1-2014-05",
@@ -105,7 +108,8 @@
       "answer": "B",
       "tagNames": [
         "行列式"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/05_q_thumb.png"
     },
     "math1-2014-06": {
       "id": "math1-2014-06",
@@ -126,7 +130,8 @@
       "answer": "A",
       "tagNames": [
         "向量组的线性相关性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/06_q_thumb.png"
     },
     "math1-2014-07": {
       "id": "math1-2014-07",
@@ -147,7 +152,8 @@
       "answer": "B",
       "tagNames": [
         "随机事件和概率"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/07_q_thumb.png"
     },
     "math1-2014-08": {
       "id": "math1-2014-08",
@@ -210,7 +216,8 @@
       "answer": null,
       "tagNames": [
         "定积分的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/10_q_thumb.png"
     },
     "math1-2014-11": {
       "id": "math1-2014-11",
@@ -231,7 +238,8 @@
       "answer": null,
       "tagNames": [
         "可分离变量的微分方程与齐次方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/11_q_thumb.png"
     },
     "math1-2014-12": {
       "id": "math1-2014-12",
@@ -252,7 +260,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲线积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/12_q_thumb.png"
     },
     "math1-2014-13": {
       "id": "math1-2014-13",
@@ -273,7 +282,8 @@
       "answer": null,
       "tagNames": [
         "二次型"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/13_q_thumb.png"
     },
     "math1-2014-14": {
       "id": "math1-2014-14",
@@ -294,7 +304,8 @@
       "answer": null,
       "tagNames": [
         "估计量的无偏性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/14_q_thumb.png"
     },
     "math1-2014-15": {
       "id": "math1-2014-15",
@@ -315,7 +326,8 @@
       "answer": null,
       "tagNames": [
         "函数极限的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/15_q_thumb.png"
     },
     "math1-2014-16": {
       "id": "math1-2014-16",
@@ -336,7 +348,8 @@
       "answer": null,
       "tagNames": [
         "函数的单调性、极值与最值"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/16_q_thumb.png"
     },
     "math1-2014-17": {
       "id": "math1-2014-17",
@@ -357,7 +370,8 @@
       "answer": null,
       "tagNames": [
         "常系数非齐次线性微分方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/17_q_thumb.png"
     },
     "math1-2014-18": {
       "id": "math1-2014-18",
@@ -378,7 +392,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲面积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/18_q_thumb.png"
     },
     "math1-2014-19": {
       "id": "math1-2014-19",
@@ -399,7 +414,8 @@
       "answer": null,
       "tagNames": [
         "常数项级数敛散性的判定"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/19_q_thumb.png"
     },
     "math1-2014-20": {
       "id": "math1-2014-20",
@@ -420,7 +436,8 @@
       "answer": null,
       "tagNames": [
         "线性方程组"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/20_q_thumb.png"
     },
     "math1-2014-21": {
       "id": "math1-2014-21",
@@ -441,7 +458,8 @@
       "answer": null,
       "tagNames": [
         "矩阵的相似与相似对角化"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/21_q_thumb.png"
     },
     "math1-2014-22": {
       "id": "math1-2014-22",
@@ -462,7 +480,8 @@
       "answer": null,
       "tagNames": [
         "数学期望与方差"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/22_q_thumb.png"
     },
     "math1-2014-23": {
       "id": "math1-2014-23",
@@ -483,7 +502,8 @@
       "answer": null,
       "tagNames": [
         "大数定律和中心极限定理"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/23_q_thumb.png"
     }
   },
   "tags": [

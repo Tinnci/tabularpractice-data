@@ -21,7 +21,8 @@
       "answer": "C",
       "tagNames": [
         "曲线的凹凸性、拐点及渐近线"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/01_q_thumb.png"
     },
     "math1-2011-02": {
       "id": "math1-2011-02",
@@ -42,7 +43,8 @@
       "answer": "C",
       "tagNames": [
         "求幂级数的收敛半径、收敛区间和收敛域"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/02_q_thumb.png"
     },
     "math1-2011-03": {
       "id": "math1-2011-03",
@@ -63,7 +65,8 @@
       "answer": "A",
       "tagNames": [
         "多元函数的极值问题"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/03_q_thumb.png"
     },
     "math1-2011-04": {
       "id": "math1-2011-04",
@@ -84,7 +87,8 @@
       "answer": "B",
       "tagNames": [
         "定积分的概念、性质及几何意义"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/04_q_thumb.png"
     },
     "math1-2011-05": {
       "id": "math1-2011-05",
@@ -105,7 +109,8 @@
       "answer": "D",
       "tagNames": [
         "矩阵的运算与变换"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/05_q_thumb.png"
     },
     "math1-2011-06": {
       "id": "math1-2011-06",
@@ -126,7 +131,8 @@
       "answer": "D",
       "tagNames": [
         "伴随矩阵与可逆矩阵"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/06_q_thumb.png"
     },
     "math1-2011-07": {
       "id": "math1-2011-07",
@@ -147,7 +153,8 @@
       "answer": "D",
       "tagNames": [
         "随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/07_q_thumb.png"
     },
     "math1-2011-08": {
       "id": "math1-2011-08",
@@ -168,7 +175,8 @@
       "answer": null,
       "tagNames": [
         "数学期望与方差"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/08_q_thumb.png"
     },
     "math1-2011-09": {
       "id": "math1-2011-09",
@@ -189,7 +197,8 @@
       "answer": null,
       "tagNames": [
         "定积分的应用"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/09_q_thumb.png"
     },
     "math1-2011-10": {
       "id": "math1-2011-10",
@@ -210,7 +219,8 @@
       "answer": null,
       "tagNames": [
         "一阶非齐次线性微分方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/10_q_thumb.png"
     },
     "math1-2011-11": {
       "id": "math1-2011-11",
@@ -231,7 +241,8 @@
       "answer": null,
       "tagNames": [
         "偏导数的概念与计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/11_q_thumb.png"
     },
     "math1-2011-12": {
       "id": "math1-2011-12",
@@ -252,7 +263,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲线积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/12_q_thumb.png"
     },
     "math1-2011-13": {
       "id": "math1-2011-13",
@@ -273,7 +285,8 @@
       "answer": null,
       "tagNames": [
         "二次型"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/13_q_thumb.png"
     },
     "math1-2011-14": {
       "id": "math1-2011-14",
@@ -294,7 +307,8 @@
       "answer": null,
       "tagNames": [
         "协方差与相关系数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/14_q_thumb.png"
     },
     "math1-2011-15": {
       "id": "math1-2011-15",
@@ -315,7 +329,8 @@
       "answer": null,
       "tagNames": [
         "函数极限的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/15_q_thumb.png"
     },
     "math1-2011-16": {
       "id": "math1-2011-16",
@@ -336,7 +351,8 @@
       "answer": null,
       "tagNames": [
         "偏导数的概念与计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/16_q_thumb.png"
     },
     "math1-2011-17": {
       "id": "math1-2011-17",
@@ -357,7 +373,8 @@
       "answer": null,
       "tagNames": [
         "方程根的存在性与个数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/17_q_thumb.png"
     },
     "math1-2011-18": {
       "id": "math1-2011-18",
@@ -378,7 +395,8 @@
       "answer": null,
       "tagNames": [
         "数列敛散性的判定"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/18_q_thumb.png"
     },
     "math1-2011-19": {
       "id": "math1-2011-19",
@@ -399,7 +417,8 @@
       "answer": null,
       "tagNames": [
         "重积分的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/19_q_thumb.png"
     },
     "math1-2011-20": {
       "id": "math1-2011-20",
@@ -420,7 +439,8 @@
       "answer": null,
       "tagNames": [
         "向量组之间的线性表示"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/20_q_thumb.png"
     },
     "math1-2011-21": {
       "id": "math1-2011-21",
@@ -441,7 +461,8 @@
       "answer": null,
       "tagNames": [
         "特征值与特征向量"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/21_q_thumb.png"
     },
     "math1-2011-22": {
       "id": "math1-2011-22",
@@ -462,7 +483,8 @@
       "answer": null,
       "tagNames": [
         "协方差与相关系数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/22_q_thumb.png"
     },
     "math1-2011-23": {
       "id": "math1-2011-23",
@@ -483,7 +505,8 @@
       "answer": null,
       "tagNames": [
         "矩估计和最大似然估计"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2011/assets/23_q_thumb.png"
     }
   },
   "tags": [

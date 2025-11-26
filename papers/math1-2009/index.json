@@ -21,7 +21,8 @@
       "answer": "A",
       "tagNames": [
         "确定极限中的参数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/01_q_thumb.png"
     },
     "math1-2009-02": {
       "id": "math1-2009-02",
@@ -42,7 +43,8 @@
       "answer": "A",
       "tagNames": [
         "重积分的概念与性质"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/02_q_thumb.png"
     },
     "math1-2009-03": {
       "id": "math1-2009-03",
@@ -63,7 +65,8 @@
       "answer": "D",
       "tagNames": [
         "变限积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/03_q_thumb.png"
     },
     "math1-2009-04": {
       "id": "math1-2009-04",
@@ -84,7 +87,8 @@
       "answer": "C",
       "tagNames": [
         "常数项级数敛散性的判定"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/04_q_thumb.png"
     },
     "math1-2009-05": {
       "id": "math1-2009-05",
@@ -105,7 +109,8 @@
       "answer": "A",
       "tagNames": [
         "向量内积与向量正交"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/05_q_thumb.png"
     },
     "math1-2009-06": {
       "id": "math1-2009-06",
@@ -126,7 +131,8 @@
       "answer": "B",
       "tagNames": [
         "伴随矩阵与可逆矩阵"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/06_q_thumb.png"
     },
     "math1-2009-07": {
       "id": "math1-2009-07",
@@ -189,7 +195,8 @@
       "answer": null,
       "tagNames": [
         "偏导数的概念与计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/09_q_thumb.png"
     },
     "math1-2009-10": {
       "id": "math1-2009-10",
@@ -210,7 +217,8 @@
       "answer": null,
       "tagNames": [
         "常系数非齐次线性微分方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/10_q_thumb.png"
     },
     "math1-2009-11": {
       "id": "math1-2009-11",
@@ -231,7 +239,8 @@
       "answer": null,
       "tagNames": [
         "第一类曲线积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/11_q_thumb.png"
     },
     "math1-2009-12": {
       "id": "math1-2009-12",
@@ -252,7 +261,8 @@
       "answer": null,
       "tagNames": [
         "重积分的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/12_q_thumb.png"
     },
     "math1-2009-13": {
       "id": "math1-2009-13",
@@ -294,7 +304,8 @@
       "answer": null,
       "tagNames": [
         "估计量的无偏性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/14_q_thumb.png"
     },
     "math1-2009-15": {
       "id": "math1-2009-15",
@@ -315,7 +326,8 @@
       "answer": null,
       "tagNames": [
         "多元函数的极值问题"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/15_q_thumb.png"
     },
     "math1-2009-16": {
       "id": "math1-2009-16",
@@ -336,7 +348,8 @@
       "answer": null,
       "tagNames": [
         "幂级数的和函数及幂级数展开式"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/16_q_thumb.png"
     },
     "math1-2009-17": {
       "id": "math1-2009-17",
@@ -357,7 +370,8 @@
       "answer": null,
       "tagNames": [
         "定积分的应用"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/17_q_thumb.png"
     },
     "math1-2009-18": {
       "id": "math1-2009-18",
@@ -378,7 +392,8 @@
       "answer": null,
       "tagNames": [
         "微分中值定理"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/18_q_thumb.png"
     },
     "math1-2009-19": {
       "id": "math1-2009-19",
@@ -399,7 +414,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲面积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/19_q_thumb.png"
     },
     "math1-2009-20": {
       "id": "math1-2009-20",
@@ -420,7 +436,8 @@
       "answer": null,
       "tagNames": [
         "向量组的线性相关性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/20_q_thumb.png"
     },
     "math1-2009-21": {
       "id": "math1-2009-21",
@@ -441,7 +458,8 @@
       "answer": null,
       "tagNames": [
         "二次型"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/21_q_thumb.png"
     },
     "math1-2009-22": {
       "id": "math1-2009-22",
@@ -462,7 +480,8 @@
       "answer": null,
       "tagNames": [
         "边缘分布和条件分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/22_q_thumb.png"
     },
     "math1-2009-23": {
       "id": "math1-2009-23",
@@ -483,7 +502,8 @@
       "answer": null,
       "tagNames": [
         "矩估计和最大似然估计"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/23_q_thumb.png"
     }
   },
   "tags": [

@@ -21,7 +21,8 @@
       "answer": null,
       "tagNames": [
         "变限积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/01_q_thumb.png"
     },
     "math1-2024-02": {
       "id": "math1-2024-02",
@@ -63,7 +64,8 @@
       "answer": "A",
       "tagNames": [
         "幂级数的和函数及幂级数展开式"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/03_q_thumb.png"
     },
     "math1-2024-04": {
       "id": "math1-2024-04",
@@ -84,7 +86,8 @@
       "answer": "B",
       "tagNames": [
         "导数与微分的概念"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/04_q_thumb.png"
     },
     "math1-2024-05": {
       "id": "math1-2024-05",
@@ -105,7 +108,8 @@
       "answer": "B",
       "tagNames": [
         "线性方程组"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/05_q_thumb.png"
     },
     "math1-2024-06": {
       "id": "math1-2024-06",
@@ -147,7 +151,8 @@
       "answer": "A",
       "tagNames": [
         "特征值与特征向量"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/07_q_thumb.png"
     },
     "math1-2024-08": {
       "id": "math1-2024-08",
@@ -168,7 +173,8 @@
       "answer": "B",
       "tagNames": [
         "随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/08_q_thumb.png"
     },
     "math1-2024-09": {
       "id": "math1-2024-09",
@@ -189,7 +195,8 @@
       "answer": "D",
       "tagNames": [
         "协方差与相关系数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/09_q_thumb.png"
     },
     "math1-2024-10": {
       "id": "math1-2024-10",
@@ -210,7 +217,8 @@
       "answer": "D",
       "tagNames": [
         "二维随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/10_q_thumb.png"
     },
     "math1-2024-11": {
       "id": "math1-2024-11",
@@ -231,7 +239,8 @@
       "answer": null,
       "tagNames": [
         "确定极限中的参数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/11_q_thumb.png"
     },
     "math1-2024-12": {
       "id": "math1-2024-12",
@@ -252,7 +261,8 @@
       "answer": null,
       "tagNames": [
         "偏导数的概念与计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/12_q_thumb.png"
     },
     "math1-2024-13": {
       "id": "math1-2024-13",
@@ -294,7 +304,8 @@
       "answer": null,
       "tagNames": [
         "其他方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/14_q_thumb.png"
     },
     "math1-2024-15": {
       "id": "math1-2024-15",
@@ -315,7 +326,8 @@
       "answer": null,
       "tagNames": [
         "二次型"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/15_q_thumb.png"
     },
     "math1-2024-16": {
       "id": "math1-2024-16",
@@ -336,7 +348,8 @@
       "answer": null,
       "tagNames": [
         "随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/16_q_thumb.png"
     },
     "math1-2024-17": {
       "id": "math1-2024-17",
@@ -357,7 +370,8 @@
       "answer": null,
       "tagNames": [
         "重积分的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/17_q_thumb.png"
     },
     "math1-2024-18": {
       "id": "math1-2024-18",
@@ -378,7 +392,8 @@
       "answer": null,
       "tagNames": [
         "多元函数的极值问题"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/18_q_thumb.png"
     },
     "math1-2024-19": {
       "id": "math1-2024-19",
@@ -420,7 +435,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲线积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/20_q_thumb.png"
     },
     "math1-2024-21": {
       "id": "math1-2024-21",
@@ -441,7 +457,8 @@
       "answer": null,
       "tagNames": [
         "矩阵的相似与相似对角化"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/21_q_thumb.png"
     },
     "math1-2024-22": {
       "id": "math1-2024-22",
@@ -462,7 +479,8 @@
       "answer": null,
       "tagNames": [
         "估计量的无偏性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/22_q_thumb.png"
     }
   },
   "tags": [
