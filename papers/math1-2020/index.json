@@ -1,0 +1,537 @@
+{
+  "paperId": "math1-2020",
+  "year": "2020",
+  "questions": {
+    "math1-2020-01": {
+      "id": "math1-2020-01",
+      "originalId": 776,
+      "paperId": "math1-2020",
+      "number": 1,
+      "type": "choice",
+      "tags": [
+        "wu-qiong-xiao-liang-de-bi-jiao"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=61&t=50",
+      "contentImg": "/papers/math1-2020/assets/01_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2020/assets/01_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "D",
+      "tagNames": [
+        "无穷小量的比较"
+      ]
+    },
+    "math1-2020-02": {
+      "id": "math1-2020-02",
+      "originalId": 774,
+      "paperId": "math1-2020",
+      "number": 2,
+      "type": "choice",
+      "tags": [
+        "dao-shu-yu-wei-fen-de-gai-nian"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=61&t=634",
+      "contentImg": "/papers/math1-2020/assets/02_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2020/assets/02_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "C",
+      "tagNames": [
+        "导数与微分的概念"
+      ]
+    },
+    "math1-2020-03": {
+      "id": "math1-2020-03",
+      "originalId": 775,
+      "paperId": "math1-2020",
+      "number": 3,
+      "type": "choice",
+      "tags": [
+        "quan-wei-fen-de-gai-nian-yu-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=61&t=1266",
+      "contentImg": "/papers/math1-2020/assets/03_q.png",
+      "answerImg": null,
+      "analysisImg": null,
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "A",
+      "tagNames": [
+        "全微分的概念与计算"
+      ]
+    },
+    "math1-2020-04": {
+      "id": "math1-2020-04",
+      "originalId": 770,
+      "paperId": "math1-2020",
+      "number": 4,
+      "type": "choice",
+      "tags": [
+        "qiu-mi-ji-shu-de-shou-lian-ban-jing-shou-lian-qu-jian-he-shou-lian-yu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=61&t=2693",
+      "contentImg": "/papers/math1-2020/assets/04_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2020/assets/04_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "A",
+      "tagNames": [
+        "求幂级数的收敛半径、收敛区间和收敛域"
+      ]
+    },
+    "math1-2020-05": {
+      "id": "math1-2020-05",
+      "originalId": 771,
+      "paperId": "math1-2020",
+      "number": 5,
+      "type": "choice",
+      "tags": [
+        "ju-zhen-de-yun-suan-yu-bian-huan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=62&t=12",
+      "contentImg": null,
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2020/assets/05_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "B",
+      "tagNames": [
+        "矩阵的运算与变换"
+      ]
+    },
+    "math1-2020-06": {
+      "id": "math1-2020-06",
+      "originalId": 773,
+      "paperId": "math1-2020",
+      "number": 6,
+      "type": "choice",
+      "tags": [
+        "xiang-liang-zu-zhi-jian-de-xian-xing-biao-shi"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=62&t=316",
+      "contentImg": "/papers/math1-2020/assets/06_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2020/assets/06_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "C",
+      "tagNames": [
+        "向量组之间的线性表示"
+      ]
+    },
+    "math1-2020-07": {
+      "id": "math1-2020-07",
+      "originalId": 772,
+      "paperId": "math1-2020",
+      "number": 7,
+      "type": "choice",
+      "tags": [
+        "sui-ji-shi-jian-he-gai-lv"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=62&t=1683",
+      "contentImg": "/papers/math1-2020/assets/07_q.png",
+      "answerImg": null,
+      "analysisImg": null,
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "D",
+      "tagNames": [
+        "随机事件和概率"
+      ]
+    },
+    "math1-2020-08": {
+      "id": "math1-2020-08",
+      "originalId": 754,
+      "paperId": "math1-2020",
+      "number": 8,
+      "type": "choice",
+      "tags": [
+        "da-shu-ding-lv-he-zhong-xin-ji-xian-ding-li"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=62&t=2277",
+      "contentImg": null,
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2020/assets/08_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "B",
+      "tagNames": [
+        "大数定律和中心极限定理"
+      ]
+    },
+    "math1-2020-09": {
+      "id": "math1-2020-09",
+      "originalId": 755,
+      "paperId": "math1-2020",
+      "number": 9,
+      "type": "fill",
+      "tags": [
+        "han-shu-ji-xian-de-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=63&t=10",
+      "contentImg": "/papers/math1-2020/assets/09_q.png",
+      "answerImg": "/papers/math1-2020/assets/09_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/09_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "函数极限的计算"
+      ]
+    },
+    "math1-2020-10": {
+      "id": "math1-2020-10",
+      "originalId": 763,
+      "paperId": "math1-2020",
+      "number": 10,
+      "type": "fill",
+      "tags": [
+        "dao-shu-yu-wei-fen-de-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=63&t=371",
+      "contentImg": "/papers/math1-2020/assets/10_q.png",
+      "answerImg": "/papers/math1-2020/assets/10_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/10_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "导数与微分的计算"
+      ]
+    },
+    "math1-2020-11": {
+      "id": "math1-2020-11",
+      "originalId": 762,
+      "paperId": "math1-2020",
+      "number": 11,
+      "type": "fill",
+      "tags": [
+        "chang-xi-shu-qi-ci-xian-xing-wei-fen-fang-cheng"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=63&t=624",
+      "contentImg": "/papers/math1-2020/assets/11_q.png",
+      "answerImg": "/papers/math1-2020/assets/11_ans.png",
+      "analysisImg": null,
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "常系数齐次线性微分方程"
+      ]
+    },
+    "math1-2020-12": {
+      "id": "math1-2020-12",
+      "originalId": 760,
+      "paperId": "math1-2020",
+      "number": 12,
+      "type": "fill",
+      "tags": [
+        "pian-dao-shu-de-gai-nian-yu-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=63&t=1548",
+      "contentImg": "/papers/math1-2020/assets/12_q.png",
+      "answerImg": "/papers/math1-2020/assets/12_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/12_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "偏导数的概念与计算"
+      ]
+    },
+    "math1-2020-13": {
+      "id": "math1-2020-13",
+      "originalId": 761,
+      "paperId": "math1-2020",
+      "number": 13,
+      "type": "fill",
+      "tags": [
+        "xing-lie-shi"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=63&t=2269",
+      "contentImg": "/papers/math1-2020/assets/13_q.png",
+      "answerImg": "/papers/math1-2020/assets/13_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/13_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "行列式"
+      ]
+    },
+    "math1-2020-14": {
+      "id": "math1-2020-14",
+      "originalId": 756,
+      "paperId": "math1-2020",
+      "number": 14,
+      "type": "fill",
+      "tags": [
+        "xie-fang-cha-yu-xiang-guan-xi-shu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=63&t=2932",
+      "contentImg": "/papers/math1-2020/assets/14_q.png",
+      "answerImg": "/papers/math1-2020/assets/14_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/14_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "协方差与相关系数"
+      ]
+    },
+    "math1-2020-15": {
+      "id": "math1-2020-15",
+      "originalId": 757,
+      "paperId": "math1-2020",
+      "number": 15,
+      "type": "answer",
+      "tags": [
+        "duo-yuan-han-shu-de-ji-zhi-wen-ti"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=64&t=11",
+      "contentImg": "/papers/math1-2020/assets/15_q.png",
+      "answerImg": "/papers/math1-2020/assets/15_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/15_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "多元函数的极值问题"
+      ]
+    },
+    "math1-2020-16": {
+      "id": "math1-2020-16",
+      "originalId": 759,
+      "paperId": "math1-2020",
+      "number": 16,
+      "type": "answer",
+      "tags": [
+        "di-er-lei-qu-xian-ji-fen"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=64&t=456",
+      "contentImg": "/papers/math1-2020/assets/16_q.png",
+      "answerImg": "/papers/math1-2020/assets/16_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/16_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "第二类曲线积分"
+      ]
+    },
+    "math1-2020-17": {
+      "id": "math1-2020-17",
+      "originalId": 758,
+      "paperId": "math1-2020",
+      "number": 17,
+      "type": "answer",
+      "tags": [
+        "mi-ji-shu-de-he-han-shu-ji-mi-ji-shu-zhan-kai-shi"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=64&t=1481",
+      "contentImg": "/papers/math1-2020/assets/17_q.png",
+      "answerImg": "/papers/math1-2020/assets/17_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/17_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "幂级数的和函数及幂级数展开式"
+      ]
+    },
+    "math1-2020-18": {
+      "id": "math1-2020-18",
+      "originalId": 768,
+      "paperId": "math1-2020",
+      "number": 18,
+      "type": "answer",
+      "tags": [
+        "di-er-lei-qu-mian-ji-fen"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=65&t=11",
+      "contentImg": "/papers/math1-2020/assets/18_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2020/assets/18_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "第二类曲面积分"
+      ]
+    },
+    "math1-2020-19": {
+      "id": "math1-2020-19",
+      "originalId": 769,
+      "paperId": "math1-2020",
+      "number": 19,
+      "type": "answer",
+      "tags": [
+        "wei-fen-zhong-zhi-ding-li"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=65&t=1200",
+      "contentImg": "/papers/math1-2020/assets/19_q.png",
+      "answerImg": "/papers/math1-2020/assets/19_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/19_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "微分中值定理"
+      ]
+    },
+    "math1-2020-20": {
+      "id": "math1-2020-20",
+      "originalId": 765,
+      "paperId": "math1-2020",
+      "number": 20,
+      "type": "answer",
+      "tags": [
+        "er-ci-xing"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=66&t=10",
+      "contentImg": "/papers/math1-2020/assets/20_q.png",
+      "answerImg": "/papers/math1-2020/assets/20_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/20_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "二次型"
+      ]
+    },
+    "math1-2020-21": {
+      "id": "math1-2020-21",
+      "originalId": 764,
+      "paperId": "math1-2020",
+      "number": 21,
+      "type": "answer",
+      "tags": [
+        "ju-zhen-de-xiang-si-yu-xiang-si-dui-jiao-hua"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=66&t=1133",
+      "contentImg": "/papers/math1-2020/assets/21_q.png",
+      "answerImg": "/papers/math1-2020/assets/21_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/21_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "矩阵的相似与相似对角化"
+      ]
+    },
+    "math1-2020-22": {
+      "id": "math1-2020-22",
+      "originalId": 766,
+      "paperId": "math1-2020",
+      "number": 22,
+      "type": "answer",
+      "tags": [
+        "er-wei-sui-ji-bian-liang-ji-qi-fen-bu"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=66&t=1964",
+      "contentImg": "/papers/math1-2020/assets/22_q.png",
+      "answerImg": "/papers/math1-2020/assets/22_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/22_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "二维随机变量及其分布"
+      ]
+    },
+    "math1-2020-23": {
+      "id": "math1-2020-23",
+      "originalId": 767,
+      "paperId": "math1-2020",
+      "number": 23,
+      "type": "answer",
+      "tags": [
+        "ju-gu-ji-he-zui-da-si-ran-gu-ji"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=66&t=2692",
+      "contentImg": "/papers/math1-2020/assets/23_q.png",
+      "answerImg": "/papers/math1-2020/assets/23_ans.png",
+      "analysisImg": "/papers/math1-2020/assets/23_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "矩估计和最大似然估计"
+      ]
+    }
+  },
+  "tags": [
+    "chang-xi-shu-qi-ci-xian-xing-wei-fen-fang-cheng",
+    "da-shu-ding-lv-he-zhong-xin-ji-xian-ding-li",
+    "dao-shu-yu-wei-fen-de-gai-nian",
+    "dao-shu-yu-wei-fen-de-ji-suan",
+    "di-er-lei-qu-mian-ji-fen",
+    "di-er-lei-qu-xian-ji-fen",
+    "duo-yuan-han-shu-de-ji-zhi-wen-ti",
+    "er-ci-xing",
+    "er-wei-sui-ji-bian-liang-ji-qi-fen-bu",
+    "han-shu-ji-xian-de-ji-suan",
+    "ju-gu-ji-he-zui-da-si-ran-gu-ji",
+    "ju-zhen-de-xiang-si-yu-xiang-si-dui-jiao-hua",
+    "ju-zhen-de-yun-suan-yu-bian-huan",
+    "mi-ji-shu-de-he-han-shu-ji-mi-ji-shu-zhan-kai-shi",
+    "pian-dao-shu-de-gai-nian-yu-ji-suan",
+    "qiu-mi-ji-shu-de-shou-lian-ban-jing-shou-lian-qu-jian-he-shou-lian-yu",
+    "quan-wei-fen-de-gai-nian-yu-ji-suan",
+    "sui-ji-shi-jian-he-gai-lv",
+    "wei-fen-zhong-zhi-ding-li",
+    "wu-qiong-xiao-liang-de-bi-jiao",
+    "xiang-liang-zu-zhi-jian-de-xian-xing-biao-shi",
+    "xie-fang-cha-yu-xiang-guan-xi-shu",
+    "xing-lie-shi"
+  ]
+}

@@ -1,56 +1,75 @@
 # TabularPractice Data Repository Structure
 
-This document describes the structure for the decoupled data repository. You can create a new GitHub repository and push the contents of `public/data` to it.
+This document describes the structure for the decoupled data repository.
 
 ## 📂 Directory Structure
 
 ```text
 /
 ├── index.json            # [Required] The master index file
-├── README.md             # [Optional] Documentation for your question bank
-└── papers/               # [Required] Folder containing individual paper details
-    ├── math1-2023.json
-    ├── math1-2022.json
-    └── ...
+├── tags.json             # [Required] Knowledge tree structure
+├── papers/               # [Required] Folder containing individual paper details
+│   ├── math1-2025/       # Subdirectory for each paper
+│   │   ├── index.json    # The paper's data file
+│   │   └── assets/       # Images for this paper
+│   │       ├── 01_q.png  # Question 1 Image
+│   │       ├── 01_a.png  # Question 1 Analysis Image
+│   │       └── ...
+│   ├── math1-2024/
+│   └── ...
 ```
 
 ## 📄 File Formats
 
 ### 1. `index.json`
-This file is loaded on the initial page load. It should be lightweight and contain metadata for all questions.
+Master index loaded on initial page load.
 
 **Schema:**
 ```json
 [
   {
-    "id": "math1-2023-01",      // Unique ID
-    "paperId": "math1-2023",    // ID of the paper it belongs to
+    "id": "math1-2025-01",      // Unique ID
+    "paperId": "math1-2025",    // ID of the paper it belongs to
     "number": 1,                // Question number
     "type": "choice",           // "choice" | "fill" | "answer"
-    "tags": ["limit"]           // Array of tag IDs
+    "tags": ["13"],             // Array of tag IDs
+    "year": 2025,
+    "subject": "math",
+    "category": "math1"
   },
   ...
 ]
 ```
 
-### 2. `papers/[paperId].json`
-This file is loaded lazily when a user selects a specific year/paper. It contains the full content of the questions.
+### 2. `papers/[paperId]/index.json`
+Loaded lazily when a user selects a specific paper.
 
 **Schema:**
 ```json
 {
-  "paperId": "math1-2023",
+  "paperId": "math1-2025",
+  "year": "2025",
+  "tags": [               // [New] Aggregated tags for the entire paper
+    "han-shu-ji-xian",
+    "wei-fen-xue"
+  ],
   "questions": {
-    "math1-2023-01": {
-      "id": "math1-2023-01",
-      "paperId": "math1-2023",
+    "math1-2025-01": {
+      "id": "math1-2025-01",
+      "originalId": 665,          // ID from source
+      "paperId": "math1-2025",
       "number": 1,
       "type": "choice",
-      "tags": ["limit"],
-      "contentMd": "Calculate the limit...",  // Markdown content
-      "answerMd": "**(B)**",                  // Markdown answer
-      "analysisMd": "Use L'Hopital's rule...",// Markdown analysis
-      "videoUrl": "https://..."               // Optional video link
+      "tags": ["han-shu-ji-xian"],
+      "score": 5,
+      "videoUrl": "https://...",
+      "contentImg": "/papers/math1-2025/assets/01_q.png",
+      "answerImg": "/papers/math1-2025/assets/01_ans.png",
+      "analysisImg": "/papers/math1-2025/assets/01_a.png",
+      "contentMd": "",            // Markdown fallback
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "B"
     },
     ...
   }
@@ -59,13 +78,5 @@ This file is loaded lazily when a user selects a specific year/paper. It contain
 
 ## 🚀 How to Deploy
 
-1. **Create a new GitHub Repository** (e.g., `my-math-questions`).
-2. **Push the files** described above to the `main` branch.
-3. **Get the Base URL**:
-   - Use GitHub Raw: `https://raw.githubusercontent.com/<username>/<repo>/main`
-   - like: `https://raw.githubusercontent.com/Tinnci/tabularpractice-data/main` for this repo
-   - Or use GitHub Pages: Enable Pages in settings, then use `https://<username>.github.io/<repo>`
-4. **Configure App**:
-   - Open TabularPractice Settings.
-   - Paste the Base URL into the "Repository Source" field.
-   - Click "Verify & Save".
+1. **Push to GitHub**: Push this folder structure to your repository.
+2. **Configure App**: Set the "Repository Source" in your app to the root of this repo (e.g., `https://raw.githubusercontent.com/Tinnci/tabularpractice-data/main`).

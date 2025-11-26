@@ -1,0 +1,536 @@
+{
+  "paperId": "math1-2012",
+  "year": "2012",
+  "questions": {
+    "math1-2012-01": {
+      "id": "math1-2012-01",
+      "originalId": 1526,
+      "paperId": "math1-2012",
+      "number": 1,
+      "type": "choice",
+      "tags": [
+        "qu-xian-de-ao-tu-xing-guai-dian-ji-jian-jin-xian"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=13&t=12",
+      "contentImg": "/papers/math1-2012/assets/01_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2012/assets/01_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "曲线的凹凸性、拐点及渐近线"
+      ]
+    },
+    "math1-2012-02": {
+      "id": "math1-2012-02",
+      "originalId": 1527,
+      "paperId": "math1-2012",
+      "number": 2,
+      "type": "choice",
+      "tags": [
+        "dao-shu-yu-wei-fen-de-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=13&t=508",
+      "contentImg": "/papers/math1-2012/assets/02_q.png",
+      "answerImg": null,
+      "analysisImg": null,
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "A",
+      "tagNames": [
+        "导数与微分的计算"
+      ]
+    },
+    "math1-2012-03": {
+      "id": "math1-2012-03",
+      "originalId": 1528,
+      "paperId": "math1-2012",
+      "number": 3,
+      "type": "choice",
+      "tags": [
+        "quan-wei-fen-de-gai-nian-yu-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=13&t=901",
+      "contentImg": "/papers/math1-2012/assets/03_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2012/assets/03_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "全微分的概念与计算"
+      ]
+    },
+    "math1-2012-04": {
+      "id": "math1-2012-04",
+      "originalId": 1529,
+      "paperId": "math1-2012",
+      "number": 4,
+      "type": "choice",
+      "tags": [
+        "ding-ji-fen-de-gai-nian-xing-zhi-ji-ji-he-yi-yi"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=13&t=1659",
+      "contentImg": "/papers/math1-2012/assets/04_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2012/assets/04_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "D",
+      "tagNames": [
+        "定积分的概念、性质及几何意义"
+      ]
+    },
+    "math1-2012-05": {
+      "id": "math1-2012-05",
+      "originalId": 1530,
+      "paperId": "math1-2012",
+      "number": 5,
+      "type": "choice",
+      "tags": [
+        "xiang-liang-zu-de-xian-xing-xiang-guan-xing"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=14&t=12",
+      "contentImg": "/papers/math1-2012/assets/05_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2012/assets/05_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "向量组的线性相关性"
+      ]
+    },
+    "math1-2012-06": {
+      "id": "math1-2012-06",
+      "originalId": 1531,
+      "paperId": "math1-2012",
+      "number": 6,
+      "type": "choice",
+      "tags": [
+        "ju-zhen-de-yun-suan-yu-bian-huan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=14&t=198",
+      "contentImg": "/papers/math1-2012/assets/06_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2012/assets/06_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "B",
+      "tagNames": [
+        "矩阵的运算与变换"
+      ]
+    },
+    "math1-2012-07": {
+      "id": "math1-2012-07",
+      "originalId": 1532,
+      "paperId": "math1-2012",
+      "number": 7,
+      "type": "choice",
+      "tags": [
+        "er-wei-sui-ji-bian-liang-ji-qi-fen-bu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=14&t=686",
+      "contentImg": "/papers/math1-2012/assets/07_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2012/assets/07_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "A",
+      "tagNames": [
+        "二维随机变量及其分布"
+      ]
+    },
+    "math1-2012-08": {
+      "id": "math1-2012-08",
+      "originalId": 1533,
+      "paperId": "math1-2012",
+      "number": 8,
+      "type": "choice",
+      "tags": [
+        "xie-fang-cha-yu-xiang-guan-xi-shu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=14&t=1153",
+      "contentImg": "/papers/math1-2012/assets/08_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2012/assets/08_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "D",
+      "tagNames": [
+        "协方差与相关系数"
+      ]
+    },
+    "math1-2012-09": {
+      "id": "math1-2012-09",
+      "originalId": 1534,
+      "paperId": "math1-2012",
+      "number": 9,
+      "type": "fill",
+      "tags": [
+        "chang-xi-shu-qi-ci-xian-xing-wei-fen-fang-cheng"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=12",
+      "contentImg": "/papers/math1-2012/assets/09_q.png",
+      "answerImg": "/papers/math1-2012/assets/09_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/09_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "常系数齐次线性微分方程"
+      ]
+    },
+    "math1-2012-10": {
+      "id": "math1-2012-10",
+      "originalId": 1535,
+      "paperId": "math1-2012",
+      "number": 10,
+      "type": "fill",
+      "tags": [
+        "ding-ji-fen-de-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=297",
+      "contentImg": "/papers/math1-2012/assets/10_q.png",
+      "answerImg": "/papers/math1-2012/assets/10_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/10_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "定积分的计算"
+      ]
+    },
+    "math1-2012-11": {
+      "id": "math1-2012-11",
+      "originalId": 1536,
+      "paperId": "math1-2012",
+      "number": 11,
+      "type": "fill",
+      "tags": [
+        "fang-xiang-dao-shu-he-ti-du"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=642",
+      "contentImg": "/papers/math1-2012/assets/11_q.png",
+      "answerImg": "/papers/math1-2012/assets/11_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/11_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "方向导数和梯度"
+      ]
+    },
+    "math1-2012-12": {
+      "id": "math1-2012-12",
+      "originalId": 1537,
+      "paperId": "math1-2012",
+      "number": 12,
+      "type": "fill",
+      "tags": [
+        "di-yi-lei-qu-mian-ji-fen"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=780",
+      "contentImg": null,
+      "answerImg": "/papers/math1-2012/assets/12_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/12_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "第一类曲面积分"
+      ]
+    },
+    "math1-2012-13": {
+      "id": "math1-2012-13",
+      "originalId": 1538,
+      "paperId": "math1-2012",
+      "number": 13,
+      "type": "fill",
+      "tags": [
+        "ju-zhen-de-zhi"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=1131",
+      "contentImg": "/papers/math1-2012/assets/13_q.png",
+      "answerImg": "/papers/math1-2012/assets/13_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/13_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "矩阵的秩"
+      ]
+    },
+    "math1-2012-14": {
+      "id": "math1-2012-14",
+      "originalId": 1539,
+      "paperId": "math1-2012",
+      "number": 14,
+      "type": "fill",
+      "tags": [
+        "sui-ji-shi-jian-he-gai-lv"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=1551",
+      "contentImg": "/papers/math1-2012/assets/14_q.png",
+      "answerImg": "/papers/math1-2012/assets/14_ans.png",
+      "analysisImg": null,
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "随机事件和概率"
+      ]
+    },
+    "math1-2012-15": {
+      "id": "math1-2012-15",
+      "originalId": 1540,
+      "paperId": "math1-2012",
+      "number": 15,
+      "type": "answer",
+      "tags": [
+        "bu-deng-shi-de-zheng-ming"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=16&t=12",
+      "contentImg": "/papers/math1-2012/assets/15_q.png",
+      "answerImg": "/papers/math1-2012/assets/15_ans.png",
+      "analysisImg": null,
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "不等式的证明"
+      ]
+    },
+    "math1-2012-16": {
+      "id": "math1-2012-16",
+      "originalId": 1541,
+      "paperId": "math1-2012",
+      "number": 16,
+      "type": "answer",
+      "tags": [
+        "duo-yuan-han-shu-de-ji-zhi-wen-ti"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=16&t=671",
+      "contentImg": null,
+      "answerImg": "/papers/math1-2012/assets/16_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/16_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "多元函数的极值问题"
+      ]
+    },
+    "math1-2012-17": {
+      "id": "math1-2012-17",
+      "originalId": 1542,
+      "paperId": "math1-2012",
+      "number": 17,
+      "type": "answer",
+      "tags": [
+        "mi-ji-shu-de-he-han-shu-ji-mi-ji-shu-zhan-kai-shi"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=16&t=1281",
+      "contentImg": "/papers/math1-2012/assets/17_q.png",
+      "answerImg": "/papers/math1-2012/assets/17_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/17_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "幂级数的和函数及幂级数展开式"
+      ]
+    },
+    "math1-2012-18": {
+      "id": "math1-2012-18",
+      "originalId": 1543,
+      "paperId": "math1-2012",
+      "number": 18,
+      "type": "answer",
+      "tags": [
+        "ding-ji-fen-de-ying-yong"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=17&t=12",
+      "contentImg": "/papers/math1-2012/assets/18_q.png",
+      "answerImg": "/papers/math1-2012/assets/18_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/18_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "定积分的应用"
+      ]
+    },
+    "math1-2012-19": {
+      "id": "math1-2012-19",
+      "originalId": 1544,
+      "paperId": "math1-2012",
+      "number": 19,
+      "type": "answer",
+      "tags": [
+        "di-er-lei-qu-xian-ji-fen"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=17&t=940",
+      "contentImg": null,
+      "answerImg": "/papers/math1-2012/assets/19_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/19_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "第二类曲线积分"
+      ]
+    },
+    "math1-2012-20": {
+      "id": "math1-2012-20",
+      "originalId": 1545,
+      "paperId": "math1-2012",
+      "number": 20,
+      "type": "answer",
+      "tags": [
+        "xian-xing-fang-cheng-zu"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=18&t=12",
+      "contentImg": "/papers/math1-2012/assets/20_q.png",
+      "answerImg": "/papers/math1-2012/assets/20_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/20_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "线性方程组"
+      ]
+    },
+    "math1-2012-21": {
+      "id": "math1-2012-21",
+      "originalId": 1546,
+      "paperId": "math1-2012",
+      "number": 21,
+      "type": "answer",
+      "tags": [
+        "er-ci-xing"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=18&t=830",
+      "contentImg": "/papers/math1-2012/assets/21_q.png",
+      "answerImg": "/papers/math1-2012/assets/21_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/21_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "二次型"
+      ]
+    },
+    "math1-2012-22": {
+      "id": "math1-2012-22",
+      "originalId": 1547,
+      "paperId": "math1-2012",
+      "number": 22,
+      "type": "answer",
+      "tags": [
+        "xie-fang-cha-yu-xiang-guan-xi-shu"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=18&t=1500",
+      "contentImg": "/papers/math1-2012/assets/22_q.png",
+      "answerImg": "/papers/math1-2012/assets/22_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/22_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "协方差与相关系数"
+      ]
+    },
+    "math1-2012-23": {
+      "id": "math1-2012-23",
+      "originalId": 1548,
+      "paperId": "math1-2012",
+      "number": 23,
+      "type": "answer",
+      "tags": [
+        "ju-gu-ji-he-zui-da-si-ran-gu-ji"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=18&t=2219",
+      "contentImg": "/papers/math1-2012/assets/23_q.png",
+      "answerImg": "/papers/math1-2012/assets/23_ans.png",
+      "analysisImg": "/papers/math1-2012/assets/23_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "矩估计和最大似然估计"
+      ]
+    }
+  },
+  "tags": [
+    "bu-deng-shi-de-zheng-ming",
+    "chang-xi-shu-qi-ci-xian-xing-wei-fen-fang-cheng",
+    "dao-shu-yu-wei-fen-de-ji-suan",
+    "di-er-lei-qu-xian-ji-fen",
+    "di-yi-lei-qu-mian-ji-fen",
+    "ding-ji-fen-de-gai-nian-xing-zhi-ji-ji-he-yi-yi",
+    "ding-ji-fen-de-ji-suan",
+    "ding-ji-fen-de-ying-yong",
+    "duo-yuan-han-shu-de-ji-zhi-wen-ti",
+    "er-ci-xing",
+    "er-wei-sui-ji-bian-liang-ji-qi-fen-bu",
+    "fang-xiang-dao-shu-he-ti-du",
+    "ju-gu-ji-he-zui-da-si-ran-gu-ji",
+    "ju-zhen-de-yun-suan-yu-bian-huan",
+    "ju-zhen-de-zhi",
+    "mi-ji-shu-de-he-han-shu-ji-mi-ji-shu-zhan-kai-shi",
+    "qu-xian-de-ao-tu-xing-guai-dian-ji-jian-jin-xian",
+    "quan-wei-fen-de-gai-nian-yu-ji-suan",
+    "sui-ji-shi-jian-he-gai-lv",
+    "xian-xing-fang-cheng-zu",
+    "xiang-liang-zu-de-xian-xing-xiang-guan-xing",
+    "xie-fang-cha-yu-xiang-guan-xi-shu"
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "paperId": "math1-2019",
+  "year": "2019",
+  "questions": {
+    "math1-2019-01": {
+      "id": "math1-2019-01",
+      "originalId": 799,
+      "paperId": "math1-2019",
+      "number": 1,
+      "type": "choice",
+      "tags": [
+        "que-ding-ji-xian-zhong-de-can-shu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=55&t=27",
+      "contentImg": null,
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/01_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "C",
+      "tagNames": [
+        "确定极限中的参数"
+      ]
+    },
+    "math1-2019-02": {
+      "id": "math1-2019-02",
+      "originalId": 797,
+      "paperId": "math1-2019",
+      "number": 2,
+      "type": "choice",
+      "tags": [
+        "han-shu-de-dan-diao-xing-ji-zhi-yu-zui-zhi"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=55&t=332",
+      "contentImg": "/papers/math1-2019/assets/02_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/02_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "B",
+      "tagNames": [
+        "函数的单调性、极值与最值"
+      ]
+    },
+    "math1-2019-03": {
+      "id": "math1-2019-03",
+      "originalId": 798,
+      "paperId": "math1-2019",
+      "number": 3,
+      "type": "choice",
+      "tags": [
+        "chang-shu-xiang-ji-shu-lian-san-xing-de-pan-ding"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=55&t=851",
+      "contentImg": "/papers/math1-2019/assets/03_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/03_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "D",
+      "tagNames": [
+        "常数项级数敛散性的判定"
+      ]
+    },
+    "math1-2019-04": {
+      "id": "math1-2019-04",
+      "originalId": 793,
+      "paperId": "math1-2019",
+      "number": 4,
+      "type": "choice",
+      "tags": [
+        "di-er-lei-qu-xian-ji-fen"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=55&t=1569",
+      "contentImg": "/papers/math1-2019/assets/04_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/04_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "D",
+      "tagNames": [
+        "第二类曲线积分"
+      ]
+    },
+    "math1-2019-05": {
+      "id": "math1-2019-05",
+      "originalId": 794,
+      "paperId": "math1-2019",
+      "number": 5,
+      "type": "choice",
+      "tags": [
+        "er-ci-xing"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=56&t=19",
+      "contentImg": "/papers/math1-2019/assets/05_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/05_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "C",
+      "tagNames": [
+        "二次型"
+      ]
+    },
+    "math1-2019-06": {
+      "id": "math1-2019-06",
+      "originalId": 796,
+      "paperId": "math1-2019",
+      "number": 6,
+      "type": "choice",
+      "tags": [
+        "xian-xing-fang-cheng-zu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=56&t=357",
+      "contentImg": "/papers/math1-2019/assets/06_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/06_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "A",
+      "tagNames": [
+        "线性方程组"
+      ]
+    },
+    "math1-2019-07": {
+      "id": "math1-2019-07",
+      "originalId": 795,
+      "paperId": "math1-2019",
+      "number": 7,
+      "type": "choice",
+      "tags": [
+        "sui-ji-shi-jian-he-gai-lv"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=56&t=1129",
+      "contentImg": "/papers/math1-2019/assets/07_q.png",
+      "answerImg": null,
+      "analysisImg": null,
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": "C",
+      "tagNames": [
+        "随机事件和概率"
+      ]
+    },
+    "math1-2019-08": {
+      "id": "math1-2019-08",
+      "originalId": 777,
+      "paperId": "math1-2019",
+      "number": 8,
+      "type": "choice",
+      "tags": [
+        "sui-ji-bian-liang-ji-qi-fen-bu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=56&t=1315",
+      "contentImg": "/papers/math1-2019/assets/08_q.png",
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/08_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "随机变量及其分布"
+      ]
+    },
+    "math1-2019-09": {
+      "id": "math1-2019-09",
+      "originalId": 778,
+      "paperId": "math1-2019",
+      "number": 9,
+      "type": "fill",
+      "tags": [
+        "pian-dao-shu-de-gai-nian-yu-ji-suan"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=57&t=19",
+      "contentImg": "/papers/math1-2019/assets/09_q.png",
+      "answerImg": "/papers/math1-2019/assets/09_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/09_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "偏导数的概念与计算"
+      ]
+    },
+    "math1-2019-10": {
+      "id": "math1-2019-10",
+      "originalId": 786,
+      "paperId": "math1-2019",
+      "number": 10,
+      "type": "fill",
+      "tags": [
+        "ke-fen-li-bian-liang-de-wei-fen-fang-cheng-yu-qi-ci-fang-cheng"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=57&t=207",
+      "contentImg": "/papers/math1-2019/assets/10_q.png",
+      "answerImg": "/papers/math1-2019/assets/10_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/10_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "可分离变量的微分方程与齐次方程"
+      ]
+    },
+    "math1-2019-11": {
+      "id": "math1-2019-11",
+      "originalId": 785,
+      "paperId": "math1-2019",
+      "number": 11,
+      "type": "fill",
+      "tags": [
+        "mi-ji-shu-de-he-han-shu-ji-mi-ji-shu-zhan-kai-shi"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=57&t=413",
+      "contentImg": "/papers/math1-2019/assets/11_q.png",
+      "answerImg": "/papers/math1-2019/assets/11_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/11_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "幂级数的和函数及幂级数展开式"
+      ]
+    },
+    "math1-2019-12": {
+      "id": "math1-2019-12",
+      "originalId": 783,
+      "paperId": "math1-2019",
+      "number": 12,
+      "type": "fill",
+      "tags": [
+        "di-er-lei-qu-mian-ji-fen"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=57&t=679",
+      "contentImg": "/papers/math1-2019/assets/12_q.png",
+      "answerImg": "/papers/math1-2019/assets/12_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/12_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "第二类曲面积分"
+      ]
+    },
+    "math1-2019-13": {
+      "id": "math1-2019-13",
+      "originalId": 784,
+      "paperId": "math1-2019",
+      "number": 13,
+      "type": "fill",
+      "tags": [
+        "xian-xing-fang-cheng-zu"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=57&t=1484",
+      "contentImg": "/papers/math1-2019/assets/13_q.png",
+      "answerImg": "/papers/math1-2019/assets/13_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/13_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "线性方程组"
+      ]
+    },
+    "math1-2019-14": {
+      "id": "math1-2019-14",
+      "originalId": 779,
+      "paperId": "math1-2019",
+      "number": 14,
+      "type": "fill",
+      "tags": [
+        "shu-xue-qi-wang-yu-fang-cha"
+      ],
+      "score": 4,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=57&t=1984",
+      "contentImg": "/papers/math1-2019/assets/14_q.png",
+      "answerImg": "/papers/math1-2019/assets/14_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/14_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "数学期望与方差"
+      ]
+    },
+    "math1-2019-15": {
+      "id": "math1-2019-15",
+      "originalId": 780,
+      "paperId": "math1-2019",
+      "number": 15,
+      "type": "answer",
+      "tags": [
+        "yi-jie-fei-qi-ci-xian-xing-wei-fen-fang-cheng"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=58&t=20",
+      "contentImg": "/papers/math1-2019/assets/15_q.png",
+      "answerImg": "/papers/math1-2019/assets/15_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/15_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "一阶非齐次线性微分方程"
+      ]
+    },
+    "math1-2019-16": {
+      "id": "math1-2019-16",
+      "originalId": 782,
+      "paperId": "math1-2019",
+      "number": 16,
+      "type": "answer",
+      "tags": [
+        "fang-xiang-dao-shu-he-ti-du"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=58&t=665",
+      "contentImg": "/papers/math1-2019/assets/16_q.png",
+      "answerImg": "/papers/math1-2019/assets/16_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/16_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "方向导数和梯度"
+      ]
+    },
+    "math1-2019-17": {
+      "id": "math1-2019-17",
+      "originalId": 781,
+      "paperId": "math1-2019",
+      "number": 17,
+      "type": "answer",
+      "tags": [
+        "ding-ji-fen-de-ying-yong"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=58&t=1722",
+      "contentImg": "/papers/math1-2019/assets/17_q.png",
+      "answerImg": "/papers/math1-2019/assets/17_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/17_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "定积分的应用"
+      ]
+    },
+    "math1-2019-18": {
+      "id": "math1-2019-18",
+      "originalId": 791,
+      "paperId": "math1-2019",
+      "number": 18,
+      "type": "answer",
+      "tags": [
+        "shu-lie-lian-san-xing-de-pan-ding"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=59&t=20",
+      "contentImg": "/papers/math1-2019/assets/18_q.png",
+      "answerImg": "/papers/math1-2019/assets/18_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/18_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "数列敛散性的判定"
+      ]
+    },
+    "math1-2019-19": {
+      "id": "math1-2019-19",
+      "originalId": 792,
+      "paperId": "math1-2019",
+      "number": 19,
+      "type": "answer",
+      "tags": [
+        "zhong-ji-fen-de-ying-yong"
+      ],
+      "score": 10,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=59&t=1154",
+      "contentImg": null,
+      "answerImg": null,
+      "analysisImg": "/papers/math1-2019/assets/19_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "重积分的应用"
+      ]
+    },
+    "math1-2019-20": {
+      "id": "math1-2019-20",
+      "originalId": 788,
+      "paperId": "math1-2019",
+      "number": 20,
+      "type": "answer",
+      "tags": [
+        "xiang-liang-nei-ji-yu-xiang-liang-zheng-jiao"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=60&t=20",
+      "contentImg": "/papers/math1-2019/assets/20_q.png",
+      "answerImg": "/papers/math1-2019/assets/20_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/20_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "向量内积与向量正交"
+      ]
+    },
+    "math1-2019-21": {
+      "id": "math1-2019-21",
+      "originalId": 787,
+      "paperId": "math1-2019",
+      "number": 21,
+      "type": "answer",
+      "tags": [
+        "ju-zhen-de-xiang-si-yu-xiang-si-dui-jiao-hua"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=60&t=1206",
+      "contentImg": "/papers/math1-2019/assets/21_q.png",
+      "answerImg": "/papers/math1-2019/assets/21_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/21_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "矩阵的相似与相似对角化"
+      ]
+    },
+    "math1-2019-22": {
+      "id": "math1-2019-22",
+      "originalId": 789,
+      "paperId": "math1-2019",
+      "number": 22,
+      "type": "answer",
+      "tags": [
+        "er-wei-sui-ji-bian-liang-ji-qi-fen-bu"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=60&t=2458",
+      "contentImg": null,
+      "answerImg": "/papers/math1-2019/assets/22_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/22_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "二维随机变量及其分布"
+      ]
+    },
+    "math1-2019-23": {
+      "id": "math1-2019-23",
+      "originalId": 790,
+      "paperId": "math1-2019",
+      "number": 23,
+      "type": "answer",
+      "tags": [
+        "ju-gu-ji-he-zui-da-si-ran-gu-ji"
+      ],
+      "score": 11,
+      "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=60&t=3834",
+      "contentImg": "/papers/math1-2019/assets/23_q.png",
+      "answerImg": "/papers/math1-2019/assets/23_ans.png",
+      "analysisImg": "/papers/math1-2019/assets/23_a.png",
+      "contentMd": "",
+      "answerMd": "",
+      "analysisMd": "",
+      "answer": null,
+      "tagNames": [
+        "矩估计和最大似然估计"
+      ]
+    }
+  },
+  "tags": [
+    "chang-shu-xiang-ji-shu-lian-san-xing-de-pan-ding",
+    "di-er-lei-qu-mian-ji-fen",
+    "di-er-lei-qu-xian-ji-fen",
+    "ding-ji-fen-de-ying-yong",
+    "er-ci-xing",
+    "er-wei-sui-ji-bian-liang-ji-qi-fen-bu",
+    "fang-xiang-dao-shu-he-ti-du",
+    "han-shu-de-dan-diao-xing-ji-zhi-yu-zui-zhi",
+    "ju-gu-ji-he-zui-da-si-ran-gu-ji",
+    "ju-zhen-de-xiang-si-yu-xiang-si-dui-jiao-hua",
+    "ke-fen-li-bian-liang-de-wei-fen-fang-cheng-yu-qi-ci-fang-cheng",
+    "mi-ji-shu-de-he-han-shu-ji-mi-ji-shu-zhan-kai-shi",
+    "pian-dao-shu-de-gai-nian-yu-ji-suan",
+    "que-ding-ji-xian-zhong-de-can-shu",
+    "shu-lie-lian-san-xing-de-pan-ding",
+    "shu-xue-qi-wang-yu-fang-cha",
+    "sui-ji-bian-liang-ji-qi-fen-bu",
+    "sui-ji-shi-jian-he-gai-lv",
+    "xian-xing-fang-cheng-zu",
+    "xiang-liang-nei-ji-yu-xiang-liang-zheng-jiao",
+    "yi-jie-fei-qi-ci-xian-xing-wei-fen-fang-cheng",
+    "zhong-ji-fen-de-ying-yong"
+  ]
+}
