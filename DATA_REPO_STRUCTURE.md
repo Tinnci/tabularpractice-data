@@ -8,6 +8,7 @@ This document describes the structure for the decoupled data repository.
 /
 ├── index.json            # [Required] The master index file
 ├── tags.json             # [Required] Knowledge tree structure
+├── paperGroups.json      # [Required] Exam group definition (Unified/Self-Proposed)
 ├── papers/               # [Required] Folder containing individual paper details
 │   ├── math1-2025/       # Subdirectory for each paper
 │   │   ├── index.json    # The paper's data file
@@ -63,7 +64,28 @@ Defines the hierarchical knowledge tree.
 ]
 ```
 
-### 3. `papers/[paperId]/index.json`
+### 3. `paperGroups.json`
+Defines the classification of exam subjects (Unified vs. Self-Proposed).
+
+**Schema:**
+```json
+[
+  {
+    "id": "math1",
+    "name": "数学一",
+    "type": "unified"      // "unified" | "self_proposed"
+  },
+  {
+    "id": "shu-812",
+    "name": "上海大学 812",
+    "type": "self_proposed",
+    "university": "上海大学",
+    "courseCode": "812"
+  }
+]
+```
+
+### 4. `papers/[paperId]/index.json`
 Loaded lazily when a user selects a specific paper.
 
 **Schema:**
