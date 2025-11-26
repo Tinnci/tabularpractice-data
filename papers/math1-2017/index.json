@@ -4,7 +4,6 @@
   "questions": {
     "math1-2017-01": {
       "id": "math1-2017-01",
-      "originalId": 845,
       "paperId": "math1-2017",
       "number": 1,
       "type": "choice",
@@ -26,7 +25,6 @@
     },
     "math1-2017-02": {
       "id": "math1-2017-02",
-      "originalId": 843,
       "paperId": "math1-2017",
       "number": 2,
       "type": "choice",
@@ -48,7 +46,6 @@
     },
     "math1-2017-03": {
       "id": "math1-2017-03",
-      "originalId": 844,
       "paperId": "math1-2017",
       "number": 3,
       "type": "choice",
@@ -70,7 +67,6 @@
     },
     "math1-2017-04": {
       "id": "math1-2017-04",
-      "originalId": 839,
       "paperId": "math1-2017",
       "number": 4,
       "type": "choice",
@@ -92,7 +88,6 @@
     },
     "math1-2017-05": {
       "id": "math1-2017-05",
-      "originalId": 840,
       "paperId": "math1-2017",
       "number": 5,
       "type": "choice",
@@ -114,7 +109,6 @@
     },
     "math1-2017-06": {
       "id": "math1-2017-06",
-      "originalId": 842,
       "paperId": "math1-2017",
       "number": 6,
       "type": "choice",
@@ -136,7 +130,6 @@
     },
     "math1-2017-07": {
       "id": "math1-2017-07",
-      "originalId": 841,
       "paperId": "math1-2017",
       "number": 7,
       "type": "choice",
@@ -158,7 +151,6 @@
     },
     "math1-2017-08": {
       "id": "math1-2017-08",
-      "originalId": 823,
       "paperId": "math1-2017",
       "number": 8,
       "type": "choice",
@@ -180,7 +172,6 @@
     },
     "math1-2017-09": {
       "id": "math1-2017-09",
-      "originalId": 824,
       "paperId": "math1-2017",
       "number": 9,
       "type": "fill",
@@ -202,7 +193,6 @@
     },
     "math1-2017-10": {
       "id": "math1-2017-10",
-      "originalId": 832,
       "paperId": "math1-2017",
       "number": 10,
       "type": "fill",
@@ -224,7 +214,6 @@
     },
     "math1-2017-11": {
       "id": "math1-2017-11",
-      "originalId": 831,
       "paperId": "math1-2017",
       "number": 11,
       "type": "fill",
@@ -246,7 +235,6 @@
     },
     "math1-2017-12": {
       "id": "math1-2017-12",
-      "originalId": 829,
       "paperId": "math1-2017",
       "number": 12,
       "type": "fill",
@@ -268,7 +256,6 @@
     },
     "math1-2017-13": {
       "id": "math1-2017-13",
-      "originalId": 830,
       "paperId": "math1-2017",
       "number": 13,
       "type": "fill",
@@ -290,7 +277,6 @@
     },
     "math1-2017-14": {
       "id": "math1-2017-14",
-      "originalId": 825,
       "paperId": "math1-2017",
       "number": 14,
       "type": "fill",
@@ -312,7 +298,6 @@
     },
     "math1-2017-15": {
       "id": "math1-2017-15",
-      "originalId": 826,
       "paperId": "math1-2017",
       "number": 15,
       "type": "answer",
@@ -334,7 +319,6 @@
     },
     "math1-2017-16": {
       "id": "math1-2017-16",
-      "originalId": 828,
       "paperId": "math1-2017",
       "number": 16,
       "type": "answer",
@@ -356,7 +340,6 @@
     },
     "math1-2017-17": {
       "id": "math1-2017-17",
-      "originalId": 827,
       "paperId": "math1-2017",
       "number": 17,
       "type": "answer",
@@ -378,7 +361,6 @@
     },
     "math1-2017-18": {
       "id": "math1-2017-18",
-      "originalId": 837,
       "paperId": "math1-2017",
       "number": 18,
       "type": "answer",
@@ -400,7 +382,6 @@
     },
     "math1-2017-19": {
       "id": "math1-2017-19",
-      "originalId": 838,
       "paperId": "math1-2017",
       "number": 19,
       "type": "answer",
@@ -422,7 +403,6 @@
     },
     "math1-2017-20": {
       "id": "math1-2017-20",
-      "originalId": 834,
       "paperId": "math1-2017",
       "number": 20,
       "type": "answer",
@@ -444,7 +424,6 @@
     },
     "math1-2017-21": {
       "id": "math1-2017-21",
-      "originalId": 833,
       "paperId": "math1-2017",
       "number": 21,
       "type": "answer",
@@ -466,7 +445,6 @@
     },
     "math1-2017-22": {
       "id": "math1-2017-22",
-      "originalId": 835,
       "paperId": "math1-2017",
       "number": 22,
       "type": "answer",
@@ -488,7 +466,6 @@
     },
     "math1-2017-23": {
       "id": "math1-2017-23",
-      "originalId": 836,
       "paperId": "math1-2017",
       "number": 23,
       "type": "answer",

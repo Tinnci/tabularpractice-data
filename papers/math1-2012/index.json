@@ -4,7 +4,6 @@
   "questions": {
     "math1-2012-01": {
       "id": "math1-2012-01",
-      "originalId": 1526,
       "paperId": "math1-2012",
       "number": 1,
       "type": "choice",
@@ -26,7 +25,6 @@
     },
     "math1-2012-02": {
       "id": "math1-2012-02",
-      "originalId": 1527,
       "paperId": "math1-2012",
       "number": 2,
       "type": "choice",
@@ -48,7 +46,6 @@
     },
     "math1-2012-03": {
       "id": "math1-2012-03",
-      "originalId": 1528,
       "paperId": "math1-2012",
       "number": 3,
       "type": "choice",
@@ -70,7 +67,6 @@
     },
     "math1-2012-04": {
       "id": "math1-2012-04",
-      "originalId": 1529,
       "paperId": "math1-2012",
       "number": 4,
       "type": "choice",
@@ -92,7 +88,6 @@
     },
     "math1-2012-05": {
       "id": "math1-2012-05",
-      "originalId": 1530,
       "paperId": "math1-2012",
       "number": 5,
       "type": "choice",
@@ -114,7 +109,6 @@
     },
     "math1-2012-06": {
       "id": "math1-2012-06",
-      "originalId": 1531,
       "paperId": "math1-2012",
       "number": 6,
       "type": "choice",
@@ -136,7 +130,6 @@
     },
     "math1-2012-07": {
       "id": "math1-2012-07",
-      "originalId": 1532,
       "paperId": "math1-2012",
       "number": 7,
       "type": "choice",
@@ -158,7 +151,6 @@
     },
     "math1-2012-08": {
       "id": "math1-2012-08",
-      "originalId": 1533,
       "paperId": "math1-2012",
       "number": 8,
       "type": "choice",
@@ -180,7 +172,6 @@
     },
     "math1-2012-09": {
       "id": "math1-2012-09",
-      "originalId": 1534,
       "paperId": "math1-2012",
       "number": 9,
       "type": "fill",
@@ -202,7 +193,6 @@
     },
     "math1-2012-10": {
       "id": "math1-2012-10",
-      "originalId": 1535,
       "paperId": "math1-2012",
       "number": 10,
       "type": "fill",
@@ -224,7 +214,6 @@
     },
     "math1-2012-11": {
       "id": "math1-2012-11",
-      "originalId": 1536,
       "paperId": "math1-2012",
       "number": 11,
       "type": "fill",
@@ -246,7 +235,6 @@
     },
     "math1-2012-12": {
       "id": "math1-2012-12",
-      "originalId": 1537,
       "paperId": "math1-2012",
       "number": 12,
       "type": "fill",
@@ -268,7 +256,6 @@
     },
     "math1-2012-13": {
       "id": "math1-2012-13",
-      "originalId": 1538,
       "paperId": "math1-2012",
       "number": 13,
       "type": "fill",
@@ -290,7 +277,6 @@
     },
     "math1-2012-14": {
       "id": "math1-2012-14",
-      "originalId": 1539,
       "paperId": "math1-2012",
       "number": 14,
       "type": "fill",
@@ -312,7 +298,6 @@
     },
     "math1-2012-15": {
       "id": "math1-2012-15",
-      "originalId": 1540,
       "paperId": "math1-2012",
       "number": 15,
       "type": "answer",
@@ -334,7 +319,6 @@
     },
     "math1-2012-16": {
       "id": "math1-2012-16",
-      "originalId": 1541,
       "paperId": "math1-2012",
       "number": 16,
       "type": "answer",
@@ -356,7 +340,6 @@
     },
     "math1-2012-17": {
       "id": "math1-2012-17",
-      "originalId": 1542,
       "paperId": "math1-2012",
       "number": 17,
       "type": "answer",
@@ -378,7 +361,6 @@
     },
     "math1-2012-18": {
       "id": "math1-2012-18",
-      "originalId": 1543,
       "paperId": "math1-2012",
       "number": 18,
       "type": "answer",
@@ -400,7 +382,6 @@
     },
     "math1-2012-19": {
       "id": "math1-2012-19",
-      "originalId": 1544,
       "paperId": "math1-2012",
       "number": 19,
       "type": "answer",
@@ -422,7 +403,6 @@
     },
     "math1-2012-20": {
       "id": "math1-2012-20",
-      "originalId": 1545,
       "paperId": "math1-2012",
       "number": 20,
       "type": "answer",
@@ -444,7 +424,6 @@
     },
     "math1-2012-21": {
       "id": "math1-2012-21",
-      "originalId": 1546,
       "paperId": "math1-2012",
       "number": 21,
       "type": "answer",
@@ -466,7 +445,6 @@
     },
     "math1-2012-22": {
       "id": "math1-2012-22",
-      "originalId": 1547,
       "paperId": "math1-2012",
       "number": 22,
       "type": "answer",
@@ -488,7 +466,6 @@
     },
     "math1-2012-23": {
       "id": "math1-2012-23",
-      "originalId": 1548,
       "paperId": "math1-2012",
       "number": 23,
       "type": "answer",

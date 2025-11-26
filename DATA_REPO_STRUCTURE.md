@@ -32,7 +32,7 @@ Master index loaded on initial page load.
     "paperId": "math1-2025",    // ID of the paper it belongs to
     "number": 1,                // Question number
     "type": "choice",           // "choice" | "fill" | "answer"
-    "tags": ["13"],             // Array of tag IDs
+    "tags": ["han-shu-ji-xian"],// Array of tag IDs (Natural Language)
     "year": 2025,
     "subject": "math",
     "category": "math1"
@@ -41,7 +41,27 @@ Master index loaded on initial page load.
 ]
 ```
 
-### 2. `papers/[paperId]/index.json`
+### 2. `tags.json`
+Defines the hierarchical knowledge tree.
+
+**Schema:**
+```json
+[
+  {
+    "id": "gao-deng-shu-xue",
+    "name": "高等数学",
+    "parentId": null
+  },
+  {
+    "id": "han-shu-ji-xian-lian-xu",
+    "name": "函数、极限、连续",
+    "parentId": "gao-deng-shu-xue"
+  },
+  ...
+]
+```
+
+### 3. `papers/[paperId]/index.json`
 Loaded lazily when a user selects a specific paper.
 
 **Schema:**
@@ -56,7 +76,6 @@ Loaded lazily when a user selects a specific paper.
   "questions": {
     "math1-2025-01": {
       "id": "math1-2025-01",
-      "originalId": 665,          // ID from source
       "paperId": "math1-2025",
       "number": 1,
       "type": "choice",
