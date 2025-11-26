@@ -13,6 +13,7 @@ This document describes the structure for the decoupled data repository.
 │   │   ├── index.json    # The paper's data file
 │   │   └── assets/       # Images for this paper
 │   │       ├── 01_q.png  # Question 1 Image
+│   │       ├── 01_q_thumb.png # [New] Question 1 Thumbnail (400px width)
 │   │       ├── 01_a.png  # Question 1 Analysis Image
 │   │       └── ...
 │   ├── math1-2024/
