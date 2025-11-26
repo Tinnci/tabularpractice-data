@@ -210,7 +210,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=88&t=3256",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2025/assets/10_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/10_a.png",
       "contentMd": "",
@@ -219,7 +219,8 @@
       "answer": "D",
       "tagNames": [
         "假设检验"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2025/assets/10_q_thumb.png"
     },
     "math1-2025-11": {
       "id": "math1-2025-11",
@@ -231,7 +232,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=89&t=1",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2025/assets/11_q.png",
       "answerImg": "/papers/math1-2025/assets/11_ans.png",
       "analysisImg": "/papers/math1-2025/assets/11_a.png",
       "contentMd": "",
@@ -240,7 +241,8 @@
       "answer": null,
       "tagNames": [
         "函数极限的计算"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2025/assets/11_q_thumb.png"
     },
     "math1-2025-12": {
       "id": "math1-2025-12",
@@ -319,7 +321,7 @@
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=89&t=1342",
       "contentImg": "/papers/math1-2025/assets/15_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2025/assets/15_ans.png",
       "analysisImg": "/papers/math1-2025/assets/15_a.png",
       "contentMd": "",
       "answerMd": "",
@@ -340,16 +342,17 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=89&t=1559",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2025/assets/16_q.png",
       "answerImg": "/papers/math1-2025/assets/16_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2025/assets/16_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
       "answer": null,
       "tagNames": [
         "随机事件和概率"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2025/assets/16_q_thumb.png"
     },
     "math1-2025-17": {
       "id": "math1-2025-17",
@@ -383,7 +386,7 @@
       ],
       "score": 12,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=90&t=604",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2025/assets/18_q.png",
       "answerImg": "/papers/math1-2025/assets/18_ans.png",
       "analysisImg": "/papers/math1-2025/assets/18_a.png",
       "contentMd": "",
@@ -392,7 +395,8 @@
       "answer": null,
       "tagNames": [
         "一阶非齐次线性微分方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2025/assets/18_q_thumb.png"
     },
     "math1-2025-19": {
       "id": "math1-2025-19",
@@ -404,7 +408,7 @@
       ],
       "score": 12,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=90&t=1885",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2025/assets/19_q.png",
       "answerImg": "/papers/math1-2025/assets/19_ans.png",
       "analysisImg": "/papers/math1-2025/assets/19_a.png",
       "contentMd": "",
@@ -413,7 +417,8 @@
       "answer": null,
       "tagNames": [
         "微分中值定理"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2025/assets/19_q_thumb.png"
     },
     "math1-2025-20": {
       "id": "math1-2025-20",

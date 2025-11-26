@@ -58,7 +58,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=61&t=1266",
       "contentImg": "/papers/math1-2020/assets/03_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2020/assets/03_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -100,7 +100,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=62&t=12",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2020/assets/05_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2020/assets/05_a.png",
       "contentMd": "",
@@ -109,7 +109,8 @@
       "answer": "B",
       "tagNames": [
         "矩阵的运算与变换"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2020/assets/05_q_thumb.png"
     },
     "math1-2020-06": {
       "id": "math1-2020-06",
@@ -145,7 +146,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=62&t=1683",
       "contentImg": "/papers/math1-2020/assets/07_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2020/assets/07_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -165,7 +166,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=62&t=2277",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2020/assets/08_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2020/assets/08_a.png",
       "contentMd": "",
@@ -174,7 +175,8 @@
       "answer": "B",
       "tagNames": [
         "大数定律和中心极限定理"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2020/assets/08_q_thumb.png"
     },
     "math1-2020-09": {
       "id": "math1-2020-09",
@@ -232,7 +234,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=63&t=624",
       "contentImg": "/papers/math1-2020/assets/11_q.png",
       "answerImg": "/papers/math1-2020/assets/11_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2020/assets/11_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -385,7 +387,7 @@
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=65&t=11",
       "contentImg": "/papers/math1-2020/assets/18_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2020/assets/18_ans.png",
       "analysisImg": "/papers/math1-2020/assets/18_a.png",
       "contentMd": "",
       "answerMd": "",

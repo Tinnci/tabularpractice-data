@@ -102,7 +102,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=67&t=1674",
       "contentImg": "/papers/math1-2021/assets/05_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2021/assets/05_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -210,7 +210,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=68&t=2399",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2021/assets/10_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2021/assets/10_a.png",
       "contentMd": "",
@@ -219,7 +219,8 @@
       "answer": "B",
       "tagNames": [
         "假设检验"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2021/assets/10_q_thumb.png"
     },
     "math1-2021-11": {
       "id": "math1-2021-11",
@@ -275,7 +276,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=69&t=374",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2021/assets/13_q.png",
       "answerImg": "/papers/math1-2021/assets/13_ans.png",
       "analysisImg": "/papers/math1-2021/assets/13_a.png",
       "contentMd": "",
@@ -284,7 +285,8 @@
       "answer": null,
       "tagNames": [
         "其他方程"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2021/assets/13_q_thumb.png"
     },
     "math1-2021-14": {
       "id": "math1-2021-14",

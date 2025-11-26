@@ -102,7 +102,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1vJ411P73N?p=1&t=2551",
       "contentImg": "/papers/math1-2009/assets/05_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2009/assets/05_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -144,7 +144,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1vJ411P73N?p=1&t=3698",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2009/assets/07_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2009/assets/07_a.png",
       "contentMd": "",
@@ -153,7 +153,8 @@
       "answer": "C",
       "tagNames": [
         "数学期望与方差"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/07_q_thumb.png"
     },
     "math1-2009-08": {
       "id": "math1-2009-08",
@@ -165,7 +166,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1vJ411P73N?p=1&t=4146",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2009/assets/08_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2009/assets/08_a.png",
       "contentMd": "",
@@ -174,7 +175,8 @@
       "answer": null,
       "tagNames": [
         "二维随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/08_q_thumb.png"
     },
     "math1-2009-09": {
       "id": "math1-2009-09",
@@ -209,7 +211,7 @@
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1vJ411P73N?p=1&t=5165",
       "contentImg": "/papers/math1-2009/assets/10_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2009/assets/10_ans.png",
       "analysisImg": "/papers/math1-2009/assets/10_a.png",
       "contentMd": "",
       "answerMd": "",
@@ -274,8 +276,8 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1vJ411P73N?p=1&t=6593",
-      "contentImg": null,
-      "answerImg": null,
+      "contentImg": "/papers/math1-2009/assets/13_q.png",
+      "answerImg": "/papers/math1-2009/assets/13_ans.png",
       "analysisImg": "/papers/math1-2009/assets/13_a.png",
       "contentMd": "",
       "answerMd": "",
@@ -283,7 +285,8 @@
       "answer": null,
       "tagNames": [
         "特征值与特征向量"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2009/assets/13_q_thumb.png"
     },
     "math1-2009-14": {
       "id": "math1-2009-14",
@@ -319,7 +322,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1vJ411P73N?p=2&t=28",
       "contentImg": "/papers/math1-2009/assets/15_q.png",
       "answerImg": "/papers/math1-2009/assets/15_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2009/assets/15_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -341,7 +344,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1vJ411P73N?p=2&t=296",
       "contentImg": "/papers/math1-2009/assets/16_q.png",
       "answerImg": "/papers/math1-2009/assets/16_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2009/assets/16_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",

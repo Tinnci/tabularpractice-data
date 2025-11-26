@@ -36,7 +36,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=13&t=508",
       "contentImg": "/papers/math1-2012/assets/02_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2012/assets/02_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -254,7 +254,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=780",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2012/assets/12_q.png",
       "answerImg": "/papers/math1-2012/assets/12_ans.png",
       "analysisImg": "/papers/math1-2012/assets/12_a.png",
       "contentMd": "",
@@ -263,7 +263,8 @@
       "answer": null,
       "tagNames": [
         "第一类曲面积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2012/assets/12_q_thumb.png"
     },
     "math1-2012-13": {
       "id": "math1-2012-13",
@@ -299,7 +300,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=15&t=1551",
       "contentImg": "/papers/math1-2012/assets/14_q.png",
       "answerImg": "/papers/math1-2012/assets/14_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2012/assets/14_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -321,7 +322,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=16&t=12",
       "contentImg": "/papers/math1-2012/assets/15_q.png",
       "answerImg": "/papers/math1-2012/assets/15_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2012/assets/15_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -341,7 +342,7 @@
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=16&t=671",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2012/assets/16_q.png",
       "answerImg": "/papers/math1-2012/assets/16_ans.png",
       "analysisImg": "/papers/math1-2012/assets/16_a.png",
       "contentMd": "",
@@ -350,7 +351,8 @@
       "answer": null,
       "tagNames": [
         "多元函数的极值问题"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2012/assets/16_q_thumb.png"
     },
     "math1-2012-17": {
       "id": "math1-2012-17",
@@ -406,7 +408,7 @@
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=17&t=940",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2012/assets/19_q.png",
       "answerImg": "/papers/math1-2012/assets/19_ans.png",
       "analysisImg": "/papers/math1-2012/assets/19_a.png",
       "contentMd": "",
@@ -415,7 +417,8 @@
       "answer": null,
       "tagNames": [
         "第二类曲线积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2012/assets/19_q_thumb.png"
     },
     "math1-2012-20": {
       "id": "math1-2012-20",

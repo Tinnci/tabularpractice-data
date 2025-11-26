@@ -12,7 +12,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=55&t=27",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2019/assets/01_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2019/assets/01_a.png",
       "contentMd": "",
@@ -21,7 +21,8 @@
       "answer": "C",
       "tagNames": [
         "确定极限中的参数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2019/assets/01_q_thumb.png"
     },
     "math1-2019-02": {
       "id": "math1-2019-02",
@@ -145,7 +146,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=56&t=1129",
       "contentImg": "/papers/math1-2019/assets/07_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2019/assets/07_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -407,8 +408,8 @@
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=59&t=1154",
-      "contentImg": null,
-      "answerImg": null,
+      "contentImg": "/papers/math1-2019/assets/19_q.png",
+      "answerImg": "/papers/math1-2019/assets/19_ans.png",
       "analysisImg": "/papers/math1-2019/assets/19_a.png",
       "contentMd": "",
       "answerMd": "",
@@ -416,7 +417,8 @@
       "answer": null,
       "tagNames": [
         "重积分的应用"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2019/assets/19_q_thumb.png"
     },
     "math1-2019-20": {
       "id": "math1-2019-20",
@@ -472,7 +474,7 @@
       ],
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=60&t=2458",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2019/assets/22_q.png",
       "answerImg": "/papers/math1-2019/assets/22_ans.png",
       "analysisImg": "/papers/math1-2019/assets/22_a.png",
       "contentMd": "",
@@ -481,7 +483,8 @@
       "answer": null,
       "tagNames": [
         "二维随机变量及其分布"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2019/assets/22_q_thumb.png"
     },
     "math1-2019-23": {
       "id": "math1-2019-23",

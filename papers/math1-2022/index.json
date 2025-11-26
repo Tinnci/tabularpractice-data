@@ -36,7 +36,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=72&t=646",
       "contentImg": "/papers/math1-2022/assets/02_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2022/assets/02_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -100,7 +100,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=72&t=2372",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2022/assets/05_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2022/assets/05_a.png",
       "contentMd": "",
@@ -109,7 +109,8 @@
       "answer": "A",
       "tagNames": [
         "矩阵的相似与相似对角化"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2022/assets/05_q_thumb.png"
     },
     "math1-2022-06": {
       "id": "math1-2022-06",

@@ -168,7 +168,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=20&t=1241",
       "contentImg": "/papers/math1-2013/assets/08_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2013/assets/08_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -189,7 +189,7 @@
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=21&t=12",
       "contentImg": "/papers/math1-2013/assets/09_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2013/assets/09_ans.png",
       "analysisImg": "/papers/math1-2013/assets/09_a.png",
       "contentMd": "",
       "answerMd": "",
@@ -386,7 +386,7 @@
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=23&t=12",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2013/assets/18_q.png",
       "answerImg": "/papers/math1-2013/assets/18_ans.png",
       "analysisImg": "/papers/math1-2013/assets/18_a.png",
       "contentMd": "",
@@ -395,7 +395,8 @@
       "answer": null,
       "tagNames": [
         "微分中值定理"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2013/assets/18_q_thumb.png"
     },
     "math1-2013-19": {
       "id": "math1-2013-19",
@@ -495,7 +496,7 @@
       ],
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=24&t=2080",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2013/assets/23_q.png",
       "answerImg": "/papers/math1-2013/assets/23_ans.png",
       "analysisImg": "/papers/math1-2013/assets/23_a.png",
       "contentMd": "",
@@ -504,7 +505,8 @@
       "answer": null,
       "tagNames": [
         "矩估计和最大似然估计"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2013/assets/23_q_thumb.png"
     }
   },
   "tags": [

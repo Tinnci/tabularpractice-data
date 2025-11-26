@@ -34,7 +34,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=82&t=717",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2024/assets/02_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2024/assets/02_a.png",
       "contentMd": "",
@@ -43,7 +43,8 @@
       "answer": "A",
       "tagNames": [
         "第二类曲面积分"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/02_q_thumb.png"
     },
     "math1-2024-03": {
       "id": "math1-2024-03",
@@ -121,7 +122,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=83&t=16",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2024/assets/06_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2024/assets/06_a.png",
       "contentMd": "",
@@ -130,7 +131,8 @@
       "answer": "D",
       "tagNames": [
         "向量组的线性相关性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/06_q_thumb.png"
     },
     "math1-2024-07": {
       "id": "math1-2024-07",
@@ -166,7 +168,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=83&t=1377",
       "contentImg": "/papers/math1-2024/assets/08_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2024/assets/08_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -274,7 +276,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=84&t=571",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2024/assets/13_q.png",
       "answerImg": "/papers/math1-2024/assets/13_ans.png",
       "analysisImg": "/papers/math1-2024/assets/13_a.png",
       "contentMd": "",
@@ -283,7 +285,8 @@
       "answer": null,
       "tagNames": [
         "傅里叶级数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/13_q_thumb.png"
     },
     "math1-2024-14": {
       "id": "math1-2024-14",
@@ -405,7 +408,7 @@
       ],
       "score": 12,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=85&t=2466",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2024/assets/19_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2024/assets/19_a.png",
       "contentMd": "",
@@ -414,7 +417,8 @@
       "answer": null,
       "tagNames": [
         "泰勒公式"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2024/assets/19_q_thumb.png"
     },
     "math1-2024-20": {
       "id": "math1-2024-20",
@@ -428,7 +432,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=86&t=12",
       "contentImg": "/papers/math1-2024/assets/20_q.png",
       "answerImg": "/papers/math1-2024/assets/20_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2024/assets/20_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",

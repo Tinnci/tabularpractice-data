@@ -166,7 +166,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=32&t=1472",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2015/assets/08_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2015/assets/08_a.png",
       "contentMd": "",
@@ -175,7 +175,8 @@
       "answer": "D",
       "tagNames": [
         "协方差与相关系数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2015/assets/08_q_thumb.png"
     },
     "math1-2015-09": {
       "id": "math1-2015-09",
@@ -431,7 +432,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=36&t=20",
       "contentImg": "/papers/math1-2015/assets/20_q.png",
       "answerImg": "/papers/math1-2015/assets/20_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2015/assets/20_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",

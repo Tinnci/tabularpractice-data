@@ -100,7 +100,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=77&t=3093",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2023/assets/05_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2023/assets/05_a.png",
       "contentMd": "",
@@ -109,7 +109,8 @@
       "answer": "B",
       "tagNames": [
         "矩阵的秩"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/05_q_thumb.png"
     },
     "math1-2023-06": {
       "id": "math1-2023-06",
@@ -231,7 +232,7 @@
       ],
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=79&t=12",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2023/assets/11_q.png",
       "answerImg": "/papers/math1-2023/assets/11_ans.png",
       "analysisImg": "/papers/math1-2023/assets/11_a.png",
       "contentMd": "",
@@ -240,7 +241,8 @@
       "answer": null,
       "tagNames": [
         "确定极限中的参数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2023/assets/11_q_thumb.png"
     },
     "math1-2023-12": {
       "id": "math1-2023-12",
@@ -254,7 +256,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=79&t=327",
       "contentImg": "/papers/math1-2023/assets/12_q.png",
       "answerImg": "/papers/math1-2023/assets/12_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2023/assets/12_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -275,7 +277,7 @@
       "score": 5,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=79&t=550",
       "contentImg": "/papers/math1-2023/assets/13_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2023/assets/13_ans.png",
       "analysisImg": "/papers/math1-2023/assets/13_a.png",
       "contentMd": "",
       "answerMd": "",

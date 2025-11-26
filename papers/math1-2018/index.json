@@ -78,7 +78,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=49&t=1376",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2018/assets/04_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2018/assets/04_a.png",
       "contentMd": "",
@@ -87,7 +87,8 @@
       "answer": "C",
       "tagNames": [
         "定积分的概念、性质及几何意义"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/04_q_thumb.png"
     },
     "math1-2018-05": {
       "id": "math1-2018-05",
@@ -211,7 +212,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=51&t=600",
       "contentImg": "/papers/math1-2018/assets/10_q.png",
       "answerImg": "/papers/math1-2018/assets/10_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2018/assets/10_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -365,7 +366,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=52&t=1443",
       "contentImg": "/papers/math1-2018/assets/17_q.png",
       "answerImg": "/papers/math1-2018/assets/17_ans.png",
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2018/assets/17_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -473,7 +474,7 @@
       ],
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=54&t=1658",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2018/assets/22_q.png",
       "answerImg": "/papers/math1-2018/assets/22_ans.png",
       "analysisImg": "/papers/math1-2018/assets/22_a.png",
       "contentMd": "",
@@ -482,7 +483,8 @@
       "answer": null,
       "tagNames": [
         "协方差与相关系数"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2018/assets/22_q_thumb.png"
     },
     "math1-2018-23": {
       "id": "math1-2018-23",
@@ -495,7 +497,7 @@
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=54&t=2151",
       "contentImg": "/papers/math1-2018/assets/23_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2018/assets/23_ans.png",
       "analysisImg": "/papers/math1-2018/assets/23_a.png",
       "contentMd": "",
       "answerMd": "",

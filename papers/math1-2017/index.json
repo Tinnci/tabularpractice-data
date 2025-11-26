@@ -58,7 +58,7 @@
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=43&t=1186",
       "contentImg": "/papers/math1-2017/assets/03_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2017/assets/03_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
@@ -299,7 +299,7 @@
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=45&t=2478",
       "contentImg": "/papers/math1-2017/assets/14_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2017/assets/14_ans.png",
       "analysisImg": "/papers/math1-2017/assets/14_a.png",
       "contentMd": "",
       "answerMd": "",
@@ -342,7 +342,7 @@
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=46&t=605",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2017/assets/16_q.png",
       "answerImg": "/papers/math1-2017/assets/16_ans.png",
       "analysisImg": "/papers/math1-2017/assets/16_a.png",
       "contentMd": "",
@@ -351,7 +351,8 @@
       "answer": null,
       "tagNames": [
         "定积分的概念、性质及几何意义"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2017/assets/16_q_thumb.png"
     },
     "math1-2017-17": {
       "id": "math1-2017-17",

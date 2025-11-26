@@ -12,7 +12,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=25&t=29",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2014/assets/01_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2014/assets/01_a.png",
       "contentMd": "",
@@ -21,7 +21,8 @@
       "answer": "C",
       "tagNames": [
         "曲线的凹凸性、拐点及渐近线"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/01_q_thumb.png"
     },
     "math1-2014-02": {
       "id": "math1-2014-02",
@@ -165,16 +166,17 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=26&t=1029",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2014/assets/08_q.png",
       "answerImg": null,
-      "analysisImg": null,
+      "analysisImg": "/papers/math1-2014/assets/08_a.png",
       "contentMd": "",
       "answerMd": "",
       "analysisMd": "",
       "answer": "D",
       "tagNames": [
         "数学期望与方差"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/08_q_thumb.png"
     },
     "math1-2014-09": {
       "id": "math1-2014-09",
@@ -186,7 +188,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=27&t=20",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2014/assets/09_q.png",
       "answerImg": "/papers/math1-2014/assets/09_ans.png",
       "analysisImg": "/papers/math1-2014/assets/09_a.png",
       "contentMd": "",
@@ -195,7 +197,8 @@
       "answer": null,
       "tagNames": [
         "多元函数微分学的几何应用"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2014/assets/09_q_thumb.png"
     },
     "math1-2014-10": {
       "id": "math1-2014-10",

@@ -56,7 +56,7 @@
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=1&t=847",
-      "contentImg": null,
+      "contentImg": "/papers/math1-2010/assets/03_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2010/assets/03_a.png",
       "contentMd": "",
@@ -65,7 +65,8 @@
       "answer": "D",
       "tagNames": [
         "反常积分的计算与敛散性"
-      ]
+      ],
+      "contentImgThumb": "/papers/math1-2010/assets/03_q_thumb.png"
     },
     "math1-2010-04": {
       "id": "math1-2010-04",
@@ -188,7 +189,7 @@
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=3&t=12",
       "contentImg": "/papers/math1-2010/assets/09_q.png",
-      "answerImg": null,
+      "answerImg": "/papers/math1-2010/assets/09_ans.png",
       "analysisImg": "/papers/math1-2010/assets/09_a.png",
       "contentMd": "",
       "answerMd": "",
