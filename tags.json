@@ -35,6 +35,11 @@
     "parentId": "han-shu-ji-xian-lian-xu"
   },
   {
+    "id": "han-shu-de-qi-ou-xing-yu-zhou-qi-xing",
+    "name": "函数的奇偶性与周期性",
+    "parentId": "han-shu-ji-xian-lian-xu"
+  },
+  {
     "id": "yi-yuan-han-shu-wei-fen-xue",
     "name": "一元函数微分学",
     "parentId": "gao-deng-shu-xue"
@@ -200,6 +205,11 @@
     "parentId": "duo-yuan-han-shu-ji-fen-xue"
   },
   {
+    "id": "gao-si-gong-shi",
+    "name": "高斯公式",
+    "parentId": "duo-yuan-han-shu-ji-fen-xue"
+  },
+  {
     "id": "wu-qiong-ji-shu",
     "name": "无穷级数",
     "parentId": "gao-deng-shu-xue"
@@ -262,6 +272,11 @@
   {
     "id": "wei-fen-fang-cheng-de-ying-yong",
     "name": "微分方程的应用",
+    "parentId": "chang-wei-fen-fang-cheng"
+  },
+  {
+    "id": "quan-wei-fen-fang-cheng",
+    "name": "全微分方程",
     "parentId": "chang-wei-fen-fang-cheng"
   },
   {
@@ -417,6 +432,11 @@
   {
     "id": "jia-she-jian-yan",
     "name": "假设检验",
+    "parentId": "can-shu-gu-ji-yu-jia-she-jian-yan"
+  },
+  {
+    "id": "gu-ji-liang-de-you-xiao-xing",
+    "name": "估计量的有效性",
     "parentId": "can-shu-gu-ji-yu-jia-she-jian-yan"
   }
 ]
