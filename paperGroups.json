@@ -2,11 +2,13 @@
     {
         "id": "math1",
         "name": "2009-2025数学一",
-        "type": "unified"
+        "type": "unified",
+        "subjectKey": "math"
     },
     {
         "id": "zhangyu-4",
         "name": "张宇四套卷",
-        "type": "unified"
+        "type": "unified",
+        "subjectKey": "math"
     }
 ]

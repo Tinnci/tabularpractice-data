@@ -73,14 +73,16 @@ Defines the classification of exam subjects (Unified vs. Self-Proposed).
   {
     "id": "math1",
     "name": "数学一",
-    "type": "unified"      // "unified" | "self_proposed"
+    "type": "unified",      // "unified" | "self_proposed"
+    "subjectKey": "math"    // "math" | "english" | "politics" | "cs" | "other"
   },
   {
     "id": "shu-812",
     "name": "上海大学 812",
     "type": "self_proposed",
     "university": "上海大学",
-    "courseCode": "812"
+    "courseCode": "812",
+    "subjectKey": "cs"
   }
 ]
 ```
