@@ -94,6 +94,7 @@ Loaded lazily when a user selects a specific paper.
 ```json
 {
   "paperId": "math1-2025",
+  "subjectKey": "math",   // [Optional] Force specific subject knowledge tree, e.g. "math"
   "year": "2025",
   "tags": [               // [New] Aggregated tags for the entire paper
     "han-shu-ji-xian",
