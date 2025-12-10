@@ -8,7 +8,7 @@
       "number": 1,
       "type": "choice",
       "tags": [
-        "qu-xian-de-ao-tu-xing-guai-dian-ji-jian-jin-xian"
+        "concavity-asymptote"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=25&t=29",
@@ -30,7 +30,7 @@
       "number": 2,
       "type": "choice",
       "tags": [
-        "qu-xian-de-ao-tu-xing-guai-dian-ji-jian-jin-xian"
+        "concavity-asymptote"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=25&t=770",
@@ -52,7 +52,7 @@
       "number": 3,
       "type": "choice",
       "tags": [
-        "jiao-huan-ji-fen-ci-xu-yu-zuo-biao-xi-zhi-jian-de-zhuan-hua"
+        "integral-order-transform"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=25&t=1595",
@@ -74,7 +74,7 @@
       "number": 4,
       "type": "choice",
       "tags": [
-        "ding-ji-fen-de-ji-suan"
+        "definite-integral-calculation"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=25&t=2549",
@@ -96,7 +96,7 @@
       "number": 5,
       "type": "choice",
       "tags": [
-        "xing-lie-shi"
+        "determinant"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=26&t=20",
@@ -118,7 +118,7 @@
       "number": 6,
       "type": "choice",
       "tags": [
-        "xiang-liang-zu-de-xian-xing-xiang-guan-xing"
+        "linear-dependence"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=26&t=224",
@@ -140,7 +140,7 @@
       "number": 7,
       "type": "choice",
       "tags": [
-        "sui-ji-shi-jian-he-gai-lv"
+        "random-event"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=26&t=742",
@@ -162,7 +162,7 @@
       "number": 8,
       "type": "choice",
       "tags": [
-        "shu-xue-qi-wang-yu-fang-cha"
+        "expectation-variance"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=26&t=1029",
@@ -184,7 +184,7 @@
       "number": 9,
       "type": "fill",
       "tags": [
-        "duo-yuan-han-shu-wei-fen-xue-de-ji-he-ying-yong"
+        "multivariable-geometry"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=27&t=20",
@@ -206,7 +206,7 @@
       "number": 10,
       "type": "fill",
       "tags": [
-        "ding-ji-fen-de-ji-suan"
+        "definite-integral-calculation"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=27&t=419",
@@ -228,7 +228,7 @@
       "number": 11,
       "type": "fill",
       "tags": [
-        "ke-fen-li-bian-liang-de-wei-fen-fang-cheng-yu-qi-ci-fang-cheng"
+        "separable-homogeneous"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=27&t=788",
@@ -250,7 +250,7 @@
       "number": 12,
       "type": "fill",
       "tags": [
-        "di-er-lei-qu-xian-ji-fen"
+        "line-integral-type2"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=27&t=1432",
@@ -272,7 +272,7 @@
       "number": 13,
       "type": "fill",
       "tags": [
-        "er-ci-xing"
+        "quadratic-form"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=27&t=2610",
@@ -294,7 +294,7 @@
       "number": 14,
       "type": "fill",
       "tags": [
-        "gu-ji-liang-de-wu-pian-xing"
+        "estimator-unbiased"
       ],
       "score": 4,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=27&t=3050",
@@ -316,7 +316,7 @@
       "number": 15,
       "type": "answer",
       "tags": [
-        "han-shu-ji-xian-de-ji-suan"
+        "limit-calculation"
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=28&t=20",
@@ -338,7 +338,7 @@
       "number": 16,
       "type": "answer",
       "tags": [
-        "han-shu-de-dan-diao-xing-ji-zhi-yu-zui-zhi"
+        "monotonicity-extremum"
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=28&t=786",
@@ -360,7 +360,7 @@
       "number": 17,
       "type": "answer",
       "tags": [
-        "chang-xi-shu-fei-qi-ci-xian-xing-wei-fen-fang-cheng"
+        "constant-coefficient-nonhomogeneous"
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=28&t=1523",
@@ -382,7 +382,7 @@
       "number": 18,
       "type": "answer",
       "tags": [
-        "di-er-lei-qu-mian-ji-fen"
+        "surface-integral-type2"
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=29&t=20",
@@ -404,7 +404,7 @@
       "number": 19,
       "type": "answer",
       "tags": [
-        "chang-shu-xiang-ji-shu-lian-san-xing-de-pan-ding"
+        "series-convergence"
       ],
       "score": 10,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=29&t=1495",
@@ -426,7 +426,7 @@
       "number": 20,
       "type": "answer",
       "tags": [
-        "xian-xing-fang-cheng-zu"
+        "linear-system"
       ],
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=30&t=20",
@@ -448,7 +448,7 @@
       "number": 21,
       "type": "answer",
       "tags": [
-        "ju-zhen-de-xiang-si-yu-xiang-si-dui-jiao-hua"
+        "matrix-diagonalization"
       ],
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=30&t=578",
@@ -470,7 +470,7 @@
       "number": 22,
       "type": "answer",
       "tags": [
-        "shu-xue-qi-wang-yu-fang-cha"
+        "expectation-variance"
       ],
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=30&t=1142",
@@ -492,7 +492,7 @@
       "number": 23,
       "type": "answer",
       "tags": [
-        "da-shu-ding-lv-he-zhong-xin-ji-xian-ding-li"
+        "law-of-large-numbers"
       ],
       "score": 11,
       "videoUrl": "https://www.bilibili.com/video/BV1Ut411p7k3?p=30&t=1845",
@@ -510,25 +510,25 @@
     }
   },
   "tags": [
-    "chang-shu-xiang-ji-shu-lian-san-xing-de-pan-ding",
-    "chang-xi-shu-fei-qi-ci-xian-xing-wei-fen-fang-cheng",
-    "da-shu-ding-lv-he-zhong-xin-ji-xian-ding-li",
-    "di-er-lei-qu-mian-ji-fen",
-    "di-er-lei-qu-xian-ji-fen",
-    "ding-ji-fen-de-ji-suan",
-    "duo-yuan-han-shu-wei-fen-xue-de-ji-he-ying-yong",
-    "er-ci-xing",
-    "gu-ji-liang-de-wu-pian-xing",
-    "han-shu-de-dan-diao-xing-ji-zhi-yu-zui-zhi",
-    "han-shu-ji-xian-de-ji-suan",
-    "jiao-huan-ji-fen-ci-xu-yu-zuo-biao-xi-zhi-jian-de-zhuan-hua",
-    "ju-zhen-de-xiang-si-yu-xiang-si-dui-jiao-hua",
-    "ke-fen-li-bian-liang-de-wei-fen-fang-cheng-yu-qi-ci-fang-cheng",
-    "qu-xian-de-ao-tu-xing-guai-dian-ji-jian-jin-xian",
-    "shu-xue-qi-wang-yu-fang-cha",
-    "sui-ji-shi-jian-he-gai-lv",
-    "xian-xing-fang-cheng-zu",
-    "xiang-liang-zu-de-xian-xing-xiang-guan-xing",
-    "xing-lie-shi"
+    "series-convergence",
+    "constant-coefficient-nonhomogeneous",
+    "law-of-large-numbers",
+    "surface-integral-type2",
+    "line-integral-type2",
+    "definite-integral-calculation",
+    "multivariable-geometry",
+    "quadratic-form",
+    "estimator-unbiased",
+    "monotonicity-extremum",
+    "limit-calculation",
+    "integral-order-transform",
+    "matrix-diagonalization",
+    "separable-homogeneous",
+    "concavity-asymptote",
+    "expectation-variance",
+    "random-event",
+    "linear-system",
+    "linear-dependence",
+    "determinant"
   ]
 }
