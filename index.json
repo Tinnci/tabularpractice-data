@@ -5140,7 +5140,6 @@
     "type": "choice",
     "tags": [
       "random-event",
-      "hypothesis-testing",
       "hypothesis-testing"
     ],
     "subject": "math",
@@ -5155,7 +5154,6 @@
     "type": "choice",
     "tags": [
       "random-event",
-      "estimator-unbiased",
       "estimator-unbiased"
     ],
     "subject": "math",
@@ -5241,7 +5239,6 @@
     "type": "fill",
     "tags": [
       "random-event",
-      "estimation-methods",
       "estimation-methods"
     ],
     "subject": "math",
@@ -5256,8 +5253,7 @@
     "type": "answer",
     "tags": [
       "multivariable-extremum",
-      "total-differential",
-      "multivariable-extremum"
+      "total-differential"
     ],
     "subject": "math",
     "category": "zhangyu-4",
@@ -5286,7 +5282,6 @@
     "type": "answer",
     "tags": [
       "inequality-proof",
-      "mean-value-theorem",
       "mean-value-theorem"
     ],
     "subject": "math",
@@ -5316,8 +5311,6 @@
     "type": "answer",
     "tags": [
       "linear-algebra",
-      "matrix-diagonalization",
-      "matrix-diagonalization",
       "matrix-diagonalization"
     ],
     "subject": "math",
@@ -5333,7 +5326,6 @@
     "tags": [
       "random-event",
       "two-dimensional-variable",
-      "marginal-conditional",
       "marginal-conditional"
     ],
     "subject": "math",
