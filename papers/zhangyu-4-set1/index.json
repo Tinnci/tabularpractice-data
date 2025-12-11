@@ -159,7 +159,7 @@
       ],
       "contentMd": "$\\text{grad} \\left( x^2y + \\frac{z}{y} \\right) \\bigg|_{(1,1,2)} = $ ______.",
       "answerMd": "(2, -1, 1)",
-      "analysisMd": "本题考查**方向导数和梯度**及**多元函数微分学**。\n\n1. **计算偏导数**：\n   设 $u(x,y,z) = x^2y + \\frac{z}{y}$。\n   - $\\frac{\\partial u}{\\partial x} = 2xy$。\n   - $\\frac{\\partial u}{\\partial y} = x^2 - \\frac{z}{y^2}$。\n   - $\\frac{\\partial u}{\\partial z} = \\frac{1}{y}$。\n\n2. **代入点 $(1,1,2)$**：\n   - $\\frac{\\partial u}{\\partial x}\\big|_{(1,1,2)} = 2(1)(1) = 2$。\n   - $\\frac{\\partial u}{\\partial y}\\big|_{(1,1,2)} = 1^2 - \\frac{2}{1^2} = -1$。\n   - $\\frac{\\partial u}{\\partial z}\\big|_{(1,1,2)} = \\frac{1}{1} = 1$。\n\n3. **结论**：\n   梯度 $\\text{grad } u = (2, -1, 1)$。",
+      "analysisMd": "本题考查**方向导数和梯度**及**多元函数微分学**。\n\n1. **梯度的定义**：\n   函数 $u=f(x,y,z)$ 在某点的梯度 $\\text{grad } u$ 是一个向量，其坐标为该点处的三个偏导数 $\\left(\\frac{\\partial u}{\\partial x}, \\frac{\\partial u}{\\partial y}, \\frac{\\partial u}{\\partial z}\\right)$。\n\n2. **计算偏导数**：\n   设 $u(x,y,z) = x^2y + \\frac{z}{y} = x^2y + zy^{-1}$。\n   - $\\frac{\\partial u}{\\partial x} = 2xy$。\n   - $\\frac{\\partial u}{\\partial y} = x^2 - zy^{-2} = x^2 - \\frac{z}{y^2}$。\n   - $\\frac{\\partial u}{\\partial z} = \\frac{1}{y}$。\n\n3. **代入点 $(1,1,2)$**：\n   - $\\frac{\\partial u}{\\partial x}\\big|_{(1,1,2)} = 2(1)(1) = 2$。\n   - $\\frac{\\partial u}{\\partial y}\\big|_{(1,1,2)} = 1^2 - \\frac{2}{1^2} = 1 - 2 = -1$。\n   - $\\frac{\\partial u}{\\partial z}\\big|_{(1,1,2)} = \\frac{1}{1} = 1$。\n\n4. **结论**：\n   梯度 $\\text{grad } u \\big|_{(1,1,2)} = (2, -1, 1)$。",
       "videoUrl": ""
     },
     "zhangyu-4-set1-12": {
@@ -187,7 +187,7 @@
       ],
       "contentMd": "$\\sum_{n=0}^{\\infty} (-1)^n \\frac{2n}{(2n+1)!} = $ ______.",
       "answerMd": "cos(1) - sin(1)",
-      "analysisMd": "本题考查**无穷级数**求和，特别是**幂级数的和函数及幂级数展开式**。\n\n1. **通项变形**：\n   $$ (-1)^n \\frac{2n}{(2n+1)!} = (-1)^n \\frac{(2n+1)-1}{(2n+1)!} = (-1)^n \\left[ \\frac{1}{(2n)!} - \\frac{1}{(2n+1)!} \\right] $$\n\n2. **拆分级数**：\n   原式 $= \\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n)!} - \\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n+1)!}$。\n\n3. **利用已知展开式**：\n   - $\\cos x = \\sum_{n=0}^{\\infty} (-1)^n \\frac{x^{2n}}{(2n)!}$。当 $x=1$ 时，$\\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n)!} = \\cos 1$。\n   - $\\sin x = \\sum_{n=0}^{\\infty} (-1)^n \\frac{x^{2n+1}}{(2n+1)!}$。当 $x=1$ 时，$\\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n+1)!} = \\sin 1$。\n\n4. **结论**：\n   原式 $= \\cos 1 - \\sin 1$。",
+      "analysisMd": "本题考查**无穷级数**求和，特别是**幂级数的和函数及常见麦克劳林展开式**。\n\n1. **通项变形**：\n   观察通项 $(-1)^n \\frac{2n}{(2n+1)!}$，尝试拆分分子以匹配分母阶乘。\n   $$ (-1)^n \\frac{2n}{(2n+1)!} = (-1)^n \\frac{(2n+1)-1}{(2n+1)!} = (-1)^n \\left[ \\frac{1}{(2n)!} - \\frac{1}{(2n+1)!} \\right] $$\n\n2. **拆分级数**：\n   原式 $= \\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n)!} - \\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n+1)!}$。\n\n3. **利用已知展开式**：\n   回忆常见函数的麦克劳林级数：\n   - $\\cos x = \\sum_{n=0}^{\\infty} (-1)^n \\frac{x^{2n}}{(2n)!}, \\quad x \\in (-\\infty, +\\infty)$。\n     取 $x=1$，得 $\\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n)!} = \\cos 1$。\n   - $\\sin x = \\sum_{n=0}^{\\infty} (-1)^n \\frac{x^{2n+1}}{(2n+1)!}, \\quad x \\in (-\\infty, +\\infty)$。\n     取 $x=1$，得 $\\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n+1)!} = \\sin 1$。\n\n4. **结论**：\n   原式 $= \\cos 1 - \\sin 1$。",
       "videoUrl": ""
     },
     "zhangyu-4-set1-14": {
