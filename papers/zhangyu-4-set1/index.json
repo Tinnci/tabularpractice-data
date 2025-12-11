@@ -32,6 +32,25 @@
             }
           ]
         },
+        "modelLineup": {
+          "question": "下面哪个积分的阶数判断模型最适合这道题？",
+          "options": [
+            {
+              "id": "direct",
+              "label": "直接代入上限",
+              "formula": "∫_0^g(x) f(t)dt ~ f(g(x)) * g(x)",
+              "isCorrect": false,
+              "feedback": "不对。变上限积分的阶数通常是‘被积函数主部阶数’+1（当上限是x时）。"
+            },
+            {
+              "id": "order-plus-one",
+              "label": "阶数提升模型",
+              "formula": "若 f(t)~t^k, 则 ∫_0^x f(t)dt ~ x^(k+1)/(k+1)",
+              "isCorrect": true,
+              "feedback": "正确！积分运算本质上是求面积，会使无穷小量的阶数+1（对于幂函数而言）。"
+            }
+          ]
+        },
         "insight": "判断变上限积分的无穷小阶数，核心是：积分过程将‘被积函数的主部阶数’提升了1阶（如果是从0积到x）。"
       }
     },
@@ -61,6 +80,32 @@
               "type": "function",
               "label": "忘记了特征根与解的形式的关系",
               "hint": "特征根 r = u ± iv 对应的解包含 e^(ux)sin(vx)。要想由于周期性，必须 u=0。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "哪种特征根对应周期性震荡解？",
+          "options": [
+            {
+              "id": "real-distinct",
+              "label": "两个不等实根",
+              "formula": "r1 ≠ r2",
+              "isCorrect": false,
+              "feedback": "不对。实根对应的是指数函数 e^(rx)，是单调或发散的，不是周期的。"
+            },
+            {
+              "id": "complex",
+              "label": "一对共轭复根",
+              "formula": "r = u ± iv",
+              "isCorrect": false,
+              "feedback": "不完全对。复根对应 e^(ux)*sin(vx)。如果 u!=0，震荡幅度会变化（衰减或发散），不是纯周期。"
+            },
+            {
+              "id": "pure-imaginary",
+              "label": "纯虚根",
+              "formula": "r = ± iv (u=0)",
+              "isCorrect": true,
+              "feedback": "正确！纯虚根对应 sin(vx) 和 cos(vx)，这才是稳定的周期函数。"
             }
           ]
         },
@@ -96,6 +141,25 @@
             }
           ]
         },
+        "modelLineup": {
+          "question": "面对 e^(y/x) 这种积不出来的函数，最佳策略是？",
+          "options": [
+            {
+              "id": "ibp",
+              "label": "分部积分法",
+              "formula": "∫udv = uv - ∫vdu",
+              "isCorrect": false,
+              "feedback": "通常行不通。e^(y/x) 很难找到合适的 u 和 dv 来消除复杂性。"
+            },
+            {
+              "id": "swap",
+              "label": "交换积分次序",
+              "formula": "∫dx∫dy -> ∫dy∫dx",
+              "isCorrect": true,
+              "feedback": "正确！先对 y 积分时，x 是常数，e^(y/x) 就变成了 e^(ky) 形式，非常容易积分。"
+            }
+          ]
+        },
         "insight": "遇到这 e^(y/x) 或 sin(x^2) 这种‘基本函数积不出来’的情况，首先想到交换积分次序！"
       }
     },
@@ -125,6 +189,25 @@
               "type": "analogy",
               "label": "没想到用麦克劳林公式",
               "hint": "f'''(0) 其实就是麦克劳林展开式中 x^3 项系数的 3! 倍。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "求高阶导数 f'''(0) 最快的方法是？",
+          "options": [
+            {
+              "id": "direct-diff",
+              "label": "直接求导公式",
+              "formula": "(u/v)' = ...",
+              "isCorrect": false,
+              "feedback": "太慢了。对于分式求三阶导数，计算量巨大且极易出错。"
+            },
+            {
+              "id": "maclaurin",
+              "label": "麦克劳林级数展开",
+              "formula": "f(x) = Σ f^(n)(0)/n! * x^n",
+              "isCorrect": true,
+              "feedback": "正确！直接展开找 x^3 的系数 a_3，那么 f'''(0) = 3! * a_3。秒杀！"
             }
           ]
         },
@@ -169,6 +252,25 @@
             }
           ]
         },
+        "modelLineup": {
+          "question": "判断能否线性表示的关键判据是？",
+          "options": [
+            {
+              "id": "det",
+              "label": "行列式是否为0",
+              "formula": "|A| = 0",
+              "isCorrect": false,
+              "feedback": "不全面。行列式只适用于 n 个 n 维向量。这里向量个数和维数未定。"
+            },
+            {
+              "id": "rank",
+              "label": "秩的增广性",
+              "formula": "r(A) = r(A, β) vs r(A) < r(A, β)",
+              "isCorrect": true,
+              "feedback": "正确！如果加进去一个向量 β 后秩增加了，说明 β 独立于前面的向量（不能被表示）。"
+            }
+          ]
+        },
         "insight": "‘不可表示’往往意味着‘维度增加’或‘独立性’。如果缺了谁就不能表示，那‘谁’一定是关键要素。"
       }
     },
@@ -202,6 +304,20 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "2个线性无关解",
+            "currentRole": "解的个数",
+            "suggestedRole": "秩的亏损数",
+            "transformation": "n - r(A) = 2 <=> r(A) = n - 2"
+          },
+          {
+            "target": "A*x=0",
+            "currentRole": "伴随矩阵方程",
+            "suggestedRole": "秩为0或1的方程",
+            "transformation": "r(A)=n-2 => r(A*)=0 => A*=O"
+          }
+        ],
         "insight": "这是一个经典的‘秩的阶梯’结论：r(A)降两阶，A*直接归零。A*归零意味着 A*x=0 的解是全体空间。"
       }
     },
@@ -232,6 +348,32 @@
               "type": "rule",
               "label": "不了解随机矩阵的谱半径性质",
               "hint": "正矩阵且行和固定为k，则谱半径（最大特征值模长）就是k。这是盖尔圆盘定理的一个推论。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "这道题描述的是哪类特殊矩阵？",
+          "options": [
+            {
+              "id": "symmetric",
+              "label": "实对称矩阵",
+              "formula": "A^T = A",
+              "isCorrect": false,
+              "feedback": "题目没说对称。只说了行和固定。"
+            },
+            {
+              "id": "stochastic",
+              "label": "随机矩阵 (行和固定)",
+              "formula": "Σ a_ij = 1",
+              "isCorrect": true,
+              "feedback": "正确！随机矩阵有一个重要性质：最大特征值为1（谱半径为1）。"
+            },
+            {
+              "id": "orthogonal",
+              "label": "正交矩阵",
+              "formula": "A^T A = E",
+              "isCorrect": false,
+              "feedback": "正交矩阵行向量模长为1且正交，题目只给了行和条件。"
             }
           ]
         },
@@ -268,6 +410,25 @@
             }
           ]
         },
+        "modelLineup": {
+          "question": "应该用哪个协方差公式？",
+          "options": [
+            {
+              "id": "independent",
+              "label": "独立变量",
+              "formula": "Cov(X, Y) = 0",
+              "isCorrect": false,
+              "feedback": "不对。总样本数 n 是固定的，取到一个 -1 就少一个机会取 0，它们不独立。"
+            },
+            {
+              "id": "multinomial",
+              "label": "多项分布",
+              "formula": "Cov(Ni, Nj) = -n * pi * pj",
+              "isCorrect": true,
+              "feedback": "正确！就像从同一个蛋糕切分，你多切一块，我就少一块，必然负相关。"
+            }
+          ]
+        },
         "insight": "多项分布中，任意两个不同类别的频数总是‘此消彼长’的，因此协方差 Cov(Ni, Nj) = -n*pi*pj 总是负的。"
       }
     },
@@ -300,6 +461,14 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "β (第二类错误)",
+            "currentRole": "错误概率",
+            "suggestedRole": "条件概率 P(接受H0 | H1真)",
+            "transformation": "P(X_bar <= 20 | μ=20.5)"
+          }
+        ],
         "insight": "求第二类错误概率，本质上就是求在 H1 参数（μ=20.5）条件下，样本均值落在 H0 接受域（<=20）内的概率。"
       }
     },
@@ -330,6 +499,25 @@
               "type": "function",
               "label": "计算方差最小值时卡住了",
               "hint": "利用拉格朗日乘数法，或者直接把k1代入k2的式子变成一元二次求导。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "评价估计量好坏的标准是？",
+          "options": [
+            {
+              "id": "unbiased-only",
+              "label": "仅无偏性",
+              "formula": "E(θ_hat) = θ",
+              "isCorrect": false,
+              "feedback": "不够。无偏估计有很多，还需要看波动大小。"
+            },
+            {
+              "id": "efficiency",
+              "label": "有效性 (最小方差)",
+              "formula": "D(θ_hat) 最小",
+              "isCorrect": true,
+              "feedback": "正确！所谓‘最有效’就是在所有无偏估计中，方差最小的那一个。"
             }
           ]
         },
@@ -373,6 +561,14 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "(1,1,2)",
+            "currentRole": "几何坐标点",
+            "suggestedRole": "求值代入点",
+            "transformation": "grad f |_(1,1,2) = (fx(1,1,2), fy(1,1,2), fz(1,1,2))"
+          }
+        ],
         "insight": "梯度是向量，标量场变化最快的方向。计算上就是纯粹的偏导数计算，细心即可。"
       }
     },
@@ -402,6 +598,32 @@
               "type": "function",
               "label": "求 limit (y-kx) 时算出 0 或无穷",
               "hint": "这一步往往需要泰勒展开。e^(1/(x+1)) 展开成 1 + 1/(x+1) + ... 试试？"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "这道题求的是哪种渐近线？",
+          "options": [
+            {
+              "id": "vertical",
+              "label": "铅直渐近线",
+              "formula": "x -> x0, y -> ∞",
+              "isCorrect": false,
+              "feedback": "虽然 x=-1 是铅直渐近线，但题目问的是斜渐近线。"
+            },
+            {
+              "id": "horizontal",
+              "label": "水平渐近线",
+              "formula": "x -> ∞, y -> A",
+              "isCorrect": false,
+              "feedback": "lim(x->∞) y = ∞，不存在水平渐近线。"
+            },
+            {
+              "id": "oblique",
+              "label": "斜渐近线",
+              "formula": "y = kx + b",
+              "isCorrect": true,
+              "feedback": "正确！当 x->∞ 时 y 也趋于无穷且同阶，存在斜渐近线。"
             }
           ]
         },
@@ -515,6 +737,14 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "y/x",
+            "currentRole": "变量比值",
+            "suggestedRole": "新变量 u",
+            "transformation": "令 y = ux, dy = udx + xdu"
+          }
+        ],
         "insight": "遇到 Ax+By+C 形式的系数，第一反应总是：平移坐标系，把原点移到直线交点，把它变成齐次方程。"
       }
     },
@@ -545,6 +775,25 @@
               "type": "function",
               "label": "矩阵乘法算错了",
               "hint": "B^T A 是 3x3 矩阵。注意矩阵乘法不仅要对应相乘，还要行列对应：行乘列。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "如何理解“解均是...的解”？",
+          "options": [
+            {
+              "id": "equal",
+              "label": "两个方程组同解",
+              "formula": "S1 = S2",
+              "isCorrect": false,
+              "feedback": "题目说“不同解”，所以包含关系是真子集。"
+            },
+            {
+              "id": "subset",
+              "label": "解集包含",
+              "formula": "S1 ⊂ S2",
+              "isCorrect": true,
+              "feedback": "正确！I 的解也是 II 的解，说明 I 的约束比 II 更强（方程更多或更独立）。"
             }
           ]
         },
@@ -581,6 +830,14 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "L(μ, θ)",
+            "currentRole": "联合概率密度乘积",
+            "suggestedRole": "关于参数的函数",
+            "transformation": "把样本值 x_i 看作常数，μ, θ 看作变量求极值。"
+          }
+        ],
         "insight": "最大似然估计的关键步骤往往是第一步：利用总概率为1找到参数间的依赖关系，减少未知数个数。"
       }
     },
@@ -614,6 +871,14 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "-2xe^(-y)",
+            "currentRole": "x方向偏增量系数",
+            "suggestedRole": "偏导数 ∂z/∂x",
+            "transformation": "Δz ~ AΔx + BΔy => A = ∂z/∂x"
+          }
+        ],
         "insight": "全微分 dz = P dx + Q dy。还原函数的标准流程：先对 x 积分 P 得到 z = ∫P dx + φ(y)，再对 y 求导确定 φ(y)。"
       }
     },
@@ -644,6 +909,25 @@
               "type": "constraint",
               "label": "不知道怎么处理分段点 x=1 的常数",
               "hint": "分段微分方程会产生两个积分常数 C1, C2。必须利用函数在 x=1 处的连续性条件建立方程，解出它们的关系。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "分段函数微分方程最关键的步骤是？",
+          "options": [
+            {
+              "id": "separate",
+              "label": "分段求解",
+              "formula": "y1(x), y2(x)",
+              "isCorrect": false,
+              "feedback": "这一步是基础，但最关键的是如何确定两个不同段的积分常数。"
+            },
+            {
+              "id": "connect",
+              "label": "利用连续性缝合",
+              "formula": "y(1-) = y(1+)",
+              "isCorrect": true,
+              "feedback": "正确！分段点的函数值连续是连接两段解的唯一桥梁。"
             }
           ]
         },
@@ -680,6 +964,32 @@
             }
           ]
         },
+        "modelLineup": {
+          "question": "证明积分中值公式通常用什么工具？",
+          "options": [
+            {
+              "id": "lagrange",
+              "label": "拉格朗日中值定理",
+              "formula": "f(b)-f(a) = f'(ξ)(b-a)",
+              "isCorrect": false,
+              "feedback": "不太够。拉格朗日处理的是函数差，这里是积分形式。"
+            },
+            {
+              "id": "integral-mvt",
+              "label": "积分中值定理",
+              "formula": "∫f(x)dx = f(ξ)(b-a)",
+              "isCorrect": false,
+              "feedback": "这是基础。但题目中有 f''，说明需要更高阶的工具。"
+            },
+            {
+              "id": "taylor",
+              "label": "泰勒公式展开",
+              "formula": "f(x) = f(x0) + f'(x0)(x-x0) + ...",
+              "isCorrect": true,
+              "feedback": "正确！只有泰勒公式能把函数展开成多项式及高阶导数余项，便于积分处理。"
+            }
+          ]
+        },
         "insight": "定积分中值证明题，如果出现“中点”或“对称区间”，99% 是在利用奇偶性消去泰勒展开的一次项。"
       }
     },
@@ -713,6 +1023,14 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "任意闭曲面 Σ",
+            "currentRole": "积分区域",
+            "suggestedRole": "试探函数 (Test Function)",
+            "transformation": "任意 Σ 积分由高斯公式转为任意 Ω 体积分 => 被积函数恒为 0"
+          }
+        ],
         "insight": "看到闭曲面积分，首先想高斯公式。看到“任意区域积分等于0”，立刻得到“被积函数为0”的微分方程。"
       }
     },
@@ -743,6 +1061,25 @@
               "type": "function",
               "label": "不知道怎么同时对角化",
               "hint": "口诀：先正定，后普通。先把正定矩阵 A 化为单位阵，再把 B 在变换后的基下对角化。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "正交相似和合同的区别？",
+          "options": [
+            {
+              "id": "similarity",
+              "label": "正交相似",
+              "formula": "Q^T AQ = B (Q正交)",
+              "isCorrect": true,
+              "feedback": "要求极高：不仅特征值相同，而且迹、行列式都必须相同。"
+            },
+            {
+              "id": "congruence",
+              "label": "合同",
+              "formula": "C^T AC = B (C可逆)",
+              "isCorrect": false,
+              "feedback": "相对宽松：只要求正负惯性指数相同（特征值正负个数相同），迹可以不同。"
             }
           ]
         },
@@ -779,6 +1116,14 @@
             }
           ]
         },
+        "variableRoles": [
+          {
+            "target": "X=1/2",
+            "currentRole": "条件",
+            "suggestedRole": "切片 (Slice)",
+            "transformation": "把二维曲面 z=f(x,y) 沿着 x=1/2 切一刀，得到关于 y 的一维分布曲线。"
+          }
+        ],
         "insight": "判断二维变量独立性，直接看密度函数中有没有 x 和 y 纠缠在一起的项（如 xy, x/y, x+y 在指数上等）。"
       }
     }
