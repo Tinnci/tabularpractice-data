@@ -15,7 +15,25 @@
       "contentMd": "当 $x \\to 0^+$ 时，下列无穷小量中，最高阶的是\n\nA. $\\int_0^{x^2} (e^{t^2} + 1) dt$\n\nB. $\\int_0^x \\ln(1+\\sqrt{t^3}) dt$\n\nC. $\\int_0^{\\sin x} \\cos t^2 dt$\n\nD. $\\int_0^{1-\\cos x} \\sqrt{\\arcsin^3 t} dt$",
       "answerMd": "D",
       "analysisMd": "本题考查**函数极限的计算**与**无穷小量的比较**。\n\n1. **分析各选项无穷小量的阶数**：\n   - **A项**：$\\int_0^{x^2} (e^{t^2} + 1) dt$。当 $x \\to 0$ 时，积分上限 $x^2 \\to 0$。被积函数 $e^{t^2}+1 \\to 2$。由积分中值定理或等价无穷小性质，$\\int_0^{x^2} (e^{t^2} + 1) dt \\sim 2x^2$。阶数为 **2**。\n   - **B项**：$\\int_0^x \\ln(1+\\sqrt{t^3}) dt$。因为 $\\ln(1+u) \\sim u$，所以 $\\ln(1+t^{3/2}) \\sim t^{3/2}$。积分 $\\int_0^x t^{3/2} dt = \\frac{2}{5}x^{5/2}$。阶数为 **2.5**。\n   - **C项**：$\\int_0^{\\sin x} \\cos t^2 dt$。积分上限 $\\sin x \\sim x$。被积函数 $\\cos t^2 \\to 1$。积分 $\\sim 1 \\cdot x = x$。阶数为 **1**。\n   - **D项**：$\\int_0^{1-\\cos x} \\sqrt{\\arcsin^3 t} dt$。积分上限 $1-\\cos x \\sim \\frac{1}{2}x^2$。被积函数 $\\sqrt{\\arcsin^3 t} = (\\arcsin t)^{3/2} \\sim t^{3/2}$。令 $u = \\frac{1}{2}x^2$，则积分 $\\sim \\int_0^u t^{3/2} dt = \\frac{2}{5}u^{5/2} = \\frac{2}{5}(\\frac{1}{2}x^2)^{5/2} \\sim k x^5$。阶数为 **5**。\n\n2. **结论**：\n   阶数越高，无穷小量越高阶（趋于0的速度越快）。比较各选项阶数：$2, 2.5, 1, 5$。最高阶为 D。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "无法判断积分的无穷小阶数",
+              "hint": "尝试用‘积分中值定理’或直接观察被积函数的最低次幂，积分一次通常会让阶数+1。"
+            },
+            {
+              "type": "function",
+              "label": "对复杂函数(如arcsin)的阶数不熟悉",
+              "hint": "记住常见等价无穷小：arcsin(t) ~ t，所以 (arcsin t)^(3/2) ~ t^(3/2)。"
+            }
+          ]
+        },
+        "insight": "判断变上限积分的无穷小阶数，核心是：积分过程将‘被积函数的主部阶数’提升了1阶（如果是从0积到x）。"
+      }
     },
     "zhangyu-4-set1-02": {
       "id": "zhangyu-4-set1-02",
@@ -29,7 +47,25 @@
       "contentMd": "若微分方程 $y''+ay'+by=0$ 的解在 $(-\\infty, +\\infty)$ 上必为周期函数，则\n\nA. $a=0, b>0$\n\nB. $a=0, b<0$\n\nC. $a \neq 0, b<0$\n\nD. $a \neq 0, b>0$",
       "answerMd": "A",
       "analysisMd": "本题考查**常微分方程**解的性质以及**函数的奇偶性与周期性**。\n\n1. **特征方程分析**：\n   二阶常系数齐次线性微分方程 $y''+ay'+by=0$ 的特征方程为 $r^2+ar+b=0$。\n\n2. **周期解的条件**：\n   微分方程的解在 $(-\\infty, +\\infty)$ 上必为周期函数，意味着其通解由 $\\sin \\omega x$ 和 $\\cos \\omega x$ 组成（或常数）。这要求特征根必须为**纯虚数** $r = \\pm \\omega i$ ($\\omega \neq 0$)。\n\n3. **韦达定理应用**：\n   设特征根为 $r_1, r_2$。\n   - $r_1 + r_2 = -a$。因为 $r_1, r_2$ 互为共轭纯虚数，和为0，所以 $a=0$。\n   - $r_1 r_2 = b$。因为 $r_1 = \\omega i, r_2 = -\\omega i$，所以 $r_1 r_2 = \\omega^2 > 0$，即 $b > 0$。\n\n4. **结论**：\n   $a=0, b>0$。故选 A。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "constraint",
+              "label": "不知道‘解为周期函数’意味着什么",
+              "hint": "想一想，形如 e^(ax) 的函数是周期的吗？只有 sin(wx) 和 cos(wx) 是周期的。"
+            },
+            {
+              "type": "function",
+              "label": "忘记了特征根与解的形式的关系",
+              "hint": "特征根 r = u ± iv 对应的解包含 e^(ux)sin(vx)。要想由于周期性，必须 u=0。"
+            }
+          ]
+        },
+        "insight": "二阶常系数方程由‘纯虚根’特征值主导周期解。这直接联系到物理中的简谐振动模型。"
+      }
     },
     "zhangyu-4-set1-03": {
       "id": "zhangyu-4-set1-03",
@@ -43,7 +79,25 @@
       "contentMd": "$\\int_{\\frac{1}{4}}^{\\frac{1}{2}} dy \\int_{\\frac{1}{2}}^{\\sqrt{y}} e^{\\frac{y}{x}} dx + \\int_{\\frac{1}{2}}^{1} dy \\int_{y}^{\\sqrt{y}} e^{\\frac{y}{x}} dx =$\n\nA. $\\frac{3e}{4} - \\frac{\\sqrt{e}}{2}$\n\nB. $\\frac{3e}{8} - \\frac{\\sqrt{e}}{2}$\n\nC. $\\frac{3e}{4} + \\frac{\\sqrt{e}}{2}$\n\nD. $\\frac{3e}{8} + \\frac{\\sqrt{e}}{2}$",
       "answerMd": "B",
       "analysisMd": "本题考查**重积分的计算**及**交换积分次序**。\n\n1. **被积函数分析**：\n   被积函数为 $e^{\\frac{y}{x}}$，含有 $y/x$ 形式，直接积分困难，需考虑交换次序。\n\n2. **分析积分区域**：\n   原积分分为两部分：\n   - $D_1: \\frac{1}{4} \\le y \\le \\frac{1}{2}, \\frac{1}{2} \\le x \\le \\sqrt{y}$。由 $x \\le \\sqrt{y} \\Rightarrow y \\ge x^2$。\n   - $D_2: \\frac{1}{2} \\le y \\le 1, y \\le x \\le \\sqrt{y}$。由 $x \\le \\sqrt{y} \\Rightarrow y \\ge x^2$；由 $y \\le x \\Rightarrow y \\le x$。\n   \n   合并区域 $D = D_1 \\cup D_2$：\n   - $x$ 的范围：在 $D_1$ 中 $x \\in [1/2, \\sqrt{1/2}]$，在 $D_2$ 中 $x \\in [1/2, 1]$。总体 $x \\in [1/2, 1]$。\n   - $y$ 的范围：对于固定 $x$，下界均为 $y=x^2$。上界在 $D_1$ 为 $1/2$，在 $D_2$ 为 $x$。但在 $x \\in [1/2, 1]$ 时，区域实际上是连续的，统一为 $x^2 \\le y \\le x$。\n   \n   验证：$D = \\{(x,y) | \\frac{1}{2} \\le x \\le 1, x^2 \\le y \\le x\\}$。\n\n3. **交换次序计算**：\n   $$ I = \\int_{1/2}^1 dx \\int_{x^2}^x e^{\\frac{y}{x}} dy $$\n   - **内层积分**：\n     $$ \\int_{x^2}^x e^{\\frac{y}{x}} dy = [x e^{\\frac{y}{x}}]_{y=x^2}^{y=x} = x(e^1 - e^x) $$\n   - **外层积分**：\n     $$ \\int_{1/2}^1 (ex - xe^x) dx = e \\int_{1/2}^1 x dx - \\int_{1/2}^1 xe^x dx $$\n     第一项：$e [\\frac{1}{2}x^2]_{1/2}^1 = \\frac{e}{2}(1 - \\frac{1}{4}) = \\frac{3e}{8}$。\n     第二项：$\\int xe^x dx = xe^x - e^x$。代入上下限：$(1\\cdot e - e) - (\\frac{1}{2}e^{1/2} - e^{1/2}) = 0 - (-\\frac{1}{2}\\sqrt{e}) = \\frac{\\sqrt{e}}{2}$。\n   \n   结果：$I = \\frac{3e}{8} - \\frac{\\sqrt{e}}{2}$。\n\n4. **结论**：\n   选 B。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "画不出积分区域 D",
+              "hint": "试着在草稿纸上画出 y=x^2, y=x, x=1/2 等边界线，确定它们的围成区域。"
+            },
+            {
+              "type": "function",
+              "label": "不知道为什么要交换积分次序",
+              "hint": "观察被积函数 e^(y/x)。对 x 积分很难（指数上有倒数），但对 y 积分很简单（指数是线性的）。"
+            }
+          ]
+        },
+        "insight": "遇到这 e^(y/x) 或 sin(x^2) 这种‘基本函数积不出来’的情况，首先想到交换积分次序！"
+      }
     },
     "zhangyu-4-set1-04": {
       "id": "zhangyu-4-set1-04",
@@ -57,7 +111,33 @@
       "contentMd": "设 $f(x) = \\arcsin x - \\frac{x}{1+ax^2}$， $f'''(0)=2$，则 $a=$\n\nA. $\\frac{1}{6}$\n\nB. $\\frac{1}{4}$\n\nC. $\\frac{1}{3}$\n\nD. $\\frac{1}{2}$",
       "answerMd": "A",
       "analysisMd": "本题考查**导数与微分的计算**及**泰勒公式**的应用。\n\n1. **利用泰勒公式展开**：\n   - $\\arcsin x = x + \\frac{1}{6}x^3 + o(x^3)$。\n   - $\\frac{x}{1+ax^2} = x(1+ax^2)^{-1} = x(1 - ax^2 + o(x^2)) = x - ax^3 + o(x^3)$。\n\n2. **合并同类项**：\n   $$ f(x) = (x + \\frac{1}{6}x^3) - (x - ax^3) + o(x^3) = (\\frac{1}{6} + a)x^3 + o(x^3) $$\n\n3. **利用导数定义**：\n   根据麦克劳林公式，$x^3$ 项的系数为 $\\frac{f'''(0)}{3!}$。\n   即 $\\frac{1}{6} + a = \\frac{f'''(0)}{6}$。\n   代入 $f'''(0)=2$，得 $\\frac{1}{6} + a = \\frac{2}{6} = \\frac{1}{3}$。\n\n4. **求解**：\n   $a = \\frac{1}{3} - \\frac{1}{6} = \\frac{1}{6}$。\n\n5. **结论**：\n   选 A。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "想直接求三阶导数",
+              "hint": "直接求导计算量太大且容易出错。有没有更‘多项式化’的方法？"
+            },
+            {
+              "type": "analogy",
+              "label": "没想到用麦克劳林公式",
+              "hint": "f'''(0) 其实就是麦克劳林展开式中 x^3 项系数的 3! 倍。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "f'''(0)",
+            "currentRole": "求导结果",
+            "suggestedRole": "泰勒级数系数对应量",
+            "transformation": "Coefficient of x^3 = f'''(0) / 3!"
+          }
+        ],
+        "insight": "在 x=0 处的高阶导数问题，90% 的情况用泰勒公式（麦克劳林公式）展开比直接求导快得多。"
+      }
     },
     "zhangyu-4-set1-05": {
       "id": "zhangyu-4-set1-05",
@@ -72,7 +152,25 @@
       "contentMd": "设向量 $\\beta$ 可由向量组 $\\alpha_1, \\alpha_2, \\alpha_3, \\alpha_4$ 线性表示，但不可由向量组 (I): $\\alpha_1, \\alpha_2, \\alpha_3$ 线性表示，记向量组 (II): $\\alpha_1, \\alpha_2, \\alpha_3, \\beta$，则\n\nA. $\\alpha_4$ 不可由向量组 (I) 线性表示，也不可由向量组 (II) 线性表示\n\nB. $\\alpha_4$ 不可由向量组 (I) 线性表示，但可由向量组 (II) 线性表示\n\nC. $\\alpha_4$ 可由向量组 (I) 线性表示，也可由向量组 (II) 线性表示\n\nD. $\\alpha_4$ 可由向量组 (I) 线性表示，但不可由向量组 (II) 线性表示",
       "answerMd": "B",
       "analysisMd": "本题考查**线性代数**中**向量**组的**线性相关性**。\n\n1. **条件分析**：\n   - $\\beta$ 可由 $\\alpha_1, \\alpha_2, \\alpha_3, \\alpha_4$ 线性表示 $\\Rightarrow \\beta \\in L(\\alpha_1, \\alpha_2, \\alpha_3, \\alpha_4)$。\n   - $\\beta$ 不可由 (I) $\\alpha_1, \\alpha_2, \\alpha_3$ 线性表示 $\\Rightarrow \\beta \notin L(\\alpha_1, \\alpha_2, \\alpha_3)$。\n\n2. **推导 $\\alpha_4$ 的性质**：\n   设 $\\beta = k_1\\alpha_1 + k_2\\alpha_2 + k_3\\alpha_3 + k_4\\alpha_4$。\n   若 $k_4 = 0$，则 $\\beta$ 可由 (I) 表示，矛盾。故 $k_4 \neq 0$。\n   由此可得 $\\alpha_4 = \\frac{1}{k_4}(\\beta - k_1\\alpha_1 - k_2\\alpha_2 - k_3\\alpha_3)$。\n   这说明 $\\alpha_4$ 可由 $\\alpha_1, \\alpha_2, \\alpha_3, \\beta$ (即向量组 II) 线性表示。\n\n3. **判断 $\\alpha_4$ 与 (I) 的关系**：\n   假设 $\\alpha_4$ 可由 (I) 线性表示，即 $\\alpha_4 \\in L(\\alpha_1, \\alpha_2, \\alpha_3)$。\n   结合 $\\beta \\in L(\\alpha_1, \\alpha_2, \\alpha_3, \\alpha_4)$，将推导出 $\\beta \\in L(\\alpha_1, \\alpha_2, \\alpha_3)$，与题设矛盾。\n   故 $\\alpha_4$ 不可由 (I) 线性表示。\n\n4. **结论**：\n   $\\alpha_4$ 不可由 (I) 线性表示，但可由 (II) 线性表示。选 B。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "被抽象的向量组绕晕了",
+              "hint": "试着把 a1, a2, a3 想象成三维空间的 x, y, z 轴。Beta 是第四维的东西吗？"
+            },
+            {
+              "type": "constraint",
+              "label": "不理解线性表示的传递性",
+              "hint": "如果 Beta 需要 Alpha4 才能表示出来，那 Alpha4 显然不能被剩下的表示，否则 Beta 就不需要 Alpha4 了。"
+            }
+          ]
+        },
+        "insight": "‘不可表示’往往意味着‘维度增加’或‘独立性’。如果缺了谁就不能表示，那‘谁’一定是关键要素。"
+      }
     },
     "zhangyu-4-set1-06": {
       "id": "zhangyu-4-set1-06",
@@ -87,7 +185,25 @@
       "contentMd": "设 $A$ 为 $n$ 阶矩阵，$A^*$ 是 $A$ 的伴随矩阵，齐次线性方程组 $Ax=0$ 有两个线性无关的解，则\n\nA. $A^*x=0$ 的解均是 $Ax=0$ 的解\n\nB. $Ax=0$ 的解均是 $A^*x=0$ 的解\n\nC. $Ax=0$ 与 $A^*x=0$ 没有非零公共解\n\nD. $Ax=0$ 与 $A^*x=0$ 仅有两个非零公共解",
       "answerMd": "B",
       "analysisMd": "本题考查**线性代数**中的**线性方程组**解的结构以及**伴随矩阵与可逆矩阵**的性质.\n\n1. **分析 $A$ 的秩**：\n   齐次线性方程组 $Ax=0$ 有两个线性无关的解，根据基础解系解的个数公式 $n - r(A) = 2$，可得 $r(A) = n-2$.\n\n2. **分析 $A^*$ 的秩**：\n   根据伴随矩阵秩的性质：\n   - 若 $r(A)=n$，则 $r(A^*)=n$；\n   - 若 $r(A)=n-1$，则 $r(A^*)=1$；\n   - 若 $r(A)<n-1$，则 $r(A^*)=0$。\n   本题中 $r(A) = n-2$。\n   - 若 $n=2$，则 $r(A)=0 \\Rightarrow A=O \\Rightarrow A^*=O$。\n   - 若 $n>2$，则 $r(A) < n-1 \\Rightarrow r(A^*)=0 \\Rightarrow A^*=O$。\n   综上所述，总是成立 $A^* = O$（零矩阵）。\n\n3. **分析解集关系**：\n   - 方程组 $A^*x=0$ 即 $Ox=0$，其解集为整个 $n$ 维向量空间 $\\mathbb{R}^n$。\n   - 方程组 $Ax=0$ 的解集是 $\\mathbb{R}^n$ 的一个二维子空间。\n   - 显然，$Ax=0$ 的解集包含于 $A^*x=0$ 的解集。\n\n4. **结论**：\n   $Ax=0$ 的解均是 $A^*x=0$ 的解。选 B。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "忘记了秩与解的关系",
+              "hint": "基础解系包含 2 个向量 => n - r(A) = 2，所以 r(A) = n-2。"
+            },
+            {
+              "type": "rule",
+              "label": "记不清伴随矩阵的秩的结论",
+              "hint": "当 r(A) < n-1 时，r(A*) 是多少？是 0！"
+            }
+          ]
+        },
+        "insight": "这是一个经典的‘秩的阶梯’结论：r(A)降两阶，A*直接归零。A*归零意味着 A*x=0 的解是全体空间。"
+      }
     },
     "zhangyu-4-set1-07": {
       "id": "zhangyu-4-set1-07",
@@ -102,7 +218,25 @@
       "contentMd": "设矩阵 $A=(a_{ij})_{n \\times n}$ 的元素全大于零，且每行元素之和等于 1，以下结论：\n\n① $\\lambda=1$ 是 $A$ 的特征值；\n\n② $(A-E)x=0$ 有非零解；\n\n③ $A$ 的每一个特征值 $\\lambda$ 都满足 $|\\lambda| \\le 1$。\n\n正确结论的个数为\n\nA. 0\n\nB. 1\n\nC. 2\n\nD. 3",
       "answerMd": "D",
       "analysisMd": "本题考查**线性代数**中**矩阵的特征值与特征向量**及**矩阵**性质。\n\n1. **分析结论①**：\n   矩阵每行元素之和等于 1，即 $\\sum_{j=1}^n a_{ij} = 1$。这意味着 $A \\begin{pmatrix} 1 \\\\ \\vdots \\\\ 1 \\end{pmatrix} = 1 \\cdot \\begin{pmatrix} 1 \\\\ \\vdots \\\\ 1 \\end{pmatrix}$。故 $\\lambda=1$ 是 $A$ 的一个特征值。结论①正确。\n\n2. **分析结论②**：\n   由①知 $\\lambda=1$ 是特征值，所以 $|A-E| = 0$。齐次线性方程组 $(A-E)x=0$ 的系数行列式为0，故必有非零解。结论②正确。\n\n3. **分析结论③**：\n   $A$ 是正矩阵（元素全大于0）且行和为1（随机矩阵）。根据 Perron-Frobenius 定理或盖尔圆盘定理，行和为1的非负矩阵的谱半径 $\\rho(A) \\le 1$（实际上等于行和最大值1）。因此 $A$ 的所有特征值模长 $|\\lambda| \\le 1$。结论③正确。\n\n4. **结论**：\n   三个结论均正确。选 D。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "看不出“行和为1”的代数含义",
+              "hint": "把矩阵A乘以全1向量(1,1,...,1)^T试一试？你会发现结果还是全1向量。"
+            },
+            {
+              "type": "rule",
+              "label": "不了解随机矩阵的谱半径性质",
+              "hint": "正矩阵且行和固定为k，则谱半径（最大特征值模长）就是k。这是盖尔圆盘定理的一个推论。"
+            }
+          ]
+        },
+        "insight": "“行和为常数k”直接告诉你 λ=k 是一个特征值，对应的特征向量是全1向量。"
+      }
     },
     "zhangyu-4-set1-08": {
       "id": "zhangyu-4-set1-08",
@@ -117,7 +251,25 @@
       "contentMd": "设总体 $X$ 的概率分布如下：\n\n| $X$ | -1 | 0 | 1 |\n| :---: | :---: | :---: | :---: |\n| $P$ | $\\frac{1}{4}$ | $\\frac{1}{2}$ | $\\frac{1}{4}$ |\n\n从总体 $X$ 中抽取 $n$ 个简单随机样本，$N_1$ 表示 $n$ 个样本中取到 -1 的个数，$N_2$ 表示 $n$ 个样本中取到 0 的个数，$N_3$ 表示 $n$ 个样本中取到 1 的个数，则 $N_1$ 与 $N_2$ 的相关系数为\n\nA. -1\n\nB. 1\n\nC. $-\\frac{\\sqrt{3}}{3}$\n\nD. $\\frac{\\sqrt{3}}{3}$",
       "answerMd": "C",
       "analysisMd": "本题考查**概率论与数理统计**中的**协方差与相关系数**以及**多维随机变量及其分布**。\n\n1. **识别分布模型**：\n   从总体抽取 $n$ 个样本，统计取到各值的个数，这服从多项分布。参数为 $n, p_1=1/4 (-1), p_2=1/2 (0), p_3=1/4 (1)$。\n\n2. **计算协方差**：\n   多项分布中，不同类别次数的协方差 $Cov(N_i, N_j) = -n p_i p_j$ ($i \neq j$)。\n   $Cov(N_1, N_2) = -n \\times \\frac{1}{4} \\times \\frac{1}{2} = -\\frac{n}{8}$。\n\n3. **计算方差**：\n   $Var(N_i) = n p_i (1-p_i)$。\n   $Var(N_1) = n \\times \\frac{1}{4} \\times \\frac{3}{4} = \\frac{3n}{16}$。\n   $Var(N_2) = n \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{n}{4} = \\frac{4n}{16}$。\n\n4. **计算相关系数**：\n   $$ \\rho = \\frac{Cov(N_1, N_2)}{\\sqrt{Var(N_1)Var(N_2)}} = \\frac{-n/8}{\\sqrt{\\frac{3n}{16} \\cdot \\frac{4n}{16}}} = \\frac{-n/8}{\\frac{n}{16}\\sqrt{12}} = \\frac{-2}{2\\sqrt{3}} = -\\frac{\\sqrt{3}}{3} $$\n\n5. **结论**：\n   选 C。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "没识别出这是多项分布",
+              "hint": "把问题想成：把n个球扔进3个桶里。N1, N2, N3 分别是各个桶里的球数。"
+            },
+            {
+              "type": "function",
+              "label": "记不住协方差公式",
+              "hint": "直观想：总数n固定，N1多了，N2往往就得少（因为要抢名额），所以肯定是负相关。"
+            }
+          ]
+        },
+        "insight": "多项分布中，任意两个不同类别的频数总是‘此消彼长’的，因此协方差 Cov(Ni, Nj) = -n*pi*pj 总是负的。"
+      }
     },
     "zhangyu-4-set1-09": {
       "id": "zhangyu-4-set1-09",
@@ -131,7 +283,25 @@
       "contentMd": "设 $X_1, X_2, \\cdots, X_{25}$ 是来自总体 $N(\\mu, \\sigma^2) (\\sigma>0)$ 的简单随机样本，$\\Phi(x)$ 表示标准正态分布函数，考虑假设检验问题：$H_0: \\mu \\le 10, H_1: \\mu > 10$，若该检验问题的拒绝域为 $W = \\{\\overline{X} > 20\\}$，其中 $\\overline{X} = \\frac{1}{25} \\sum_{i=1}^{25} X_i$，当 $\\mu=20.5$ 时，该检验犯第二类错误的概率为 $1 - \\Phi(\\frac{1}{2})$，则 $\\sigma=$\n\nA. 5\n\nB. 6\n\nC. 7\n\nD. 8",
       "answerMd": "A",
       "analysisMd": "本题考查**概率论与数理统计**中的**假设检验**，特别是第二类错误。\n\n1. **确定统计量分布**：\n   样本均值 $\\overline{X} \\sim N(\\mu, \\sigma^2/25)$。\n\n2. **第二类错误定义**：\n   第二类错误是“原假设 $H_0$ 为假，却接受了 $H_0$”。\n   当 $\\mu = 20.5$ 时，$H_1$ 为真。接受域为 $W^c = \\{\\overline{X} \\le 20\\}$。\n   $\\beta = P(\\overline{X} \\le 20 \\mid \\mu = 20.5)$。\n\n3. **计算概率**：\n   标准化 $Z = \\frac{\\overline{X} - \\mu}{\\sigma/\\sqrt{n}} = \\frac{\\overline{X} - 20.5}{\\sigma/5}$。\n   $$ \\beta = P\\left(Z \\le \\frac{20 - 20.5}{\\sigma/5}\\right) = P\\left(Z \\le \\frac{-0.5}{\\sigma/5}\\right) = \\Phi\\left(-\\frac{2.5}{\\sigma}\\right) = 1 - \\Phi\\left(\\frac{2.5}{\\sigma}\\right) $$\n\n4. **求解 $\\sigma$**：\n   已知 $\\beta = 1 - \\Phi(1/2)$。\n   所以 $\\frac{2.5}{\\sigma} = \\frac{1}{2}$，解得 $\\sigma = 5$。\n\n5. **结论**：\n   选 A。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "搞混了第一类和第二类错误",
+              "hint": "记住口诀：一类弃真（冤枉好人），二类取伪（放过坏人）。这里是‘放过坏人’（H1真却接受H0）。"
+            },
+            {
+              "type": "representation",
+              "label": "不知道怎么算 β",
+              "hint": "画出H0和H1对应的两个正态分布图。β就是H1分布下落在H0接受域（左边）的面积。"
+            }
+          ]
+        },
+        "insight": "求第二类错误概率，本质上就是求在 H1 参数（μ=20.5）条件下，样本均值落在 H0 接受域（<=20）内的概率。"
+      }
     },
     "zhangyu-4-set1-10": {
       "id": "zhangyu-4-set1-10",
@@ -146,7 +316,33 @@
       "contentMd": "设总体 $X \\sim U(0, \\alpha)$， $Y \\sim U(\\alpha, 2\\alpha)$， $\\alpha>0$ 为未知参数，$X, Y$ 相互独立。记 $Z_{(a,b)} = aX + bY$，则当 $Z_{(k_1, k_2)}$ 是 $\\alpha$ 的最有效的估计量时，有\n\nA. $k_1 = \\frac{1}{3}, k_2 = \\frac{2}{3}$\n\nB. $k_1 = \\frac{2}{3}, k_2 = \\frac{1}{3}$\n\nC. $k_1 = \\frac{1}{5}, k_2 = \\frac{3}{5}$\n\nD. $k_1 = \\frac{1}{2}, k_2 = \\frac{1}{2}$",
       "answerMd": "C",
       "analysisMd": "本题考查**概率论与数理统计**中的**参数估计与假设检验**及**估计量的有效性**。\n\n1. **计算期望与方差**：\n   - $X \\sim U(0, \\alpha) \\Rightarrow E(X) = \\frac{\\alpha}{2}, D(X) = \\frac{\\alpha^2}{12}$。\n   - $Y \\sim U(\\alpha, 2\\alpha) \\Rightarrow E(Y) = \\frac{3\\alpha}{2}, D(Y) = \\frac{\\alpha^2}{12}$。\n\n2. **无偏性条件**：\n   估计量 $Z = k_1 X + k_2 Y$。\n   若 $Z$ 为 $\\alpha$ 的无偏估计（有效性通常在无偏估计类中讨论），则：\n   $E(Z) = k_1 E(X) + k_2 E(Y) = (\\frac{k_1}{2} + \\frac{3k_2}{2})\\alpha = \\alpha$。\n   即 $k_1 + 3k_2 = 2$。\n\n3. **有效性（最小方差）**：\n   $D(Z) = k_1^2 D(X) + k_2^2 D(Y) = (k_1^2 + k_2^2) \\frac{\\alpha^2}{12}$。\n   求 $k_1^2 + k_2^2$ 在 $k_1 + 3k_2 = 2$ 下的最小值。\n   代入 $k_1 = 2 - 3k_2$：\n   $f(k_2) = (2-3k_2)^2 + k_2^2 = 10k_2^2 - 12k_2 + 4$。\n   令 $f'(k_2) = 20k_2 - 12 = 0 \\Rightarrow k_2 = \\frac{12}{20} = \\frac{3}{5}$。\n   此时 $k_1 = 2 - 3(\\frac{3}{5}) = \\frac{1}{5}$。\n\n4. **结论**：\n   $k_1 = \\frac{1}{5}, k_2 = \\frac{3}{5}$。选 C。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "constraint",
+              "label": "忘记了‘有效性’的定义",
+              "hint": "有效性 = 方差最小。这是一个求极值问题：在满足无偏性（期望相等）的约束下，求方差最小值。"
+            },
+            {
+              "type": "function",
+              "label": "计算方差最小值时卡住了",
+              "hint": "利用拉格朗日乘数法，或者直接把k1代入k2的式子变成一元二次求导。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "k1, k2",
+            "currentRole": "待定系数",
+            "suggestedRole": "权重分配",
+            "transformation": "总权重受无偏性约束，分配权重以最小化总风险（方差）。"
+          }
+        ],
+        "insight": "最有效估计量其实就是在给不同来源的信息‘加权’。方差越小的信息源（越靠谱），分到的权重应该越大（虽然这里方差一样，但期望不同导致系数不同）。"
+      }
     },
     "zhangyu-4-set1-11": {
       "id": "zhangyu-4-set1-11",
@@ -160,7 +356,25 @@
       "contentMd": "$\\text{grad} \\left( x^2y + \\frac{z}{y} \\right) \\bigg|_{(1,1,2)} = $ ______.",
       "answerMd": "(2, -1, 1)",
       "analysisMd": "本题考查**方向导数和梯度**及**多元函数微分学**。\n\n1. **梯度的定义**：\n   函数 $u=f(x,y,z)$ 在某点的梯度 $\\text{grad } u$ 是一个向量，其坐标为该点处的三个偏导数 $\\left(\\frac{\\partial u}{\\partial x}, \\frac{\\partial u}{\\partial y}, \\frac{\\partial u}{\\partial z}\\right)$。\n\n2. **计算偏导数**：\n   设 $u(x,y,z) = x^2y + \\frac{z}{y} = x^2y + zy^{-1}$。\n   - $\\frac{\\partial u}{\\partial x} = 2xy$。\n   - $\\frac{\\partial u}{\\partial y} = x^2 - zy^{-2} = x^2 - \\frac{z}{y^2}$。\n   - $\\frac{\\partial u}{\\partial z} = \\frac{1}{y}$。\n\n3. **代入点 $(1,1,2)$**：\n   - $\\frac{\\partial u}{\\partial x}\\big|_{(1,1,2)} = 2(1)(1) = 2$。\n   - $\\frac{\\partial u}{\\partial y}\\big|_{(1,1,2)} = 1^2 - \\frac{2}{1^2} = 1 - 2 = -1$。\n   - $\\frac{\\partial u}{\\partial z}\\big|_{(1,1,2)} = \\frac{1}{1} = 1$。\n\n4. **结论**：\n   梯度 $\\text{grad } u \\big|_{(1,1,2)} = (2, -1, 1)$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "忘记了梯度的定义",
+              "hint": "梯度 grad f 就是向量 (fx, fy, fz)。别把它想复杂了，就是先求偏导再代值。"
+            },
+            {
+              "type": "function",
+              "label": "求偏导时出错",
+              "hint": "对x求偏导时，把y和z看作常数。z/y 对 x 求导是0哦。"
+            }
+          ]
+        },
+        "insight": "梯度是向量，标量场变化最快的方向。计算上就是纯粹的偏导数计算，细心即可。"
+      }
     },
     "zhangyu-4-set1-12": {
       "id": "zhangyu-4-set1-12",
@@ -174,7 +388,25 @@
       "contentMd": "曲线 $y = x e^{\\frac{1}{x+1}}$ 的斜渐近线方程为 ______.",
       "answerMd": "y = x + 1",
       "analysisMd": "本题考查**曲线的凹凸性、拐点及渐近线**与**函数极限的计算**。\n\n1. **斜渐近线公式**：\n   设斜渐近线为 $y = kx + b$。\n\n2. **计算斜率 $k$**：\n   $$ k = \\lim_{x\\to\\infty} \\frac{y}{x} = \\lim_{x\\to\\infty} e^{\\frac{1}{x+1}} = e^0 = 1 $$\n\n3. **计算截距 $b$**：\n   $$ b = \\lim_{x\\to\\infty} (y - kx) = \\lim_{x\\to\\infty} (x e^{\\frac{1}{x+1}} - x) = \\lim_{x\\to\\infty} x(e^{\\frac{1}{x+1}} - 1) $$\n   令 $t = \\frac{1}{x+1}$，则 $x = \\frac{1}{t} - 1$。当 $x\\to\\infty$ 时 $t\\to 0$。\n   $$ b = \\lim_{t\\to 0} (\\frac{1}{t}-1)(e^t-1) = \\lim_{t\\to 0} \\frac{e^t-1}{t} - (e^t-1) = 1 - 0 = 1 $$\n\n4. **结论**：\n   斜渐近线方程为 $y = x + 1$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "忘记斜渐近线公式",
+              "hint": "k = lim(y/x), b = lim(y-kx)。两步走。"
+            },
+            {
+              "type": "function",
+              "label": "求 limit (y-kx) 时算出 0 或无穷",
+              "hint": "这一步往往需要泰勒展开。e^(1/(x+1)) 展开成 1 + 1/(x+1) + ... 试试？"
+            }
+          ]
+        },
+        "insight": "求斜渐近线的截距 b 时，利用变量代换 t=1/x 或泰勒公式往往比洛必达法则更简便。"
+      }
     },
     "zhangyu-4-set1-13": {
       "id": "zhangyu-4-set1-13",
@@ -266,7 +498,25 @@
       "contentMd": "微分方程 $(x-y-1)dx + (x+4y-1)dy = 0$ 的通解为 ______.",
       "answerMd": "$\\ln(4y^2 + (x-1)^2) + \\arctan\\left(\\frac{2y}{x-1}\\right) = C$",
       "analysisMd": "本题考查**全微分方程**的求解。\n\n1. **变量代换**：\n   $X = x-1, Y=y$，则 $dx=dX, dy=dY$。\n   原方程化为：$(X-Y)dX + (X+4Y)dY = 0$。\n\n2. **解齐次方程**：\n   令 $Y = uX$，则 $dY = u dX + X du$。\n   代入整理：\n   $(X-uX)dX + (X+4uX)(u dX + X du) = 0$\n   $X(1-u)dX + X(1+4u)(u dX + X du) = 0$\n   消除 $X$：$(1-u + u + 4u^2)dX + X(1+4u)du = 0$\n   $(1+4u^2)dX + X(1+4u)du = 0$\n   分离变量：\n   $$ \\frac{dX}{X} + \\frac{1+4u}{1+4u^2} du = 0 $$\n\n3. **积分求解**：\n   $$ \\int \\frac{dX}{X} + \\int \\frac{1}{1+4u^2} du + \\int \\frac{4u}{1+4u^2} du = C $$\n   - $\\int \\frac{1}{1+(2u)^2} du = \\frac{1}{2} \\arctan(2u)$。\n   - $\\int \\frac{4u}{1+4u^2} du = \\frac{1}{2} \\int \\frac{d(1+4u^2)}{1+4u^2} = \\frac{1}{2} \\ln(1+4u^2)$。\n   故：$\\ln|X| + \\frac{1}{2}\\arctan(2u) + \\frac{1}{2}\\ln(1+4u^2) = C_1$。\n   整理得：$2\\ln|X| + \\arctan(2u) + \\ln(1+4u^2) = 2C_1$。\n   $\\ln[X^2(1+4u^2)] + \\arctan(2u) = C$。\n\n4. **回代还原**：\n   $X^2(1+4u^2) = X^2 (1 + 4\\frac{Y^2}{X^2}) = X^2 + 4Y^2 = (x-1)^2 + 4y^2$。\n   $2u = \\frac{2Y}{X} = \\frac{2y}{x-1}$。\n   通解为：$\\ln((x-1)^2 + 4y^2) + \\arctan(\\frac{2y}{x-1}) = C$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "看不出微分方程的类型",
+              "hint": "形如 (a1x+b1y+c1)dx + (a2x+b2y+c2)dy = 0。这是‘齐次方程’的推广形式，需要先平移坐标系消去常数项。"
+            },
+            {
+              "type": "function",
+              "label": "不知道怎么做变量代换",
+              "hint": "令 X=x-x0, Y=y-y0，其中 (x0, y0) 是两条直线 x-y-1=0 和 x+4y-1=0 的交点。"
+            }
+          ]
+        },
+        "insight": "遇到 Ax+By+C 形式的系数，第一反应总是：平移坐标系，把原点移到直线交点，把它变成齐次方程。"
+      }
     },
     "zhangyu-4-set1-15": {
       "id": "zhangyu-4-set1-15",
@@ -281,7 +531,25 @@
       "contentMd": "已知方程组 (I) $\\begin{cases} x_2 + ax_3 = 0, \\\\ x_1 + x_2 + (a+1)x_3 = 0 \\end{cases}$ 的解均是方程组 (II) $\\begin{cases} x_1 + x_2 + 2x_3 = 0, \\\\ x_1 + x_2 + bx_3 = 0 \\end{cases}$ 的解，但方程组 (I) 与方程组 (II) 不同解。设矩阵 $A$ 为方程组 (I) 的系数矩阵，矩阵 $B$ 为方程组 (II) 的系数矩阵，则 $B^T A = $ ______.",
       "answerMd": "\\begin{pmatrix} 1 & 2 & 3 \\\\ 1 & 2 & 3 \\\\ 2 & 4 & 6 \\end{pmatrix}",
       "analysisMd": "本题考查**线性代数**中的**线性方程组**同解问题及**矩阵的运算与变换**。\n\n1. **求解方程组 (I)**：\n   $\\begin{cases} x_2 + ax_3 = 0 \\\\ x_1 + x_2 + (a+1)x_3 = 0 \\end{cases}$。\n   由第一式 $x_2 = -ax_3$。\n   代入第二式 $x_1 - ax_3 + (a+1)x_3 = 0 \\Rightarrow x_1 + x_3 = 0 \\Rightarrow x_1 = -x_3$。\n   取 $x_3=1$，得基础解系 $\\xi = (-1, -a, 1)^T$。\n\n2. **利用同解条件**：\n   (I) 的解也是 (II) 的解，故 $\\xi$ 满足 (II)。\n   $\\begin{cases} -1 - a + 2(1) = 0 \\\\ -1 - a + b(1) = 0 \\end{cases}$。\n   解得 $a=1, b=2$。\n\n3. **计算矩阵乘积**：\n   $A = \\begin{pmatrix} 0 & 1 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix}$。\n   $B = \\begin{pmatrix} 1 & 1 & 2 \\\\ 1 & 1 & 2 \\end{pmatrix}$。\n   $B^T A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\\\ 2 & 2 \\end{pmatrix} \\begin{pmatrix} 0 & 1 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 & 3 \\\\ 1 & 2 & 3 \\\\ 2 & 4 & 6 \\end{pmatrix}$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不理解“解均是...的解”是什么意思",
+              "hint": "这意味着方程组 I 的解集是方程组 II 解集的子集。把 I 的基础解系代入 II 肯定成立。"
+            },
+            {
+              "type": "function",
+              "label": "矩阵乘法算错了",
+              "hint": "B^T A 是 3x3 矩阵。注意矩阵乘法不仅要对应相乘，还要行列对应：行乘列。"
+            }
+          ]
+        },
+        "insight": "“同解”或“解包含”问题，核心都是把一个方程组的解（特别是基础解系）代入另一个方程组去反求参数。"
+      }
     },
     "zhangyu-4-set1-16": {
       "id": "zhangyu-4-set1-16",
@@ -296,7 +564,25 @@
       "contentMd": "设总体 $X$ 的概率密度 $f(x) = \\begin{cases} \\mu x, & 0 \\le x < 1, \\\\ \\theta x, & 1 \\le x \\le 2, \\\\ 0, & \\text{其他}, \\end{cases}$ $\\mu, \\theta$ 为未知参数且 $\\mu>0, \\theta>0$。$Y=e^X$，$X$ 的样本观测值为 0.1, 0.9, 1.2, 1.2，则 $P\\{Y<4\\}$ 的最大似然估计值为 ______.",
       "answerMd": "$\\frac{1}{2} + \\frac{1}{6}[(\\ln 4)^2 - 1]$",
       "analysisMd": "本题考查**最大似然估计**及**参数估计**。\n\n1. **确立参数关系**：\n   由概率密度归一性 $\\int_{-\\infty}^{+\\infty} f(x)dx = 1$：\n   $$ \\int_0^1 \\mu x dx + \\int_1^2 \\theta x dx = \\mu [\\frac{x^2}{2}]_0^1 + \\theta [\\frac{x^2}{2}]_1^2 = \\frac{\\mu}{2} + \\frac{3\\theta}{2} = 1 $$\n   得约束条件：$\\mu = 2 - 3\\theta$。\n\n2. **最大似然估计**：\n   样本观测值中有2个在 $(0,1)$ 区间（0.1, 0.9），2个在 $(1,2)$ 区间（1.2, 1.2）。\n   似然函数：\n   $$ L(\\mu, \\theta) = \\prod f(x_i) = (\\mu x_1)(\\mu x_2)(\\theta x_3)(\\theta x_4) = C \\mu^2 \\theta^2 $$\n   将 $\\mu = 2-3\\theta$ 代入，构建关于 $\\theta$ 的函数：\n   $$ L(\\theta) = C (2-3\\theta)^2 \\theta^2 $$\n   取对数：$\\ln L = \\ln C + 2\\ln(2-3\\theta) + 2\\ln \\theta$。\n   求导置零：\n   $$ \\frac{d \\ln L}{d\\theta} = \\frac{2(-3)}{2-3\\theta} + \\frac{2}{\\theta} = 0 $$\n   $$ \\frac{3}{2-3\\theta} = \\frac{1}{\\theta} \\Rightarrow 3\\theta = 2-3\\theta \\Rightarrow 6\\theta = 2 \\Rightarrow \\theta = \\frac{1}{3} $$\n   此时 $\\mu = 2 - 3(\\frac{1}{3}) = 1 > 0$，符合题意。\n   故极大似然估计值为 $\\hat{\\mu} = 1, \\hat{\\theta} = \\frac{1}{3}$。\n\n3. **计算概率估计**：\n   $$ P\\{Y<4\\} = P\\{e^X < 4\\} = P\\{X < \\ln 4\\} $$\n   因 $1 < \\ln 4 \\approx 1.386 < 2$，积分使用两段密度：\n   $$ P = \\int_0^1 \\hat{\\mu} x dx + \\int_1^{\\ln 4} \\hat{\\theta} x dx $$\n   $$ = 1 \\cdot [\\frac{x^2}{2}]_0^1 + \\frac{1}{3} \\cdot [\\frac{x^2}{2}]_1^{\\ln 4} $$\n   $$ = \\frac{1}{2} + \\frac{1}{6}((\\ln 4)^2 - 1) $$",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "constraint",
+              "label": "忘记了参数 μ 和 θ 之间的约束",
+              "hint": "概率密度函数的总积分为1！这是隐藏的第一个方程：1/2*μ + 3/2*θ = 1。"
+            },
+            {
+              "type": "function",
+              "label": "似然函数列错了",
+              "hint": "似然函数 L 是所有样本概率密度值的乘积。先把 μ 用 θ 表示，变成单变量函数再求导。"
+            }
+          ]
+        },
+        "insight": "最大似然估计的关键步骤往往是第一步：利用总概率为1找到参数间的依赖关系，减少未知数个数。"
+      }
     },
     "zhangyu-4-set1-17": {
       "id": "zhangyu-4-set1-17",
@@ -311,7 +597,25 @@
       "contentMd": "设曲面 $z=f(x,y)$ 过点 $(0,0,2)$，且 $\\Delta z$ 关于 $x$ 的偏增量 $\\Delta_x z = -2xe^{-y} \\cdot \\Delta x + o(\\Delta x)$，$\\Delta z$ 关于 $y$ 的偏增量 $\\Delta_y z = e^{-y} (x^2-y-1)\\Delta y + o(\\Delta y)$，求 $z=f(x,y)$ 的表达式及 $z$ 的极值。",
       "answerMd": "$z = e^{-y}(y+2-x^2), \\; z_{\\max} = e$",
       "analysisMd": "本题考查**多元函数微分学**中的**全微分**及**极值问题**。\n\n1. **求原函数 $f(x,y)$**：\n   已知 $\\frac{\\partial z}{\\partial x} = -2xe^{-y}$，$\\frac{\\partial z}{\\partial y} = e^{-y}(x^2-y-1)$。\n   对 $x$ 偏积分：$z = \\int -2xe^{-y} dx = -x^2 e^{-y} + \\phi(y)$。\n   对 $y$ 求偏导：$\\frac{\\partial z}{\\partial y} = -x^2(-e^{-y}) + \\phi'(y) = x^2e^{-y} + \\phi'(y)$。\n   对照已知条件：$x^2e^{-y} + \\phi'(y) = e^{-y}x^2 - e^{-y}(y+1)$。\n   得 $\\phi'(y) = -(y+1)e^{-y}$。\n   积分 $\\phi(y) = -\\int (y+1)e^{-y} dy = -[-(y+1)e^{-y} - \\int -e^{-y} dy] = (y+1)e^{-y} + e^{-y} + C = (y+2)e^{-y} + C$。\n   故 $z = e^{-y}(y+2-x^2) + C$。\n   代入点 $(0,0,2)$：$2 = e^0(2) + C \\Rightarrow C=0$。\n   所以 $z = e^{-y}(y+2-x^2)$。\n\n2. **求极值**：\n   **第一步：解驻点方程**\n   $\\begin{cases} z_x = -2xe^{-y} = 0 \\Rightarrow x=0 \\\\ z_y = e^{-y}(x^2-y-1) = 0 \\end{cases}$\n   把 $x=0$ 代入第二式：$e^{-y}(-y-1)=0 \\Rightarrow y=-1$。\n   驻点为 $(0, -1)$。\n   \n   **第二步：计算二阶偏导数及判别式**\n   $z_{xx} = -2e^{-y}$。\n   $z_{xy} = -2x(-e^{-y}) = 2xe^{-y}$。\n   $z_{yy} = \\frac{\\partial}{\\partial y}[e^{-y}(x^2-y-1)] = -e^{-y}(x^2-y-1) + e^{-y}(-1) = e^{-y}(y-x^2)$。\n   在点 $(0, -1)$ 处：\n   $A = z_{xx} = -2e^1 = -2e$。\n   $B = z_{xy} = 0$。\n   $C = z_{yy} = e^1(-1-0) = -e$。\n   \n   **第三步：结论**\n   $AC - B^2 = (-2e)(-e) - 0 = 2e^2 > 0$。\n   且 $A = -2e < 0$。\n   故 $z$ 在 $(0, -1)$ 处取得**极大值**。\n   极大值 $z_{max} = e^{-(-1)}(-1+2-0) = e$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "不知道如何从偏增量还原函数",
+              "hint": "偏增量 Δx z 其实就对应 ∂z/∂x * Δx。所以已知了 ∂z/∂x 和 ∂z/∂y，这变成了偏积分问题。"
+            },
+            {
+              "type": "rule",
+              "label": "忘记了二元函数极值判别法",
+              "hint": "AC-B^2 > 0 且 A < 0 是极大值。先解驻点 (zx=0, zy=0)，再求二阶导 A, B, C。"
+            }
+          ]
+        },
+        "insight": "全微分 dz = P dx + Q dy。还原函数的标准流程：先对 x 积分 P 得到 z = ∫P dx + φ(y)，再对 y 求导确定 φ(y)。"
+      }
     },
     "zhangyu-4-set1-18": {
       "id": "zhangyu-4-set1-18",
@@ -326,7 +630,25 @@
       "contentMd": "设 $f(x) = \\begin{cases} x, & x<1, \\\\ \\ln x, & x>1, \\end{cases}$ $g(x) = e^{x-1}$.\n\n(1) 求 $\\varphi(x) = f[g(x)]$;\n\n(2) 求在 $(-\\infty, +\\infty)$ 内的连续函数 $y$，使之在 $(-\\infty, 1)$ 与 $(1, +\\infty)$ 内满足微分方程 $y' - y = \\varphi(x)$，且 $y(0)=0$。",
       "answerMd": "$y = \\begin{cases} x e^{x-1}, & x \\le 1 \\\\ 2e^{x-1} - x, & x > 1 \\end{cases}$",
       "analysisMd": "本题考查**常微分方程**及**分段函数**。\n\n1. **求复合函数 $\\varphi(x)$**：\n   $g(x) = e^{x-1}$。\n   - 当 $x < 1$ 时，$g(x) < 1$，此时 $f(g(x)) = g(x) = e^{x-1}$。\n   - 当 $x > 1$ 时，$g(x) > 1$，此时 $f(g(x)) = \\ln(g(x)) = x-1$。\n   故 $\\varphi(x) = \\begin{cases} e^{x-1}, & x<1 \\\\ x-1, & x>1 \\end{cases}$。\n\n2. **求解微分方程**：\n   方程为 $y' - y = \\varphi(x)$。\n   - **$x < 1$ 段**：\n     $y' - y = e^{x-1}$。\n     $y = e^x (\\int e^{x-1} e^{-x} dx + C_1) = e^x (e^{-1}x + C_1) = xe^{x-1} + C_1 e^x$。\n     由 $y(0)=0$ 得 $C_1=0$。故 $y = xe^{x-1}$。\n   - **$x > 1$ 段**：\n     $y' - y = x-1$。\n     $y = e^x (\\int (x-1)e^{-x} dx + C_2) = e^x (-xe^{-x} + C_2) = -x + C_2 e^x$。\n\n3. **确定常数**：\n   利用 $y(x)$ 在 $x=1$ 处连续。\n   $y(1^-) = 1 \\cdot e^0 = 1$。\n   $y(1^+) = -1 + C_2 e$。\n   令 $1 = -1 + C_2 e \\Rightarrow C_2 = 2e^{-1}$。\n   故 $x > 1$ 时，$y = 2e^{x-1} - x$。\n\n4. **结论**：\n   $y = \\begin{cases} x e^{x-1}, & x \\le 1 \\\\ 2e^{x-1} - x, & x > 1 \\end{cases}$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "被复合函数 f[g(x)] 绕晕了",
+              "hint": "分两步：先看内层 g(x)=e^(x-1) 的范围（它是<1还是>1？），再根据这个范围决定外层 f 套用哪个解析式。"
+            },
+            {
+              "type": "constraint",
+              "label": "不知道怎么处理分段点 x=1 的常数",
+              "hint": "分段微分方程会产生两个积分常数 C1, C2。必须利用函数在 x=1 处的连续性条件建立方程，解出它们的关系。"
+            }
+          ]
+        },
+        "insight": "分段微分方程的“缝合怪”解法：分段求解 -> 利用连续性（左右极限相等）缝合常数 -> 得到完整解。"
+      }
     },
     "zhangyu-4-set1-19": {
       "id": "zhangyu-4-set1-19",
@@ -341,7 +663,25 @@
       "contentMd": "(1) 设 $f(x)$ 在 $[a,b]$ 上具有二阶连续导数，证明存在 $\\xi \\in (a,b)$，使得\n$$ \\int_a^b f(x)dx = f\\left(\\frac{a+b}{2}\\right)(b-a) + \\frac{f''(\\xi)}{24}(b-a)^3; $$\n\n(2) 设 $g(x)$ 在 $[-1,1]$ 上具有三阶连续导数，且 $g(-1)=g(1)$， $g'(0)=0$，证明存在 $\\eta \\in (-1,1)$，使得 $g'''(\\eta)=0$。",
       "answerMd": "Proof",
       "analysisMd": "本题考查**微分中值定理**、**定积分性质**及**泰勒公式**。\n\n1. **证明 (1)**：\n   记 $x_0 = \\frac{a+b}{2}$。利用**泰勒公式**将 $f(x)$ 在 $x_0$ 处展开到二阶（拉格朗日余项）：\n   $$ f(x) = f(x_0) + f'(x_0)(x-x_0) + \\frac{f''(\\xi_x)}{2}(x-x_0)^2 $$\n   两边在 $[a,b]$ 上积分：\n   $$ \\int_a^b f(x)dx = f(x_0)\\int_a^b dx + f'(x_0)\\int_a^b (x-x_0)dx + \\int_a^b \\frac{f''(\\xi_x)}{2}(x-x_0)^2 dx $$\n   - **第一项**：$f(x_0)(b-a)$。\n   - **第二项**：$\\int_a^b (x-x_0)dx = [\\frac{(x-x_0)^2}{2}]_a^b = 0$（区间关于中心对称，一次项积分为0）。\n   - **第三项**：由积分中值定理推广形式，存在 $\\xi \\in (a,b)$：\n     $$ \\int_a^b \\frac{f''(\\xi_x)}{2}(x-x_0)^2 dx = \\frac{f''(\\xi)}{2} \\int_a^b (x-x_0)^2 dx $$\n     其中 $\\int_a^b (x-x_0)^2 dx = [\\frac{1}{3}(x-x_0)^3]_a^b = \\frac{2}{3}(\\frac{b-a}{2})^3 = \\frac{1}{12}(b-a)^3$。\n   整理得：$\\int_a^b f(x)dx = f(\\frac{a+b}{2})(b-a) + \\frac{f''(\\xi)}{24}(b-a)^3$。\n\n2. **证明 (2)**：\n   **第一步：利用罗尔定理**\n   由 $g(-1)=g(1)$，根据罗尔定理 $\\exists \\xi_1 \\in (-1,1)$ 使 $g'(\\xi_1)=0$。\n   又已知 $g'(0)=0$。\n   \n   **第二步：利用泰勒展开**\n   将 $g(1)$ 和 $g(-1)$ 在 $x=0$ 处展开（利用 $g'(0)=0$）：\n   $$ g(1) = g(0) + \\frac{g''(0)}{2} + \\frac{g'''(\\eta_1)}{6} $$\n   $$ g(-1) = g(0) + \\frac{g''(0)}{2} - \\frac{g'''(\\eta_2)}{6} $$\n   两式相减（因 $g(1)=g(-1)$）：\n   $$ 0 = \\frac{1}{6}(g'''(\\eta_1) + g'''(\\eta_2)) \\Rightarrow g'''(\\eta_1) = -g'''(\\eta_2) $$\n   \n   **第三步：利用介值定理**\n   由 $g'''(x)$ 连续，根据**介值定理**（或零点定理），在 $\\eta_1$ 与 $\\eta_2$ 之间存在 $\\eta$ 使得 $g'''(\\eta)=0$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "想不到在什么点展开泰勒公式",
+              "hint": "观察目标式中的 f((a+b)/2)。这提示你应该在区间中点 x0=(a+b)/2 处展开。"
+            },
+            {
+              "type": "function",
+              "label": "积分项消不掉",
+              "hint": "在中心对称区间 [a,b] 上积分奇函数 (x-x0) 结果是多少？是 0！利用对称性简化运算。"
+            }
+          ]
+        },
+        "insight": "定积分中值证明题，如果出现“中点”或“对称区间”，99% 是在利用奇偶性消去泰勒展开的一次项。"
+      }
     },
     "zhangyu-4-set1-20": {
       "id": "zhangyu-4-set1-20",
@@ -356,7 +696,25 @@
       "contentMd": "设非负函数 $f(x)$ 有连续的二阶导数，$f(x)$ 满足 $f(0)=1, f'(0)=2$，对于任意的位于 $xOy$ 面上方的分片光滑闭曲面 $\\Sigma$ 的内侧，都有 $\\oiint_{\\Sigma} z^2 f'(x) dydz - 3yz^2 \\sqrt{f(x)} dzdx = 0$。求 $f(x)$。",
       "answerMd": "$f(x) = (\\frac{1}{2}x + 1)^4$",
       "analysisMd": "本题考查**高斯公式**及**微分方程**。\n\n1. **应用高斯公式**：\n   $$ \\oiint_{\\Sigma} z^2 f'(x) dydz - 3yz^2 \\sqrt{f(x)} dzdx = \\iiint_{\\Omega} [\\frac{\\partial}{\\partial x}(z^2 f'(x)) + \\frac{\\partial}{\\partial y}(-3yz^2 \\sqrt{f(x)})] dV $$\n   $$ = \\iiint_{\\Omega} [z^2 f''(x) - 3z^2 \\sqrt{f(x)}] dV = \\iiint_{\\Omega} z^2 [f''(x) - 3\\sqrt{f(x)}] dV = 0 $$\n   由区域 $\\Omega$ 的任意性及被积函数连续性，得 $f''(x) - 3\\sqrt{f(x)} = 0$。\n\n2. **求解微分方程**：\n   方程为 $y'' = 3\\sqrt{y}$（缺 $x$ 型）。\n   令 $y' = p$，则 $y'' = p \\frac{dp}{dy}$。\n   $$ p \\frac{dp}{dy} = 3y^{1/2} \\Rightarrow p dp = 3y^{1/2} dy $$\n   两边积分：\n   $$ \\int p dp = \\int 3y^{1/2} dy \\Rightarrow \\frac{1}{2}p^2 = 2y^{3/2} + C_1 $$\n   代入初始条件 $f(0)=1, f'(0)=2$（即 $y=1$ 时 $p=2$）：\n   $\\frac{1}{2}(4) = 2(1) + C_1 \\Rightarrow 2 = 2 + C_1 \\Rightarrow C_1=0$。\n   $$ p^2 = 4y^{3/2} \\Rightarrow p = 2y^{3/4} \\quad (\\because p>0) $$\n   $$ \\frac{dy}{dx} = 2y^{3/4} \\Rightarrow y^{-3/4} dy = 2 dx $$\n   积分得：$4y^{1/4} = 2x + C_2$。\n   代入 $x=0, y=1$：$4(1) = 0 + C_2 \\Rightarrow C_2=4$。\n   $$ 4y^{1/4} = 2x + 4 \\Rightarrow y^{1/4} = \\frac{1}{2}x + 1 \\Rightarrow y = (\\frac{1}{2}x + 1)^4 $$",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不知道如何处理“任意闭曲面”条件",
+              "hint": "高斯公式！根据积分中值定理或反证法，如果对任意区域积分都为0，那么被积函数恒为0。"
+            },
+            {
+              "type": "function",
+              "label": "解微分方程 y'' = 3√y 卡住",
+              "hint": "这是一个不显含 x 的方程（缺 x 型）。令 y'=p, y''=p dp/dy，降阶求解。"
+            }
+          ]
+        },
+        "insight": "看到闭曲面积分，首先想高斯公式。看到“任意区域积分等于0”，立刻得到“被积函数为0”的微分方程。"
+      }
     },
     "zhangyu-4-set1-21": {
       "id": "zhangyu-4-set1-21",
@@ -371,7 +729,25 @@
       "contentMd": "设 $A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix}$, $B = \\begin{pmatrix} 0 & 0 & 1 \\\\ 0 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix}$.\n\n(1) 是否存在正交矩阵 $Q$，使得 $Q^T A Q = B$？若存在，求出 $Q$；若不存在，说明理由。\n\n(2) 求可逆矩阵 $P$，使得 $P^T A P$，$P^T B P$ 均为对角矩阵。",
       "answerMd": "(1) 不存在; (2) $P = \\begin{pmatrix} \\sqrt{2} & -1 & 0 \\\\ 0 & 1 & 0 \\\\ -\\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}} \\end{pmatrix}$ \\text{(答案不唯一)}",
       "analysisMd": "本题考查**矩阵相似**及实对称矩阵的**合同**（同时对角化）。\n\n1. **第一问：正交矩阵存在性判定**\n   $Q^T A Q = B$ 且 $Q$ 为正交矩阵，意味着 $Q^{-1} A Q = B$，即 $A$ 与 $B$ 相似。\n   相似矩阵的迹（Trace）相等。\n   $tr(A) = 1+2+2=5$，\n   $tr(B) = 0+2+2=4$。\n   由于 $tr(A) \\neq tr(B)$，故 $A$ 与 $B$ 不相似，不存在满足条件的正交矩阵 $Q$。\n\n2. **第二问：同时对角化求解**\n   求可逆矩阵 $P$ 使 $P^T A P$ 和 $P^T B P$ 均为对角矩阵。\n   \n   **步骤一：将正定矩阵 $A$ 化为单位阵**\n   $A$ 的顺序主子式 $1, 1, 1$ 均大于 0，故 $A$ 正定。\n   $A$ 对应的二次型为 $f = x_1^2 + 2x_2^2 + 2x_3^2 + 2x_1x_2 + 2x_1x_3 + 2x_2x_3$。\n   配方可得 $f = (x_1+x_2+x_3)^2 + x_2^2 + x_3^2$。\n   令 $\\begin{cases} y_1 = x_1+x_2+x_3 \\\\ y_2 = x_2 \\\\ y_3 = x_3 \\end{cases}$，变换矩阵 $C = \\begin{pmatrix} 1 & -1 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$。\n   此时 $C^T A C = E$。\n\n   **步骤二：对 $B$ 进行合同变换**\n   计算 $B_1 = C^T B C = \\begin{pmatrix} 0 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix}$。\n   \n   **步骤三：正交对角化 $B_1$**\n   $|\\lambda E - B_1| = (\\lambda-2)(\\lambda^2-1) = 0$，特征值 $\\lambda = 2, 1, -1$。\n   - $\\lambda_1 = 2$: 特征向量 $\\xi_1 = (0, 1, 0)^T$。\n   - $\\lambda_2 = 1$: 特征向量 $\\xi_2 = (1, 0, 1)^T$，单位化 $\\eta_2 = (\\frac{1}{\\sqrt{2}}, 0, \\frac{1}{\\sqrt{2}})^T$。\n   - $\\lambda_3 = -1$: 特征向量 $\\xi_3 = (1, 0, -1)^T$，单位化 $\\eta_3 = (\\frac{1}{\\sqrt{2}}, 0, -\\frac{1}{\\sqrt{2}})^T$。\n   正交矩阵 $Q = (\\eta_3, \\eta_1, \\eta_2) = \\begin{pmatrix} \\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}} \\\\ 0 & 1 & 0 \\\\ -\\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}} \\end{pmatrix}$。\n\n   **步骤四：构造 $P$**\n   $P = C Q = \\begin{pmatrix} \\sqrt{2} & -1 & 0 \\\\ 0 & 1 & 0 \\\\ -\\frac{1}{\\sqrt{2}} & 0 & \\frac{1}{\\sqrt{2}} \\end{pmatrix}$。\n   此时 $P^T A P = E$， $P^T B P = \\text{diag}(-1, 2, 1)$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "分不清相似和合同的条件",
+              "hint": "正交相似（Q^T AQ = B）要求迹(Trace)相等。合同（P^T AP = B）不要求迹相等，只要求惯性指数相同。"
+            },
+            {
+              "type": "function",
+              "label": "不知道怎么同时对角化",
+              "hint": "口诀：先正定，后普通。先把正定矩阵 A 化为单位阵，再把 B 在变换后的基下对角化。"
+            }
+          ]
+        },
+        "insight": "判断两个实对称矩阵是否正交相似，最快的方法是看“迹”和“行列式”是否相等。"
+      }
     },
     "zhangyu-4-set1-22": {
       "id": "zhangyu-4-set1-22",
@@ -386,7 +762,25 @@
       "contentMd": "设随机变量 $(X,Y)$ 的概率密度为 $f(x,y) = \\begin{cases} a(x^2 + \\frac{xy}{2}), & 0 < x < 1, 0 < y < 2, \\\\ 0, & \\text{其他}. \\end{cases}$\n\n(1) 求 $a$ 的值；\n\n(2) $X, Y$ 是否相互独立，说明理由；\n\n(3) 计算 $P\\left\\{ Y > 1 \\mid X = \\frac{1}{2} \\right\\}$。",
       "answerMd": "(1) $a=\\frac{6}{7}$; \\; (2) \\text{不独立}; \\; (3) $\\frac{5}{8}$",
       "analysisMd": "本题考查**二维随机变量**。\n\n1. **求常数 $a$**：\n   利用归一性 $\\int_0^1 dx \\int_0^2 f(x,y) dy = 1$。\n   $\\int_0^2 a(x^2 + \\frac{xy}{2}) dy = a(2x^2 + x)$。\n   $\\int_0^1 a(2x^2 + x) dx = a(\\frac{2}{3} + \\frac{1}{2}) = \\frac{7}{6}a = 1$。\n   解得 $a = \\frac{6}{7}$。\n\n2. **判断独立性**：\n   边缘密度 $f_X(x) = \\frac{6}{7}(2x^2+x)$，$f_Y(y) = \\frac{6}{7}(\\frac{1}{3} + \\frac{y}{4})$。\n   显然 $f(x,y) \neq f_X(x)f_Y(y)$，故 $X, Y$ 不独立。\n\n3. **计算条件概率**：\n   $f_{Y|X}(y|x) = \\frac{f(x,y)}{f_X(x)}$。\n   当 $x = \\frac{1}{2}$ 时，$f(\\frac{1}{2}, y) = \\frac{6}{7}(\\frac{1}{4} + \\frac{y}{4}) = \\frac{3}{14}(1+y)$。\n   $f_X(\\frac{1}{2}) = \\frac{6}{7}(2(\\frac{1}{4}) + \\frac{1}{2}) = \\frac{6}{7}$。\n   $f_{Y|X}(y|\\frac{1}{2}) = \\frac{\\frac{3}{14}(1+y)}{\\frac{6}{7}} = \\frac{1}{4}(1+y)$ ($0<y<2$)。\n   $P\\{ Y > 1 \\mid X = \\frac{1}{2} \\} = \\int_1^2 \\frac{1}{4}(1+y) dy = \\frac{1}{4} [y + \\frac{y^2}{2}]_1^2 = \\frac{1}{4} (4 - 1.5) = \\frac{2.5}{4} = \\frac{5}{8}$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "判断独立性总是出错",
+              "hint": "看 f(x,y) 能不能写成 g(x)*h(y)。这道题里有一项 xy，显然拆不开，所以肯定不独立。"
+            },
+            {
+              "type": "function",
+              "label": "条件概率积分范围搞错",
+              "hint": "在给定 X=1/2 的条件下，Y 的范围还是 (0,2)。求 P(Y>1) 就是积分 (1, 2)。"
+            }
+          ]
+        },
+        "insight": "判断二维变量独立性，直接看密度函数中有没有 x 和 y 纠缠在一起的项（如 xy, x/y, x+y 在指数上等）。"
+      }
     }
   }
 }
