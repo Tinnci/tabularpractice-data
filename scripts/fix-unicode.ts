@@ -24,7 +24,16 @@ const unicodeToLatex: Record<string, string> = {
     'θ': '\\theta',
     'π': '\\pi',
     'Δ': '\\Delta',
-    '→': '\\to'
+    '→': '\\to',
+    // Superscripts (common in matrices)
+    'ᵀ': '^T',  // Transpose
+    '²': '^2',
+    '³': '^3',
+    // Subscripts
+    '₀': '_0',
+    '₁': '_1',
+    '₂': '_2',
+    '₃': '_3'
 };
 
 function replaceUnicodeWithLatex(text: string): string {
