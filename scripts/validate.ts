@@ -235,7 +235,11 @@ async function validateQuestionIndex(validTagIds: Set<string>): Promise<Set<stri
 
     if (missingTagsSet.size > 0) {
         warn(`${missingTagsSet.size} unique tag(s) referenced in questions but not in tags.json`);
-        // Optionally list first few: console.log(Array.from(missingTagsSet).slice(0,5));
+        const missingList = Array.from(missingTagsSet).slice(0, 15);
+        console.log(`   Missing tags (first 15): ${missingList.join(', ')}`);
+        if (missingTagsSet.size > 15) {
+            console.log(`   ... and ${missingTagsSet.size - 15} more`);
+        }
     }
 
     success(`Validated ${questions.length} question summaries across ${paperIds.size} papers`);
