@@ -125,32 +125,66 @@ async function exists(path: string): Promise<boolean> {
 
 // Validate Eureka formatting (check for plain text vs Markdown/LaTeX)
 function validateEurekaFormatting(question: Question, paperId: string): void {
-    if (!question.eureka?.strategies) return;
+    if (!question.eureka) return;
 
     const unicodeMathSymbols = /[∫∂∑∏√∞≈≠≤≥±×÷]/;
     const hasLatex = /\$.*?\$/;
     const hasBold = /\*\*.*?\*\*/;
+    const containsMathTerms = /(积分|函数|方程|矩阵|变量|公式|阶数|区域|导数|极限|收敛|特征|概率)/;
 
-    question.eureka.strategies.forEach((strategy, index) => {
-        const { trigger, action } = strategy;
+    const checkField = (fieldValue: string, fieldPath: string) => {
+        if (!fieldValue) return;
 
-        // Check for Unicode math symbols (should use LaTeX)
-        if (unicodeMathSymbols.test(trigger)) {
-            warn(`${paperId}/${question.id} strategy[${index}].trigger uses Unicode math symbols. Use LaTeX ($...$) instead.`);
-        }
-        if (unicodeMathSymbols.test(action)) {
-            warn(`${paperId}/${question.id} strategy[${index}].action uses Unicode math symbols. Use LaTeX ($...$) instead.`);
+        // Check for Unicode math symbols
+        if (unicodeMathSymbols.test(fieldValue)) {
+            warn(`${paperId}/${question.id} ${fieldPath} uses Unicode math symbols. Use LaTeX ($...$) instead.`);
         }
 
-        // Check for lack of formatting (heuristic: if contains math-like text but no LaTeX/bold)
-        const containsMathTerms = /(积分|函数|方程|矩阵|变量|公式|阶数|区域)/;
-        if (containsMathTerms.test(trigger) && !hasLatex.test(trigger) && !hasBold.test(trigger)) {
-            warn(`${paperId}/${question.id} strategy[${index}].trigger lacks formatting. Consider using **bold** or $LaTeX$.`);
+        // Check for lack of formatting
+        if (containsMathTerms.test(fieldValue) && !hasLatex.test(fieldValue) && !hasBold.test(fieldValue)) {
+            warn(`${paperId}/${question.id} ${fieldPath} lacks formatting. Consider using **bold** or $LaTeX$.`);
         }
-        if (containsMathTerms.test(action) && !hasLatex.test(action) && !hasBold.test(action)) {
-            warn(`${paperId}/${question.id} strategy[${index}].action lacks formatting. Consider using **bold** or $LaTeX$.`);
-        }
-    });
+    };
+
+    // Check diagnostic
+    if (question.eureka.diagnostic) {
+        question.eureka.diagnostic.options.forEach((option, idx) => {
+            checkField(option.label, `diagnostic.options[${idx}].label`);
+            checkField(option.hint, `diagnostic.options[${idx}].hint`);
+        });
+    }
+
+    // Check modelLineup
+    if (question.eureka.modelLineup) {
+        question.eureka.modelLineup.options.forEach((option, idx) => {
+            checkField(option.label, `modelLineup.options[${idx}].label`);
+            if (option.formula) checkField(option.formula, `modelLineup.options[${idx}].formula`);
+            checkField(option.feedback, `modelLineup.options[${idx}].feedback`);
+        });
+    }
+
+    // Check variableRoles
+    if (question.eureka.variableRoles) {
+        question.eureka.variableRoles.forEach((role, idx) => {
+            checkField(role.target, `variableRoles[${idx}].target`);
+            checkField(role.currentRole, `variableRoles[${idx}].currentRole`);
+            checkField(role.suggestedRole, `variableRoles[${idx}].suggestedRole`);
+            checkField(role.transformation, `variableRoles[${idx}].transformation`);
+        });
+    }
+
+    // Check strategies
+    if (question.eureka.strategies) {
+        question.eureka.strategies.forEach((strategy, idx) => {
+            checkField(strategy.trigger, `strategies[${idx}].trigger`);
+            checkField(strategy.action, `strategies[${idx}].action`);
+        });
+    }
+
+    // Check insight
+    if (question.eureka.insight) {
+        checkField(question.eureka.insight, 'insight');
+    }
 }
 
 // --- Validators ---
