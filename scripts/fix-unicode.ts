@@ -25,15 +25,29 @@ const unicodeToLatex: Record<string, string> = {
     'π': '\\pi',
     'Δ': '\\Delta',
     '→': '\\to',
-    // Superscripts (common in matrices)
-    'ᵀ': '^T',  // Transpose
+    // Superscripts (common in matrices and exponents)
+    'ᵀ': '^T',   // Transpose
+    '⁰': '^0',
+    '¹': '^1',
     '²': '^2',
     '³': '^3',
+    '⁴': '^4',
+    '⁵': '^5',
+    '⁶': '^6',
+    '⁷': '^7',
+    '⁸': '^8',
+    '⁹': '^9',
     // Subscripts
     '₀': '_0',
     '₁': '_1',
     '₂': '_2',
-    '₃': '_3'
+    '₃': '_3',
+    '₄': '_4',
+    '₅': '_5',
+    '₆': '_6',
+    '₇': '_7',
+    '₈': '_8',
+    '₉': '_9'
 };
 
 function replaceUnicodeWithLatex(text: string): string {

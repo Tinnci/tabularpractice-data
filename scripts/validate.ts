@@ -127,7 +127,7 @@ async function exists(path: string): Promise<boolean> {
 function validateEurekaFormatting(question: Question, paperId: string): void {
     if (!question.eureka) return;
 
-    const unicodeMathSymbols = /[∫∂∑∏√∞≈≠≤≥±×÷]/;
+    const unicodeMathSymbols = /[∫∂∑∏√∞≈≠≤≥±×÷ᵀ²³⁴⁵⁶⁷⁸⁹⁰₀₁₂₃₄₅₆₇₈₉]/;
     const hasLatex = /\$.*?\$/;
     const hasBold = /\*\*.*?\*\*/;
     const containsMathTerms = /(积分|函数|方程|矩阵|变量|公式|阶数|区域|导数|极限|收敛|特征|概率)/;
