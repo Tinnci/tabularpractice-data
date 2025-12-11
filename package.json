@@ -1,0 +1,15 @@
+{
+  "name": "tabularpractice-data",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "validate": "bun run scripts/validate.ts"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
