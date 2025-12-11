@@ -264,8 +264,8 @@
         "strategies": [
           {
             "title": "Taylor公式回忆",
-            "trigger": "看到求高阶导数",
-            "action": "写出泰勒展开，从系数提取导数值"
+            "trigger": "看到**求高阶导数**",
+            "action": "写出**泰勒展开**，从系数提取导数值"
           }
         ]
       }
@@ -569,7 +569,7 @@
           },
           {
             "title": "收敛半径",
-            "trigger": "判断幂级数收敛域",
+            "trigger": "判断**幂级数收敛域**",
             "action": "由 $\\rho = \\lim |\\frac{a_n}{a_{n+1}}|$ 得半径 $R$，检查端点"
           }
         ]
@@ -964,12 +964,12 @@
         "strategies": [
           {
             "title": "特征方程",
-            "trigger": "求特征值",
+            "trigger": "求**特征值**",
             "action": "解 $|A - \\lambda E| = 0$，得到所有**特征值**"
           },
           {
             "title": "特征向量",
-            "trigger": "得到特征值后",
+            "trigger": "得到**特征值**后",
             "action": "对每个 $\\lambda_i$，解 $(A - \\lambda_i E)\\vec{x} = 0$ 得**特征向量**"
           }
         ]
@@ -1241,7 +1241,7 @@
             },
             {
               "type": "function",
-              "label": "解微分**方程** y'' = 3√y 卡住",
+              "label": "不会用 $D(X) = E(X^2) - [E(X)]^2$",
               "hint": "这是一个不显含 x 的**方程**（缺 x 型）。令 y'=p, y''=p dp/dy，降阶求解。"
             }
           ]
