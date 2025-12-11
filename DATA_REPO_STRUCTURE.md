@@ -34,7 +34,7 @@ Master index loaded on initial page load.
     "paperId": "math1-2025",    // ID of the paper it belongs to
     "number": 1,                // Question number
     "type": "choice",           // "choice" | "fill" | "answer"
-    "tags": ["han-shu-ji-xian"],// Array of tag IDs (Natural Language)
+    "tags": ["limit-calculation"],// Array of tag IDs
     "contentImgThumb": "/papers/math1-2025/assets/01_q_thumb.png", // [New] Thumbnail path
     "year": 2025,
     "subject": "math",
@@ -51,14 +51,14 @@ Defines the hierarchical knowledge tree.
 ```json
 [
   {
-    "id": "gao-deng-shu-xue",
-    "name": "高等数学",
+    "id": "limit-calculation",
+    "name": "函数极限的计算",
     "parentId": null
   },
   {
-    "id": "han-shu-ji-xian-lian-xu",
-    "name": "函数、极限、连续",
-    "parentId": "gao-deng-shu-xue"
+    "id": "derivative-concept",
+    "name": "导数与微分的概念",
+    "parentId": null
   },
   ...
 ]
@@ -97,8 +97,8 @@ Loaded lazily when a user selects a specific paper.
   "subjectKey": "math",   // [Optional] Force specific subject knowledge tree, e.g. "math"
   "year": "2025",
   "tags": [               // [New] Aggregated tags for the entire paper
-    "han-shu-ji-xian",
-    "wei-fen-xue"
+    "limit-calculation",
+    "derivative-concept"
   ],
   "questions": {
     "math1-2025-01": {
@@ -106,7 +106,7 @@ Loaded lazily when a user selects a specific paper.
       "paperId": "math1-2025",
       "number": 1,
       "type": "choice",
-      "tags": ["han-shu-ji-xian"],
+      "tags": ["limit-calculation"],
       "score": 5,
       "videoUrl": "https://...",
       "contentImg": "/papers/math1-2025/assets/01_q.png",
