@@ -123,6 +123,36 @@ async function exists(path: string): Promise<boolean> {
     }
 }
 
+// Validate Eureka formatting (check for plain text vs Markdown/LaTeX)
+function validateEurekaFormatting(question: Question, paperId: string): void {
+    if (!question.eureka?.strategies) return;
+
+    const unicodeMathSymbols = /[∫∂∑∏√∞≈≠≤≥±×÷]/;
+    const hasLatex = /\$.*?\$/;
+    const hasBold = /\*\*.*?\*\*/;
+
+    question.eureka.strategies.forEach((strategy, index) => {
+        const { trigger, action } = strategy;
+
+        // Check for Unicode math symbols (should use LaTeX)
+        if (unicodeMathSymbols.test(trigger)) {
+            warn(`${paperId}/${question.id} strategy[${index}].trigger uses Unicode math symbols. Use LaTeX ($...$) instead.`);
+        }
+        if (unicodeMathSymbols.test(action)) {
+            warn(`${paperId}/${question.id} strategy[${index}].action uses Unicode math symbols. Use LaTeX ($...$) instead.`);
+        }
+
+        // Check for lack of formatting (heuristic: if contains math-like text but no LaTeX/bold)
+        const containsMathTerms = /(积分|函数|方程|矩阵|变量|公式|阶数|区域)/;
+        if (containsMathTerms.test(trigger) && !hasLatex.test(trigger) && !hasBold.test(trigger)) {
+            warn(`${paperId}/${question.id} strategy[${index}].trigger lacks formatting. Consider using **bold** or $LaTeX$.`);
+        }
+        if (containsMathTerms.test(action) && !hasLatex.test(action) && !hasBold.test(action)) {
+            warn(`${paperId}/${question.id} strategy[${index}].action lacks formatting. Consider using **bold** or $LaTeX$.`);
+        }
+    });
+}
+
 // --- Validators ---
 
 async function validatePaperGroups(): Promise<Set<string>> {
@@ -247,6 +277,9 @@ async function validatePaperDirectories(referencedPaperIds: Set<string>) {
             if (q.paperId !== paperData.paperId) {
                 error(`Question ${q.id} has mismatched paperId: ${q.paperId} != ${paperData.paperId}`);
             }
+
+            // Validate Eureka formatting
+            validateEurekaFormatting(q, paperData.paperId);
         }
     }
 
