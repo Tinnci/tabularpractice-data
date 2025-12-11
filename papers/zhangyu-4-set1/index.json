@@ -45,7 +45,7 @@
             {
               "id": "order-plus-one",
               "label": "**阶数**提升模型",
-              "formula": "若 f(t)~t^k, 则 $\\int$_0^x f(t)dt ~ x^(k+1)/(k+1)",
+              "formula": "若 f(t)~$t^k$, 则 $\\int$_0^x f(t)dt ~ x^(k+1)/(k+1)",
               "isCorrect": true,
               "feedback": "正确！积分运算本质上是求面积，会使无穷小量的阶数+1（对于幂**函数**而言）。"
             }
@@ -246,7 +246,7 @@
             {
               "id": "maclaurin",
               "label": "麦克劳林级数展开",
-              "formula": "f(x) = Σ f^(n)(0)/n! * x^n",
+              "formula": "f(x) = Σ f^(n)(0)/n! * $x^n$",
               "isCorrect": true,
               "feedback": "正确！直接展开找 x^3 的系数 a_3，那么 f'''(0) = 3! * a_3。秒杀！"
             }
@@ -257,7 +257,7 @@
             "target": "f'''(0)",
             "currentRole": "求导结果",
             "suggestedRole": "泰勒级数系数对应量",
-            "transformation": "Coefficient of x^3 = f'''(0) / 3!"
+            "transformation": "Coefficient of $x^3$ = f'''(0) / 3!"
           }
         ],
         "insight": "Taylor公式：n 阶**导数**的值隐藏在 $(x-x_0)^n$ 项的**系数**里，只需乘以 $n!$ 提取。",
@@ -424,21 +424,21 @@
             {
               "id": "symmetric",
               "label": "实对称**矩阵**",
-              "formula": "A^T = A",
+              "formula": "$A^T$ = A",
               "isCorrect": false,
               "feedback": "题目没说对称。只说了行和固定。"
             },
             {
               "id": "stochastic",
               "label": "随机**矩阵** (行和固定)",
-              "formula": "Σ a_ij = 1",
+              "formula": "Σ $a_ij$ = 1",
               "isCorrect": true,
               "feedback": "正确！随机**矩阵**有一个重要性质：最大特征值为1（谱半径为1）。"
             },
             {
               "id": "orthogonal",
               "label": "正交**矩阵**",
-              "formula": "A^T A = E",
+              "formula": "$A^T$ A = E",
               "isCorrect": false,
               "feedback": "正交**矩阵**行向量模长为1且正交，题目只给了行和条件。"
             }
@@ -557,7 +557,7 @@
             "target": "β (第二类错误)",
             "currentRole": "错误**概率**",
             "suggestedRole": "条件**概率** P(接受H0 | H1真)",
-            "transformation": "P(X_bar <= 20 | μ=20.5)"
+            "transformation": "P($X_bar$ <= 20 | μ=20.5)"
           }
         ],
         "insight": "级数**收敛**判断：看到 $n!$ 或 $a^n$，首选**比值判别法**。",
@@ -1010,7 +1010,7 @@
             "target": "L(μ, θ)",
             "currentRole": "联合**概率**密度乘积",
             "suggestedRole": "关于参数的**函数**",
-            "transformation": "把样本值 x_i 看作常数，μ, $\\theta$ 看作变量求极值。"
+            "transformation": "把样本值 $x_i$ 看作常数，μ, $\\theta$ 看作变量求极值。"
           }
         ],
         "insight": "**二次型**标准化：配方法消交叉项，或用正交变换对角化。",
@@ -1305,14 +1305,14 @@
             {
               "id": "similarity",
               "label": "正交相似",
-              "formula": "Q^T AQ = B (Q正交)",
+              "formula": "$Q^T$ AQ = B (Q正交)",
               "isCorrect": true,
               "feedback": "要求极高：不仅**特征值**相同，而且迹、行列式都必须相同。"
             },
             {
               "id": "congruence",
               "label": "合同",
-              "formula": "C^T AC = B (C可逆)",
+              "formula": "$C^T$ AC = B (C可逆)",
               "isCorrect": false,
               "feedback": "相对宽松：只要求正负惯性指数相同（**特征值**正负个数相同），迹可以不同。"
             }
