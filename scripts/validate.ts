@@ -61,6 +61,11 @@ interface EurekaData {
         suggestedRole: string;
         transformation: string;
     }>;
+    strategies?: Array<{
+        title: string;
+        trigger: string;
+        action: string;
+    }>;
     insight?: string;
 }
 
