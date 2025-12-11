@@ -38,14 +38,14 @@
             {
               "id": "direct",
               "label": "直接代入上限",
-              "formula": "∫_0^g(x) f(t)dt ~ f(g(x)) * g(x)",
+              "formula": "$\\int$_0^g(x) f(t)dt ~ f(g(x)) * g(x)",
               "isCorrect": false,
               "feedback": "不对。变上限积分的阶数通常是‘被积函数主部阶数’+1（当上限是x时）。"
             },
             {
               "id": "order-plus-one",
               "label": "阶数提升模型",
-              "formula": "若 f(t)~t^k, 则 ∫_0^x f(t)dt ~ x^(k+1)/(k+1)",
+              "formula": "若 f(t)~t^k, 则 $\\int$_0^x f(t)dt ~ x^(k+1)/(k+1)",
               "isCorrect": true,
               "feedback": "正确！积分运算本质上是求面积，会使无穷小量的阶数+1（对于幂函数而言）。"
             }
@@ -63,7 +63,7 @@
             "action": "用**等价无穷小**替换被积函数，只保留**最低次项**（主部）"
           }
         ],
-        "insight": "判断变上限积分的无穷小阶数，核心是：积分过程将‘被积函数的主部阶数’提升了1阶（如果是从0积到x）。"
+        "insight": "判断**变上限积分**的无穷小**阶数**，核心是：积分过程将‘**被积函数**的**主部****阶数**’提升了1阶（如果是从0积到x）。"
       }
     },
     "zhangyu-4-set1-02": {
@@ -91,7 +91,7 @@
             {
               "type": "function",
               "label": "忘记了特征根与解的形式的关系",
-              "hint": "特征根 r = u ± iv 对应的解包含 e^(ux)sin(vx)。要想由于周期性，必须 u=0。"
+              "hint": "特征根 r = u $\\pm$ iv 对应的解包含 e^(ux)sin(vx)。要想由于周期性，必须 u=0。"
             }
           ]
         },
@@ -101,27 +101,27 @@
             {
               "id": "real-distinct",
               "label": "两个不等实根",
-              "formula": "r1 ≠ r2",
+              "formula": "r1 $\\neq$ r2",
               "isCorrect": false,
               "feedback": "不对。实根对应的是指数函数 e^(rx)，是单调或发散的，不是周期的。"
             },
             {
               "id": "complex",
               "label": "一对共轭复根",
-              "formula": "r = u ± iv",
+              "formula": "r = u $\\pm$ iv",
               "isCorrect": false,
               "feedback": "不完全对。复根对应 e^(ux)*sin(vx)。如果 u!=0，震荡幅度会变化（衰减或发散），不是纯周期。"
             },
             {
               "id": "pure-imaginary",
               "label": "纯虚根",
-              "formula": "r = ± iv (u=0)",
+              "formula": "r = $\\pm$ iv (u=0)",
               "isCorrect": true,
               "feedback": "正确！纯虚根对应 sin(vx) 和 cos(vx)，这才是稳定的周期函数。"
             }
           ]
         },
-        "insight": "二阶常系数方程由‘纯虚根’特征值主导周期解。这直接联系到物理中的简谐振动模型。",
+        "insight": "二阶常系数方程由‘**纯虚根**’**特征值**主导**周期解**。这直接联系到物理中的**简谐振动**模型。",
         "strategies": [
           {
             "title": "特征方程分析",
@@ -171,14 +171,14 @@
             {
               "id": "ibp",
               "label": "分部积分法",
-              "formula": "∫udv = uv - ∫vdu",
+              "formula": "$\\int$udv = uv - $\\int$vdu",
               "isCorrect": false,
               "feedback": "通常行不通。e^(y/x) 很难找到合适的 u 和 dv 来消除复杂性。"
             },
             {
               "id": "swap",
               "label": "交换积分次序",
-              "formula": "∫dx∫dy -> ∫dy∫dx",
+              "formula": "$\\int$dx$\\int$dy -> $\\int$dy$\\int$dx",
               "isCorrect": true,
               "feedback": "正确！先对 y 积分时，x 是常数，e^(y/x) 就变成了 e^(ky) 形式，非常容易积分。"
             }
@@ -313,9 +313,9 @@
             {
               "id": "rank",
               "label": "秩的增广性",
-              "formula": "r(A) = r(A, β) vs r(A) < r(A, β)",
+              "formula": "r(A) = r(A, $\\beta$) vs r(A) < r(A, $\\beta$)",
               "isCorrect": true,
-              "feedback": "正确！如果加进去一个向量 β 后秩增加了，说明 β 独立于前面的向量（不能被表示）。"
+              "feedback": "正确！如果加进去一个向量 $\\beta$ 后秩增加了，说明 $\\beta$ 独立于前面的向量（不能被表示）。"
             }
           ]
         },
@@ -444,7 +444,7 @@
             }
           ]
         },
-        "insight": "“行和为常数k”直接告诉你 λ=k 是一个特征值，对应的特征向量是全1向量。",
+        "insight": "“行和为常数k”直接告诉你 $\\lambda$=k 是一个特征值，对应的特征向量是全1向量。",
         "strategies": [
           {
             "title": "驻点求解",
@@ -508,7 +508,7 @@
             }
           ]
         },
-        "insight": "多项分布中，任意两个不同类别的频数总是‘此消彼长’的，因此协方差 Cov(Ni, Nj) = -n*pi*pj 总是负的。",
+        "insight": "多项分布中，任意两个不同类别的频数总是‘此消彼长’的，因此协**方差** Cov(Ni, Nj) = -n*pi*pj 总是负的。",
         "strategies": [
           {
             "title": "Gauss公式",
@@ -548,7 +548,7 @@
             {
               "type": "representation",
               "label": "不知道怎么算 β",
-              "hint": "画出H0和H1对应的两个正态分布图。β就是H1分布下落在H0接受域（左边）的面积。"
+              "hint": "画出H0和H1对应的两个正态分布图。$\\beta$就是H1分布下落在H0接受域（左边）的面积。"
             }
           ]
         },
@@ -611,14 +611,14 @@
             {
               "id": "unbiased-only",
               "label": "仅无偏性",
-              "formula": "E(θ_hat) = θ",
+              "formula": "E($\\theta$_hat) = $\\theta$",
               "isCorrect": false,
               "feedback": "不够。无偏估计有很多，还需要看波动大小。"
             },
             {
               "id": "efficiency",
               "label": "有效性 (最小方差)",
-              "formula": "D(θ_hat) 最小",
+              "formula": "D($\\theta$_hat) 最小",
               "isCorrect": true,
               "feedback": "正确！所谓‘最有效’就是在所有无偏估计中，方差最小的那一个。"
             }
@@ -632,7 +632,7 @@
             "transformation": "总权重受无偏性约束，分配权重以最小化总风险（方差）。"
           }
         ],
-        "insight": "最有效估计量其实就是在给不同来源的信息‘加权’。方差越小的信息源（越靠谱），分到的权重应该越大（虽然这里方差一样，但期望不同导致系数不同）。",
+        "insight": "最有效估计量其实就是在给不同来源的信息‘加权’。**方差**越小的信息源（越靠谱），分到的权重应该越大（虽然这里**方差**一样，但**期望**不同导致系数不同）。",
         "strategies": [
           {
             "title": "已知函数展开",
@@ -734,23 +734,23 @@
             {
               "id": "vertical",
               "label": "铅直渐近线",
-              "formula": "x -> x0, y -> ∞",
+              "formula": "x -> x0, y -> $\\infty$",
               "isCorrect": false,
               "feedback": "虽然 x=-1 是铅直渐近线，但题目问的是斜渐近线。"
             },
             {
               "id": "horizontal",
               "label": "水平渐近线",
-              "formula": "x -> ∞, y -> A",
+              "formula": "x -> $\\infty$, y -> A",
               "isCorrect": false,
-              "feedback": "lim(x->∞) y = ∞，不存在水平渐近线。"
+              "feedback": "lim(x->$\\infty$) y = $\\infty$，不存在水平渐近线。"
             },
             {
               "id": "oblique",
               "label": "斜渐近线",
               "formula": "y = kx + b",
               "isCorrect": true,
-              "feedback": "正确！当 x->∞ 时 y 也趋于无穷且同阶，存在斜渐近线。"
+              "feedback": "正确！当 x->$\\infty$ 时 y 也趋于无穷且同阶，存在斜渐近线。"
             }
           ]
         },
@@ -809,28 +809,28 @@
             {
               "id": "geometric",
               "label": "几何级数",
-              "formula": "∑ aⁿ = 1/(1-a)",
+              "formula": "$\\sum$ aⁿ = 1/(1-a)",
               "isCorrect": false,
               "feedback": "不对。几何级数分母是指数，这道题分母是阶乘 (2n+1)!，差别很大。"
             },
             {
               "id": "exp",
               "label": "指数函数",
-              "formula": "eˣ = ∑ xⁿ/n!",
+              "formula": "eˣ = $\\sum$ xⁿ/n!",
               "isCorrect": false,
               "feedback": "接近了！eˣ 确实有阶乘，但它的指数和阶乘都是 n，而这道题是 2n 和 (2n+1)。"
             },
             {
               "id": "trig",
               "label": "三角函数 (sin/cos)",
-              "formula": "sin x = ∑ (-1)ⁿ x^(2n+1)/(2n+1)!",
+              "formula": "sin x = $\\sum$ (-1)ⁿ x^(2n+1)/(2n+1)!",
               "isCorrect": true,
               "feedback": "✓ 正确！分母 (2n+1)! 和 (-1)ⁿ 都提示这是 sin 或 cos 的展开式变体。"
             },
             {
               "id": "ln",
               "label": "对数函数",
-              "formula": "ln(1+x) = ∑ (-1)^(n-1) xⁿ/n",
+              "formula": "ln(1+x) = $\\sum$ (-1)^(n-1) xⁿ/n",
               "isCorrect": false,
               "feedback": "不对。ln 的展开式分母是 n 而不是 n!，结构不匹配。"
             }
@@ -996,12 +996,12 @@
             {
               "type": "constraint",
               "label": "忘记了参数 μ 和 θ 之间的约束",
-              "hint": "概率密度函数的总积分为1！这是隐藏的第一个方程：1/2*μ + 3/2*θ = 1。"
+              "hint": "概率密度函数的总积分为1！这是隐藏的第一个方程：1/2*μ + 3/2*$\\theta$ = 1。"
             },
             {
               "type": "function",
               "label": "似然函数列错了",
-              "hint": "似然函数 L 是所有样本概率密度值的乘积。先把 μ 用 θ 表示，变成单变量函数再求导。"
+              "hint": "似然函数 L 是所有样本概率密度值的乘积。先把 μ 用 $\\theta$ 表示，变成单变量函数再求导。"
             }
           ]
         },
@@ -1010,7 +1010,7 @@
             "target": "L(μ, θ)",
             "currentRole": "联合概率密度乘积",
             "suggestedRole": "关于参数的函数",
-            "transformation": "把样本值 x_i 看作常数，μ, θ 看作变量求极值。"
+            "transformation": "把样本值 x_i 看作常数，μ, $\\theta$ 看作变量求极值。"
           }
         ],
         "insight": "最大似然估计的关键步骤往往是第一步：利用总概率为1找到参数间的依赖关系，减少未知数个数。",
@@ -1049,7 +1049,7 @@
             {
               "type": "function",
               "label": "不知道如何从偏增量还原函数",
-              "hint": "偏增量 Δx z 其实就对应 ∂z/∂x * Δx。所以已知了 ∂z/∂x 和 ∂z/∂y，这变成了偏积分问题。"
+              "hint": "偏增量 \\Deltax z 其实就对应 $\\partial$z/$\\partial$x * \\Deltax。所以已知了 $\\partial$z/$\\partial$x 和 $\\partial$z/$\\partial$y，这变成了偏积分问题。"
             },
             {
               "type": "rule",
@@ -1062,8 +1062,8 @@
           {
             "target": "-2xe^(-y)",
             "currentRole": "x方向偏增量系数",
-            "suggestedRole": "偏导数 ∂z/∂x",
-            "transformation": "Δz ~ AΔx + BΔy => A = ∂z/∂x"
+            "suggestedRole": "偏导数 $\\partial$z/$\\partial$x",
+            "transformation": "\\Deltaz ~ A\\Deltax + B\\Deltay => A = $\\partial$z/$\\partial$x"
           }
         ],
         "strategies": [
@@ -1078,7 +1078,7 @@
             "action": "根据刚才求出的式子求 $\\frac{\\partial z}{\\partial y}$，让它等于 $Q$，解出 $\\varphi'(y)$"
           }
         ],
-        "insight": "全微分 dz = P dx + Q dy。还原函数的标准流程：先对 x 积分 P 得到 z = ∫P dx + φ(y)，再对 y 求导确定 φ(y)。"
+        "insight": "全微分 dz = P dx + Q dy。还原函数的标准流程：先对 x 积分 P 得到 z = $\\int$P dx + φ(y)，再对 y 求导确定 φ(y)。"
       }
     },
     "zhangyu-4-set1-18": {
@@ -1188,7 +1188,7 @@
             {
               "id": "integral-mvt",
               "label": "积分中值定理",
-              "formula": "∫f(x)dx = f(ξ)(b-a)",
+              "formula": "$\\int$f(x)dx = f(ξ)(b-a)",
               "isCorrect": false,
               "feedback": "这是基础。但题目中有 f''，说明需要更高阶的工具。"
             },
@@ -1201,7 +1201,7 @@
             }
           ]
         },
-        "insight": "定积分中值证明题，如果出现“中点”或“对称区间”，99% 是在利用奇偶性消去泰勒展开的一次项。",
+        "insight": "定积分中值证明题，如果出现“中点”或“对称区间”，99% 是在利用奇偶性消去**泰勒展开**的一次项。",
         "strategies": [
           {
             "title": "分布函数法",
@@ -1254,7 +1254,7 @@
             "transformation": "任意 Σ 积分由高斯公式转为任意 Ω 体积分 => 被积函数恒为 0"
           }
         ],
-        "insight": "看到闭曲面积分，首先想高斯公式。看到“任意区域积分等于0”，立刻得到“被积函数为0”的微分方程。",
+        "insight": "看到闭曲面积分，首先想高斯公式。看到“任意区域积分等于0”，立刻得到“**被积函数**为0”的微分方程。",
         "strategies": [
           {
             "title": "期望定义",
@@ -1371,7 +1371,7 @@
             "transformation": "把二维曲面 z=f(x,y) 沿着 x=1/2 切一刀，得到关于 y 的一维分布曲线。"
           }
         ],
-        "insight": "判断二维变量独立性，直接看密度函数中有没有 x 和 y 纠缠在一起的项（如 xy, x/y, x+y 在指数上等）。",
+        "insight": "判断二维变量独立性，直接看**密度函数**中有没有 x 和 y 纠缠在一起的项（如 xy, x/y, x+y 在指数上等）。",
         "strategies": [
           {
             "title": "矩估计",
