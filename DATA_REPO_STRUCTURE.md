@@ -122,6 +122,37 @@ Loaded lazily when a user selects a specific paper.
 }
 ```
 
+## 📝 Text Formatting Rules
+
+To ensure consistent rendering across the frontend application (specifically with `QuestionRenderer.tsx`), please adhere to the following Markdown and LaTeX rules in `contentMd`, `answerMd`, and `analysisMd`:
+
+### 1. LaTeX Math Delimiters
+- **Inline Math**: MUST be wrapped in single dollar signs `$...$`.
+  - ✅ Correct: `$\cos x$`
+  - ❌ Incorrect: `\cos x`, `\\(\cos x\\)`
+- **Block Math**: MUST be wrapped in double dollar signs `$$...$$`.
+  - ✅ Correct:
+    ```markdown
+    $$
+    \int_0^1 x dx
+    $$
+    ```
+  - ❌ Incorrect: `\[\int_0^1 x dx\]`
+
+### 2. Mixed Content
+- When mixing text and math, ensure math is strictly delimited.
+  - ✅ Correct: `(1) $a=\frac{6}{7}$; (2) 不独立`
+  - ❌ Incorrect: `(1) a=\frac{6}{7}; (2) 不独立`
+
+### 3. Analysis Structure
+- Use a **numbered list** for main steps.
+- Use **bold titles** for step headers.
+  - ✅ Correct:
+    ```markdown
+    1. **Step Title**:
+       Description...
+    ```
+
 ## 🚀 How to Deploy
 
 1. **Push to GitHub**: Push this folder structure to your repository.
