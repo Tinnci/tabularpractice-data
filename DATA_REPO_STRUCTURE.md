@@ -115,7 +115,13 @@ Loaded lazily when a user selects a specific paper.
       "contentMd": "",            // Markdown fallback
       "answerMd": "",
       "analysisMd": "",
-      "answer": "B"
+      "answer": "B",
+      "hints": [           // Eureka moments / Hints
+        {
+          "label": "Representation", // e.g. "Cognitive Break", "Analogy"
+          "content": "Try rewriting 2n as (2n+1)-1"
+        }
+      ]
     },
     ...
   }

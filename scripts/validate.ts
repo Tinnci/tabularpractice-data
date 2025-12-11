@@ -39,6 +39,7 @@ interface Question {
     number: number;
     type: string;
     tags?: string[];
+    hints?: Array<{ label: string; content: string }>;
 }
 
 interface Tag {
