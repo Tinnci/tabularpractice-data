@@ -33,13 +33,44 @@ interface PaperDetail {
     questions: Record<string, Question>;
 }
 
+
+type BlockerType = 'representation' | 'function' | 'constraint' | 'analogy';
+
+interface EurekaData {
+    diagnostic?: {
+        question: string;
+        options: Array<{
+            type: BlockerType;
+            label: string;
+            hint: string;
+        }>;
+    };
+    modelLineup?: {
+        question: string;
+        options: Array<{
+            id: string;
+            label: string;
+            formula?: string;
+            isCorrect: boolean;
+            feedback: string;
+        }>;
+    };
+    variableRoles?: Array<{
+        target: string;
+        currentRole: string;
+        suggestedRole: string;
+        transformation: string;
+    }>;
+    insight?: string;
+}
+
 interface Question {
     id: string;
     paperId: string;
     number: number;
     type: string;
     tags?: string[];
-    hints?: Array<{ label: string; content: string }>;
+    eureka?: EurekaData;
 }
 
 interface Tag {

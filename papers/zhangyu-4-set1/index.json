@@ -188,7 +188,71 @@
       "contentMd": "$\\sum_{n=0}^{\\infty} (-1)^n \\frac{2n}{(2n+1)!} = $ ______.",
       "answerMd": "$\\cos 1 - \\sin 1$",
       "analysisMd": "本题考查**无穷级数**求和，特别是**幂级数的和函数及常见麦克劳林展开式**。\n\n1. **通项变形**：\n   观察通项 $(-1)^n \\frac{2n}{(2n+1)!}$，尝试拆分分子以匹配分母阶乘。\n   $$ (-1)^n \\frac{2n}{(2n+1)!} = (-1)^n \\frac{(2n+1)-1}{(2n+1)!} = (-1)^n \\left[ \\frac{1}{(2n)!} - \\frac{1}{(2n+1)!} \\right] $$\n\n2. **拆分级数**：\n   原式 $= \\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n)!} - \\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n+1)!}$。\n\n3. **利用已知展开式**：\n   回忆常见函数的麦克劳林级数：\n   - $\\cos x = \\sum_{n=0}^{\\infty} (-1)^n \\frac{x^{2n}}{(2n)!}, \\quad x \\in (-\\infty, +\\infty)$。\n     取 $x=1$，得 $\\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n)!} = \\cos 1$。\n   - $\\sin x = \\sum_{n=0}^{\\infty} (-1)^n \\frac{x^{2n+1}}{(2n+1)!}, \\quad x \\in (-\\infty, +\\infty)$。\n     取 $x=1$，得 $\\sum_{n=0}^{\\infty} (-1)^n \\frac{1}{(2n+1)!} = \\sin 1$。\n\n4. **结论**：\n   原式 $= \\cos 1 - \\sin 1$。",
-      "videoUrl": ""
+      "videoUrl": "",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "看不出该往哪个已知级数靠",
+              "hint": "观察分母 (2n+1)! —— 这提示你应该想到 sin 或 cos 的展开式！"
+            },
+            {
+              "type": "function",
+              "label": "分子 2n 和分母 (2n+1)! 对不上",
+              "hint": "这就是关键卡点！你能不能把 2n 写成和分母相关的形式？比如 2n = (2n+1) - 1？"
+            },
+            {
+              "type": "analogy",
+              "label": "不记得 sin/cos 的级数展开",
+              "hint": "回到定义：sin 和 cos 的麦克劳林级数是什么？偶数项还是奇数项？"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "下面哪个级数的结构和这道题最像？",
+          "options": [
+            {
+              "id": "geometric",
+              "label": "几何级数",
+              "formula": "∑ aⁿ = 1/(1-a)",
+              "isCorrect": false,
+              "feedback": "不对。几何级数分母是指数，这道题分母是阶乘 (2n+1)!，差别很大。"
+            },
+            {
+              "id": "exp",
+              "label": "指数函数",
+              "formula": "eˣ = ∑ xⁿ/n!",
+              "isCorrect": false,
+              "feedback": "接近了！eˣ 确实有阶乘，但它的指数和阶乘都是 n，而这道题是 2n 和 (2n+1)。"
+            },
+            {
+              "id": "trig",
+              "label": "三角函数 (sin/cos)",
+              "formula": "sin x = ∑ (-1)ⁿ x^(2n+1)/(2n+1)!",
+              "isCorrect": true,
+              "feedback": "✓ 正确！分母 (2n+1)! 和 (-1)ⁿ 都提示这是 sin 或 cos 的展开式变体。"
+            },
+            {
+              "id": "ln",
+              "label": "对数函数",
+              "formula": "ln(1+x) = ∑ (-1)^(n-1) xⁿ/n",
+              "isCorrect": false,
+              "feedback": "不对。ln 的展开式分母是 n 而不是 n!，结构不匹配。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "2n",
+            "currentRole": "看作常数系数",
+            "suggestedRole": "看作 (2n+1) - 1 的差",
+            "transformation": "拆项：2n/(2n+1)! = [(2n+1)-1]/(2n+1)! = 1/(2n)! - 1/(2n+1)!"
+          }
+        ],
+        "insight": "原来不需要背专门的公式！只要意识到 2n 可以写成 (2n+1)-1，就能拆成两个熟悉的级数：cos(1) 和 sin(1)。这就是'组块分解'的威力。"
+      }
     },
     "zhangyu-4-set1-14": {
       "id": "zhangyu-4-set1-14",

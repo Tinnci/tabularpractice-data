@@ -116,12 +116,51 @@ Loaded lazily when a user selects a specific paper.
       "answerMd": "",
       "analysisMd": "",
       "answer": "B",
-      "hints": [           // Eureka moments / Hints
-        {
-          "label": "Representation", // e.g. "Cognitive Break", "Analogy"
-          "content": "Try rewriting 2n as (2n+1)-1"
-        }
-      ]
+      "eureka": {           // [New] Interactive Cognitive Scaffolding
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "看不出该用什么方法",
+              "hint": "这道题的关键是识别出它是周期函数。周期函数的特征方程必须有纯虚根。"
+            },
+            {
+              "type": "constraint",
+              "label": "不知道如何处理约束条件",
+              "hint": "回到定义：什么样的函数是周期函数？sin(x) 和 cos(x)！它们来自哪里？"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "下面哪个模型的结构和这道题最像？",
+          "options": [
+            {
+              "id": "geometric",
+              "label": "几何级数",
+              "formula": "∑ aⁿ",
+              "isCorrect": false,
+              "feedback": "不对。这道题分母有阶乘，不是几何级数。"
+            },
+            {
+              "id": "taylor",
+              "label": "泰勒展开 (sin/cos)",
+              "formula": "∑ xⁿ/n!",
+              "isCorrect": true,
+              "feedback": "正确！分子的 2n 和分母的 (2n+1)! 提示你这是 sin 或 cos 的变体。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "(x-1)",
+            "currentRole": "看作减法运算",
+            "suggestedRole": "看作整体变量 X",
+            "transformation": "令 X = x-1，整个方程变成 dX/dy = f(X, y)"
+          }
+        ],
+        "insight": "原来不需要背冷门结论，只要回到 sin/cos 的来源（二阶常系数齐次线性微分方程的特征根）就能推出来！"
+      }
     },
     ...
   }
