@@ -1343,7 +1343,7 @@
             "target": "变换 $y_1 = x_1+x_2+x_3$",
             "currentRole": "配方后的**新变量**",
             "suggestedRole": "需要**反解**为 $x = Cy$ 的关系",
-            "transformation": "从 $\\\\begin{cases} y_1 = x_1+x_2+x_3 \\\\ y_2 = x_2 \\\\ y_3 = x_3 \\\\end{cases}$ 反解为 $\\\\begin{cases} x_1 = y_1 - y_2 - y_3 \\\\ x_2 = y_2 \\\\ x_3 = y_3 \\\\end{cases}$，得 $C = \\\\begin{pmatrix} 1 & -1 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\end{pmatrix}$"
+            "transformation": "从 $\\begin{cases} y_1 = x_1+x_2+x_3 \\\\ y_2 = x_2 \\\\ y_3 = x_3 \\end{cases}$ 反解为 $\\begin{cases} x_1 = y_1 - y_2 - y_3 \\\\ x_2 = y_2 \\\\ x_3 = y_3 \\end{cases}$，得 $C = \\begin{pmatrix} 1 & -1 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$"
           },
           {
             "target": "正交矩阵 $Q = (\\eta_3, \\eta_1, \\eta_2)$",

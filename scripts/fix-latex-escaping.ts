@@ -40,20 +40,32 @@ function fixLatexEscaping(paperId: string = 'zhangyu-4-set1') {
             // So we replace runtime \\\\ with \\
 
             // Check if transformation contains problematic patterns in runtime
-            if (original.includes('\\\\\\\\')) {
-                // This means JSON source has 8 backslashes, which becomes 4 in runtime
-                // Fix: reduce 4 runtime backslashes to 2
-                const fixed = original.replace(/\\\\\\\\/g, '\\\\');
+            let fixed = role.transformation;
+            let modified = false;
 
-                if (fixed !== original) {
-                    role.transformation = fixed;
-                    fixCount++;
-                    fixes.push(`  ${qId}.eureka.variableRoles[${idx}].transformation`);
+            // 1. Fix over-escaped line breaks: \\\\\\\\ (8 backslashes in JSON) -> \\\\ (4 backslashes in JSON)
+            // Runtime: \\\\ -> \\
+            if (fixed.includes('\\\\\\\\')) {
+                fixed = fixed.replace(/\\\\\\\\/g, '\\\\');
+                modified = true;
+            }
 
-                    console.log(`\n✏️  Fixing ${qId} variableRoles[${idx}]:`);
-                    console.log(`   Before (runtime): ${original.substring(0, 80)}...`);
-                    console.log(`   After  (runtime): ${fixed.substring(0, 80)}...`);
-                }
+            // 2. Fix over-escaped commands: \\\\begin (4 backslashes in JSON) -> \\begin (2 backslashes in JSON)
+            // Runtime: \\begin -> \begin
+            // Check for patterns like \\begin, \\end, \\frac which indicate over-escaping
+            if (/\\\\(begin|end|frac|pmatrix|cases)/.test(fixed)) {
+                fixed = fixed.replace(/\\\\(begin|end|frac|pmatrix|cases)/g, '\\$1');
+                modified = true;
+            }
+
+            if (modified) {
+                role.transformation = fixed;
+                fixCount++;
+                fixes.push(`  ${qId}.eureka.variableRoles[${idx}].transformation`);
+
+                console.log(`\n✏️  Fixing ${qId} variableRoles[${idx}]:`);
+                console.log(`   Before (runtime): ${original.substring(0, 80)}...`);
+                console.log(`   After  (runtime): ${fixed.substring(0, 80)}...`);
             }
         });
     }

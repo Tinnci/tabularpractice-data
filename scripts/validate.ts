@@ -153,8 +153,11 @@ function validateEurekaFormatting(question: Question, paperId: string): void {
         }
 
         // Check for over-escaped LaTeX commands (e.g., \\\\begin should be \\begin)
-        if (/\\\\\\\\(begin|end)\{/.test(fieldValue)) {
-            error(`${paperId}/${question.id} ${fieldPath} has over-escaped LaTeX environment. Found \\\\\\\\begin/end (should be \\\\begin/end).`);
+        // Runtime: \\begin (2 backslashes) -> Wrong
+        // Runtime: \begin (1 backslash) -> Correct
+        // Regex /\\\\(begin|end)/ matches 2 backslashes followed by begin/end
+        if (/\\\\(begin|end)\{/.test(fieldValue)) {
+            error(`${paperId}/${question.id} ${fieldPath} has over-escaped LaTeX environment. Found \\\\\\\\begin/end (should be \\\\begin/end). Run: bun run scripts/fix-latex-escaping.ts`);
         }
     };
 
