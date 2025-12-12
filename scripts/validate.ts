@@ -144,6 +144,18 @@ function validateEurekaFormatting(question: Question, paperId: string): void {
         if (containsMathTerms.test(fieldValue) && !hasLatex.test(fieldValue) && !hasBold.test(fieldValue)) {
             warn(`${paperId}/${question.id} ${fieldPath} lacks formatting. Consider using **bold** or $LaTeX$.`);
         }
+
+        // Check for over-escaped LaTeX line breaks (4+ backslashes in runtime = 8+ in JSON source)
+        // Correct: \\\\ in JSON -> \\ in runtime -> LaTeX line break
+        // Wrong: \\\\\\\\ in JSON -> \\\\ in runtime -> renders as literal \\
+        if (/\\\\\\\\/.test(fieldValue)) {
+            error(`${paperId}/${question.id} ${fieldPath} has over-escaped LaTeX. Found \\\\\\\\ (should be \\\\). Run: bun run scripts/fix-latex-escaping.ts`);
+        }
+
+        // Check for over-escaped LaTeX commands (e.g., \\\\begin should be \\begin)
+        if (/\\\\\\\\(begin|end)\{/.test(fieldValue)) {
+            error(`${paperId}/${question.id} ${fieldPath} has over-escaped LaTeX environment. Found \\\\\\\\begin/end (should be \\\\begin/end).`);
+        }
     };
 
     // Check diagnostic
