@@ -1,0 +1,18 @@
+#!/bin/sh
+# Husky pre-commit hook
+# 在提交前运行数据验证
+
+echo "🔍 Running data validation before commit..."
+
+# 运行验证脚本
+bun run validate
+
+# 检查退出码
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ Pre-commit validation failed!"
+  echo "💡 Please fix the validation errors before committing."
+  exit 1
+fi
+
+echo "✅ Validation passed! Proceeding with commit..."
