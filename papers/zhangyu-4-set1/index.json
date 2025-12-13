@@ -66,25 +66,25 @@
         "variableRoles": [
           {
             "target": "A: $\\int_0^{x^2}(e^{t^2}+1)dt$",
-            "currentRole": "复杂积分",
+            "currentRole": "**复杂积分**",
             "suggestedRole": "上限阶数2 + 被积函数阶数0 = **2阶**",
             "transformation": "$e^{t^2}+1 \\to 2$，积分 $\\sim 2 \\cdot x^2$"
           },
           {
             "target": "B: $\\int_0^x \\ln(1+\\sqrt{t^3})dt$",
-            "currentRole": "复杂积分",
+            "currentRole": "**复杂积分**",
             "suggestedRole": "上限阶数1 + 被积函数阶数1.5 = **2.5阶**",
             "transformation": "$\\ln(1+t^{3/2}) \\sim t^{3/2}$，积分 $\\sim x^{5/2}$"
           },
           {
             "target": "C: $\\int_0^{\\sin x}\\cos t^2 dt$",
-            "currentRole": "复杂积分",
+            "currentRole": "**复杂积分**",
             "suggestedRole": "上限阶数1 + 被积函数阶数0 = **1阶**",
             "transformation": "$\\cos t^2 \\to 1$，积分 $\\sim \\sin x \\sim x$"
           },
           {
             "target": "D: $\\int_0^{1-\\cos x}\\sqrt{\\arcsin^3 t}dt$",
-            "currentRole": "复杂积分",
+            "currentRole": "**复杂积分**",
             "suggestedRole": "上限阶数2 + 被积函数阶数1.5 → 积分后 = **5阶**",
             "transformation": "$1-\\cos x \\sim \\frac{x^2}{2}$，$(\\arcsin t)^{3/2} \\sim t^{3/2}$，积分 $\\sim (\\frac{x^2}{2})^{5/2} \\sim x^5$"
           }
@@ -1120,12 +1120,12 @@
         "strategies": [
           {
             "title": "建立约束",
-            "trigger": "看到概率密度函数有多个参数",
+            "trigger": "看到**概率密度函数**有多个参数",
             "action": "利用 $\\int f(x)dx = 1$ 建立参数之间的**约束方程**"
           },
           {
             "title": "消元求导",
-            "trigger": "似然函数含两个参数",
+            "trigger": "**似然函数**含两个参数",
             "action": "用约束方程**消掉一个参数**，对剩余参数求导置零"
           },
           {
@@ -1252,7 +1252,7 @@
           },
           {
             "title": "分段求解",
-            "trigger": "微分方程右端是分段函数",
+            "trigger": "**微分方程**右端是分段函数",
             "action": "在每个区间分别**求解通解**，得到各自的积分常数"
           },
           {
@@ -1323,7 +1323,7 @@
         "strategies": [
           {
             "title": "泰勒展开积分",
-            "trigger": "证明积分形式的中值公式",
+            "trigger": "证明**积分形式**的中值公式",
             "action": "在**区间中点** $x_0 = (a+b)/2$ 处展开 $f(x)$，积分时奇次项自动消失"
           },
           {
