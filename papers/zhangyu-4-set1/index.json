@@ -165,7 +165,7 @@
             },
             {
               "type": "representation",
-              "label": "不明白两个积分为什么能合并",
+              "label": "不明白两个**积分**为什么能合并",
               "hint": "画图！两个积分区域 $D_1$ 和 $D_2$ 其实拼成了一个完整区域：$\\{1/2 \\le x \\le 1, x^2 \\le y \\le x\\}$。不合并就无法统一换序，不换序就积不出来——这是**双重陷阱**。"
             }
           ]
@@ -206,6 +206,42 @@
             "action": "根据画出的区域，重新确定 **X型区域**的上下限，转化为 $\\int dx \\int dy$"
           }
         ],
+        "visualization": {
+          "type": "integral-region-2d",
+          "title": "积分区域 D (合并后)",
+          "config": {
+            "xRange": [
+              0.5,
+              1
+            ],
+            "lowerBound": "x*x",
+            "upperBound": "x",
+            "curves": [
+              {
+                "expr": "x*x",
+                "color": "#3b82f6",
+                "label": "y = x²"
+              },
+              {
+                "expr": "x",
+                "color": "#ef4444",
+                "label": "y = x"
+              }
+            ],
+            "labels": [
+              {
+                "x": 0.5,
+                "y": 0.5,
+                "text": "x = 1/2"
+              },
+              {
+                "x": 1,
+                "y": 1,
+                "text": "(1, 1)"
+              }
+            ]
+          }
+        },
         "insight": "遇到 e^(y/x) 或 sin(x^2) 这种基本**函数**积不出来的情况，首先想到**交换积分次序**！"
       }
     },
