@@ -2,17 +2,23 @@
   {
     "id": "advanced-math",
     "name": "高等数学",
-    "parentId": null
+    "parentId": null,
+    "subjectKey": "math",
+    "isRoot": true
   },
   {
     "id": "linear-algebra",
     "name": "线性代数",
-    "parentId": null
+    "parentId": null,
+    "subjectKey": "math",
+    "isRoot": true
   },
   {
     "id": "probability-statistics",
     "name": "概率论与数理统计",
-    "parentId": null
+    "parentId": null,
+    "subjectKey": "math",
+    "isRoot": true
   },
   {
     "id": "adjoint-inverse",
