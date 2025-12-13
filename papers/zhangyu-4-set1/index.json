@@ -516,17 +516,17 @@
             }
           ]
         },
-        "insight": "无条件**极值**三步走：**驻点** \\to **Hessian** \\to **判定**。$AC - B^2$ 是关键。",
+        "insight": "**随机矩阵**的核心性质：行和 = k 意味着 $A \\cdot \\mathbf{1} = k \\cdot \\mathbf{1}$，即全1向量是**特征向量**，k是**特征值**。",
         "strategies": [
           {
-            "title": "驻点求解",
-            "trigger": "求**无条件极值**",
-            "action": "令 $\\frac{\\partial f}{\\partial x} = 0$, $\\frac{\\partial f}{\\partial y} = 0$"
+            "title": "全1向量技巧",
+            "trigger": "看到**行和**或**列和**固定为 $k$",
+            "action": "把全1向量 $(1,1,\\ldots,1)^T$ 代入 $A\\vec{x}$，发现 $A\\mathbf{1} = k\\mathbf{1}$"
           },
           {
-            "title": "Hessian判定",
-            "trigger": "得到驻点后",
-            "action": "计算 $A = f_{xx}$, $B = f_{xy}$, $C = f_{yy}$，用 $AC - B^2$ 判断"
+            "title": "谱半径定界",
+            "trigger": "判断**所有特征值**的模长范围",
+            "action": "用**盖尔圆盘定理**：每个特征值落在以 $a_{ii}$ 为圆心、$\\sum_{j \\neq i}|a_{ij}|$ 为半径的圆盘内"
           }
         ]
       }
@@ -583,14 +583,14 @@
         "insight": "多项分布中，任意两个不同类别的频数总是‘此消彼长’的，因此协**方差** Cov(Ni, Nj) = -n*pi*pj 总是负的。",
         "strategies": [
           {
-            "title": "Gauss公式",
-            "trigger": "第二类曲面积分且**闭合曲面**",
-            "action": "用 $\\iint_S P\\,dy\\,dz = \\iiint_V \\frac{\\partial P}{\\partial x}\\,dV$"
+            "title": "识别多项分布",
+            "trigger": "从总体抽样，**统计各类别出现次数**",
+            "action": "这是**多项分布**！频数 $N_i \\sim B(n, p_i)$，但它们不独立"
           },
           {
-            "title": "散度计算",
-            "trigger": "**转化为三重积分**",
-            "action": "计算 $\\nabla \\cdot \\vec{F} = \\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z}$"
+            "title": "协方差公式",
+            "trigger": "求多项分布中 $N_i$ 和 $N_j$ 的协方差",
+            "action": "直接用公式 $Cov(N_i, N_j) = -n p_i p_j$（总是**负相关**）"
           }
         ]
       }
@@ -632,17 +632,17 @@
             "transformation": "P($X_bar$ <= 20 | μ=20.5)"
           }
         ],
-        "insight": "级数**收敛**判断：看到 $n!$ 或 $a^n$，首选**比值判别法**。",
+        "insight": "**假设检验两类错误**：α (弃真) = P(拒绝H0|H0真)，β (取伪) = P(接受H0|H1真)。两者通常**此消彼长**。",
         "strategies": [
           {
-            "title": "比值判别法",
-            "trigger": "看到级数通项含 $n!$ 或 $a^n$",
-            "action": "计算 $\\lim_{n\\to\\infty} |\\frac{u_{n+1}}{u_n}|$，小于1收敛"
+            "title": "标准化检验统计量",
+            "trigger": "总体为**正态分布** $N(\\mu, \\sigma^2)$",
+            "action": "构造 $Z = \\frac{\\bar{X} - \\mu_0}{\\sigma/\\sqrt{n}}$，然后代入具体的 $\\mu$ 值"
           },
           {
-            "title": "收敛半径",
-            "trigger": "判断**幂级数收敛域**",
-            "action": "由 $\\rho = \\lim |\\frac{a_n}{a_{n+1}}|$ 得半径 $R$，检查端点"
+            "title": "第二类错误计算",
+            "trigger": "求 $\\beta = P($接受$H_0 | H_1$真$)$",
+            "action": "在 $H_1$ 成立的参数下，计算检验**统计量落入接受域**的概率"
           }
         ]
       }
@@ -707,14 +707,14 @@
         "insight": "最有效估计量其实就是在给不同来源的信息‘加权’。**方差**越小的信息源（越靠谱），分到的权重应该越大（虽然这里**方差**一样，但**期望**不同导致系数不同）。",
         "strategies": [
           {
-            "title": "已知函数展开",
-            "trigger": "将**已知函数**展开为幂级数",
-            "action": "利用常见展开式（如 $e^x$, $\\ln(1+x)$），进行**变量替换**"
+            "title": "无偏性约束",
+            "trigger": "构造线性估计量 $\\hat{\\theta} = k_1 X + k_2 Y$",
+            "action": "列出 $E(\\hat{\\theta}) = \\theta$ 的**约束方程**，得到 $k_1$ 和 $k_2$ 的关系"
           },
           {
-            "title": "逐项求导/积分",
-            "trigger": "需要调整形式",
-            "action": "利用幂级数可**逐项求导**或**逐项积分**的性质"
+            "title": "最小方差求解",
+            "trigger": "在无偏约束下求**最优权重**",
+            "action": "将 $D(\\hat{\\theta}) = k_1^2 D(X) + k_2^2 D(Y)$ 代入约束，用**求导**找极值"
           }
         ]
       }
