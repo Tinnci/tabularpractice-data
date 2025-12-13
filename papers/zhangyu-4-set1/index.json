@@ -753,7 +753,7 @@
             "target": "(1,1,2)",
             "currentRole": "几何坐标点",
             "suggestedRole": "求值**代入**点",
-            "transformation": "grad f |_(1,1,2) = (fx(1,1,2), fy(1,1,2), fz(1,1,2))"
+            "transformation": "$\\nabla f \\big|_{(1,1,2)} = (f_x, f_y, f_z)\\big|_{(1,1,2)}$"
           }
         ],
         "insight": "**梯度**就是偏导数的向量打包：$\\nabla f = (f_x, f_y, f_z)$。它指向函数增长**最快**的方向，模长是最大方向导数。",
