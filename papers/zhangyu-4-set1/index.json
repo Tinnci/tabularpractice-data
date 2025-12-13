@@ -1599,55 +1599,182 @@
       ],
       "contentMd": "设随机变量 $(X,Y)$ 的概率密度为 $f(x,y) = \\begin{cases} a(x^2 + \\frac{xy}{2}), & 0 < x < 1, 0 < y < 2, \\\\ 0, & \\text{其他}. \\end{cases}$\n\n(1) 求 $a$ 的值；\n\n(2) $X, Y$ 是否相互独立，说明理由；\n\n(3) 计算 $P\\left\\{ Y > 1 \\mid X = \\frac{1}{2} \\right\\}$。",
       "answerMd": "(1) $a=\\frac{6}{7}$; \\; (2) \\text{不独立}; \\; (3) $\\frac{5}{8}$",
-      "analysisMd": "本题考查**二维随机变量**。\n\n1. **求常数 $a$**：\n   利用归一性 $\\int_0^1 dx \\int_0^2 f(x,y) dy = 1$。\n   $\\int_0^2 a(x^2 + \\frac{xy}{2}) dy = a(2x^2 + x)$。\n   $\\int_0^1 a(2x^2 + x) dx = a(\\frac{2}{3} + \\frac{1}{2}) = \\frac{7}{6}a = 1$。\n   解得 $a = \\frac{6}{7}$。\n\n2. **判断独立性**：\n   边缘密度 $f_X(x) = \\frac{6}{7}(2x^2+x)$，$f_Y(y) = \\frac{6}{7}(\\frac{1}{3} + \\frac{y}{4})$。\n   显然 $f(x,y) \neq f_X(x)f_Y(y)$，故 $X, Y$ 不独立。\n\n3. **计算条件概率**：\n   $f_{Y|X}(y|x) = \\frac{f(x,y)}{f_X(x)}$。\n   当 $x = \\frac{1}{2}$ 时，$f(\\frac{1}{2}, y) = \\frac{6}{7}(\\frac{1}{4} + \\frac{y}{4}) = \\frac{3}{14}(1+y)$。\n   $f_X(\\frac{1}{2}) = \\frac{6}{7}(2(\\frac{1}{4}) + \\frac{1}{2}) = \\frac{6}{7}$。\n   $f_{Y|X}(y|\\frac{1}{2}) = \\frac{\\frac{3}{14}(1+y)}{\\frac{6}{7}} = \\frac{1}{4}(1+y)$ ($0<y<2$)。\n   $P\\{ Y > 1 \\mid X = \\frac{1}{2} \\} = \\int_1^2 \\frac{1}{4}(1+y) dy = \\frac{1}{4} [y + \\frac{y^2}{2}]_1^2 = \\frac{1}{4} (4 - 1.5) = \\frac{2.5}{4} = \\frac{5}{8}$。",
+      "analysisMd": "本题考查**二维随机变量**的**边缘分布**与**条件分布**。\n\n---\n\n## (1) 求常数 $a$\n\n**核心思想**：利用概率密度函数的**归一性**，即 $\\iint_{\\mathbb{R}^2} f(x,y) \\, dxdy = 1$。\n\n由于 $f(x,y)$ 仅在 $0 < x < 1, 0 < y < 2$ 时非零，故积分区间为 $D = (0,1) \\times (0,2)$：\n$$\\iint_D f(x,y) \\, dxdy = \\int_0^1 \\left[ \\int_0^2 a\\left(x^2 + \\frac{xy}{2}\\right) dy \\right] dx = 1$$\n\n**Step 1**: 先对 $y$ 积分（将 $x$ 视为常数）：\n$$\\int_0^2 a\\left(x^2 + \\frac{xy}{2}\\right) dy = a \\left[ x^2 y + \\frac{xy^2}{4} \\right]_0^2 = a \\left( 2x^2 + \\frac{4x}{4} \\right) = a(2x^2 + x)$$\n\n**Step 2**: 再对 $x$ 积分：\n$$\\int_0^1 a(2x^2 + x) dx = a \\left[ \\frac{2x^3}{3} + \\frac{x^2}{2} \\right]_0^1 = a \\left( \\frac{2}{3} + \\frac{1}{2} \\right) = a \\cdot \\frac{7}{6}$$\n\n**Step 3**: 由归一性 $a \\cdot \\frac{7}{6} = 1$，解得：\n$$\\boxed{a = \\frac{6}{7}}$$\n\n---\n\n## (2) 判断 $X, Y$ 是否独立\n\n**核心思想**：$X, Y$ 独立 $\\Leftrightarrow f(x,y) = f_X(x) \\cdot f_Y(y)$ 对所有 $(x,y)$ 成立。\n\n### 2.1 求边缘密度 $f_X(x)$\n\n对 $y$ 积分消去 $y$：\n$$f_X(x) = \\int_{-\\infty}^{+\\infty} f(x,y) dy = \\int_0^2 \\frac{6}{7}\\left(x^2 + \\frac{xy}{2}\\right) dy$$\n\n（此积分在 Step 1 已算过）\n$$f_X(x) = \\frac{6}{7}(2x^2 + x), \\quad 0 < x < 1$$\n\n### 2.2 求边缘密度 $f_Y(y)$\n\n对 $x$ 积分消去 $x$：\n$$f_Y(y) = \\int_{-\\infty}^{+\\infty} f(x,y) dx = \\int_0^1 \\frac{6}{7}\\left(x^2 + \\frac{xy}{2}\\right) dx$$\n\n$$= \\frac{6}{7} \\left[ \\frac{x^3}{3} + \\frac{x^2 y}{4} \\right]_0^1 = \\frac{6}{7} \\left( \\frac{1}{3} + \\frac{y}{4} \\right), \\quad 0 < y < 2$$\n\n### 2.3 验证独立性\n\n检验 $f(x,y) \\stackrel{?}{=} f_X(x) \\cdot f_Y(y)$：\n\n- **左边**：$f(x,y) = \\frac{6}{7}\\left(x^2 + \\frac{xy}{2}\\right)$\n- **右边**：$f_X(x) \\cdot f_Y(y) = \\frac{6}{7}(2x^2+x) \\cdot \\frac{6}{7}\\left(\\frac{1}{3}+\\frac{y}{4}\\right) = \\frac{36}{49}(2x^2+x)\\left(\\frac{1}{3}+\\frac{y}{4}\\right)$\n\n**快速判断**：观察联合密度 $f(x,y) = \\frac{6}{7}\\left(x^2 + \\frac{xy}{2}\\right)$ 中包含**交叉项 $xy$**，无法写成 $g(x) \\cdot h(y)$ 的形式（即无法分离变量）。\n\n$$\\boxed{\\text{因此 } X, Y \\text{ 不独立}}$$\n\n---\n\n## (3) 计算 $P\\left\\{ Y > 1 \\mid X = \\frac{1}{2} \\right\\}$\n\n**核心思想**：先求**条件密度** $f_{Y|X}(y|x)$，再对目标区间积分。\n\n### 3.1 条件密度公式\n\n$$f_{Y|X}(y|x) = \\frac{f(x,y)}{f_X(x)}$$\n\n### 3.2 计算 $f\\left(\\frac{1}{2}, y\\right)$\n\n代入 $x = \\frac{1}{2}$：\n$$f\\left(\\frac{1}{2}, y\\right) = \\frac{6}{7}\\left(\\left(\\frac{1}{2}\\right)^2 + \\frac{\\frac{1}{2} \\cdot y}{2}\\right) = \\frac{6}{7}\\left(\\frac{1}{4} + \\frac{y}{4}\\right) = \\frac{6}{7} \\cdot \\frac{1+y}{4} = \\frac{3(1+y)}{14}$$\n\n### 3.3 计算 $f_X\\left(\\frac{1}{2}\\right)$\n\n代入 $x = \\frac{1}{2}$：\n$$f_X\\left(\\frac{1}{2}\\right) = \\frac{6}{7}\\left(2 \\cdot \\frac{1}{4} + \\frac{1}{2}\\right) = \\frac{6}{7}\\left(\\frac{1}{2} + \\frac{1}{2}\\right) = \\frac{6}{7} \\cdot 1 = \\frac{6}{7}$$\n\n### 3.4 求条件密度\n\n$$f_{Y|X}\\left(y \\mid \\frac{1}{2}\\right) = \\frac{f\\left(\\frac{1}{2}, y\\right)}{f_X\\left(\\frac{1}{2}\\right)} = \\frac{\\frac{3(1+y)}{14}}{\\frac{6}{7}} = \\frac{3(1+y)}{14} \\times \\frac{7}{6} = \\frac{1+y}{4}$$\n\n**验证归一性**（可选）：$\\int_0^2 \\frac{1+y}{4} dy = \\frac{1}{4}\\left[y + \\frac{y^2}{2}\\right]_0^2 = \\frac{1}{4}(2+2) = 1$ ✓\n\n### 3.5 计算条件概率\n\n$$P\\left\\{ Y > 1 \\mid X = \\frac{1}{2} \\right\\} = \\int_1^2 f_{Y|X}\\left(y \\mid \\frac{1}{2}\\right) dy = \\int_1^2 \\frac{1+y}{4} dy$$\n\n$$= \\frac{1}{4} \\left[ y + \\frac{y^2}{2} \\right]_1^2 = \\frac{1}{4} \\left[ \\left(2 + 2\\right) - \\left(1 + \\frac{1}{2}\\right) \\right] = \\frac{1}{4} \\left( 4 - \\frac{3}{2} \\right) = \\frac{1}{4} \\times \\frac{5}{2} = \\boxed{\\frac{5}{8}}$$",
       "videoUrl": "",
       "eureka": {
         "diagnostic": {
           "question": "你觉得卡在哪里了？",
           "options": [
             {
+              "type": "constraint",
+              "label": "二重积分的积分顺序搞混了",
+              "hint": "先对 $y$ 积分（把 $x$ 看作常数），得到关于 $x$ 的函数；再对 $x$ 积分。顺序：内层积分 → 外层积分。这道题是 $\\int_0^1 [\\int_0^2 f(x,y) dy] dx$。"
+            },
+            {
               "type": "representation",
               "label": "判断独立性总是出错",
-              "hint": "看 f(x,y) 能不能写成 g(x)*h(y)。这道题里有一项 xy，显然拆不开，所以肯定不独立。"
+              "hint": "**快速判断法**：如果 $f(x,y)$ 中有交叉项（如 $xy$），那就**不可能**写成 $g(x) \\cdot h(y)$ 的形式，直接判定不独立！这道题 $f(x,y) = \\frac{6}{7}(x^2 + \\frac{xy}{2})$ 有 $xy$ 项，秒杀。"
+            },
+            {
+              "type": "function",
+              "label": "边缘密度 $f_X(x)$ 和 $f_Y(y)$ 不会求",
+              "hint": "**口诀**：消谁积谁。求 $f_X(x)$（只关于 $x$）→ 对 $y$ 积分消掉 $y$；求 $f_Y(y)$（只关于 $y$）→ 对 $x$ 积分消掉 $x$。记住积分限要根据定义域确定。"
             },
             {
               "type": "function",
               "label": "条件概率**积分**范围搞错",
-              "hint": "在给定 X=1/2 的条件下，Y 的范围还是 (0,2)。求 P(Y>1) 就是**积分** (1, 2)。"
+              "hint": "**关键**：给定 $X=1/2$ 后，$Y$ 的取值范围**不变**，依然是原定义域 $(0,2)$。求 $P(Y>1 | X=1/2)$ 就是在条件密度 $f_{Y|X}(y|1/2)$ 下对 $(1,2)$ 积分，而不是对 $(0,1)$ 积分。"
             },
             {
               "type": "function",
               "label": "直接用 f(1/2, y) 当条件密度",
-              "hint": "经典陷阱！f(1/2, y) 只是二维曲面的'切片'，积分不等于1。必须除以边缘密度 $f_X(1/2)$ 进行**归一化**：$f_{Y|X}(y|x) = \\frac{f(x,y)}{f_X(x)}$。"
+              "hint": "**经典陷阱**！$f(1/2, y)$ 只是联合密度在 $x=1/2$ 处的'切片'，它的积分 $\\int_0^2 f(1/2, y) dy = f_X(1/2) \\neq 1$。必须**归一化**：$f_{Y|X}(y|1/2) = \\frac{f(1/2, y)}{f_X(1/2)}$，这样积分才等于1。"
+            },
+            {
+              "type": "calculation",
+              "label": "条件密度公式记不住",
+              "hint": "**万能公式**：$f_{Y|X}(y|x) = \\frac{f(x,y)}{f_X(x)}$（分子是联合，分母是边缘）。物理意义：在 $X=x$ 这个'切片'上，重新归一化得到 $Y$ 的条件分布。"
+            },
+            {
+              "type": "calculation",
+              "label": "积分算错了（尤其是 $\\frac{y^2}{2}$）",
+              "hint": "细心！$\\int (1+y) dy = y + \\frac{y^2}{2}$（不是 $\\frac{y}{2}$）。代入上下限：$[y + \\frac{y^2}{2}]_1^2 = (2+2) - (1+\\frac{1}{2}) = 4 - 1.5 = 2.5$。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "如何快速判断 $X, Y$ 是否独立？",
+          "options": [
+            {
+              "id": "definition",
+              "label": "定义法：验证 $f(x,y) = f_X(x) \\cdot f_Y(y)$",
+              "formula": "分别求边缘密度再相乘",
+              "isCorrect": false,
+              "feedback": "这是标准方法，但计算量大。对于这道题，有更快的方法。"
+            },
+            {
+              "id": "separation",
+              "label": "分离变量法：看能否写成 $g(x) \\cdot h(y)$",
+              "formula": "$f(x,y) = g(x) \\cdot h(y)$",
+              "isCorrect": true,
+              "feedback": "✓ 最快！观察 $f(x,y) = \\frac{6}{7}(x^2 + \\frac{xy}{2})$ 有交叉项 $xy$，无法分离变量 → 直接判定不独立。"
+            },
+            {
+              "id": "correlation",
+              "label": "相关系数法：$\\rho_{XY} = 0$ 则独立",
+              "formula": "计算 $Cov(X,Y)$",
+              "isCorrect": false,
+              "feedback": "错误！$\\rho=0$ 只能说明**不相关**，不能推出独立（除非是正态分布）。"
             }
           ]
         },
         "variableRoles": [
           {
-            "target": "X=1/2",
-            "currentRole": "条件",
+            "target": "$a$ (未知常数)",
+            "currentRole": "待求参数",
+            "suggestedRole": "归一化因子",
+            "transformation": "利用 $\\iint f(x,y) dxdy = 1$ 这个**约束条件**，把 $a$ 解出来。$a$ 的作用是让概率密度的总积分归一到1。"
+          },
+          {
+            "target": "$f(x,y)$ (联合密度)",
+            "currentRole": "二维概率密度函数",
+            "suggestedRole": "三维曲面 $z = f(x,y)$",
+            "transformation": "从几何角度理解：$f(x,y)$ 是 $xOy$ 平面上方的一个曲面，曲面下的体积等于1。边缘密度 $f_X(x)$ 就是把这个曲面沿 $y$ 方向'压扁'得到的 $x$ 的分布。"
+          },
+          {
+            "target": "$X=1/2$ (条件)",
+            "currentRole": "给定的常数",
             "suggestedRole": "切片 (Slice)",
-            "transformation": "把二维曲面 z=f(x,y) 沿着 x=1/2 切一刀，得到关于 y 的一维分布曲线。"
+            "transformation": "把三维曲面 $z=f(x,y)$ 沿着平面 $x=1/2$ 切一刀，得到关于 $y$ 的一维曲线 $z=f(1/2, y)$。但这条曲线下的面积不等于1，需要除以 $f_X(1/2)$ 归一化后才是条件密度。"
+          },
+          {
+            "target": "$f_{Y|X}(y|1/2)$ (条件密度)",
+            "currentRole": "给定 $X=1/2$ 时 $Y$ 的密度",
+            "suggestedRole": "归一化后的切片",
+            "transformation": "$f_{Y|X}(y|1/2) = \\frac{f(1/2, y)}{f_X(1/2)} = \\frac{\\frac{3(1+y)}{14}}{\\frac{6}{7}} = \\frac{1+y}{4}$。验证：$\\int_0^2 \\frac{1+y}{4} dy = 1$ ✓"
+          },
+          {
+            "target": "积分限 $(0,2)$ vs $(1,2)$",
+            "currentRole": "积分的上下限",
+            "suggestedRole": "事件的范围",
+            "transformation": "$Y$ 的定义域是 $(0,2)$（全集），事件 $\\{Y>1\\}$ 对应区间 $(1,2)$（子集）。条件概率积分时，积分限是**事件范围** $(1,2)$，而不是定义域 $(0,2)$。"
           }
         ],
-        "insight": "**条件密度**的核心：$f_{Y|X}(y|x) = \\frac{f(x,y)}{f_X(x)}$。别忘了**归一化**！直接用联合密度当条件密度是经典错误。",
+        "insight": "**二维随机变量三大核心**：\\n1. **归一化**：$\\iint f(x,y)dxdy=1$ 求常数 $a$\\n2. **边缘化**：消谁积谁（求 $f_X$ 就积掉 $y$）\\n3. **条件化**：$f_{Y|X}(y|x) = \\frac{f(x,y)}{f_X(x)}$（切片+归一化）\\n\\n**独立性快速判断**：看 $f(x,y)$ 能否写成 $g(x) \\cdot h(y)$，有交叉项 $xy$ → 秒杀不独立！",
         "strategies": [
           {
             "title": "归一化求常数",
             "trigger": "求**联合密度**中的未知常数 $a$",
-            "action": "利用 $\\iint f(x,y) dxdy = 1$，解出 $a$"
+            "action": "利用 $\\iint f(x,y) dxdy = 1$，按定义域积分。**技巧**：先对一个变量积分（通常选计算简单的），再对另一个积分。"
           },
           {
-            "title": "独立性判断",
+            "title": "二重积分顺序",
+            "trigger": "计算 $\\iint_D f(x,y) dxdy$",
+            "action": "**先内后外**：内层积分把对应变量视为变量，外层变量视为常数；算完内层后，外层积分的被积函数只含外层变量。本题：$\\int_0^1 [\\int_0^2 a(x^2+\\frac{xy}{2}) dy] dx$。"
+          },
+          {
+            "title": "边缘密度计算",
+            "trigger": "求 $f_X(x)$ 或 $f_Y(y)$",
+            "action": "**口诀：消谁积谁**。\\n- 求 $f_X(x)$：$\\int_{-\\infty}^{+\\infty} f(x,y) dy$（对 $y$ 积分，积分限根据 $y$ 的范围）\\n- 求 $f_Y(y)$：$\\int_{-\\infty}^{+\\infty} f(x,y) dx$（对 $x$ 积分，积分限根据 $x$ 的范围）"
+          },
+          {
+            "title": "独立性判断（快速法）",
             "trigger": "判断 $X$, $Y$ 是否**独立**",
-            "action": "检验 $f(x,y) = f_X(x) \\cdot f_Y(y)$ 是否恒成立，或看**联合密度能否分离变量**"
+            "action": "**分离变量法**（最快）：检查 $f(x,y)$ 能否写成 $g(x) \\cdot h(y)$ 的形式。\\n- 能分离 → 独立\\n- 有交叉项（如 $xy$, $x^2y$）→ 不独立\\n本题 $f(x,y) = \\frac{6}{7}(x^2 + \\frac{xy}{2})$ 有 $xy$ 项 → 不独立。"
+          },
+          {
+            "title": "独立性判断（验证法）",
+            "trigger": "需要严格验证独立性",
+            "action": "计算 $f_X(x)$, $f_Y(y)$，验证 $f(x,y) = f_X(x) \\cdot f_Y(y)$ 是否恒成立。注意：只需找一组 $(x,y)$ 不满足即可判定不独立。"
+          },
+          {
+            "title": "条件密度公式",
+            "trigger": "求 $f_{Y|X}(y|x_0)$",
+            "action": "**三步走**：\\n1. 计算 $f(x_0, y)$（代入 $x=x_0$）\\n2. 计算 $f_X(x_0)$（代入边缘密度公式）\\n3. 归一化：$f_{Y|X}(y|x_0) = \\frac{f(x_0, y)}{f_X(x_0)}$"
           },
           {
             "title": "条件概率计算",
             "trigger": "求 $P(Y \\in B | X = x_0)$",
-            "action": "先求**条件密度** $f_{Y|X} = f(x_0, y) / f_X(x_0)$，再对 $B$ 积分"
+            "action": "先求**条件密度** $f_{Y|X}(y|x_0)$，再对事件区域 $B$ 积分：\\n$$P(Y \\in B | X=x_0) = \\int_B f_{Y|X}(y|x_0) dy$$\\n**注意**：积分限是事件 $B$ 的范围，不是 $Y$ 的定义域。"
+          },
+          {
+            "title": "验证条件密度的归一性",
+            "trigger": "求出 $f_{Y|X}(y|x)$ 后",
+            "action": "**自查**：计算 $\\int_{-\\infty}^{+\\infty} f_{Y|X}(y|x) dy$，结果必须等于1。如果不等于1，说明归一化步骤有误。"
           }
-        ]
+        ],
+        "visualization": {
+          "type": "surface-plot-3d",
+          "title": "二维随机变量的联合密度曲面",
+          "config": {
+            "function": "(6/7) * (x*x + x*y/2)",
+            "xRange": [
+              0,
+              1
+            ],
+            "yRange": [
+              0,
+              2
+            ],
+            "colorScheme": "viridis",
+            "opacity": 0.8,
+            "showWireframe": true,
+            "annotations": [
+              {
+                "type": "plane",
+                "equation": "x = 0.5",
+                "color": "#ff6b6b",
+                "label": "切片 x=1/2",
+                "opacity": 0.3
+              }
+            ],
+            "criticalCurves": [
+              {
+                "description": "边缘密度 f_X(x) 在 xOy 平面的投影"
+              }
+            ]
+          }
+        }
       }
     }
   }
