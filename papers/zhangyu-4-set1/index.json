@@ -1186,7 +1186,33 @@
             "action": "根据刚才求出的式子求 $\\frac{\\partial z}{\\partial y}$，让它等于 $Q$，解出 $\\varphi'(y)$"
           }
         ],
-        "insight": "**全微分**还原：对 $x$ 积分 $P$ 得 $z = \\int P dx + \\varphi(y)$，再用 $Q$ 确定 $\\varphi(y)$。"
+        "insight": "**全微分**还原：对 $x$ 积分 $P$ 得 $z = \\int P dx + \\varphi(y)$，再用 $Q$ 确定 $\\varphi(y)$。",
+        "visualization": {
+          "type": "surface-plot-3d",
+          "title": "曲面 z = e^(-y)(y+2-x²) 的极大值",
+          "config": {
+            "function": "exp(-y) * (y + 2 - x*x)",
+            "xRange": [
+              -2.5,
+              2.5
+            ],
+            "yRange": [
+              -3,
+              2
+            ],
+            "colorScheme": "viridis",
+            "opacity": 0.85,
+            "showWireframe": false,
+            "criticalPoints": [
+              {
+                "x": 0,
+                "y": -1,
+                "type": "maximum",
+                "label": "极大值 (0,-1,e)"
+              }
+            ]
+          }
+        }
       }
     },
     "zhangyu-4-set1-18": {
