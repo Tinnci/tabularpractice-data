@@ -63,6 +63,32 @@
             "action": "用**等价无穷小**替换被积函数，只保留**最低次项**（主部）"
           }
         ],
+        "variableRoles": [
+          {
+            "target": "A: $\\int_0^{x^2}(e^{t^2}+1)dt$",
+            "currentRole": "复杂积分",
+            "suggestedRole": "上限阶数2 + 被积函数阶数0 = **2阶**",
+            "transformation": "$e^{t^2}+1 \\to 2$，积分 $\\sim 2 \\cdot x^2$"
+          },
+          {
+            "target": "B: $\\int_0^x \\ln(1+\\sqrt{t^3})dt$",
+            "currentRole": "复杂积分",
+            "suggestedRole": "上限阶数1 + 被积函数阶数1.5 = **2.5阶**",
+            "transformation": "$\\ln(1+t^{3/2}) \\sim t^{3/2}$，积分 $\\sim x^{5/2}$"
+          },
+          {
+            "target": "C: $\\int_0^{\\sin x}\\cos t^2 dt$",
+            "currentRole": "复杂积分",
+            "suggestedRole": "上限阶数1 + 被积函数阶数0 = **1阶**",
+            "transformation": "$\\cos t^2 \\to 1$，积分 $\\sim \\sin x \\sim x$"
+          },
+          {
+            "target": "D: $\\int_0^{1-\\cos x}\\sqrt{\\arcsin^3 t}dt$",
+            "currentRole": "复杂积分",
+            "suggestedRole": "上限阶数2 + 被积函数阶数1.5 → 积分后 = **5阶**",
+            "transformation": "$1-\\cos x \\sim \\frac{x^2}{2}$，$(\\arcsin t)^{3/2} \\sim t^{3/2}$，积分 $\\sim (\\frac{x^2}{2})^{5/2} \\sim x^5$"
+          }
+        ],
         "insight": "判断**变上限积分**的无穷小**阶数**，核心是：积分过程将‘**被积函数**的**主部****阶数**’提升了1阶（如果是从0积到x）。"
       }
     },
@@ -769,8 +795,13 @@
             },
             {
               "type": "function",
-              "label": "求 limit (y-kx) 时算出 0 或无穷",
-              "hint": "这一步往往需要泰勒展开。e^(1/(x+1)) 展开成 1 + 1/(x+1) + ... 试试？"
+              "label": "求 $\\lim (y-kx)$ 时算出 0 或无穷",
+              "hint": "这一步往往需要泰勒展开。$e^{1/(x+1)} \\approx 1 + \\frac{1}{x+1} + \\cdots$，代入后提取主部。"
+            },
+            {
+              "type": "function",
+              "label": "换元 $t = \\frac{1}{x+1}$ 后算不对",
+              "hint": "注意 $x = \\frac{1}{t} - 1$，所以 $x(e^t - 1) = (\\frac{1}{t} - 1)(e^t - 1)$。当 $t \\to 0$ 时，$\\frac{e^t-1}{t} \\to 1$。"
             }
           ]
         },
@@ -800,19 +831,45 @@
             }
           ]
         },
-        "insight": "**行列式**计算艺术：先用性质简化，再选择零最多的行展开。",
+        "visualization": {
+          "type": "function-plot",
+          "title": "函数图像与斜渐近线",
+          "config": {
+            "functions": [
+              {
+                "expr": "x * exp(1/(x+1))",
+                "color": "#3b82f6",
+                "label": "y = x·e^(1/(x+1))"
+              },
+              {
+                "expr": "x + 1",
+                "color": "#ef4444",
+                "label": "y = x + 1 (渐近线)"
+              }
+            ],
+            "xRange": [
+              -3,
+              8
+            ],
+            "yRange": [
+              -4,
+              10
+            ]
+          }
+        },
         "strategies": [
           {
-            "title": "行列式性质",
-            "trigger": "看到复杂行列式",
-            "action": "利用**性质化简**：提公因子、行列互换、加减消元"
+            "title": "斜渐近线两步法",
+            "trigger": "求 $y = f(x)$ 的斜渐近线 $y = kx + b$",
+            "action": "先求 $k = \\lim_{x \\to \\infty} \\frac{f(x)}{x}$，再求 $b = \\lim_{x \\to \\infty} (f(x) - kx)$"
           },
           {
-            "title": "按行展开",
-            "trigger": "化简后",
-            "action": "选择**零元素最多**的行或列展开计算"
+            "title": "处理 $\\infty \\cdot 0$ 型",
+            "trigger": "计算 $\\lim x(e^{1/(x+1)} - 1)$",
+            "action": "令 $t = \\frac{1}{x+1}$，转化为 $\\lim_{t \\to 0} (\\frac{1}{t} - 1)(e^t - 1)$"
           }
-        ]
+        ],
+        "insight": "**斜渐近线**本质是函数在无穷远处的**线性主部**。$y = kx + b + o(1)$，其中 $o(1) \\to 0$。"
       }
     },
     "zhangyu-4-set1-13": {
@@ -1059,17 +1116,22 @@
             "transformation": "把样本值 $x_i$ 看作常数，μ, $\\theta$ 看作变量求极值。"
           }
         ],
-        "insight": "**二次型**标准化：配方法消交叉项，或用正交变换对角化。",
+        "insight": "**最大似然估计**的核心：把似然函数看作参数的函数，用约束条件消元后变成单变量优化问题。",
         "strategies": [
           {
-            "title": "配方法",
-            "trigger": "将二次型化为标准形",
-            "action": "**配方**消掉交叉项，得到 $\\sum \\lambda_i y_i^2$ 形式"
+            "title": "建立约束",
+            "trigger": "看到概率密度函数有多个参数",
+            "action": "利用 $\\int f(x)dx = 1$ 建立参数之间的**约束方程**"
           },
           {
-            "title": "正交变换",
-            "trigger": "要求正交变换",
-            "action": "求矩阵的特征值，**正交化**特征向量得到 $P$"
+            "title": "消元求导",
+            "trigger": "似然函数含两个参数",
+            "action": "用约束方程**消掉一个参数**，对剩余参数求导置零"
+          },
+          {
+            "title": "不变性原理",
+            "trigger": "求 $g(\\theta)$ 的 MLE",
+            "action": "若 $\\hat{\\theta}$ 是 $\\theta$ 的 MLE，则 $g(\\hat{\\theta})$ 是 $g(\\theta)$ 的 MLE"
           }
         ]
       }
@@ -1181,17 +1243,22 @@
             }
           ]
         },
-        "insight": "**概率**组合拳：全概率公式求 $P(A)$，Bayes公式求 $P(B_i|A)$。",
+        "insight": "**分段微分方程**的核心：分别求解 + **连续性缝合**。$y(1^-)=y(1^+)$ 是确定第二个常数的唯一桥梁。",
         "strategies": [
           {
-            "title": "全概率公式",
-            "trigger": "事件 $A$ 可由**完备事件组** $B_i$ 划分",
-            "action": "用 $P(A) = \\sum P(B_i)P(A|B_i)$ 计算"
+            "title": "复合函数分段",
+            "trigger": "看到 $f[g(x)]$ 形式",
+            "action": "先判断 $g(x)$ 的**范围**，再决定外层函数用哪个分段表达式"
           },
           {
-            "title": "Bayes公式",
-            "trigger": "已知 $P(A)$ 求 $P(B_i|A)$",
-            "action": "用 $P(B_i|A) = \\frac{P(B_i)P(A|B_i)}{P(A)}$"
+            "title": "分段求解",
+            "trigger": "微分方程右端是分段函数",
+            "action": "在每个区间分别**求解通解**，得到各自的积分常数"
+          },
+          {
+            "title": "连续性缝合",
+            "trigger": "分段点处有两个常数待定",
+            "action": "利用 $y(x_0^-) = y(x_0^+)$ (**连续性**条件) 建立方程，解出常数关系"
           }
         ]
       }
@@ -1252,17 +1319,22 @@
             }
           ]
         },
-        "insight": "随机**变量**函数分布：先求 $F_Y(y) = P(Y \\le y)$，再对 $y$ 求导得密度。",
+        "insight": "**中值定理证明题**：泰勒公式在中点展开 + 对称性消除奇次项。罗尔定理链式递推高阶导数等于零。",
         "strategies": [
           {
-            "title": "分布函数法",
-            "trigger": "求 $Y = g(X)$ 的分布",
-            "action": "先求 $F_Y(y) = P(Y \\le y) = P(g(X) \\le y)$"
+            "title": "泰勒展开积分",
+            "trigger": "证明积分形式的中值公式",
+            "action": "在**区间中点** $x_0 = (a+b)/2$ 处展开 $f(x)$，积分时奇次项自动消失"
           },
           {
-            "title": "密度函数",
-            "trigger": "得到 $F_Y(y)$ 后",
-            "action": "对 $y$ **求导**得到密度函数 $f_Y(y) = F_Y'(y)$"
+            "title": "罗尔定理递推",
+            "trigger": "证明 $f^{(n)}(\\xi) = 0$",
+            "action": "找 $n$ 个点使 $f$ 相等 → 罗尔得 $f'$ 有 $n-1$ 个零点 → 递推到 $f^{(n)}$"
+          },
+          {
+            "title": "介值定理收尾",
+            "trigger": "得到 $g(\\eta_1) = -g(\\eta_2)$",
+            "action": "由**连续性**和**介值定理**，存在 $\\eta$ 使 $g(\\eta) = 0$"
           }
         ]
       }
@@ -1292,8 +1364,8 @@
             },
             {
               "type": "function",
-              "label": "不会用 $D(X) = E(X^2) - [E(X)]^2$",
-              "hint": "这是一个不显含 x 的**方程**（缺 x 型）。令 y'=p, y''=p dp/dy，降阶求解。"
+              "label": "不会解 $y'' = 3\\sqrt{y}$ 这种**微分方程**",
+              "hint": "这是**缺 x 型**方程。令 $p = y'$，则 $y'' = p \\frac{dp}{dy}$，转化为可分离变量方程。"
             }
           ]
         },
@@ -1305,17 +1377,22 @@
             "transformation": "任意 Σ 积分由高斯公式转为任意 Ω 体积分 => 被积**函数**恒为 0"
           }
         ],
-        "insight": "数字特征：**期望**用定义积分，**方差**用 $D(X) = E(X^2) - [E(X)]^2$。",
+        "insight": "**高斯公式 + 反证法**：对任意闭曲面积分为0 ⟹ 被积函数恒为0。若被积函数不为0，总能找到反例曲面。",
         "strategies": [
           {
-            "title": "期望定义",
-            "trigger": "求 $E(X)$",
-            "action": "离散用 $\\sum x_i p_i$，连续用 $\\int x f(x) dx$"
+            "title": "高斯公式转化",
+            "trigger": "看到曲面积分对**任意**闭曲面成立",
+            "action": "用高斯公式将曲面积分转为体积分，$\\oiint \\to \\iiint (\\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z}) dV$"
           },
           {
-            "title": "方差性质",
-            "trigger": "求 $D(X)$",
-            "action": "用 $D(X) = E(X^2) - [E(X)]^2$ 或性质 $D(aX+b) = a^2 D(X)$"
+            "title": "被积函数恒为零",
+            "trigger": "对任意 $\\Omega$ 体积分都为0",
+            "action": "由**连续性**推出被积函数 $\\equiv 0$，建立关于 $f(x)$ 的**微分方程**"
+          },
+          {
+            "title": "缺x型方程降阶",
+            "trigger": "方程 $y'' = F(y)$ 不显含 $x$",
+            "action": "令 $p = y'$，则 $y'' = p \\frac{dp}{dy}$，分离变量后积分"
           }
         ]
       }
