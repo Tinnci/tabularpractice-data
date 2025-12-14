@@ -371,3 +371,41 @@ interface Question {
     ]
 }
 ```
+
+## 六、实施进度 (Implementation Status)
+
+### 1. 核心可视化组件 (Core Components) - ✅ 已完成
+位于 `src/components/question/ui/ControlVisualization/`：
+- `ControlVisualizationRenderer`: 统一渲染入口
+- `StepResponse`: 阶跃响应图 (Mafs)
+- `BodePlot`: 伯德图 (Mafs)
+- `RootLocus`: 根轨迹图 (Mafs)
+- `BlockDiagram`: 方框图 (@xyflow/react)
+- `CircuitDiagram`: 电路图 (SVG)
+
+### 2. 真题数据集成 (Data Integration) - ✅ 已完成
+- 更新 `shu-836-2025/index.json`
+- Q6 (电路), Q7 (根轨迹), Q8 (Bode), Q9 (离散方框图) 已配置
+
+### 3. 应用集成 (App Integration) - ✅ 已完成
+- `QuestionContent.tsx` 已更新，智能识别 `eureka.visualization` 类型
+
+### 4. Markdown 内嵌渲染 (Markdown Rendering) - ✅ 已完成
+已在 `MarkdownContent.tsx` 中实现。
+**使用方法**：使用 `control-viz` 语言代码块，并填入 JSON 配置对象。
+
+````markdown
+```control-viz
+{
+  "type": "step-response",
+  "systemType": "second-order",
+  "dampingRatio": 0.5,
+  "naturalFrequency": 5,
+  "tRange": [0, 5],
+  "height": 300
+}
+```
+````
+
+组件导出已在 `src/components/question/ui/ControlVisualization/index.ts` 确认完成。
+
