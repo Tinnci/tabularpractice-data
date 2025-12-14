@@ -5332,5 +5332,104 @@
     "category": "zhangyu-4",
     "year": 2026,
     "contentImgThumb": "/papers/zhangyu-4-set1/assets/22_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-01",
+    "paperId": "shu-836-2025",
+    "number": 1,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/01_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-02",
+    "paperId": "shu-836-2025",
+    "number": 2,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/02_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-03",
+    "paperId": "shu-836-2025",
+    "number": 3,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/03_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-04",
+    "paperId": "shu-836-2025",
+    "number": 4,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/04_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-05",
+    "paperId": "shu-836-2025",
+    "number": 5,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/05_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-06",
+    "paperId": "shu-836-2025",
+    "number": 6,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/06_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-07",
+    "paperId": "shu-836-2025",
+    "number": 7,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/07_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-08",
+    "paperId": "shu-836-2025",
+    "number": 8,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/08_q_thumb.png"
+  },
+  {
+    "id": "shu-836-2025-09",
+    "paperId": "shu-836-2025",
+    "number": 9,
+    "year": 2025,
+    "type": "answer",
+    "tags": [],
+    "subject": "control-theory",
+    "category": "shu-836",
+    "contentImgThumb": "/papers/shu-836-2025/assets/09_q_thumb.png"
   }
 ]

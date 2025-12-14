@@ -1,0 +1,492 @@
+{
+  "paperId": "shu-836-2025",
+  "subjectKey": "control-theory",
+  "year": 2025,
+  "questions": {
+    "shu-836-2025-01": {
+      "id": "shu-836-2025-01",
+      "paperId": "shu-836-2025",
+      "number": 1,
+      "type": "answer",
+      "tags": [
+        "linear-transformation",
+        "transfer-function",
+        "state-space"
+      ],
+      "score": 10,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/01_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/01_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/01_a.png",
+      "answerImg": null,
+      "contentMd": "# 第1题：线性变换与传递函数不变性\n\n给定一个线性定常系统的状态空间表达式：\n\n$$\\dot{x} = Ax + Bu$$\n$$y = Cx + Du$$\n\n并给出一个线性变换 $x = P\\bar{x}$（注意 $P$ 与 $P^{-1}$ 的关系）。\n\n1. 写出变换后的状态空间表达式 $\\dot{\\bar{x}} = \\bar{A}\\bar{x} + \\bar{B}u$，$y = \\bar{C}\\bar{x} + \\bar{D}u$。\n2. 证明线性变换前后的传递函数矩阵是不变的，即 $G(s) = \\bar{G}(s)$。",
+      "answerMd": "## 第1问：变换后的状态空间表达式\n\n$$\\bar{A} = P^{-1}AP$$\n$$\\bar{B} = P^{-1}B$$\n$$\\bar{C} = CP$$\n$$\\bar{D} = D$$\n\n## 第2问：证明传递函数不变\n\n原系统传递函数：$G(s) = C(sI-A)^{-1}B + D$\n\n变换后系统传递函数：\n$$\\bar{G}(s) = \\bar{C}(sI-\\bar{A})^{-1}\\bar{B} + \\bar{D}$$\n$$= CP(sI-P^{-1}AP)^{-1}P^{-1}B + D$$\n$$= CP[P^{-1}(sI-A)P]^{-1}P^{-1}B + D$$\n$$= CPP^{-1}(sI-A)^{-1}PP^{-1}B + D$$\n$$= C(sI-A)^{-1}B + D = G(s)$$\n\n因此证明了线性变换前后传递函数矩阵不变。",
+      "analysisMd": "**本题考点**：线性变换的基本公式推导、传递函数矩阵的定义与性质。\n\n**关键点**：\n1. 熟练掌握线性变换公式 $x = P\\bar{x}$ 的推导\n2. 利用矩阵运算性质：$(P^{-1}AP)^{-1} = P^{-1}A^{-1}P$\n3. 传递函数的定义：$G(s) = C(sI-A)^{-1}B + D$",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不清楚线性变换后各矩阵的表达式",
+              "hint": "记住关键公式：$\\bar{A} = P^{-1}AP$，$\\bar{B} = P^{-1}B$，$\\bar{C} = CP$"
+            },
+            {
+              "type": "calculation",
+              "label": "矩阵求逆运算不熟练",
+              "hint": "利用$(P^{-1}AP)^{-1} = P^{-1}A^{-1}P$的性质"
+            },
+            {
+              "type": "rule",
+              "label": "不知道如何证明传递函数不变",
+              "hint": "分别写出变换前后的传递函数表达式，然后代入变换关系式进行化简"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$P$",
+            "currentRole": "一个普通的变换矩阵",
+            "suggestedRole": "连接新旧坐标系的桥梁",
+            "transformation": "从 $x = P\\bar{x}$ 中，$P$ 的作用是将新坐标 $\\bar{x}$ 映射到原坐标 $x$"
+          }
+        ],
+        "strategies": [
+          {
+            "title": "线性变换的本质理解",
+            "trigger": "遇到状态空间的坐标变换问题",
+            "action": "记住线性变换不改变系统的输入输出关系，只是换了一个观察角度"
+          }
+        ],
+        "insight": "线性变换是现代控制理论的基础工具，它允许我们将复杂的系统矩阵变换为更简单的标准型（如能控标准型、约当标准型），但本质的传递函数关系保持不变。"
+      }
+    },
+    "shu-836-2025-02": {
+      "id": "shu-836-2025-02",
+      "paperId": "shu-836-2025",
+      "number": 2,
+      "type": "answer",
+      "tags": [
+        "lyapunov-stability"
+      ],
+      "score": 10,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/02_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/02_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/02_a.png",
+      "answerImg": null,
+      "contentMd": "# 第2题：李雅普诺夫稳定性概念\n\n解释李雅普诺夫意义下的以下概念：\n\n1. **稳定（Stable）**\n2. **渐近稳定（Asymptotically Stable）**\n3. **大范围渐近稳定（Globally Asymptotically Stable）**",
+      "answerMd": "## 1. 稳定（Stable）\n\n对于平衡点 $x_e$，如果对于任意 $\\varepsilon > 0$，存在 $\\delta(\\varepsilon) > 0$，使得当 $\\|x(t_0) - x_e\\| < \\delta$ 时，有 $\\|x(t) - x_e\\| < \\varepsilon$（对所有 $t \\geq t_0$ 成立），则称平衡点 $x_e$ 是**稳定的**。\n\n**物理意义**：如果初始状态在平衡点附近的一个小邻域内，则系统状态将永远保持在平衡点附近的某个邻域内，不会发散。\n\n## 2. 渐近稳定（Asymptotically Stable）\n\n如果平衡点 $x_e$ 是稳定的，并且存在 $r > 0$，使得当 $\\|x(t_0) - x_e\\| < r$ 时，有：\n$$\\lim_{t \\to \\infty} x(t) = x_e$$\n\n则称平衡点 $x_e$ 是**渐近稳定的**。\n\n**物理意义**：不仅系统状态保持在平衡点附近，而且随着时间趋于无穷，系统状态会收敛到平衡点。\n\n## 3. 大范围渐近稳定（Globally Asymptotically Stable）\n\n如果平衡点 $x_e$ 是渐近稳定的，并且对于**任意初始状态** $x(t_0)$（不论距离平衡点多远），都有：\n$$\\lim_{t \\to \\infty} x(t) = x_e$$\n\n则称平衡点 $x_e$ 是**大范围渐近稳定的**。\n\n**物理意义**：无论初始状态在何处，系统最终都会收敛到平衡点。",
+      "analysisMd": "**本题考点**：基本概念的识记与理解，非计算题。\n\n**关键区别**：\n- **稳定**：状态有界，但不一定收敛\n- **渐近稳定**：局部收敛（在一定范围内）\n- **大范围渐近稳定**：全局收敛（任意初始状态）\n\n**记忆要点**：三个概念是递进关系，大范围渐近稳定 ⊂ 渐近稳定 ⊂ 稳定。",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不理解 $\\varepsilon-\\delta$ 语言",
+              "hint": "$\\delta$ 是初始偏差的限制，$\\varepsilon$ 是之后状态偏差的上界"
+            },
+            {
+              "type": "rule",
+              "label": "混淆三个概念的区别",
+              "hint": "关键词：稳定→有界；渐近稳定→收敛；大范围→全局"
+            }
+          ]
+        },
+        "variableRoles": [],
+        "strategies": [
+          {
+            "title": "稳定性概念的层次理解",
+            "trigger": "遇到稳定性判定问题",
+            "action": "先判断是否稳定（有界性），再判断是否渐近稳定（收敛性），最后看是局部还是全局"
+          }
+        ],
+        "insight": "李雅普诺夫稳定性理论是现代控制的核心，它提供了无需求解微分方程就能判断系统稳定性的方法。"
+      }
+    },
+    "shu-836-2025-03": {
+      "id": "shu-836-2025-03",
+      "paperId": "shu-836-2025",
+      "number": 3,
+      "type": "answer",
+      "tags": [
+        "canonical-form",
+        "transfer-function"
+      ],
+      "score": 10,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/03_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/03_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/03_a.png",
+      "answerImg": null,
+      "contentMd": "# 第3题：传递函数转约当标准型\n\n给定一个闭环传递函数（含有重极点）：\n\n$$\\Phi(s) = \\frac{2s+3}{(s-1)^2}$$\n\n要求：\n1. 写出对应的常微分方程表达式。\n2. 写出系统的**约当（Jordan）标准型**状态空间表达式。",
+      "answerMd": "## 第1问：常微分方程\n\n对传递函数进行拉普拉斯反变换：\n\n$$(s-1)^2 Y(s) = (2s+3)U(s)$$\n\n展开：\n$$s^2Y(s) - 2sY(s) + Y(s) = 2sU(s) + 3U(s)$$\n\n反变换得微分方程：\n$$\\ddot{y}(t) - 2\\dot{y}(t) + y(t) = 2\\dot{u}(t) + 3u(t)$$\n\n## 第2问：约当标准型\n\n系统有重极点 $\\lambda_1 = \\lambda_2 = 1$，约当标准型为：\n\n$$\\dot{x} = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} x + \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix} u$$\n\n$$y = \\begin{bmatrix} 2 & 1 \\end{bmatrix} x$$\n\n**推导过程**：利用部分分式展开\n$$\\Phi(s) = \\frac{2s+3}{(s-1)^2} = \\frac{2}{s-1} + \\frac{1}{(s-1)^2}$$",
+      "analysisMd": "**本题考点**：拉普拉斯反变换、利用部分分式展开法求约当标准型。\n\n**关键技巧**：\n1. 对于重极点，约当块的标准形式是对角线为极点值，上对角线为1\n2. 部分分式展开法比用特征向量法计算量小得多\n3. 约当标准型的 $A$ 矩阵形式：$J = \\begin{bmatrix} \\lambda & 1 \\\\ 0 & \\lambda \\end{bmatrix}$",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "calculation",
+              "label": "部分分式展开不熟练",
+              "hint": "对于 $(s-a)^2$ 的因子，展开为 $\\frac{A}{s-a} + \\frac{B}{(s-a)^2}$"
+            },
+            {
+              "type": "representation",
+              "label": "不记得约当块的标准形式",
+              "hint": "重极点的约当块：主对角线是极点值，上对角线是1"
+            }
+          ]
+        },
+        "variableRoles": [],
+        "strategies": [
+          {
+            "title": "约当标准型的快速求解",
+            "trigger": "遇到重极点的传递函数",
+            "action": "优先使用部分分式展开法，避免求特征向量的复杂计算"
+          }
+        ],
+        "insight": "约当标准型是处理重特征值系统的标准工具，它将系统矩阵化为最简单的形式，便于分析和计算。"
+      }
+    },
+    "shu-836-2025-04": {
+      "id": "shu-836-2025-04",
+      "paperId": "shu-836-2025",
+      "number": 4,
+      "type": "answer",
+      "tags": [
+        "state-transition-matrix",
+        "state-space"
+      ],
+      "score": 10,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/04_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/04_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/04_a.png",
+      "answerImg": null,
+      "contentMd": "# 第4题：状态转移矩阵与非齐次解\n\n给定一个二阶系统的状态方程：\n\n$$\\dot{x} = \\begin{bmatrix} 0 & 1 \\\\ -2 & -3 \\end{bmatrix} x + \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix} u$$\n\n初始条件：$x(0) = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$\n\n要求：\n1. 使用拉氏反变换法求矩阵指数（状态转移矩阵）$e^{At} = \\Phi(t)$。\n2. 给定单位阶跃输入 $u(t) = 1(t)$，求状态方程的解 $x(t)$（包含零输入响应和零状态响应）。",
+      "answerMd": "## 第1问：状态转移矩阵 $\\Phi(t) = e^{At}$\n\n**步骤1**：计算 $(sI - A)^{-1}$\n\n$$sI - A = \\begin{bmatrix} s & -1 \\\\ 2 & s+3 \\end{bmatrix}$$\n\n$$det(sI - A) = s(s+3) + 2 = s^2 + 3s + 2 = (s+1)(s+2)$$\n\n$$(sI - A)^{-1} = \\frac{1}{(s+1)(s+2)} \\begin{bmatrix} s+3 & 1 \\\\ -2 & s \\end{bmatrix}$$\n\n**步骤2**：部分分式展开并拉氏反变换\n\n对每个元素进行部分分式展开后，得到：\n\n$$\\Phi(t) = e^{At} = \\begin{bmatrix} 2e^{-t} - e^{-2t} & e^{-t} - e^{-2t} \\\\ -2e^{-t} + 2e^{-2t} & -e^{-t} + 2e^{-2t} \\end{bmatrix}$$\n\n## 第2问：状态响应 $x(t)$\n\n状态方程的解为：\n$$x(t) = \\Phi(t)x(0) + \\int_0^t \\Phi(t-\\tau)Bu(\\tau)d\\tau$$\n\n**零输入响应**：\n$$x_{zi}(t) = \\Phi(t)x(0) = \\begin{bmatrix} 2e^{-t} - e^{-2t} \\\\ -2e^{-t} + 2e^{-2t} \\end{bmatrix}$$\n\n**零状态响应**（$u(t) = 1$）：\n$$x_{zs}(t) = \\int_0^t \\Phi(t-\\tau) \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix} d\\tau$$\n\n计算后得：\n$$x_{zs}(t) = \\begin{bmatrix} \\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t} \\\\ \\frac{1}{2} + e^{-t} - \\frac{3}{2}e^{-2t} \\end{bmatrix}$$\n\n**总响应**：\n$$x(t) = x_{zi}(t) + x_{zs}(t) = \\begin{bmatrix} \\frac{1}{2} + e^{-t} - \\frac{1}{2}e^{-2t} \\\\ \\frac{1}{2} - e^{-t} + \\frac{1}{2}e^{-2t} \\end{bmatrix}$$",
+      "analysisMd": "**本题考点**：$(sI-A)^{-1}$ 的计算、拉氏反变换、非齐次状态方程的求解公式。\n\n**关键步骤**：\n1. 求解 $(sI-A)^{-1}$ 时，需要先求行列式，再求伴随矩阵\n2. 部分分式展开是手算的关键技巧\n3. 积分 $\\int_0^t \\Phi(t-\\tau)Bu(\\tau)d\\tau$ 可以通过换元 $\\eta = t - \\tau$ 简化\n\n**禁用计算器下的技巧**：\n- 保留根号和分数形式，不强求数值结果\n- 利用矩阵的伴随矩阵公式快速计算逆矩阵",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "calculation",
+              "label": "矩阵求逆计算复杂",
+              "hint": "利用伴随矩阵公式：$(sI-A)^{-1} = \\frac{adj(sI-A)}{det(sI-A)}$"
+            },
+            {
+              "type": "calculation",
+              "label": "积分计算困难",
+              "hint": "$\\int_0^t e^{-a(t-\\tau)}d\\tau = \\frac{1-e^{-at}}{a}$"
+            },
+            {
+              "type": "rule",
+              "label": "不熟悉状态响应公式",
+              "hint": "总响应 = 零输入响应 + 零状态响应"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\Phi(t)$",
+            "currentRole": "一个复杂的矩阵函数",
+            "suggestedRole": "系统的'记忆'——它描述了从初始状态到当前状态的演化",
+            "transformation": "状态转移矩阵 $\\Phi(t)$ 完全由系统矩阵 $A$ 决定，与输入无关"
+          }
+        ],
+        "strategies": [
+          {
+            "title": "拉氏变换法求 $e^{At}$",
+            "trigger": "需要计算状态转移矩阵",
+            "action": "先求$(sI-A)^{-1}$，然后对每个元素做部分分式展开再反变换"
+          }
+        ],
+        "insight": "状态转移矩阵是线性系统理论的核心概念，它不仅用于求解状态方程，还在能控性、能观性分析中扮演重要角色。"
+      }
+    },
+    "shu-836-2025-05": {
+      "id": "shu-836-2025-05",
+      "paperId": "shu-836-2025",
+      "number": 5,
+      "type": "answer",
+      "tags": [
+        "controllability",
+        "observability",
+        "pole-placement",
+        "state-observer"
+      ],
+      "score": 10,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/05_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/05_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/05_a.png",
+      "answerImg": null,
+      "contentMd": "# 第5题：能控性、极点配置与观测器设计（综合题）\n\n给定一个三阶系统：\n\n$$\\dot{x} = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ -6 & -11 & -6 \\end{bmatrix} x + \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix} u$$\n\n$$y = \\begin{bmatrix} 1 & 0 & 0 \\end{bmatrix} x$$\n\n要求：\n1. 判断系统的**能控性**；如果能控，写出**能控标准型**。\n2. 设计状态反馈矩阵 $K$，将闭环极点配置在 $\\{-10, -6, -4\\}$。\n3. 判断系统的**能观性**，并设计状态观测器，将观测器极点配置在 $\\{-6, -6, -6\\}$（如果可能）。",
+      "answerMd": "## 第1问：能控性判定与能控标准型\n\n**能控性矩阵**：\n$$Q_c = [B, AB, A^2B] = \\begin{bmatrix} 0 & 0 & 1 \\\\ 0 & 1 & -6 \\\\ 1 & -6 & 25 \\end{bmatrix}$$\n\n$$rank(Q_c) = 3$$\n\n系统**完全能控**。\n\n**能控标准型**：\n特征多项式：$det(sI-A) = s^3 + 6s^2 + 11s + 6$\n\n$$\\dot{\\bar{x}} = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ -6 & -11 & -6 \\end{bmatrix} \\bar{x} + \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix} u$$\n\n（原系统已经是能控标准型）\n\n## 第2问：极点配置 $K$ 设计\n\n期望特征多项式：\n$$(s+10)(s+6)(s+4) = s^3 + 20s^2 + 124s + 240$$\n\n使用Ackermann公式或直接法，得：\n$$K = [234, 113, 14]$$\n\n闭环系统：$A - BK$ 的特征多项式为 $s^3 + 20s^2 + 124s + 240$\n\n## 第3问：能观性与观测器设计 ⚠️\n\n**能观性矩阵**：\n$$Q_o = \\begin{bmatrix} C \\\\ CA \\\\ CA^2 \\end{bmatrix} = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$$\n\n$$rank(Q_o) = 3$$\n\n系统**完全能观**，可以设计全维观测器。\n\n观测器增益 $L$ 可通过对偶原理求解：\n$$L = \\begin{bmatrix} 12 \\\\ 72 \\\\ 144 \\end{bmatrix}$$\n\n**注意**: 根据资料，本题可能设计有陷阱——如果系统不完全能观，则无法任意配置观测器极点。",
+      "analysisMd": "**本题考点**：能控/能观性判据（秩判据）、能控标准型变换、Ackermann公式或直接法进行极点配置。\n\n**关键陷阱**：\n- 2025年真题中提到，此类题目可能存在**系统不完全能观**的情况，导致无法任意配置观测器极点\n- 必须先判断能观性矩阵的秩，再决定是否可以设计观测器\n\n**计算技巧**：\n1. 能控性矩阵：逐次计算 $AB$, $A^2B$\n2. Ackermann公式：$K = [0, 0, ..., 1] Q_c^{-1} \\phi_d(A)$\n3. 观测器设计：利用对偶原理，将极点配置问题转化为能控问题求解",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "calculation",
+              "label": "三阶矩阵求秩困难",
+              "hint": "利用行简化或计算行列式判断线性无关性"
+            },
+            {
+              "type": "rule",
+              "label": "不熟悉Ackermann公式",
+              "hint": "$K = [0, ..., 0, 1] Q_c^{-1} \\phi_d(A)$，其中 $\\phi_d(A)$ 是期望特征多项式代入 $A$"
+            },
+            {
+              "type": "constraint",
+              "label": "忽略了能观性检查",
+              "hint": "设计观测器前必须先验证系统是否能观！"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$Q_c$ 和 $Q_o$",
+            "currentRole": "两个需要计算的矩阵",
+            "suggestedRole": "系统结构性质的'检测器'",
+            "transformation": "$Q_c$ 满秩 ↔ 能控；$Q_o$ 满秩 ↔ 能观。它们的秩决定了我们能对系统做什么。"
+          }
+        ],
+        "strategies": [
+          {
+            "title": "综合设计题的标准流程",
+            "trigger": "遇到能控/能观/极点配置综合题",
+            "action": "1️⃣ 先判能控性 → 2️⃣ 设计状态反馈 $K$ → 3️⃣ 判能观性 → 4️⃣ 设计观测器 $L$"
+          },
+          {
+            "title": "陷阱识别",
+            "trigger": "题目要求设计观测器",
+            "action": "务必先检查能观性！不可观系统无法任意配置观测器极点"
+          }
+        ],
+        "insight": "能控性和能观性是对偶概念，它们决定了我们能否通过反馈控制和状态估计实现期望的系统性能。2025年考题特别强调了'不完全能观'的陷阱，这要求考生必须严格按照理论步骤操作，不能想当然。"
+      }
+    },
+    "shu-836-2025-06": {
+      "id": "shu-836-2025-06",
+      "paperId": "shu-836-2025",
+      "number": 6,
+      "type": "answer",
+      "tags": [
+        "circuit-modeling",
+        "transfer-function"
+      ],
+      "score": 20,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/06_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/06_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/06_a.png",
+      "answerImg": null,
+      "contentMd": "# 第6题：电路系统建模\n\n给定一个包含电阻、电容的电路图（两个动态元件，二阶系统）。\n\n要求：\n1. **先列写微分方程表达式**（题目明确要求）。\n2. 求传递函数 $G(s) = \\frac{U_o(s)}{U_i(s)}$（注意：初始条件默认为零）。\n\n**电路参数**：\n- 电阻 $R_1, R_2$\n- 电容 $C_1, C_2$",
+      "answerMd": "## 解题步骤\n\n**第1步：列写微分方程**\n\n利用**基尔霍夫定律（KCL/KVL）**：\n- KCL（节点电流定律）\n- KVL（回路电压定律）\n\n对两个电容分别应用：\n$$i_{C1} = C_1 \\frac{du_{C1}}{dt}$$\n$$i_{C2} = C_2 \\frac{du_{C2}}{dt}$$\n\n根据电路拓扑，列写方程（具体形式取决于电路结构）。\n\n**第2步：求传递函数**\n\n对微分方程进行拉普拉斯变换（零初始条件）：\n$$G(s) = \\frac{U_o(s)}{U_i(s)} = \\frac{K}{(\\tau_1 s + 1)(\\tau_2 s + 1)}$$\n\n其中 $K$ 为增益，$\\tau_1, \\tau_2$ 为时间常数。",
+      "analysisMd": "**本题考点**：基尔霍夫定律（KCL/KVL）、微分方程建模、传递函数定义。\n\n**关键注意事项**：\n1. **题目强制要求先写微分方程**，不能直接求传递函数\n2. 传递函数默认零初始条件，即使题目给出了初始条件\n3. 对于RLC电路，需要分别对每个动态元件（电容/电感）建立方程\n\n**常见错误**：\n- 忘记写微分方程，直接求传递函数（扣分）\n- 使用非零初始条件求传递函数（概念错误）",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不熟悉基尔霍夫定律",
+              "hint": "KCL：节点流入电流 = 流出电流；KVL：回路电压和为0"
+            },
+            {
+              "type": "representation",
+              "label": "混淆了微分方程和传递函数的概念",
+              "hint": "微分方程是时域描述，传递函数是频域描述（需拉普拉斯变换）"
+            }
+          ]
+        },
+        "variableRoles": [],
+        "strategies": [
+          {
+            "title": "电路建模标准流程",
+            "trigger": "遇到RLC电路建模题",
+            "action": "1️⃣ 标记节点和回路 → 2️⃣ 列写KCL/KVL方程 → 3️⃣ 消元得输入输出关系 → 4️⃣ 拉普拉斯变换得传递函数"
+          }
+        ],
+        "insight": "电路建模是控制理论与实际工程的桥梁。2025年考题特别强调先写微分方程，这要求考生不能跳步，必须展示完整的推导过程。"
+      }
+    },
+    "shu-836-2025-07": {
+      "id": "shu-836-2025-07",
+      "paperId": "shu-836-2025",
+      "number": 7,
+      "type": "answer",
+      "tags": [
+        "root-locus",
+        "stability-analysis"
+      ],
+      "score": 20,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/07_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/07_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/07_a.png",
+      "answerImg": null,
+      "contentMd": "# 第7题：参数根轨迹\n\n已知单位负反馈系统的开环传递函数，其中参数 $K^*$ 位于**零点位置**（参数出现在分子多项式中）：\n\n$$G(s) = \\frac{K^* s + a}{s(s+b)(s+c)}$$\n\n要求：\n1. 绘制以 $K^*$ 为变量的**参数根轨迹**（标明：渐近线、分离点、虚轴交点）。\n2. 确定系统稳定时 $K^*$ 的取值范围。",
+      "answerMd": "## 第1问：参数根轨迹绘制\n\n**基本信息**：\n- 开环零点：$s = -\\frac{a}{K^*}$（与 $K^*$ 相关）\n- 开环极点：$s = 0, -b, -c$（三个）\n- 分支数：$n = 3$\n\n**绘制要素**：\n\n1. **实轴段**：根据根轨迹法则，实轴上右侧奇数个开环奇点的部分是根轨迹\n\n2. **渐近线**：\n   - 渐近线数量：$n - m = 3 - 1 = 2$\n   - 渐近线与实轴夹角：$\\phi_k = \\frac{(2k+1) \\cdot 180°}{2} = 90°, 270°$\n   - 渐近线交点（重心）：$\\sigma_a = \\frac{\\sum poles - \\sum zeros}{n - m}$\n\n3. **分离点**：求解方程 $N'(s)D(s) - N(s)D'(s) = 0$\n\n4. **虚轴交点**：利用**劳斯判据**，令劳斯表某行为0，求解参数值和虚轴交点频率\n\n## 第2问：稳定性范围\n\n利用劳斯判据，列写特征方程的劳斯表，要求所有元素 $> 0$：\n$$K^* \\in (K_{min}, K_{max})$$\n\n具体数值需根据电路参数 $a, b, c$ 计算。",
+      "analysisMd": "**本题考点**：参数根轨迹的绘制（包括求分离点、与虚轴交点）、劳斯判据判稳。\n\n**难点分析**：\n1. **参数位于零点**：不同于常规的增益根轨迹，这里 $K^*$ 影响零点位置\n2. **分离点计算**：需要求解 $\\frac{dK^*}{ds} = 0$，可能涉及三次方程\n3. **虚轴交点**：必须用劳斯表辅助求解，手算繁琐\n\n**禁用计算器应对**：\n- 分离点可能给出符号解或数值估算\n- 虚轴交点利用劳斯表某行为0的条件求解",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "calculation",
+              "label": "分离点方程太复杂",
+              "hint": "尝试特殊值法（试根法）或保留符号形式"
+            },
+            {
+              "type": "rule",
+              "label": "不知道如何求虚轴交点",
+              "hint": "令劳斯表某行的第一列元素为0，求解对应的 $K^*$ 和频率 $\\omega$"
+            }
+          ]
+        },
+        "variableRoles": [],
+        "strategies": [
+          {
+            "title": "参数根轨迹vs增益根轨迹",
+            "trigger": "参数出现在零点",
+            "action": "将系统等效变换，使参数仍然作为'增益'处理，或使用广义根轨迹法则"
+          }
+        ],
+        "insight": "参数根轨迹是根轨迹理论的推广，它允许我们分析非增益参数对系统极点的影响，这在实际工程中非常有用（如PID参数调节）。"
+      }
+    },
+    "shu-836-2025-08": {
+      "id": "shu-836-2025-08",
+      "paperId": "shu-836-2025",
+      "number": 8,
+      "type": "answer",
+      "tags": [
+        "bode-plot",
+        "compensation",
+        "frequency-domain"
+      ],
+      "score": 20,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/08_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/08_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/08_a.png",
+      "answerImg": null,
+      "contentMd": "# 第8题：频域分析与校正\n\n给定校正前的系统 $G_0(s)$ 和校正装置的单位阶跃响应 $h(t)$。\n\n**已知**：\n- 校正前系统：$G_0(s) = \\frac{K}{s(\\tau s + 1)}$\n- 校正装置的单位阶跃响应：$h(t) = 1 - e^{-t/T}$\n\n要求：\n1. 求校正装置的传递函数 $G_c(s)$，判断其类型（超前/滞后），并绘制校正前 $G_0(s)$ 和校正装置 $G_c(s)$ 的**Bode图**（幅频和相频）。\n2. 计算校正前后的**相角裕度** $\\gamma$。",
+      "answerMd": "## 第1问：校正装置传递函数与Bode图\n\n**步骤1：从TDR反推传递函数**\n\n单位阶跃响应：$h(t) = 1 - e^{-t/T}$\n\n拉普拉斯反变换得：\n$$G_c(s) = \\frac{H(s)}{s} = \\frac{1}{s(Ts+1)}$$\n\n校正前系统 $G_0(s)$ 为 **II型系统**（两个积分环节）。\n\n**类型判断**：$G_c(s)$ 是 **滞后校正装置**（增加了一个低速极点）。\n\n**第2步：Bode图绘制**\n\n**$G_0(s)$ 的Bode图**：\n- 低频渐近线：斜率 $-20$ dB/dec\n- 转折频率：$\\omega = 1/\\tau$\n- 相频：始于 $-90°$，转折频率后增加 $-45°/dec$\n\n**$G_c(s)$ 的Bode图**：\n- 低频渐近线：斜率 $-20$ dB/dec（积分环节）\n- 转折频率：$\\omega = 1/T$\n- 相频：始于 $-90°$，转折频率后再滚 $-45°$\n\n## 第2问：相角裕度计算\n\n校正后系统：$G(s) = G_c(s)G_0(s)$\n\n**截止频率** $\\omega_c$：满足 $|G(j\\omega_c)| = 1$ 或 $20\\lg|G(j\\omega_c)| = 0$ dB\n\n**相角裕度**：\n$$\\gamma = 180° + \\angle G(j\\omega_c)$$\n\n具体数值需根据参数 $K, \\tau, T$ 计算。\n\n**禁用计算器技巧**：\n- 利用几何关系估算 $\\arctan$ 值\n- 实用公式：$\\arctan(1) = 45°$，$\\arctan(0.5) \\approx 27°$",
+      "analysisMd": "**本题考点**：从时域响应反推传递函数、Bode图绘制、截止频率与相角裕度的计算。\n\n**关键难点**：\n1. **从TDR求传递函数**：需记住 $h(t) = \\mathcal{L}^{-1}[H(s)] = \\mathcal{L}^{-1}[sG(s)]$\n2. **Bode图的相频曲线**：需要准确计算多个频率点的相角\n3. **相角裕度计算**：需要先求截止频率，再计算该频率下的相角\n\n**无计算器应对**：\n- 利用几何作图估算截止频率\n- 相角计算用特殊值 $\\arctan(1) = 45°$ 等进行估算",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不会从阶跃响应放推传递函数",
+              "hint": "利用关系式：$H(s) = sG(s)$，$h(t) = \\mathcal{L}^{-1}[H(s)]$"
+            },
+            {
+              "type": "calculation",
+              "label": "Bode图相频曲线不会画",
+              "hint": "每个一阶因子 $(Ts+1)$ 在转折频率后相角变化 $\\pm 45°/dec$"
+            },
+            {
+              "type": "calculation",
+              "label": "相角裕度计算复杂",
+              "hint": "先用Bode图找到截止频率 $\\omega_c$（$|G|=0$dB），再用相频图读取该点相角"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\gamma$ (相角裕度)",
+            "currentRole": "一个需要计算的数值",
+            "suggestedRole": "系统稳定性的'安全边界'",
+            "transformation": "相角裕度越大，系统越稳定。一般要求 $\\gamma > 30°\\sim 60°$。"
+          }
+        ],
+        "strategies": [
+          {
+            "title": "校正类型识别",
+            "trigger": "看到校正装置传递函数",
+            "action": "超前校正：零点频率 < 极点频率；滞后校正：零点频率 > 极点频率"
+          }
+        ],
+        "insight": "频域校正是经典控制的核心工具，它通过调整系统的频率响应来改善性能。Bode图让我们能直观地看到校正的效果。"
+      }
+    },
+    "shu-836-2025-09": {
+      "id": "shu-836-2025-09",
+      "paperId": "shu-836-2025",
+      "number": 9,
+      "type": "answer",
+      "tags": [
+        "discrete-system",
+        "z-transform",
+        "stability-analysis",
+        "steady-state-error"
+      ],
+      "score": 40,
+      "videoUrl": "",
+      "contentImg": "/papers/shu-836-2025/assets/09_q.png",
+      "contentImgThumb": "/papers/shu-836-2025/assets/09_q_thumb.png",
+      "analysisImg": "/papers/shu-836-2025/assets/09_a.png",
+      "answerImg": null,
+      "contentMd": "# 第9题：离散控制系统（压轴大题，40分） 🎯\n\n给定一个包含**多个采样开关和环节**的复杂离散系统结构图。\n\n**系统组成**：\n- 零阶保持器（ZOH）\n- 多个离散环节 $G_1(s), G_2(s), G_3(s), G_4(s)$\n- 采样周期 $T$\n\n要求：\n\n1. **求闭环脉冲传递函数** $\\frac{C(z)}{R(z)}$（用符号表示，不带入数值，考查推导能力）。\n\n2. 若 $G_4(s) = 0$：\n   - (a) 求阶跃输入下的**稳态输出**（暗示需先判稳）\n   - (b) 求斜坡输入下的**稳态误差**\n\n3. 若 $G_4(s) \\neq 0$（例如 $G_4(s) = 0.05$），重新进行上述分析。\n   - *资料提及此问计算量极大，容易出错。*",
+      "answerMd": "## 第1问：闭环脉冲传递函数 $C(z)/R(z)$\n\n**推导步骤**：\n\n1. **识别采样位置**：注意采样开关的位置，区分 $G_1(s)G_2(s)$ 与 $G_1(z)G_2(z)$ 的区别。\n\n2. **列写信号流方程**：\n   - 对于**含有ZOH**的环节：$G_{ZOH}(z) = Z\\left[\\frac{1-e^{-Ts}}{s} \\cdot G(s)\\right]$\n   - 对于**连续级联环节**：$Z[G_1(s)G_2(s)] \\neq G_1(z)G_2(z)$\n\n3. **结构图简化**：\n   - 利用块图代数求解闭环传递函数\n   - 注意反馈支路的处理\n\n**结果（符号形式）**：\n$$\\frac{C(z)}{R(z)} = \\frac{G_1G_2G_3(z) + G_4(z)}{1 + G_1G_2G_3(z)H(z)}$$\n\n（具体形式取决于结构图配置）\n\n---\n\n## 第2问：$G_4(s) = 0$ 时的分析\n\n**步骤(a)：阶跃输入的稳态输出**\n\n先判断**稳定性**：\n- 方法1：**双线性变换 + 劳斯判据**  \n  令 $z = \\frac{1+w}{1-w}$，将特征方程变换到 $w$ 域，再用劳斯判据判断。\n\n- 方法2：**Jury判据**  \n  直接在 $z$ 域判断所有根是否在单位圆内。\n\n如果系统**稳定**，则利用**终值定理**：\n$$c_{ss} = \\lim_{z \\to 1} \\frac{z-1}{z} \\cdot C(z) = \\lim_{z \\to 1} \\frac{z-1}{z} \\cdot \\frac{C(z)}{R(z)} \\cdot R(z)$$\n\n对于单位阶跃：$R(z) = \\frac{z}{z-1}$\n\n**步骤(b)：斜坡输入的稳态误差**\n\n斜坡输入：$r(t) = t$，$R(z) = \\frac{Tz}{(z-1)^2}$\n\n误差：\n$$E(z) = R(z) - C(z) = \\frac{1}{1 + G(z)H(z)} \\cdot R(z)$$\n\n稳态误差：\n$$e_{ss} = \\lim_{z \\to 1} \\frac{z-1}{z} \\cdot E(z)$$\n\n---\n\n## 第3问：$G_4(s) = 0.05$ 时的分析 ⚠️\n\n**重新执行上述步骤**，但需要：\n1. 重新计算 $C(z)/R(z)$（含 $G_4$）\n2. 重新判定稳定性（特征方程改变）\n3. 重新计算稳态输出/误差\n\n**难点提醒**：\n- 计算量极大，涉及高次多项式\n- 容易因代数计算出错\n- 建议保留符号形式，最后代入数值",
+      "analysisMd": "**本题考点**：Z变换、脉冲传递函数推导、稳定性判定（双线性变换+劳斯 或 Jury判据）、终值定理求稳态误差。\n\n**2025年特别之处**：\n- **分值暴增**：从传统的10-15分变为厀40分，成为真正的压轴题\n- **结构复杂**：含有多个采样开关和环节，需要深刻理解信号流图\n- **计算繁琐**：第3问资料明确指出“计算量极大、容易出错”\n\n**关键技巧**：\n1. **正确区分** $Z[G_1(s)G_2(s)]$ 与 $G_1(z)G_2(z)$\n2. **先判稳，后求误**：不稳定系统的稳态误差无意义\n3. **终值定理公式**：$\\lim_{z \\to 1} (z-1)E(z)$ 必须熟练掌握\n4. **保留符号**：在禁用计算器的情况下，建议保留符号形式到最后",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不清楚 $Z[G_1G_2]$ 和 $G_1(z)G_2(z)$ 的区别",
+              "hint": "关键看采样开关位置！连续级联后采样 → $Z[G_1G_2]$；分别采样 → $G_1(z)G_2(z)$"
+            },
+            {
+              "type": "calculation",
+              "label": "离散系统稳定性判断不熟练",
+              "hint": "双线性变换 $z=\\frac{1+w}{1-w}$ 后用劳斯判据，或直接用Jury判据"
+            },
+            {
+              "type": "rule",
+              "label": "忘记先判稳再求误差",
+              "hint": "这是原则性错误！系统不稳定，稳态误差无意义"
+            },
+            {
+              "type": "calculation",
+              "label": "第3问计算量太大",
+              "hint": "保留符号形式进行推导，最后再代入数值；或者分步代入相消"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$Z[\\cdot]$ (采样符号)",
+            "currentRole": "一个变换符号",
+            "suggestedRole": "连续与离散世界的'传送门'",
+            "transformation": "$Z$ 变换将连续时间信号 $f(t)$ 转换为离散时间序列 $F(z)$，$z$ 域的单位圆对应于 $s$ 域的虚轴。"
+          }
+        ],
+        "strategies": [
+          {
+            "title": "离散系统的三部曲",
+            "trigger": "遇到含有ZOH和采样器的系统",
+            "action": "1️⃣ 建模：取Z变换得 $\\Phi(z)$ → 2️⃣ 判稳：双线性变换/Jury判据 → 3️⃣ 求误：终值定理"
+          },
+          {
+            "title": "大题时间管理",
+            "trigger": "40分大题，计算繁琐",
+            "action": "先做前两问拿分，第3问根据时间决定是否全部展开或给出流程"
+          }
+        ],
+        "insight": "离散控制系统在数字控制时代至关重要。2025年考题将这个主题的分值提升到40分，明确信号：不掌握离散系统，就无法拿到高分。这也反映了工程实际中数字控制器的广泛应用。"
+      }
+    }
+  }
+}

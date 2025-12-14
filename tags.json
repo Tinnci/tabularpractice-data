@@ -374,5 +374,126 @@
     "id": "vector",
     "name": "向量",
     "parentId": "linear-algebra"
+  },
+  {
+    "id": "control-theory",
+    "name": "自动控制原理",
+    "parentId": null,
+    "subjectKey": "control-theory",
+    "isRoot": true
+  },
+  {
+    "id": "modern-control",
+    "name": "现代控制理论",
+    "parentId": null,
+    "subjectKey": "control-theory",
+    "isRoot": true
+  },
+  {
+    "id": "classical-control",
+    "name": "经典控制理论",
+    "parentId": null,
+    "subjectKey": "control-theory",
+    "isRoot": true
+  },
+  {
+    "id": "state-space",
+    "name": "状态空间模型",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "linear-transformation",
+    "name": "线性变换",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "canonical-form",
+    "name": "标准型（能控/能观/约当）",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "state-transition-matrix",
+    "name": "状态转移矩阵",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "controllability",
+    "name": "能控性",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "observability",
+    "name": "能观性",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "pole-placement",
+    "name": "极点配置",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "state-observer",
+    "name": "状态观测器",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "lyapunov-stability",
+    "name": "李雅普诺夫稳定性",
+    "parentId": "modern-control"
+  },
+  {
+    "id": "transfer-function",
+    "name": "传递函数",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "circuit-modeling",
+    "name": "电路建模",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "root-locus",
+    "name": "根轨迹",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "frequency-domain",
+    "name": "频域分析",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "bode-plot",
+    "name": "Bode图",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "nyquist-plot",
+    "name": "Nyquist图",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "compensation",
+    "name": "串联校正",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "discrete-system",
+    "name": "离散控制系统",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "z-transform",
+    "name": "Z变换",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "stability-analysis",
+    "name": "稳定性分析",
+    "parentId": "classical-control"
+  },
+  {
+    "id": "steady-state-error",
+    "name": "稳态误差",
+    "parentId": "classical-control"
   }
 ]

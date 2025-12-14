@@ -10,5 +10,13 @@
         "name": "张宇四套卷",
         "type": "unified",
         "subjectKey": "math"
+    },
+    {
+        "id": "shu-836",
+        "name": "上海大学836自动控制原理",
+        "type": "self_proposed",
+        "subjectKey": "control-theory",
+        "university": "上海大学",
+        "courseCode": "836"
     }
 ]
