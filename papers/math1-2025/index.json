@@ -139,7 +139,7 @@
           "options": [
             {
               "type": "representation",
-              "label": "不知道怎么从向量形式转化为方程组",
+              "label": "不知道怎么从**向量形式**转化为**方程组**",
               "hint": "把 $x\\alpha_1 + y\\alpha_2 + z\\alpha_3 = \\alpha_4$ 看成矩阵方程 $(\\alpha_1, \\alpha_2, \\alpha_3)\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\alpha_4$，系数矩阵就是 $(\\alpha_1, \\alpha_2, \\alpha_3)$。"
             },
             {
@@ -172,14 +172,14 @@
             {
               "id": "elimination",
               "label": "高斯消元法",
-              "formula": "具体求解方程组",
+              "formula": "**具体求解**方程组",
               "isCorrect": false,
               "feedback": "可以但太繁琐。这道题向量都是抽象的，没法具体消元。"
             },
             {
               "id": "geometric",
               "label": "几何直觉法",
-              "formula": "每个方程是一个平面",
+              "formula": "每个方程是一个**平面**",
               "isCorrect": false,
               "feedback": "在 $\\mathbb{R}^n$ 中不太适用，因为向量是 $n$ 维的，不是 3 维空间。"
             }
@@ -188,9 +188,9 @@
         "variableRoles": [
           {
             "target": "$r(\\alpha_1, \\alpha_2, \\alpha_3) = 2$",
-            "currentRole": "向量组的秩",
-            "suggestedRole": "系数矩阵的秩",
-            "transformation": "把向量按列排成矩阵，向量组的秩就是矩阵的秩，决定了方程组的解的结构。"
+            "currentRole": "**向量组**的秩",
+            "suggestedRole": "**系数矩阵**的秩",
+            "transformation": "把向量按列排成矩阵，**向量组的秩就是矩阵的秩**，决定了方程组的解的结构。"
           },
           {
             "target": "$\\alpha_1 + \\alpha_2 + \\alpha_4 = 0$",
@@ -203,12 +203,12 @@
         "strategies": [
           {
             "title": "秩-维数定理",
-            "trigger": "求方程组解集的维数/几何形状",
+            "trigger": "求方程组解集的**维数/几何形状**",
             "action": "先求系数矩阵的秩 $r$，解空间维数 = 未知数个数 $n$ 减去 $r$"
           },
           {
             "title": "判断是否过原点",
-            "trigger": "非齐次方程组",
+            "trigger": "**非齐次**方程组",
             "action": "找特解。如果存在非零特解，则解集不过原点。"
           },
           {
@@ -269,7 +269,7 @@
               "label": "$r(AB) \\geq r(A) + r(B) - n$",
               "formula": "秩的下界",
               "isCorrect": true,
-              "feedback": "✓ 正确！这给出了矩阵乘积秩的下界。"
+              "feedback": "✓ **正确**！这给出了矩阵乘积秩的**下界**。"
             },
             {
               "id": "wrong1",
@@ -283,7 +283,7 @@
               "label": "$r(AB) = r(A) \\cdot r(B) / n$",
               "formula": "秩的乘积",
               "isCorrect": false,
-              "feedback": "错误。矩阵秩不满足这样的乘法关系。"
+              "feedback": "**错误**。矩阵秩不满足这样的乘法关系。"
             }
           ]
         },
@@ -299,7 +299,7 @@
         "strategies": [
           {
             "title": "Sylvester 不等式",
-            "trigger": "涉及矩阵乘积的秩",
+            "trigger": "涉及**矩阵乘积**的秩",
             "action": "$r(AB) \\geq r(A) + r(B) - n$，可以推广到多个矩阵：$r(ABC) \\geq r(AB) + r(C) - n$"
           },
           {
@@ -342,7 +342,7 @@
             },
             {
               "type": "function",
-              "label": "方差公式记错了",
+              "label": "**方差公式**记错了",
               "hint": "**方差线性组合公式**：$D(aX + bY) = a^2 D(X) + b^2 D(Y) + 2ab \\cdot \\text{Cov}(X, Y)$"
             },
             {
@@ -423,7 +423,7 @@
             },
             {
               "type": "calculation",
-              "label": "泊松分布公式记错了",
+              "label": "**泊松分布公式**记错了",
               "hint": "**泊松分布 PMF**：$P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}$。别忘了 $0! = 1$。"
             }
           ]
@@ -431,9 +431,9 @@
         "variableRoles": [
           {
             "target": "$T = \\sum X_i$",
-            "currentRole": "20个 Bernoulli 随机变量的和",
+            "currentRole": "20个 **Bernoulli** 随机变量的和",
             "suggestedRole": "服从 $B(20, 0.1)$ 的随机变量",
-            "transformation": "独立 Bernoulli 随机变量之和服从二项分布。"
+            "transformation": "**独立 Bernoulli 随机变量之和服从二项分布**。"
           },
           {
             "target": "$\\lambda = np = 2$",
@@ -573,7 +573,7 @@
         "variableRoles": [
           {
             "target": "$x^x$",
-            "currentRole": "幂指函数",
+            "currentRole": "**幂指函数**",
             "suggestedRole": "$e^{x\\ln x}$",
             "transformation": "幂指函数统一化为 $e^{\\text{指数}\\cdot\\ln(\\text{底数})}$，方便使用等价无穷小。"
           }
@@ -630,7 +630,7 @@
             },
             {
               "type": "constraint",
-              "label": "在间断点处傅里叶级数收敛到什么",
+              "label": "在**间断点**处傅里叶级数收敛到什么",
               "hint": "**Dirichlet 定理**：傅里叶级数在间断点处收敛到左右极限的平均值 $\\frac{f(x^-) + f(x^+)}{2}$。"
             }
           ]
@@ -638,8 +638,8 @@
         "variableRoles": [
           {
             "target": "$x = \\frac{1}{2}$",
-            "currentRole": "原函数的间断点",
-            "suggestedRole": "傅里叶级数收敛到左右平均值的点",
+            "currentRole": "原函数的**间断点**",
+            "suggestedRole": "傅里叶级数收敛到**左右平均值**的点",
             "transformation": "$S(\\frac{1}{2}) = \\frac{f(\\frac{1}{2}^-) + f(\\frac{1}{2}^+)}{2} = \\frac{0 + 1/4}{2} = \\frac{1}{8}$"
           }
         ],
@@ -690,7 +690,7 @@
             },
             {
               "type": "calculation",
-              "label": "偏导数算错了",
+              "label": "**偏导数**算错了",
               "hint": "$\\frac{\\partial}{\\partial x}(xy^2z^3) = y^2z^3$，$\\frac{\\partial}{\\partial y} = 2xyz^3$，$\\frac{\\partial}{\\partial z} = 3xy^2z^2$。代入 $(1,1,1)$ 得 $(1,2,3)$。"
             }
           ]
@@ -698,9 +698,9 @@
         "variableRoles": [
           {
             "target": "$\\nabla v = (1, 2, 3)$",
-            "currentRole": "函数在该点的梯度",
-            "suggestedRole": "函数增长最快的方向",
-            "transformation": "梯度方向是函数值增长最快的方向，梯度的模是最大方向导数。"
+            "currentRole": "函数在该点的**梯度**",
+            "suggestedRole": "函数**增长最快**的方向",
+            "transformation": "**梯度方向是函数值增长最快的方向**，梯度的模是最大方向导数。"
           }
         ],
         "insight": "**方向导数 = 梯度与单位方向向量的点积**：$\\frac{\\partial f}{\\partial \\vec{n}} = \\nabla f \\cdot \\vec{n}_0$。别忘了单位化！",
@@ -740,12 +740,12 @@
           "options": [
             {
               "type": "function",
-              "label": "不知道怎么用格林公式",
+              "label": "不知道怎么用**格林公式**",
               "hint": "曲线 $L$ 不封闭，需要**补线**！补一条简单的线段（沿 $x$ 轴）构成闭曲线，再用格林公式。"
             },
             {
               "type": "constraint",
-              "label": "格林公式的方向搞反了",
+              "label": "**格林公式**的方向搞反了",
               "hint": "格林公式要求**逆时针**。$L$ 从 $(1,0)$ 到 $(-1,0)$ 在上方，补线从 $(-1,0)$ 到 $(1,0)$ 在下方，刚好逆时针。"
             },
             {
@@ -758,22 +758,22 @@
         "variableRoles": [
           {
             "target": "$\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y} = 1$",
-            "currentRole": "格林公式的被积函数",
+            "currentRole": "**格林公式**的被积函数",
             "suggestedRole": "常数 1",
-            "transformation": "被积函数为 1 意味着二重积分就是区域面积！"
+            "transformation": "被积函数为 1 意味着二重积分就是**区域面积**！"
           }
         ],
         "insight": "**格林公式处理非闭曲线**：补线构成闭曲线 → 格林公式计算环路积分 → 减去补线上的积分。",
         "strategies": [
           {
             "title": "格林公式",
-            "trigger": "平面闭曲线积分",
+            "trigger": "**平面闭曲线**积分",
             "action": "$\\oint_L P\\,dx + Q\\,dy = \\iint_D \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right) dxdy$"
           },
           {
             "title": "补线技巧",
-            "trigger": "非闭曲线积分",
-            "action": "补一条简单曲线（通常是坐标轴上的线段）构成闭曲线，再用格林公式"
+            "trigger": "**非闭曲线**积分",
+            "action": "补一条简单曲线（通常是坐标轴上的线段）构成闭曲线，再用**格林公式**"
           }
         ]
       }
@@ -823,7 +823,7 @@
         "variableRoles": [
           {
             "target": "$r(A^2) < r(A)$",
-            "currentRole": "方程组不同解的条件",
+            "currentRole": "**方程组**不同解的条件",
             "suggestedRole": "$A$ 不幂等、有非平凡核",
             "transformation": "这意味着 $A$ 的值域与核有非平凡交集，存在向量被 $A$ 映射到核中。"
           }
@@ -832,7 +832,7 @@
         "strategies": [
           {
             "title": "秩-核定理",
-            "trigger": "比较 $AX=0$ 和 $A^2X=0$ 的解",
+            "trigger": "比较 $AX=0$ 和 $A^2X=0$ 的**解**",
             "action": "解空间维数 = $n - r$，不同解 $\\Leftrightarrow$ $r(A^2) < r(A)$"
           }
         ]
@@ -870,7 +870,7 @@
             },
             {
               "type": "calculation",
-              "label": "二次方程算错了",
+              "label": "**二次方程**算错了",
               "hint": "$3p - 2p^2 = \\frac{5}{8}$，两边乘 8：$24p - 16p^2 = 5$，即 $16p^2 - 24p + 5 = 0$。"
             },
             {
@@ -883,7 +883,7 @@
         "variableRoles": [
           {
             "target": "$P(C | A \\cup B)$",
-            "currentRole": "条件概率",
+            "currentRole": "**条件概率**",
             "suggestedRole": "$\\frac{P(C)}{P(A \\cup B)}$（因为 $C \\subseteq A \\cup B$）",
             "transformation": "恰好有一个发生意味着至少有一个发生，所以 $C \\cap (A \\cup B) = C$。"
           }
@@ -897,7 +897,7 @@
           },
           {
             "title": "恰好一个发生",
-            "trigger": "求「恰好一个」的概率",
+            "trigger": "求**「恰好一个」**的概率",
             "action": "$P(A\\bar{B}) + P(\\bar{A}B) = P(A)(1-P(B)) + (1-P(A))P(B)$"
           }
         ]
@@ -952,7 +952,7 @@
         "strategies": [
           {
             "title": "部分分式分解",
-            "trigger": "有理函数积分",
+            "trigger": "**有理函数积分**",
             "action": "分母因式分解，设 $\\frac{A}{\\text{一次式}} + \\frac{Bx+C}{\\text{二次式}}$"
           },
           {
@@ -990,7 +990,7 @@
           "options": [
             {
               "type": "function",
-              "label": "复合函数求偏导太复杂",
+              "label": "**复合函数**求**偏导**太复杂",
               "hint": "设 $t = x/y$，沿用链式法则：$\\frac{\\partial g}{\\partial x} = f'(t) \\cdot \\frac{\\partial t}{\\partial x} = \\frac{f'(t)}{y}$"
             },
             {
@@ -1008,9 +1008,9 @@
         "variableRoles": [
           {
             "target": "$t = x/y$",
-            "currentRole": "复合函数的中间变量",
-            "suggestedRole": "将 PDE 化为 ODE 的关键变量",
-            "transformation": "所有 $x, y$ 的组合最终都归结为 $t$ 的函数，PDE 变成关于 $f(t)$ 的 ODE。"
+            "currentRole": "**复合函数**的中间变量",
+            "suggestedRole": "将 **PDE** 化为 **ODE** 的关键变量",
+            "transformation": "所有 $x, y$ 的组合最终都归结为 $t$ 的**函数**，**PDE** 变成关于 $f(t)$ 的 **ODE**。"
           }
         ],
         "insight": "**PDE → ODE**：对于 $g(x,y) = f(x/y)$ 这种形式，利用齐次性，最终可以化简为关于 $f$ 的常微分方程。",
@@ -1055,17 +1055,17 @@
           "options": [
             {
               "type": "representation",
-              "label": "不理解斜率不等式的几何含义",
+              "label": "不理解**斜率不等式**的几何含义",
               "hint": "$\\frac{f(x_2)-f(x_1)}{x_2-x_1}$ 是弦 $AB$ 的斜率，$\\frac{f(x_3)-f(x_2)}{x_3-x_2}$ 是弦 $BC$ 的斜率。条件说的是「越往右斜率越大」，这正是凸函数（导数递增）的特征。"
             },
             {
               "type": "function",
-              "label": "必要性怎么证",
+              "label": "**必要性**怎么证",
               "hint": "必要性用**拉格朗日中值定理**：弦斜率 = 某点切线斜率。两个弦对应两个中值点，由 $f'$ 单调增得到斜率不等式。"
             },
             {
               "type": "function",
-              "label": "充分性的极限过程不理解",
+              "label": "**充分性**的极限过程不理解",
               "hint": "让 $x_3 \\to x_2$ 取极限，弦斜率趋近于 $f'(x_2)$。这样把弦斜率的不等式转化为导数的不等式。"
             }
           ]
@@ -1073,22 +1073,22 @@
         "variableRoles": [
           {
             "target": "弦斜率 $\\frac{f(x_2)-f(x_1)}{x_2-x_1}$",
-            "currentRole": "差商",
-            "suggestedRole": "导数的「夹逼近似」",
-            "transformation": "由拉格朗日中值定理，弦斜率等于某中间点的导数值。令端点趋近可得端点导数。"
+            "currentRole": "**差商**",
+            "suggestedRole": "**导数**的「夹逼近似」",
+            "transformation": "由**拉格朗日中值定理**，弦斜率等于某中间点的**导数值**。令端点趋近可得端点导数。"
           }
         ],
         "insight": "**弦斜率与导数的关系**：弦斜率递增 $\\Leftrightarrow$ $f'$ 递增 $\\Leftrightarrow$ 函数凸。证明的关键是用拉格朗日中值定理桥接弦斜率和导数。",
         "strategies": [
           {
             "title": "拉格朗日中值定理",
-            "trigger": "弦斜率与导数的关系",
+            "trigger": "**弦斜率**与**导数**的关系",
             "action": "$\\frac{f(b)-f(a)}{b-a} = f'(\\xi)$，弦斜率等于某点导数"
           },
           {
             "title": "极限过渡",
-            "trigger": "从不等式推导数单调性",
-            "action": "令端点趋近中间点，弦斜率趋近导数，不等式对导数成立"
+            "trigger": "从**不等式**推**导数单调性**",
+            "action": "令端点趋近中间点，**弦斜率**趋近**导数**，不等式对导数成立"
           }
         ]
       }
@@ -1120,17 +1120,17 @@
           "options": [
             {
               "type": "representation",
-              "label": "不知道旋转得到什么曲面",
+              "label": "不知道旋转得到什么**曲面**",
               "hint": "$z$ 轴绕直线 $x = y = z$ 旋转，得到以 $(1,1,1)$ 方向为轴、过原点的**圆锥面**。"
             },
             {
               "type": "function",
-              "label": "高斯公式怎么用",
+              "label": "**高斯公式**怎么用",
               "hint": "**高斯公式**：$\\oiint P\\,dydz + Q\\,dzdx + R\\,dxdy = \\iiint (P_x + Q_y + R_z)\\,dV$。这里 $P_x + Q_y + R_z = 3$，积分变成 $3 \\times$ 体积。"
             },
             {
               "type": "constraint",
-              "label": "补面方向搞不清",
+              "label": "**补面方向**搞不清",
               "hint": "高斯公式要求**外侧**。$\\Sigma_1$ 是圆锥侧面外侧，$\\Sigma_2$ 是底面外侧（法向量向外 = 方向 $(1,1,1)$）。"
             }
           ]
@@ -1138,7 +1138,7 @@
         "variableRoles": [
           {
             "target": "$\\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z} = 3$",
-            "currentRole": "高斯公式被积函数",
+            "currentRole": "**高斯公式**被积函数",
             "suggestedRole": "常数",
             "transformation": "被积函数为常数 3，体积分 = $3V$。"
           }
@@ -1147,13 +1147,13 @@
         "strategies": [
           {
             "title": "高斯公式",
-            "trigger": "封闭曲面的第二类曲面积分",
+            "trigger": "**封闭曲面**的第二类曲面积分",
             "action": "$\\oiint = \\iiint (\\nabla \\cdot \\vec{F})\\,dV$"
           },
           {
             "title": "补面技巧",
-            "trigger": "非封闭曲面积分",
-            "action": "补一个简单曲面（如平面截面）构成闭曲面，再用高斯公式"
+            "trigger": "**非封闭曲面**积分",
+            "action": "补一个简单曲面（如**平面截面**）构成**闭曲面**，再用**高斯公式**"
           }
         ]
       }
@@ -1190,12 +1190,12 @@
             },
             {
               "type": "representation",
-              "label": "不理解 $A\\alpha = \\alpha + \\beta$ 的含义",
+              "label": "不理解 $A\\alpha = \\alpha + \\beta$ 的**含义**",
               "hint": "这不是标准的特征方程。可以改写为 $(A - I)\\alpha = \\beta$，即 $\\beta$ 在 $A - I$ 的列空间中。"
             },
             {
               "type": "constraint",
-              "label": "不知道怎么推出 $A\\beta = \\beta$",
+              "label": "不知道怎么**推出** $A\\beta = \\beta$",
               "hint": "对第一个方程作用 $A$：$A^2\\alpha = A\\alpha + A\\beta$。与第二个方程对比消去 $A^2\\alpha$ 和 $A\\alpha$。"
             }
           ]
@@ -1217,8 +1217,8 @@
           },
           {
             "title": "消元推导",
-            "trigger": "多个矩阵方程",
-            "action": "对方程作用矩阵，对比消去未知量"
+            "trigger": "**多个矩阵方程**",
+            "action": "对方程作用**矩阵**，对比消去未知量"
           }
         ]
       }
@@ -1250,17 +1250,17 @@
           "options": [
             {
               "type": "calculation",
-              "label": "积分算不出来",
+              "label": "**积分**算不出来",
               "hint": "$\\int_{a}^{\\infty} \\frac{1}{u^3}\\,du = \\frac{1}{2a^2}$，$\\int_{a}^{\\infty} \\frac{1}{u^2}\\,du = \\frac{1}{a}$。用换元 $u = 100 + x$ 简化。"
             },
             {
               "type": "function",
-              "label": "全概率公式怎么用",
+              "label": "**全概率公式**怎么用",
               "hint": "$P(M = m) = \\sum_{n} P(N = n) P(M = m | N = n)$。注意求和下限是 $n = m$（因为 $M \\leq N$）。"
             },
             {
               "type": "representation",
-              "label": "级数化简太复杂",
+              "label": "**级数化简**太复杂",
               "hint": "关键：$\\sum_{k=0}^{\\infty} \\frac{6^k}{k!} = e^6$。这是 $e^x$ 的级数展开。"
             }
           ]
@@ -1268,7 +1268,7 @@
         "variableRoles": [
           {
             "target": "$\\lambda_M = 2$",
-            "currentRole": "$M$ 的泊松参数",
+            "currentRole": "$M$ 的**泊松参数**",
             "suggestedRole": "$\\lambda_N \\cdot p = 8 \\times \\frac{1}{4}$",
             "transformation": "**泊松-二项复合分布**：若 $N \\sim \\text{Poisson}(\\lambda)$，$M | N \\sim B(N, p)$，则 $M \\sim \\text{Poisson}(\\lambda p)$。"
           }
@@ -1277,7 +1277,7 @@
         "strategies": [
           {
             "title": "全概率公式",
-            "trigger": "已知条件分布，求边缘分布",
+            "trigger": "已知**条件分布**，求**边缘分布**",
             "action": "$P(M = m) = \\sum_n P(N = n) P(M = m | N = n)$"
           },
           {
