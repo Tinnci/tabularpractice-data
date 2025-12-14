@@ -103,10 +103,10 @@
       "contentImg": "/papers/math1-2025/assets/05_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/05_a.png",
-      "contentMd": "二次型 $f(x_1, x_2, x_3) = x_1^2 + 2x_1x_2 + 2x_1x_3$ 的正惯性指数为 ( )\n\nA. 1\n\nB. 2\n\nC. 3\n\nD. 4",
-      "answerMd": "A",
-      "analysisMd": "**方法**：对二次型对应的矩阵进行合同变换，化为对角形。\n\n**Step 1**：写出二次型的矩阵\n\n$$A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix}$$\n\n**Step 2**：作合同变换\n\n$$\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix} \\xrightarrow{r_2-r_1, r_3-r_1} \\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1 \\end{pmatrix}$$\n\n$$\\xrightarrow{c_2-c_1, c_3-c_1} \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1 \\end{pmatrix}$$\n\n$$\\xrightarrow{r_3-r_2, c_3-c_2} \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$$\n\n**Step 3**：读取惯性指数\n\n对角元为 $1, -1, 0$：\n- **正惯性指数** = 正对角元个数 = **1**\n- 负惯性指数 = 负对角元个数 = 1\n- 秩 = 非零对角元个数 = 2\n\n选 **A**。",
-      "answer": "A",
+      "contentMd": "二次型 $f(x_1, x_2, x_3) = x_1^2 + 2x_1x_2 + 2x_1x_3$ 的正惯性指数为 ( )\n\nA. 0\n\nB. 1\n\nC. 2\n\nD. 3",
+      "answerMd": "B",
+      "analysisMd": "**方法**：对二次型对应的矩阵进行合同变换，化为对角形。\n\n**Step 1**：写出二次型的矩阵\n\n$$A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix}$$\n\n**Step 2**：作合同变换\n\n$$\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix} \\xrightarrow{r_2-r_1, r_3-r_1} \\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1 \\end{pmatrix}$$\n\n$$\\xrightarrow{c_2-c_1, c_3-c_1} \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1 \\end{pmatrix}$$\n\n$$\\xrightarrow{r_3-r_2, c_3-c_2} \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$$\n\n**Step 3**：读取惯性指数\n\n对角元为 $1, -1, 0$：\n- **正惯性指数** = 正对角元个数 = **1**\n- 负惯性指数 = 负对角元个数 = 1\n- 秩 = 非零对角元个数 = 2\n\n选 **B**。",
+      "answer": "B",
       "tagNames": [
         "二次型"
       ],
