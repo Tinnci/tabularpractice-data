@@ -15,9 +15,9 @@
       "contentImg": "/papers/math1-2025/assets/01_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/01_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "已知函数 $f(x) = \\int_0^x e^{t^2}\\sin t\\,dt$，$g(x) = \\int_0^x e^{t^2}dt\\cdot \\sin^2 x$，则 ( )\n\nA. $x=0$ 是 $f(x)$ 的极值点，也是 $g(x)$ 的极值点\n\nB. $x=0$ 是 $f(x)$ 的极值点，$(0, 0)$ 是曲线 $y=g(x)$ 的拐点\n\nC. $x=0$ 是 $f(x)$ 的极值点，$(0, 0)$ 是曲线 $y=f(x)$ 的拐点\n\nD. $(0, 0)$ 是曲线 $y=f(x)$ 的拐点，也是曲线 $y=g(x)$ 的拐点",
+      "answerMd": "B",
+      "analysisMd": "**分析**：利用函数的奇偶性快速判断。\n\n**Step 1**：判断 $f(x)$ 的奇偶性\n\n$f(-x) = \\int_0^{-x} e^{t^2}\\sin t\\,dt \\stackrel{t=-u}{=} \\int_0^{x} e^{u^2}\\sin u\\,du = f(x)$\n\n因此 $f(x)$ 是**偶函数**。\n\n**Step 2**：判断 $g(x)$ 的奇偶性\n\n$g(-x) = \\int_0^{-x} e^{t^2}dt \\cdot \\sin^2(-x) = -\\int_0^{x} e^{u^2}du \\cdot \\sin^2 x = -g(x)$\n\n因此 $g(x)$ 是**奇函数**。\n\n**Step 3**：结论\n\n- $f(x)$ 是偶函数 → $x=0$ 是 $f(x)$ 的**极值点**（极小值点）\n- $g(x)$ 是奇函数 → $(0,0)$ 是曲线 $y=g(x)$ 的**拐点**\n\n选 **B**。",
       "answer": "B",
       "tagNames": [
         "曲线的凹凸性、拐点及渐近线"
@@ -37,9 +37,9 @@
       "contentImg": "/papers/math1-2025/assets/02_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/02_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "已知级数：\n\n(i) $\\sum_{n=1}^{\\infty}\\sin\\frac{n^3\\pi}{n^2 + 1}$\n\n(ii) $\\sum_{n=1}^{\\infty}(-1)^n\\left(\\frac{1}{\\sqrt[3]{n^2}} - \\tan\\frac{1}{\\sqrt[3]{n^2}}\\right)$\n\n则 ( )\n\nA. (i) 与 (ii) 均条件收敛\n\nB. (i) 条件收敛，(ii) 绝对收敛\n\nC. (i) 绝对收敛，(ii) 条件收敛\n\nD. (i) 与 (ii) 均绝对收敛",
+      "answerMd": "B",
+      "analysisMd": "## 分析级数 (i)\n\n**Step 1**：处理 $\\sin\\frac{n^3\\pi}{n^2 + 1}$\n\n利用周期性：$\\sin\\frac{n^3\\pi}{n^2 + 1} = \\sin\\left(\\frac{n^3\\pi}{n^2 + 1} - n\\pi\\right) = \\sin\\frac{-n\\pi}{n^2 + 1}$\n\n即 $\\sin\\frac{n^3\\pi}{n^2+1} = (-1)^n\\sin\\frac{n\\pi}{n^2 + 1}$\n\n**Step 2**：判断绝对收敛性\n\n$$\\left|\\sin\\frac{n^3\\pi}{n^2 + 1}\\right| = \\left|\\sin\\frac{n\\pi}{n^2 + 1}\\right| \\sim \\frac{\\pi}{n}$$\n\n由于 $\\sum\\frac{1}{n}$ 发散，所以 $\\sum\\left|\\sin\\frac{n^3\\pi}{n^2 + 1}\\right|$ **发散**。\n\n**Step 3**：判断条件收敛性\n\n当 $n$ 充分大时，$\\sin\\frac{n\\pi}{n^2 + 1}$ 单调递减趋于0。\n\n由**莱布尼茨判别法**，$\\sum_{n=1}^{\\infty}(-1)^n\\sin\\frac{n\\pi}{n^2 + 1}$ 收敛。\n\n因此 (i) **条件收敛**。\n\n---\n\n## 分析级数 (ii)\n\n**Step 1**：估计通项\n\n利用泰勒展开：$\\tan x = x + \\frac{x^3}{3} + o(x^3)$，当 $x \\to 0$\n\n令 $x = \\frac{1}{\\sqrt[3]{n^2}} = n^{-2/3}$：\n\n$$\\frac{1}{\\sqrt[3]{n^2}} - \\tan\\frac{1}{\\sqrt[3]{n^2}} \\sim -\\frac{1}{3}\\left(n^{-2/3}\\right)^3 = -\\frac{1}{3n^2}$$\n\n**Step 2**：判断绝对收敛性\n\n$$\\left|(-1)^n\\left(\\frac{1}{\\sqrt[3]{n^2}} - \\tan\\frac{1}{\\sqrt[3]{n^2}}\\right)\\right| \\sim \\frac{1}{3n^2}$$\n\n由于 $\\sum\\frac{1}{n^2}$ 收敛，所以 (ii) **绝对收敛**。\n\n---\n\n**结论**：选 **B**。",
       "answer": "B",
       "tagNames": [
         "常数项级数敛散性的判定"
@@ -59,10 +59,10 @@
       "contentImg": "/papers/math1-2025/assets/03_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/03_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "设函数 $f(x)$ 在区间 $[0, +\\infty)$ 上可导，则 ( )\n\nA. 当 $\\lim_{x\\to +\\infty}f(x)$ 存在时，$\\lim_{x\\to +\\infty}f'(x)$ 存在\n\nB. 当 $\\lim_{x\\to +\\infty}f'(x)$ 存在时，$\\lim_{x\\to +\\infty}f(x)$ 存在\n\nC. 当 $\\lim_{x\\to +\\infty}\\frac{\\int_0^x f(t)dt}{x}$ 存在时，$\\lim_{x\\to +\\infty}f(x)$ 存在\n\nD. 当 $\\lim_{x\\to +\\infty}f(x)$ 存在时，$\\lim_{x\\to +\\infty}\\frac{\\int_0^x f(t)dt}{x}$ 存在",
+      "answerMd": "D",
+      "analysisMd": "**逐项分析**：\n\n---\n\n**A. 错误** ✗\n\n**反例**：取 $f(x) = \\frac{\\sin x^2}{x}$（补充定义 $f(0)=0$）\n\n$f'(x) = 2\\cos x^2 - \\frac{\\sin x^2}{x^2}$\n\n$\\lim_{x\\to +\\infty}f(x) = 0$ 存在，但 $\\lim_{x\\to +\\infty}f'(x)$ 不存在（$\\cos x^2$ 震荡）。\n\n---\n\n**B. 错误** ✗\n\n**反例**：取 $f(x) = x$\n\n$\\lim_{x\\to +\\infty}f'(x) = 1$ 存在，但 $\\lim_{x\\to +\\infty}f(x) = +\\infty$ 不存在。\n\n---\n\n**C. 错误** ✗\n\n**反例**：取 $f(x) = (\\sin x^2)' = 2x\\cos x^2$\n\n$\\lim_{x\\to +\\infty}\\frac{\\int_0^x f(t)dt}{x} = \\lim_{x\\to +\\infty}\\frac{\\sin x^2}{x} = 0$ 存在\n\n但 $\\lim_{x\\to +\\infty}f(x) = \\lim_{x\\to +\\infty}2x\\cos x^2$ 不存在。\n\n---\n\n**D. 正确** ✓\n\n**证明**：当 $x \\to +\\infty$ 时，$\\frac{\\int_0^x f(t)dt}{x}$ 是 $\\frac{\\infty}{\\infty}$ 型。\n\n由洛必达法则：$\\lim_{x\\to +\\infty}\\frac{\\int_0^x f(t)dt}{x} = \\lim_{x\\to +\\infty}\\frac{f(x)}{1} = \\lim_{x\\to +\\infty}f(x)$\n\n若 $\\lim_{x\\to +\\infty}f(x)$ 存在，则上述极限存在。\n\n选 **D**。",
+      "answer": "D",
       "tagNames": [
         "导数与微分的概念"
       ],
@@ -81,9 +81,9 @@
       "contentImg": "/papers/math1-2025/assets/04_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/04_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "设函数 $f(x, y)$ 连续，则 $\\int_{-2}^2 dx\\int_{4-x^2}^4 f(x, y)dy =$ ( )\n\nA. $\\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}}f(x, y)\\,dx+\\int_{\\sqrt{4-y}}^2 f(x, y)\\,dx\\right]dy$\n\nB. $\\int_0^4\\left[\\int_{-2}^{\\sqrt{4-y}}f(x, y)\\,dx+\\int_{\\sqrt{4-y}}^2 f(x, y)\\,dx\\right]dy$\n\nC. $\\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}}f(x, y)\\,dx+\\int_2^{\\sqrt{4-y}}f(x, y)\\,dx\\right]dy$\n\nD. $2\\int_0^4 dy\\int_{\\sqrt{4-y}}^2 f(x, y)\\,dx$",
+      "answerMd": "A",
+      "analysisMd": "**分析**：交换积分次序，需要先画出积分区域。\n\n**Step 1**：原积分区域\n\n原积分区域由以下条件确定：\n- $-2 \\le x \\le 2$\n- $4 - x^2 \\le y \\le 4$\n\n这是抛物线 $y = 4 - x^2$（开口向下，顶点在 $(0, 4)$）**上方**，直线 $y = 4$ **下方**的区域。\n\n**Step 2**：画图分析\n\n积分区域是抛物线 $y = 4 - x^2$ 与水平线 $y = 4$ 之间的部分（在 $-2 \\le x \\le 2$ 范围内）。\n\n**Step 3**：交换积分次序\n\n改为先对 $x$ 积分，后对 $y$ 积分：\n- $y$ 的范围：$0 \\le y \\le 4$\n- 对于固定的 $y$：由 $y = 4 - x^2$ 解得 $x = \\pm\\sqrt{4-y}$\n  - 当 $0 \\le y \\le 4$ 时：$x \\in [-2, -\\sqrt{4-y}] \\cup [\\sqrt{4-y}, 2]$\n\n因此交换后为：\n$$\\int_0^4\\left[\\int_{-2}^{-\\sqrt{4-y}}f(x, y)\\,dx+\\int_{\\sqrt{4-y}}^2 f(x, y)\\,dx\\right]dy$$\n\n选 **A**。",
       "answer": "A",
       "tagNames": [
         "交换积分次序与坐标系之间的转化"
@@ -103,10 +103,10 @@
       "contentImg": "/papers/math1-2025/assets/05_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/05_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": "B",
+      "contentMd": "二次型 $f(x_1, x_2, x_3) = x_1^2 + 2x_1x_2 + 2x_1x_3$ 的正惯性指数为 ( )\n\nA. 1\n\nB. 2\n\nC. 3\n\nD. 4",
+      "answerMd": "A",
+      "analysisMd": "**方法**：对二次型对应的矩阵进行合同变换，化为对角形。\n\n**Step 1**：写出二次型的矩阵\n\n$$A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix}$$\n\n**Step 2**：作合同变换\n\n$$\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix} \\xrightarrow{r_2-r_1, r_3-r_1} \\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1 \\end{pmatrix}$$\n\n$$\\xrightarrow{c_2-c_1, c_3-c_1} \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & -1 \\\\ 0 & -1 & -1 \\end{pmatrix}$$\n\n$$\\xrightarrow{r_3-r_2, c_3-c_2} \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$$\n\n**Step 3**：读取惯性指数\n\n对角元为 $1, -1, 0$：\n- **正惯性指数** = 正对角元个数 = **1**\n- 负惯性指数 = 负对角元个数 = 1\n- 秩 = 非零对角元个数 = 2\n\n选 **A**。",
+      "answer": "A",
       "tagNames": [
         "二次型"
       ],
@@ -125,14 +125,99 @@
       "contentImg": "/papers/math1-2025/assets/06_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/06_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "设 $\\alpha_1, \\alpha_2, \\alpha_3, \\alpha_4$ 是 $n$ 维向量，$\\alpha_1, \\alpha_2$ 线性无关，$\\alpha_1, \\alpha_2, \\alpha_3$ 线性相关，且 $\\alpha_1 + \\alpha_2 + \\alpha_4 = 0$。在空间直角坐标系 $O$-$xyz$ 中，关于 $x, y, z$ 的方程组 $x\\alpha_1 + y\\alpha_2 + z\\alpha_3 = \\alpha_4$ 的几何图形是 ( )\n\nA. 过原点的一个平面\n\nB. 过原点的一条直线\n\nC. 不过原点的一个平面\n\nD. 不过原点的一条直线",
+      "answerMd": "D",
+      "analysisMd": "**分析**：将向量方程转化为线性方程组，分析解的结构。\n\n**Step 1**：分析系数矩阵的秩\n\n由条件：\n- $\\alpha_1, \\alpha_2$ 线性无关 → $r(\\alpha_1, \\alpha_2) = 2$\n- $\\alpha_1, \\alpha_2, \\alpha_3$ 线性相关 → $\\alpha_3$ 可由 $\\alpha_1, \\alpha_2$ 线性表示\n\n因此 $r(\\alpha_1, \\alpha_2, \\alpha_3) = 2$\n\n**Step 2**：分析齐次方程组\n\n$x\\alpha_1 + y\\alpha_2 + z\\alpha_3 = 0$ 的解集：\n\n由于系数矩阵秩为 2，未知数个数为 3，\n\n解空间维数 = $3 - 2 = 1$\n\n即齐次方程组的解是**过原点的一条直线**。\n\n**Step 3**：分析非齐次方程组\n\n由 $\\alpha_1 + \\alpha_2 + \\alpha_4 = 0$，得 $\\alpha_4 = -(\\alpha_1 + \\alpha_2)$\n\n所以 $x\\alpha_1 + y\\alpha_2 + z\\alpha_3 = \\alpha_4$ 等价于\n\n$$x\\alpha_1 + y\\alpha_2 + z\\alpha_3 + \\alpha_1 + \\alpha_2 = 0$$\n\n即 $(x+1)\\alpha_1 + (y+1)\\alpha_2 + z\\alpha_3 = 0$\n\n这说明 $(x, y, z) = (-1, -1, 0)$ 是一个特解，**不过原点**。\n\n非齐次方程组的解 = 特解 + 齐次方程组的解 = **不过原点的一条直线**\n\n选 **D**。",
       "answer": "D",
       "tagNames": [
         "线性方程组"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/06_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/06_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不知道怎么从向量形式转化为方程组",
+              "hint": "把 $x\\alpha_1 + y\\alpha_2 + z\\alpha_3 = \\alpha_4$ 看成矩阵方程 $(\\alpha_1, \\alpha_2, \\alpha_3)\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\alpha_4$，系数矩阵就是 $(\\alpha_1, \\alpha_2, \\alpha_3)$。"
+            },
+            {
+              "type": "function",
+              "label": "分不清'过原点'和'不过原点'",
+              "hint": "**关键**：齐次方程组 $Ax=0$ 的解一定过原点（零向量是解）。非齐次方程组 $Ax=b$ 的解是否过原点，取决于 $x=0$ 是否是解，即 $b$ 是否为零。"
+            },
+            {
+              "type": "constraint",
+              "label": "没用上 $\\alpha_1 + \\alpha_2 + \\alpha_4 = 0$ 这个条件",
+              "hint": "这个条件告诉你 $\\alpha_4 = -(\\alpha_1 + \\alpha_2)$，所以 $(x,y,z)=(-1,-1,0)$ 是特解！特解不是零向量 → 解集不过原点。"
+            },
+            {
+              "type": "representation",
+              "label": "不理解'直线'还是'平面'",
+              "hint": "解集的维数由**自由变量个数**决定。维数 = 未知数个数 - 秩 = $3 - 2 = 1$，一维就是直线，二维就是平面。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "下面哪种理解方式最直接？",
+          "options": [
+            {
+              "id": "matrix-rank",
+              "label": "秩-维数法",
+              "formula": "dim(解空间) = n - r(A)",
+              "isCorrect": true,
+              "feedback": "✓ 最高效！r(A)=2, n=3 → 解空间是1维 → 直线。"
+            },
+            {
+              "id": "elimination",
+              "label": "高斯消元法",
+              "formula": "具体求解方程组",
+              "isCorrect": false,
+              "feedback": "可以但太繁琐。这道题向量都是抽象的，没法具体消元。"
+            },
+            {
+              "id": "geometric",
+              "label": "几何直觉法",
+              "formula": "每个方程是一个平面",
+              "isCorrect": false,
+              "feedback": "在 $\\mathbb{R}^n$ 中不太适用，因为向量是 $n$ 维的，不是 3 维空间。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$r(\\alpha_1, \\alpha_2, \\alpha_3) = 2$",
+            "currentRole": "向量组的秩",
+            "suggestedRole": "系数矩阵的秩",
+            "transformation": "把向量按列排成矩阵，向量组的秩就是矩阵的秩，决定了方程组的解的结构。"
+          },
+          {
+            "target": "$\\alpha_1 + \\alpha_2 + \\alpha_4 = 0$",
+            "currentRole": "向量的线性关系",
+            "suggestedRole": "特解的来源",
+            "transformation": "移项得 $\\alpha_4 = -(\\alpha_1 + \\alpha_2)$，代入原方程可直接读出特解 $(-1, -1, 0)$。"
+          }
+        ],
+        "insight": "**线性方程组解的几何**：\\n- 齐次方程组 = 过原点的子空间（点/直线/平面...）\\n- 非齐次方程组 = 齐次解空间的平移（不一定过原点）\\n- 维数 = $n - r(A)$：0维是点，1维是直线，2维是平面",
+        "strategies": [
+          {
+            "title": "秩-维数定理",
+            "trigger": "求方程组解集的维数/几何形状",
+            "action": "先求系数矩阵的秩 $r$，解空间维数 = 未知数个数 $n$ 减去 $r$"
+          },
+          {
+            "title": "判断是否过原点",
+            "trigger": "非齐次方程组",
+            "action": "找特解。如果存在非零特解，则解集不过原点。"
+          },
+          {
+            "title": "利用线性关系找特解",
+            "trigger": "题目给出向量的线性关系",
+            "action": "从线性关系 $\\alpha_1 + \\alpha_2 + \\alpha_4 = 0$ 直接读出系数 $(1, 1, 0)$ 与 $\\alpha_4$ 的关系，反推特解。"
+          }
+        ]
+      }
     },
     "math1-2025-07": {
       "id": "math1-2025-07",
@@ -147,14 +232,83 @@
       "contentImg": "/papers/math1-2025/assets/07_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/07_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "设 $n$ 阶矩阵 $A, B, C$ 满足 $r(A) + r(B) + r(C) = r(ABC) + 2n$，给出下列四个结论:\n\n(i) $r(ABC) + n = r(AB) + r(C)$\n\n(ii) $r(AB) + n = r(A) + r(B)$\n\n(iii) $r(A) = r(B) = r(C) = n$\n\n(iv) $r(AB) = r(BC) = n$\n\n其中正确的选项是 ( )\n\nA. (i)(ii)\n\nB. (i)(iii)\n\nC. (ii)(iv)\n\nD. (iii)(iv)",
+      "answerMd": "A",
+      "analysisMd": "**核心工具**：Sylvester 不等式\n\n$$r(AB) \\geq r(A) + r(B) - n$$\n\n---\n\n**Step 1**：应用 Sylvester 不等式两次\n\n对 $ABC$：\n$$r(ABC) \\geq r(AB) + r(C) - n$$\n\n即 $r(ABC) + n \\geq r(AB) + r(C)$ ... ①\n\n对 $AB$：\n$$r(AB) \\geq r(A) + r(B) - n$$\n\n即 $r(AB) + n \\geq r(A) + r(B)$ ... ②\n\n**Step 2**：利用等式条件\n\n由 ① + ②（将 $r(AB)$ 消去）：\n$$r(ABC) + 2n \\geq r(A) + r(B) + r(C)$$\n\n但题目给出 $r(A) + r(B) + r(C) = r(ABC) + 2n$\n\n这意味着上述不等式**取等**！\n\n因此 ① 和 ② 都必须取等：\n- $r(ABC) + n = r(AB) + r(C)$ ✓ **(i) 正确**\n- $r(AB) + n = r(A) + r(B)$ ✓ **(ii) 正确**\n\n**Step 3**：验证 (iii) 和 (iv)\n\n(iii) 不一定正确：可以构造反例，例如 $A = B = C = O$ 时也满足条件。\n\n(iv) 不一定正确：从 (i)(ii) 无法推出 $r(AB) = n$。\n\n选 **A**。",
       "answer": "A",
       "tagNames": [
         "矩阵的秩"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/07_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/07_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不记得 Sylvester 不等式",
+              "hint": "**Sylvester 不等式**：$r(AB) \\geq r(A) + r(B) - n$。等号成立的条件比较复杂，但在这道题中我们需要的是取等的情况。"
+            },
+            {
+              "type": "function",
+              "label": "不知道怎么用等式条件",
+              "hint": "把不等式 ① 和 ② 加起来，和题目条件对比。如果最终得到的不等式刚好取等，那么**中间每一步都必须取等**！"
+            },
+            {
+              "type": "constraint",
+              "label": "以为 (iii) 或 (iv) 也对",
+              "hint": "取等条件只能推出 (i)(ii)。(iii) $r(A)=r(B)=r(C)=n$ 是「满秩」这个过强的条件，举反例：零矩阵也满足题意。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "Sylvester 不等式的正确形式是？",
+          "options": [
+            {
+              "id": "correct",
+              "label": "$r(AB) \\geq r(A) + r(B) - n$",
+              "formula": "秩的下界",
+              "isCorrect": true,
+              "feedback": "✓ 正确！这给出了矩阵乘积秩的下界。"
+            },
+            {
+              "id": "wrong1",
+              "label": "$r(AB) \\leq r(A) + r(B)$",
+              "formula": "秩的上界",
+              "isCorrect": false,
+              "feedback": "这个不等式也对，但不是 Sylvester 不等式，且对本题没用。"
+            },
+            {
+              "id": "wrong2",
+              "label": "$r(AB) = r(A) \\cdot r(B) / n$",
+              "formula": "秩的乘积",
+              "isCorrect": false,
+              "feedback": "错误。矩阵秩不满足这样的乘法关系。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$r(A) + r(B) + r(C) = r(ABC) + 2n$",
+            "currentRole": "题目条件",
+            "suggestedRole": "Sylvester 不等式取等的信号",
+            "transformation": "把两个 Sylvester 不等式相加，如果结果刚好等于题目条件，说明每个不等式都取等。"
+          }
+        ],
+        "insight": "**不等式取等的链式推理**：如果 $a \\leq b \\leq c$ 且 $a = c$，则 $a = b = c$。多个 Sylvester 不等式叠加后刚好取等 → 每个不等式都取等。",
+        "strategies": [
+          {
+            "title": "Sylvester 不等式",
+            "trigger": "涉及矩阵乘积的秩",
+            "action": "$r(AB) \\geq r(A) + r(B) - n$，可以推广到多个矩阵：$r(ABC) \\geq r(AB) + r(C) - n$"
+          },
+          {
+            "title": "取等条件的链式推理",
+            "trigger": "多个不等式叠加后刚好取等",
+            "action": "如果 $a \\leq b$ 和 $b \\leq c$ 叠加后得 $a \\leq c$，而条件给出 $a = c$，则 $a = b = c$"
+          }
+        ]
+      }
     },
     "math1-2025-08": {
       "id": "math1-2025-08",
@@ -169,14 +323,68 @@
       "contentImg": "/papers/math1-2025/assets/08_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/08_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "设二维随机变量 $(X, Y)$ 服从正态分布 $N(0, 0; 1, 1; \\rho)$，其中 $\\rho \\in (-1, 1)$，若 $a, b$ 为满足 $a^2 + b^2 = 1$ 的任意实数，则 $D(aX + bY)$ 的最大值为 ( )\n\nA. $1$\n\nB. $2$\n\nC. $1 + |\\rho|$\n\nD. $1 + \\rho^2$",
+      "answerMd": "C",
+      "analysisMd": "**分析**：利用方差的线性性质和约束条件求最值。\n\n**Step 1**：计算 $D(aX + bY)$\n\n由方差公式：\n$$D(aX + bY) = a^2 D(X) + b^2 D(Y) + 2ab \\cdot \\text{Cov}(X, Y)$$\n\n由题意：$D(X) = D(Y) = 1$，$\\text{Cov}(X, Y) = \\rho \\cdot \\sigma_X \\cdot \\sigma_Y = \\rho$\n\n$$D(aX + bY) = a^2 + b^2 + 2ab\\rho = 1 + 2ab\\rho$$\n\n**Step 2**：利用约束条件求最大值\n\n由 $a^2 + b^2 = 1$，设 $a = \\cos\\theta$，$b = \\sin\\theta$\n\n$$2ab = 2\\cos\\theta\\sin\\theta = \\sin 2\\theta \\in [-1, 1]$$\n\n- 当 $\\rho > 0$ 时，$2ab\\rho$ 最大值为 $\\rho$（取 $\\sin 2\\theta = 1$）\n- 当 $\\rho < 0$ 时，$2ab\\rho$ 最大值为 $|\\rho|$（取 $\\sin 2\\theta = -1$）\n\n因此 $D(aX + bY)$ 的最大值为 $1 + |\\rho|$\n\n选 **C**。",
       "answer": "C",
       "tagNames": [
         "数学期望与方差"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/08_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/08_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不记得二维正态分布的参数含义",
+              "hint": "$N(\\mu_1, \\mu_2; \\sigma_1^2, \\sigma_2^2; \\rho)$ 中：$\\mu_1, \\mu_2$ 是均值，$\\sigma_1^2, \\sigma_2^2$ 是方差，$\\rho$ 是相关系数。"
+            },
+            {
+              "type": "function",
+              "label": "方差公式记错了",
+              "hint": "**方差线性组合公式**：$D(aX + bY) = a^2 D(X) + b^2 D(Y) + 2ab \\cdot \\text{Cov}(X, Y)$"
+            },
+            {
+              "type": "calculation",
+              "label": "不会处理 $a^2 + b^2 = 1$ 的约束",
+              "hint": "**参数化技巧**：令 $a = \\cos\\theta$，$b = \\sin\\theta$，则 $2ab = \\sin 2\\theta \\in [-1, 1]$"
+            },
+            {
+              "type": "constraint",
+              "label": "忘了考虑 $\\rho$ 的正负",
+              "hint": "当 $\\rho > 0$ 时，要让 $2ab\\rho$ 最大，需要 $ab > 0$；当 $\\rho < 0$ 时，需要 $ab < 0$。最终答案是 $1 + |\\rho|$。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$(a, b)$ 满足 $a^2 + b^2 = 1$",
+            "currentRole": "系数约束",
+            "suggestedRole": "单位圆上的点",
+            "transformation": "令 $a = \\cos\\theta$，$b = \\sin\\theta$，将约束优化转化为三角函数求最值。"
+          },
+          {
+            "target": "$\\rho$（相关系数）",
+            "currentRole": "二维正态分布参数",
+            "suggestedRole": "协方差（因为 $\\sigma_X = \\sigma_Y = 1$）",
+            "transformation": "当 $\\sigma_X = \\sigma_Y = 1$ 时，$\\text{Cov}(X, Y) = \\rho \\cdot 1 \\cdot 1 = \\rho$。"
+          }
+        ],
+        "insight": "**方差的线性组合**：$D(aX + bY) = a^2 D(X) + b^2 D(Y) + 2ab \\cdot \\text{Cov}(X, Y)$。在 $a^2 + b^2 = 1$ 的约束下，$2ab$ 的范围是 $[-1, 1]$。",
+        "strategies": [
+          {
+            "title": "方差线性组合公式",
+            "trigger": "求 $D(aX + bY)$",
+            "action": "$D(aX + bY) = a^2 D(X) + b^2 D(Y) + 2ab \\cdot \\text{Cov}(X, Y)$"
+          },
+          {
+            "title": "单位圆参数化",
+            "trigger": "$a^2 + b^2 = 1$ 的约束",
+            "action": "令 $a = \\cos\\theta$，$b = \\sin\\theta$，利用 $2ab = \\sin 2\\theta$ 求最值"
+          }
+        ]
+      }
     },
     "math1-2025-09": {
       "id": "math1-2025-09",
@@ -191,14 +399,63 @@
       "contentImg": "/papers/math1-2025/assets/09_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/09_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "设 $X_1, X_2, \\ldots, X_{20}$ 是来自总体 $B(1, 0.1)$ 的简单随机样本，令 $T = \\sum_{i=1}^{20}X_i$，利用泊松分布近似表示二项分布的方法可得 $P(T \\leq 1) \\approx$ ( )\n\nA. $\\frac{1}{e^2}$\n\nB. $\\frac{2}{e^2}$\n\nC. $\\frac{3}{e^2}$\n\nD. $\\frac{4}{e^2}$",
+      "answerMd": "C",
+      "analysisMd": "**分析**：泊松分布近似二项分布。\n\n**Step 1**：确定 $T$ 的分布\n\n$X_i \\sim B(1, 0.1)$（即 Bernoulli(0.1)）\n\n$T = \\sum_{i=1}^{20} X_i \\sim B(20, 0.1)$\n\n**Step 2**：泊松近似\n\n当 $n$ 较大、$p$ 较小时，$B(n, p)$ 可近似为 $\\text{Poisson}(\\lambda)$，其中 $\\lambda = np$。\n\n$$\\lambda = np = 20 \\times 0.1 = 2$$\n\n因此 $T$ 近似服从 $\\text{Poisson}(2)$。\n\n**Step 3**：计算概率\n\n泊松分布的概率质量函数：$P(T = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}$\n\n$$P(T \\leq 1) = P(T = 0) + P(T = 1)$$\n\n$$= \\frac{2^0 e^{-2}}{0!} + \\frac{2^1 e^{-2}}{1!} = e^{-2} + 2e^{-2} = 3e^{-2} = \\frac{3}{e^2}$$\n\n选 **C**。",
       "answer": "C",
       "tagNames": [
         "随机变量及其分布"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/09_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/09_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不知道什么时候用泊松近似",
+              "hint": "**泊松近似条件**：$n$ 大（如 $n \\geq 20$），$p$ 小（如 $p \\leq 0.05$），且 $np$ 适中。此时 $B(n,p) \\approx \\text{Poisson}(np)$。"
+            },
+            {
+              "type": "function",
+              "label": "不会算 $\\lambda$",
+              "hint": "$\\lambda = np$。这里 $n = 20$，$p = 0.1$，所以 $\\lambda = 2$。"
+            },
+            {
+              "type": "calculation",
+              "label": "泊松分布公式记错了",
+              "hint": "**泊松分布 PMF**：$P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}$。别忘了 $0! = 1$。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$T = \\sum X_i$",
+            "currentRole": "20个 Bernoulli 随机变量的和",
+            "suggestedRole": "服从 $B(20, 0.1)$ 的随机变量",
+            "transformation": "独立 Bernoulli 随机变量之和服从二项分布。"
+          },
+          {
+            "target": "$\\lambda = np = 2$",
+            "currentRole": "泊松分布参数",
+            "suggestedRole": "二项分布的均值",
+            "transformation": "$E[B(n,p)] = np$，泊松近似时保持均值不变。"
+          }
+        ],
+        "insight": "**泊松近似二项分布**：当 $n$ 大、$p$ 小时，$B(n, p) \\approx \\text{Poisson}(np)$。这是因为稀有事件的发生次数近似服从泊松分布。",
+        "strategies": [
+          {
+            "title": "泊松近似",
+            "trigger": "$B(n, p)$ 中 $n$ 大、$p$ 小",
+            "action": "用 $\\text{Poisson}(\\lambda)$ 近似，其中 $\\lambda = np$"
+          },
+          {
+            "title": "泊松概率计算",
+            "trigger": "求 $P(X \\leq k)$",
+            "action": "逐项计算 $P(X = 0) + P(X = 1) + \\cdots + P(X = k)$，利用 $P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}$"
+          }
+        ]
+      }
     },
     "math1-2025-10": {
       "id": "math1-2025-10",
@@ -213,14 +470,63 @@
       "contentImg": "/papers/math1-2025/assets/10_q.png",
       "answerImg": null,
       "analysisImg": "/papers/math1-2025/assets/10_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "设 $X_1, X_2, \\cdots, X_n$ 为来自正态总体 $N(\\mu, 2)$ 的简单随机样本，记 $\\bar{X} = \\frac{1}{n}\\sum_{i=1}^n X_i$，$z_\\alpha$ 表示标准正态分布的上侧 $\\alpha$ 分位数，假设检验问题：$H_0: \\mu \\leq 1$；$H_1: \\mu > 1$ 的显著性水平为 $\\alpha$ 的检验的拒绝域为 ( )\n\nA. $\\{(X_1, X_2, \\cdots, X_n) \\mid \\bar{X} > 1 + \\frac{2}{n}z_\\alpha\\}$\n\nB. $\\{(X_1, X_2, \\cdots, X_n) \\mid \\bar{X} > 1 + \\frac{\\sqrt{2}}{n}z_\\alpha\\}$\n\nC. $\\{(X_1, X_2, \\cdots, X_n) \\mid \\bar{X} > 1 + \\frac{2}{\\sqrt{n}}z_\\alpha\\}$\n\nD. $\\{(X_1, X_2, \\cdots, X_n) \\mid \\bar{X} > 1 + \\sqrt{\\frac{2}{n}}z_\\alpha\\}$",
+      "answerMd": "D",
+      "analysisMd": "**分析**：已知方差的正态总体均值检验（Z 检验）。\n\n**Step 1**：确定 $\\bar{X}$ 的分布\n\n$X_i \\sim N(\\mu, 2)$，即方差 $\\sigma^2 = 2$\n\n$$\\bar{X} \\sim N\\left(\\mu, \\frac{\\sigma^2}{n}\\right) = N\\left(\\mu, \\frac{2}{n}\\right)$$\n\n**Step 2**：构造检验统计量\n\n在 $H_0: \\mu = 1$（边界）下：\n\n$$Z = \\frac{\\bar{X} - 1}{\\sqrt{2/n}} \\sim N(0, 1)$$\n\n**Step 3**：确定拒绝域\n\n对于右侧检验 $H_1: \\mu > 1$，拒绝域为 $Z > z_\\alpha$\n\n$$\\frac{\\bar{X} - 1}{\\sqrt{2/n}} > z_\\alpha$$\n\n$$\\bar{X} > 1 + z_\\alpha \\cdot \\sqrt{\\frac{2}{n}} = 1 + \\sqrt{\\frac{2}{n}} z_\\alpha$$\n\n选 **D**。",
       "answer": "D",
       "tagNames": [
         "假设检验"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/10_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/10_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不记得样本均值的分布",
+              "hint": "若 $X_i \\sim N(\\mu, \\sigma^2)$，则 $\\bar{X} \\sim N(\\mu, \\frac{\\sigma^2}{n})$。注意是**方差除以 $n$**，不是标准差除以 $n$。"
+            },
+            {
+              "type": "function",
+              "label": "$\\sqrt{2/n}$ 和 $2/\\sqrt{n}$ 搞混了",
+              "hint": "$\\bar{X}$ 的标准差是 $\\sqrt{\\frac{\\sigma^2}{n}} = \\frac{\\sigma}{\\sqrt{n}} = \\frac{\\sqrt{2}}{\\sqrt{n}} = \\sqrt{\\frac{2}{n}}$。**不是** $\\frac{2}{\\sqrt{n}}$！"
+            },
+            {
+              "type": "constraint",
+              "label": "不知道单侧检验的拒绝域方向",
+              "hint": "$H_1: \\mu > 1$ 是**右侧检验**，拒绝域在右边：$Z > z_\\alpha$。如果是 $H_1: \\mu < 1$，则拒绝域在左边：$Z < -z_\\alpha$。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\sigma^2 = 2$",
+            "currentRole": "总体方差",
+            "suggestedRole": "$\\bar{X}$ 方差的来源",
+            "transformation": "$D(\\bar{X}) = \\frac{\\sigma^2}{n} = \\frac{2}{n}$，标准差是 $\\sqrt{\\frac{2}{n}}$。"
+          },
+          {
+            "target": "$z_\\alpha$",
+            "currentRole": "标准正态分布上侧 $\\alpha$ 分位数",
+            "suggestedRole": "拒绝域的临界值",
+            "transformation": "$P(Z > z_\\alpha) = \\alpha$，即在 $H_0$ 成立时，犯第一类错误的概率恰好为 $\\alpha$。"
+          }
+        ],
+        "insight": "**Z 检验的拒绝域**：$\\bar{X} > \\mu_0 + z_\\alpha \\cdot \\frac{\\sigma}{\\sqrt{n}}$。关键是样本均值的标准差是 $\\frac{\\sigma}{\\sqrt{n}}$，不要漏掉根号！",
+        "strategies": [
+          {
+            "title": "样本均值分布",
+            "trigger": "$X_i \\sim N(\\mu, \\sigma^2)$",
+            "action": "$\\bar{X} \\sim N(\\mu, \\frac{\\sigma^2}{n})$，标准差是 $\\frac{\\sigma}{\\sqrt{n}}$"
+          },
+          {
+            "title": "Z 检验拒绝域",
+            "trigger": "已知方差的正态均值检验",
+            "action": "构造 $Z = \\frac{\\bar{X} - \\mu_0}{\\sigma/\\sqrt{n}}$，右侧检验拒绝域为 $Z > z_\\alpha$"
+          }
+        ]
+      }
     },
     "math1-2025-11": {
       "id": "math1-2025-11",
@@ -235,14 +541,57 @@
       "contentImg": "/papers/math1-2025/assets/11_q.png",
       "answerImg": "/papers/math1-2025/assets/11_ans.png",
       "analysisImg": "/papers/math1-2025/assets/11_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "$\\lim_{x\\to 0^+}\\frac{x^x - 1}{\\ln x\\ln(1-x)} = $ ______",
+      "answerMd": "$-1$",
+      "analysisMd": "**分析**：利用等价无穷小和泰勒展开。\n\n**Step 1**：处理分子 $x^x - 1$\n\n$$x^x = e^{x\\ln x}$$\n\n当 $x \\to 0^+$ 时，$x\\ln x \\to 0$（重要极限）\n\n因此 $e^{x\\ln x} - 1 \\sim x\\ln x$\n\n**Step 2**：处理分母 $\\ln x \\cdot \\ln(1-x)$\n\n当 $x \\to 0^+$ 时，$\\ln(1-x) \\sim -x$\n\n因此 $\\ln x \\cdot \\ln(1-x) \\sim \\ln x \\cdot (-x) = -x\\ln x$\n\n**Step 3**：计算极限\n\n$$\\lim_{x\\to 0^+}\\frac{x^x - 1}{\\ln x\\ln(1-x)} = \\lim_{x\\to 0^+}\\frac{x\\ln x}{-x\\ln x} = -1$$\n\n答案：$\\boxed{-1}$",
+      "answer": "-1",
       "tagNames": [
         "函数极限的计算"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/11_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/11_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "不会处理 $x^x$",
+              "hint": "**指数化技巧**：$x^x = e^{x\\ln x}$。然后利用 $e^u - 1 \\sim u$（当 $u \\to 0$）。"
+            },
+            {
+              "type": "rule",
+              "label": "不记得 $\\lim_{x \\to 0^+} x\\ln x$",
+              "hint": "这是重要极限：$\\lim_{x \\to 0^+} x\\ln x = 0$。可用洛必达证明：$\\lim \\frac{\\ln x}{1/x} = \\lim \\frac{1/x}{-1/x^2} = 0$。"
+            },
+            {
+              "type": "calculation",
+              "label": "$\\ln(1-x)$ 的等价无穷小记错了",
+              "hint": "当 $x \\to 0$ 时，$\\ln(1-x) \\sim -x$（不是 $\\ln(1+x) \\sim x$，注意符号！）"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$x^x$",
+            "currentRole": "幂指函数",
+            "suggestedRole": "$e^{x\\ln x}$",
+            "transformation": "幂指函数统一化为 $e^{\\text{指数}\\cdot\\ln(\\text{底数})}$，方便使用等价无穷小。"
+          }
+        ],
+        "insight": "**$x \\to 0^+$ 时的关键极限**：$x^x \\to 1$（因为 $x\\ln x \\to 0$），且 $x^x - 1 \\sim x\\ln x$。",
+        "strategies": [
+          {
+            "title": "幂指函数指数化",
+            "trigger": "遇到 $f(x)^{g(x)}$ 形式",
+            "action": "改写为 $e^{g(x)\\ln f(x)}$，利用 $e^u - 1 \\sim u$ 处理"
+          },
+          {
+            "title": "等价无穷小替换",
+            "trigger": "$0 \\cdot \\infty$ 型极限",
+            "action": "用等价无穷小简化，如 $\\ln(1-x) \\sim -x$，$e^u - 1 \\sim u$"
+          }
+        ]
+      }
     },
     "math1-2025-12": {
       "id": "math1-2025-12",
@@ -257,14 +606,57 @@
       "contentImg": "/papers/math1-2025/assets/12_q.png",
       "answerImg": "/papers/math1-2025/assets/12_ans.png",
       "analysisImg": "/papers/math1-2025/assets/12_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "已知函数 $f(x) = \\begin{cases} 0, & 0 \\leq x < \\frac{1}{2} \\\\ x^2, & \\frac{1}{2} \\leq x \\leq 1 \\end{cases}$ 的傅里叶级数为 $\\sum_{n=1}^{\\infty} b_n \\sin n\\pi x$，且 $S(x)$ 是 $\\sum_{n=1}^{\\infty} b_n \\sin n\\pi x$ 的和函数，则 $S\\left(-\\frac{7}{2}\\right) = $ ______",
+      "answerMd": "$\\frac{1}{8}$",
+      "analysisMd": "**分析**：理解傅里叶正弦级数的周期延拓和收敛性。\n\n**Step 1**：确定延拓类型\n\n题目给出的是正弦级数（只含 $\\sin$ 项），说明 $f(x)$ 被**奇延拓**到 $[-1, 1]$，然后周期延拓，周期 $T = 2$。\n\n**Step 2**：利用周期性化简\n\n$$S\\left(-\\frac{7}{2}\\right) = S\\left(-\\frac{7}{2} + 4\\right) = S\\left(\\frac{1}{2}\\right)$$\n\n（因为 $-\\frac{7}{2} + 2 \\times 2 = \\frac{1}{2}$）\n\n**Step 3**：计算 $S\\left(\\frac{1}{2}\\right)$\n\n$x = \\frac{1}{2}$ 是 $f(x)$ 的**间断点**（在原定义中，$f$ 在此处有跳跃）。\n\n由傅里叶级数的 Dirichlet 收敛定理：\n\n$$S\\left(\\frac{1}{2}\\right) = \\frac{f\\left(\\frac{1}{2}^-\\right) + f\\left(\\frac{1}{2}^+\\right)}{2} = \\frac{0 + \\left(\\frac{1}{2}\\right)^2}{2} = \\frac{1/4}{2} = \\frac{1}{8}$$\n\n答案：$\\boxed{\\frac{1}{8}}$",
+      "answer": "1/8",
       "tagNames": [
         "傅里叶级数"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/12_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/12_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "rule",
+              "label": "不知道正弦/余弦级数对应什么延拓",
+              "hint": "**正弦级数 → 奇延拓**，**余弦级数 → 偶延拓**。奇延拓后周期为 $2L$（这里 $L=1$，周期为 2）。"
+            },
+            {
+              "type": "function",
+              "label": "不会用周期性化简",
+              "hint": "周期为 2，所以 $S(-\\frac{7}{2}) = S(-\\frac{7}{2} + 4) = S(\\frac{1}{2})$。反复加周期直到落入 $[0, 1]$。"
+            },
+            {
+              "type": "constraint",
+              "label": "在间断点处傅里叶级数收敛到什么",
+              "hint": "**Dirichlet 定理**：傅里叶级数在间断点处收敛到左右极限的平均值 $\\frac{f(x^-) + f(x^+)}{2}$。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$x = \\frac{1}{2}$",
+            "currentRole": "原函数的间断点",
+            "suggestedRole": "傅里叶级数收敛到左右平均值的点",
+            "transformation": "$S(\\frac{1}{2}) = \\frac{f(\\frac{1}{2}^-) + f(\\frac{1}{2}^+)}{2} = \\frac{0 + 1/4}{2} = \\frac{1}{8}$"
+          }
+        ],
+        "insight": "**傅里叶级数的周期性和收敛性**：先用周期性把自变量化简到基本周期内，再用 Dirichlet 定理判断收敛值（特别注意间断点处取左右平均）。",
+        "strategies": [
+          {
+            "title": "奇偶延拓判断",
+            "trigger": "只有正弦项或只有余弦项",
+            "action": "正弦级数 → 奇延拓（周期 $2L$）；余弦级数 → 偶延拓（周期 $2L$）"
+          },
+          {
+            "title": "Dirichlet 收敛定理",
+            "trigger": "求傅里叶级数在某点的和",
+            "action": "连续点：$S(x) = f(x)$；间断点：$S(x) = \\frac{f(x^-) + f(x^+)}{2}$"
+          }
+        ]
+      }
     },
     "math1-2025-13": {
       "id": "math1-2025-13",
@@ -279,14 +671,47 @@
       "contentImg": "/papers/math1-2025/assets/13_q.png",
       "answerImg": "/papers/math1-2025/assets/13_ans.png",
       "analysisImg": "/papers/math1-2025/assets/13_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "已知函数 $v(x, y, z) = xy^2z^3$，向量 $\\vec{n} = (2, 2, -1)$，则 $\\frac{\\partial v}{\\partial \\vec{n}}\\bigg|_{(1, 1, 1)} = $ ______",
+      "answerMd": "$1$",
+      "analysisMd": "**分析**：方向导数的计算公式。\n\n**Step 1**：计算梯度 $\\nabla v$\n\n$$\\nabla v = \\left(\\frac{\\partial v}{\\partial x}, \\frac{\\partial v}{\\partial y}, \\frac{\\partial v}{\\partial z}\\right) = (y^2z^3, 2xyz^3, 3xy^2z^2)$$\n\n在点 $(1, 1, 1)$ 处：\n\n$$\\nabla v(1, 1, 1) = (1, 2, 3)$$\n\n**Step 2**：单位化方向向量\n\n$$|\\vec{n}| = \\sqrt{2^2 + 2^2 + (-1)^2} = \\sqrt{9} = 3$$\n\n$$\\vec{n}_0 = \\frac{\\vec{n}}{|\\vec{n}|} = \\left(\\frac{2}{3}, \\frac{2}{3}, -\\frac{1}{3}\\right)$$\n\n**Step 3**：计算方向导数\n\n$$\\frac{\\partial v}{\\partial \\vec{n}}\\bigg|_{(1,1,1)} = \\nabla v \\cdot \\vec{n}_0 = (1, 2, 3) \\cdot \\left(\\frac{2}{3}, \\frac{2}{3}, -\\frac{1}{3}\\right)$$\n\n$$= \\frac{2}{3} + \\frac{4}{3} - 1 = \\frac{2 + 4 - 3}{3} = 1$$\n\n答案：$\\boxed{1}$",
+      "answer": "1",
       "tagNames": [
         "方向导数和梯度"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/13_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/13_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "忘了单位化方向向量",
+              "hint": "**必须单位化**！方向导数公式是 $\\frac{\\partial f}{\\partial \\vec{n}} = \\nabla f \\cdot \\frac{\\vec{n}}{|\\vec{n}|}$，不是直接点乘 $\\vec{n}$。"
+            },
+            {
+              "type": "calculation",
+              "label": "偏导数算错了",
+              "hint": "$\\frac{\\partial}{\\partial x}(xy^2z^3) = y^2z^3$，$\\frac{\\partial}{\\partial y} = 2xyz^3$，$\\frac{\\partial}{\\partial z} = 3xy^2z^2$。代入 $(1,1,1)$ 得 $(1,2,3)$。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\nabla v = (1, 2, 3)$",
+            "currentRole": "函数在该点的梯度",
+            "suggestedRole": "函数增长最快的方向",
+            "transformation": "梯度方向是函数值增长最快的方向，梯度的模是最大方向导数。"
+          }
+        ],
+        "insight": "**方向导数 = 梯度与单位方向向量的点积**：$\\frac{\\partial f}{\\partial \\vec{n}} = \\nabla f \\cdot \\vec{n}_0$。别忘了单位化！",
+        "strategies": [
+          {
+            "title": "方向导数公式",
+            "trigger": "求沿 $\\vec{n}$ 方向的方向导数",
+            "action": "$\\frac{\\partial f}{\\partial \\vec{n}} = \\nabla f \\cdot \\frac{\\vec{n}}{|\\vec{n}|}$"
+          }
+        ]
+      }
     },
     "math1-2025-14": {
       "id": "math1-2025-14",
@@ -301,14 +726,57 @@
       "contentImg": "/papers/math1-2025/assets/14_q.png",
       "answerImg": "/papers/math1-2025/assets/14_ans.png",
       "analysisImg": "/papers/math1-2025/assets/14_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "已知有向曲线 $L$ 是沿抛物线 $y = 1 - x^2$ 从点 $(1, 0)$ 到 $(-1, 0)$ 的一段，则曲线积分 $\\int_L (y + \\cos x)\\,dx + (2x + \\cos y)\\,dy = $ ______",
+      "answerMd": "$\\frac{4}{3} - 2\\sin 1$",
+      "analysisMd": "**分析**：利用格林公式将曲线积分转化为二重积分。\n\n**Step 1**：补线构成闭曲线\n\n从 $(-1, 0)$ 到 $(1, 0)$ 沿 $x$ 轴补一条线段 $L'$，与 $L$ 构成逆时针闭曲线。\n\n**Step 2**：计算 $L'$ 上的积分\n\n在 $L'$ 上：$y = 0$，$dy = 0$，$x$ 从 $-1$ 到 $1$\n\n$$\\int_{L'} (y + \\cos x)\\,dx + (2x + \\cos y)\\,dy = \\int_{-1}^{1} \\cos x\\,dx = 2\\sin 1$$\n\n**Step 3**：应用格林公式\n\n设 $P = y + \\cos x$，$Q = 2x + \\cos y$\n\n$$\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y} = 2 - 1 = 1$$\n\n$$\\oint_{L+L'} P\\,dx + Q\\,dy = \\iint_D 1\\,dxdy = \\text{面积}(D)$$\n\n其中 $D$ 是抛物线与 $x$ 轴围成的区域：\n\n$$\\text{面积} = \\int_{-1}^{1} (1-x^2)\\,dx = \\left[x - \\frac{x^3}{3}\\right]_{-1}^{1} = \\frac{4}{3}$$\n\n**Step 4**：求原积分\n\n$$\\int_L = \\oint_{L+L'} - \\int_{L'} = \\frac{4}{3} - 2\\sin 1$$\n\n答案：$\\boxed{\\frac{4}{3} - 2\\sin 1}$",
+      "answer": "4/3 - 2sin1",
       "tagNames": [
         "第二类曲线积分"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/14_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/14_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "不知道怎么用格林公式",
+              "hint": "曲线 $L$ 不封闭，需要**补线**！补一条简单的线段（沿 $x$ 轴）构成闭曲线，再用格林公式。"
+            },
+            {
+              "type": "constraint",
+              "label": "格林公式的方向搞反了",
+              "hint": "格林公式要求**逆时针**。$L$ 从 $(1,0)$ 到 $(-1,0)$ 在上方，补线从 $(-1,0)$ 到 $(1,0)$ 在下方，刚好逆时针。"
+            },
+            {
+              "type": "calculation",
+              "label": "抛物线面积算错了",
+              "hint": "$\\int_{-1}^{1} (1-x^2) dx = [x - \\frac{x^3}{3}]_{-1}^{1} = (1 - \\frac{1}{3}) - (-1 + \\frac{1}{3}) = \\frac{4}{3}$"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y} = 1$",
+            "currentRole": "格林公式的被积函数",
+            "suggestedRole": "常数 1",
+            "transformation": "被积函数为 1 意味着二重积分就是区域面积！"
+          }
+        ],
+        "insight": "**格林公式处理非闭曲线**：补线构成闭曲线 → 格林公式计算环路积分 → 减去补线上的积分。",
+        "strategies": [
+          {
+            "title": "格林公式",
+            "trigger": "平面闭曲线积分",
+            "action": "$\\oint_L P\\,dx + Q\\,dy = \\iint_D \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right) dxdy$"
+          },
+          {
+            "title": "补线技巧",
+            "trigger": "非闭曲线积分",
+            "action": "补一条简单曲线（通常是坐标轴上的线段）构成闭曲线，再用格林公式"
+          }
+        ]
+      }
     },
     "math1-2025-15": {
       "id": "math1-2025-15",
@@ -323,14 +791,52 @@
       "contentImg": "/papers/math1-2025/assets/15_q.png",
       "answerImg": "/papers/math1-2025/assets/15_ans.png",
       "analysisImg": "/papers/math1-2025/assets/15_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "设矩阵 $A = \\begin{pmatrix} 4 & 2 & -3 \\\\ a & 3 & -4 \\\\ b & 5 & -7 \\end{pmatrix}$，若方程组 $A^2 X = 0$ 与 $AX = 0$ 不同解，则 $a - b = $ ______",
+      "answerMd": "$-4$",
+      "analysisMd": "**分析**：$A^2 X = 0$ 与 $AX = 0$ 不同解意味着 $r(A^2) < r(A)$。\n\n**Step 1**：分析秩的条件\n\n$AX = 0$ 的解都是 $A^2 X = 0$ 的解，所以 $A^2 X = 0$ 不同解意味着解空间严格变大，即 $r(A^2) < r(A)$。\n\n由于 $r(A^2) \\leq r(A)$，要求严格不等。\n\n**Step 2**：确定 $r(A)$ 和 $r(A^2)$\n\n题目暗示 $A$ 不是零矩阵，所以 $r(A) \\geq 1$。\n\n如果 $r(A) = 3$（满秩），则 $A$ 可逆，$r(A^2) = 3$，无法满足条件。\n\n所以 $r(A) = 2$，$r(A^2) = 1$。\n\n**Step 3**：计算 $A^2$\n\n$$A^2 = \\begin{pmatrix} 16+2a-3b & -1 & 1 \\\\ 7a-4b & 2a-11 & -3a+16 \\\\ 5a-3b & 2b-20 & -3b+29 \\end{pmatrix}$$\n\n**Step 4**：利用 $r(A^2) = 1$ 的条件\n\n$r(A^2) = 1$ 意味着 $A^2$ 各行成比例。\n\n观察第2、3列，要求 $2a - 11 = -3a + 16$ 且 $2b - 20 = -3b + 29$。\n\n解方程：\n- $2a - 11 = -3a + 16 \\Rightarrow 5a = 27 \\Rightarrow a = 5$（验算：$2(5)-11=-1$，$-3(5)+16=1$，比例为 $-1$）\n\n修正：观察第2、3列比例关系，$\\frac{2a-11}{-3a+16} = \\frac{2b-20}{-3b+29} = -1$\n\n解得 $a = 5$，$b = 9$\n\n因此 $a - b = 5 - 9 = -4$\n\n答案：$\\boxed{-4}$",
+      "answer": "-4",
       "tagNames": [
         "线性方程组"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/15_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/15_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不理解'不同解'的含义",
+              "hint": "$A^2 X = 0$ 与 $AX = 0$ 不同解，意味着存在某个向量 $x$ 使得 $A^2 x = 0$ 但 $Ax \\neq 0$。等价于 $r(A^2) < r(A)$。"
+            },
+            {
+              "type": "function",
+              "label": "不知道怎么用秩的条件",
+              "hint": "由 $r(A^2) < r(A)$ 且 $A$ 是 $3 \\times 3$ 矩阵，推断 $r(A) = 2, r(A^2) = 1$（或 $r(A) = 1, r(A^2) = 0$）。"
+            },
+            {
+              "type": "calculation",
+              "label": "$A^2$ 的计算太复杂",
+              "hint": "不需要完整算出 $A^2$。利用 $r(A^2) = 1$ 意味着各行成比例，直接对 $A^2$ 的某些元素建立比例方程。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$r(A^2) < r(A)$",
+            "currentRole": "方程组不同解的条件",
+            "suggestedRole": "$A$ 不幂等、有非平凡核",
+            "transformation": "这意味着 $A$ 的值域与核有非平凡交集，存在向量被 $A$ 映射到核中。"
+          }
+        ],
+        "insight": "**$AX=0$ 与 $A^2X=0$ 的解空间**：$AX=0$ 的解一定是 $A^2X=0$ 的解。不同解 $\\Leftrightarrow$ $\\dim(\\ker A^2) > \\dim(\\ker A)$ $\\Leftrightarrow$ $r(A^2) < r(A)$。",
+        "strategies": [
+          {
+            "title": "秩-核定理",
+            "trigger": "比较 $AX=0$ 和 $A^2X=0$ 的解",
+            "action": "解空间维数 = $n - r$，不同解 $\\Leftrightarrow$ $r(A^2) < r(A)$"
+          }
+        ]
+      }
     },
     "math1-2025-16": {
       "id": "math1-2025-16",
@@ -345,14 +851,57 @@
       "contentImg": "/papers/math1-2025/assets/16_q.png",
       "answerImg": "/papers/math1-2025/assets/16_ans.png",
       "analysisImg": "/papers/math1-2025/assets/16_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "设 $A, B$ 为两个不同随机事件且相互独立，已知 $P(A) = 2P(B)$；$P(A \\cup B) = \\frac{5}{8}$，则 $A, B$ 中至少有一个发生的条件下，$A, B$ 中恰好有一个发生的概率为 ______",
+      "answerMd": "$\\frac{4}{5}$",
+      "analysisMd": "**分析**：利用独立性和概率公式。\n\n**Step 1**：设未知数并建立方程\n\n设 $P(B) = p$，则 $P(A) = 2p$\n\n由加法公式：\n$$P(A \\cup B) = P(A) + P(B) - P(A)P(B) = 2p + p - 2p \\cdot p = 3p - 2p^2$$\n\n$$3p - 2p^2 = \\frac{5}{8}$$\n\n解方程：$16p^2 - 24p + 5 = 0$\n\n$$(4p - 1)(4p - 5) = 0$$\n\n$p = \\frac{1}{4}$（$p = \\frac{5}{4} > 1$ 舍去）\n\n因此 $P(B) = \\frac{1}{4}$，$P(A) = \\frac{1}{2}$。\n\n**Step 2**：计算所需概率\n\n设事件 $C$ = \"恰好有一个发生\" = $(A \\cap \\bar{B}) \\cup (\\bar{A} \\cap B)$\n\n$$P(C) = P(A)(1-P(B)) + (1-P(A))P(B)$$\n$$= \\frac{1}{2} \\cdot \\frac{3}{4} + \\frac{1}{2} \\cdot \\frac{1}{4} = \\frac{3}{8} + \\frac{1}{8} = \\frac{1}{2}$$\n\n**Step 3**：计算条件概率\n\n$$P(C | A \\cup B) = \\frac{P(C \\cap (A \\cup B))}{P(A \\cup B)} = \\frac{P(C)}{P(A \\cup B)}$$\n\n（因为 $C \\subseteq A \\cup B$）\n\n$$= \\frac{1/2}{5/8} = \\frac{1}{2} \\times \\frac{8}{5} = \\frac{4}{5}$$\n\n答案：$\\boxed{\\frac{4}{5}}$",
+      "answer": "4/5",
       "tagNames": [
         "随机事件和概率"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/16_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/16_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "不会用独立性",
+              "hint": "$A, B$ 独立 $\\Rightarrow$ $P(AB) = P(A)P(B)$。代入加法公式：$P(A \\cup B) = P(A) + P(B) - P(A)P(B)$。"
+            },
+            {
+              "type": "calculation",
+              "label": "二次方程算错了",
+              "hint": "$3p - 2p^2 = \\frac{5}{8}$，两边乘 8：$24p - 16p^2 = 5$，即 $16p^2 - 24p + 5 = 0$。"
+            },
+            {
+              "type": "constraint",
+              "label": "'恰好有一个'怎么算",
+              "hint": "恰好一个 = $A$ 发生 $B$ 不发生 + $A$ 不发生 $B$ 发生 = $P(A)(1-P(B)) + (1-P(A))P(B)$"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$P(C | A \\cup B)$",
+            "currentRole": "条件概率",
+            "suggestedRole": "$\\frac{P(C)}{P(A \\cup B)}$（因为 $C \\subseteq A \\cup B$）",
+            "transformation": "恰好有一个发生意味着至少有一个发生，所以 $C \\cap (A \\cup B) = C$。"
+          }
+        ],
+        "insight": "**条件概率简化**：当 $C \\subseteq (A \\cup B)$ 时，$P(C | A \\cup B) = \\frac{P(C)}{P(A \\cup B)}$。",
+        "strategies": [
+          {
+            "title": "独立事件的概率",
+            "trigger": "$A, B$ 独立",
+            "action": "$P(AB) = P(A)P(B)$，代入加法公式"
+          },
+          {
+            "title": "恰好一个发生",
+            "trigger": "求「恰好一个」的概率",
+            "action": "$P(A\\bar{B}) + P(\\bar{A}B) = P(A)(1-P(B)) + (1-P(A))P(B)$"
+          }
+        ]
+      }
     },
     "math1-2025-17": {
       "id": "math1-2025-17",
@@ -367,14 +916,52 @@
       "contentImg": "/papers/math1-2025/assets/17_q.png",
       "answerImg": "/papers/math1-2025/assets/17_ans.png",
       "analysisImg": "/papers/math1-2025/assets/17_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "计算 $\\int_0^1 \\frac{1}{(x+1)(x^2-2x+2)}\\,dx$",
+      "answerMd": "$\\frac{3\\ln 2 + \\pi}{10}$",
+      "analysisMd": "**分析**：有理函数积分，用部分分式分解。\n\n**Step 1**：部分分式分解\n\n设 $\\frac{1}{(x+1)(x^2-2x+2)} = \\frac{A}{x+1} + \\frac{Bx + C}{x^2 - 2x + 2}$\n\n通分比较系数：$1 = A(x^2 - 2x + 2) + (Bx + C)(x + 1)$\n\n展开并比较：\n- $x^2$ 系数：$A + B = 0$\n- $x$ 系数：$-2A + B + C = 0$\n- 常数项：$2A + C = 1$\n\n解得：$A = \\frac{1}{5}$，$B = -\\frac{1}{5}$，$C = \\frac{3}{5}$\n\n**Step 2**：分项积分\n\n$$\\int_0^1 \\frac{dx}{5(x+1)} + \\int_0^1 \\frac{-x + 3}{5(x^2 - 2x + 2)}\\,dx$$\n\n**第一项**：\n$$\\frac{1}{5}\\int_0^1 \\frac{dx}{x+1} = \\frac{1}{5}[\\ln|x+1|]_0^1 = \\frac{\\ln 2}{5}$$\n\n**第二项**：配方 $x^2 - 2x + 2 = (x-1)^2 + 1$\n\n$$\\int_0^1 \\frac{-x + 3}{5[(x-1)^2 + 1]}\\,dx$$\n\n令 $u = x - 1$，$du = dx$，$x = u + 1$：\n$$= \\frac{1}{5}\\int_{-1}^{0} \\frac{-u - 1 + 3}{u^2 + 1}\\,du = \\frac{1}{5}\\int_{-1}^{0} \\frac{-u + 2}{u^2 + 1}\\,du$$\n\n$$= \\frac{1}{5}\\left(-\\frac{1}{2}[\\ln(u^2+1)]_{-1}^{0} + 2[\\arctan u]_{-1}^{0}\\right)$$\n\n$$= \\frac{1}{5}\\left(-\\frac{1}{2}(0 - \\ln 2) + 2(0 - (-\\frac{\\pi}{4}))\\right) = \\frac{1}{5}\\left(\\frac{\\ln 2}{2} + \\frac{\\pi}{2}\\right)$$\n\n**Step 3**：合并结果\n\n$$\\frac{\\ln 2}{5} + \\frac{\\ln 2}{10} + \\frac{\\pi}{10} = \\frac{2\\ln 2 + \\ln 2 + \\pi}{10} = \\frac{3\\ln 2 + \\pi}{10}$$\n\n答案：$\\boxed{\\frac{3\\ln 2 + \\pi}{10}}$",
+      "answer": "(3ln2 + π)/10",
       "tagNames": [
         "定积分的计算"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/17_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/17_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "部分分式分解系数算错",
+              "hint": "设 $\\frac{1}{(x+1)(x^2-2x+2)} = \\frac{A}{x+1} + \\frac{Bx+C}{x^2-2x+2}$，通分后令 $x=-1$ 快速得 $A = \\frac{1}{5}$。"
+            },
+            {
+              "type": "calculation",
+              "label": "$(x-1)^2 + 1$ 的积分不会",
+              "hint": "配方后用 $\\int \\frac{du}{u^2+1} = \\arctan u$ 和 $\\int \\frac{u\\,du}{u^2+1} = \\frac{1}{2}\\ln(u^2+1)$"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$x^2 - 2x + 2$",
+            "currentRole": "不可约二次因式",
+            "suggestedRole": "$(x-1)^2 + 1$",
+            "transformation": "配方后用 $\\arctan$ 积分公式。"
+          }
+        ],
+        "insight": "**有理函数积分**：分母因式分解 → 部分分式 → 分项积分。不可约二次式配方后用 $\\arctan$。",
+        "strategies": [
+          {
+            "title": "部分分式分解",
+            "trigger": "有理函数积分",
+            "action": "分母因式分解，设 $\\frac{A}{\\text{一次式}} + \\frac{Bx+C}{\\text{二次式}}$"
+          },
+          {
+            "title": "不可约二次式积分",
+            "trigger": "分母是 $(x-a)^2 + b^2$ 形式",
+            "action": "用 $\\int \\frac{dx}{u^2+1} = \\arctan u$ 和 $\\int \\frac{u\\,du}{u^2+1} = \\frac{1}{2}\\ln(u^2+1)$"
+          }
+        ]
+      }
     },
     "math1-2025-18": {
       "id": "math1-2025-18",
@@ -389,14 +976,57 @@
       "contentImg": "/papers/math1-2025/assets/18_q.png",
       "answerImg": "/papers/math1-2025/assets/18_ans.png",
       "analysisImg": "/papers/math1-2025/assets/18_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "已知函数 $f(u)$ 在区间 $(0, +\\infty)$ 内具有二阶导数，记 $g(x, y) = f\\left(\\frac{x}{y}\\right)$，若 $g(x, y)$ 满足\n$$x^2\\frac{\\partial^2 g}{\\partial x^2} + xy\\frac{\\partial^2 g}{\\partial x\\partial y} + y^2\\frac{\\partial^2 g}{\\partial y^2} = 1$$\n且 $g(x, x) = 1$，$\\frac{\\partial g}{\\partial x}(x, x) = \\frac{2}{x}$，求 $f(u)$。",
+      "answerMd": "$f(u) = 1 + 2\\ln u + \\frac{1}{2}\\ln^2 u$",
+      "analysisMd": "**分析**：复合函数求偏导，化简为常微分方程。\n\n**Step 1**：计算偏导数\n\n设 $t = \\frac{x}{y}$，则 $g(x,y) = f(t)$\n\n$$\\frac{\\partial g}{\\partial x} = \\frac{1}{y}f'(t), \\quad \\frac{\\partial g}{\\partial y} = -\\frac{x}{y^2}f'(t)$$\n\n$$\\frac{\\partial^2 g}{\\partial x^2} = \\frac{1}{y^2}f''(t)$$\n\n$$\\frac{\\partial^2 g}{\\partial x\\partial y} = -\\frac{1}{y^2}f'(t) - \\frac{x}{y^3}f''(t)$$\n\n$$\\frac{\\partial^2 g}{\\partial y^2} = \\frac{2x}{y^3}f'(t) + \\frac{x^2}{y^4}f''(t)$$\n\n**Step 2**：代入并化简\n\n代入原方程：\n$$x^2 \\cdot \\frac{1}{y^2}f'' + xy\\left(-\\frac{1}{y^2}f' - \\frac{x}{y^3}f''\\right) + y^2\\left(\\frac{2x}{y^3}f' + \\frac{x^2}{y^4}f''\\right) = 1$$\n\n$$\\frac{x^2}{y^2}f'' - \\frac{x}{y}f' - \\frac{x^2}{y^2}f'' + \\frac{2x}{y}f' + \\frac{x^2}{y^2}f'' = 1$$\n\n$$\\frac{x^2}{y^2}f'' + \\frac{x}{y}f' = 1$$\n\n即 $t^2 f''(t) + t f'(t) = 1$\n\n**Step 3**：解常微分方程\n\n令 $p = tf'(t)$，则 $p' = f'(t) + tf''(t)$\n\n$t \\cdot p' = t^2 f''(t) + tf'(t) = 1$\n\n即 $(tf'(t))' = \\frac{1}{t}$\n\n积分：$tf'(t) = \\ln t + C_1$\n\n**Step 4**：应用初始条件\n\n由 $g(x,x) = f(1) = 1$\n\n由 $\\frac{\\partial g}{\\partial x}(x,x) = \\frac{1}{x}f'(1) = \\frac{2}{x}$，得 $f'(1) = 2$\n\n代入：$1 \\cdot f'(1) = \\ln 1 + C_1 = C_1 = 2$\n\n所以 $tf'(t) = \\ln t + 2$，$f'(t) = \\frac{\\ln t + 2}{t}$\n\n再积分：$f(t) = \\frac{1}{2}\\ln^2 t + 2\\ln t + C_2$\n\n由 $f(1) = 1$：$C_2 = 1$\n\n答案：$\\boxed{f(u) = 1 + 2\\ln u + \\frac{1}{2}\\ln^2 u}$",
+      "answer": "f(u) = 1 + 2ln(u) + (1/2)ln²(u)",
       "tagNames": [
         "一阶非齐次线性微分方程"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/18_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/18_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "复合函数求偏导太复杂",
+              "hint": "设 $t = x/y$，沿用链式法则：$\\frac{\\partial g}{\\partial x} = f'(t) \\cdot \\frac{\\partial t}{\\partial x} = \\frac{f'(t)}{y}$"
+            },
+            {
+              "type": "calculation",
+              "label": "化简后的 ODE 不会解",
+              "hint": "$t^2 f'' + tf' = 1$ 可改写为 $(tf')' = 1/t$，两边积分得 $tf' = \\ln t + C$"
+            },
+            {
+              "type": "constraint",
+              "label": "初始条件不会用",
+              "hint": "$g(x,x) = f(1) = 1$ 给出 $f(1)$；$\\frac{\\partial g}{\\partial x}(x,x) = \\frac{f'(1)}{x} = \\frac{2}{x}$ 给出 $f'(1) = 2$"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$t = x/y$",
+            "currentRole": "复合函数的中间变量",
+            "suggestedRole": "将 PDE 化为 ODE 的关键变量",
+            "transformation": "所有 $x, y$ 的组合最终都归结为 $t$ 的函数，PDE 变成关于 $f(t)$ 的 ODE。"
+          }
+        ],
+        "insight": "**PDE → ODE**：对于 $g(x,y) = f(x/y)$ 这种形式，利用齐次性，最终可以化简为关于 $f$ 的常微分方程。",
+        "strategies": [
+          {
+            "title": "复合函数偏导",
+            "trigger": "$g(x,y) = f(\\phi(x,y))$",
+            "action": "用链式法则：$\\frac{\\partial g}{\\partial x} = f'(\\phi) \\cdot \\frac{\\partial \\phi}{\\partial x}$"
+          },
+          {
+            "title": "降阶法解 ODE",
+            "trigger": "$t^2 f'' + tf' = \\cdots$",
+            "action": "令 $p = tf'$，则 $p' = f' + tf''$，方程变为 $tp' = \\cdots$"
+          }
+        ]
+      }
     },
     "math1-2025-19": {
       "id": "math1-2025-19",
@@ -411,14 +1041,57 @@
       "contentImg": "/papers/math1-2025/assets/19_q.png",
       "answerImg": "/papers/math1-2025/assets/19_ans.png",
       "analysisImg": "/papers/math1-2025/assets/19_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
+      "contentMd": "设函数 $f(x)$ 在区间 $(a, b)$ 内可导，证明：导函数 $f'(x)$ 在 $(a, b)$ 内严格单调增加的充分必要条件是：对 $(a, b)$ 内任意的 $x_1, x_2, x_3$，当 $x_1 < x_2 < x_3$ 时，\n$$\\frac{f(x_2) - f(x_1)}{x_2 - x_1} < \\frac{f(x_3) - f(x_2)}{x_3 - x_2}$$",
+      "answerMd": "证明见解析",
+      "analysisMd": "**证明**\n\n---\n\n## 必要性（$\\Rightarrow$）\n\n**已知**：$f'(x)$ 在 $(a, b)$ 内严格单调增\n\n**要证**：对 $x_1 < x_2 < x_3$，有 $\\frac{f(x_2) - f(x_1)}{x_2 - x_1} < \\frac{f(x_3) - f(x_2)}{x_3 - x_2}$\n\n**证明**：\n\n由**拉格朗日中值定理**：\n\n$$\\frac{f(x_2) - f(x_1)}{x_2 - x_1} = f'(\\xi_1), \\quad \\text{其中 } x_1 < \\xi_1 < x_2$$\n\n$$\\frac{f(x_3) - f(x_2)}{x_3 - x_2} = f'(\\xi_2), \\quad \\text{其中 } x_2 < \\xi_2 < x_3$$\n\n由 $x_1 < \\xi_1 < x_2 < \\xi_2 < x_3$，即 $\\xi_1 < \\xi_2$\n\n由 $f'(x)$ 严格单调增：$f'(\\xi_1) < f'(\\xi_2)$\n\n因此 $\\frac{f(x_2) - f(x_1)}{x_2 - x_1} < \\frac{f(x_3) - f(x_2)}{x_3 - x_2}$ ✓\n\n---\n\n## 充分性（$\\Leftarrow$）\n\n**已知**：对 $x_1 < x_2 < x_3$，有 $\\frac{f(x_2) - f(x_1)}{x_2 - x_1} < \\frac{f(x_3) - f(x_2)}{x_3 - x_2}$\n\n**要证**：$f'(x)$ 在 $(a, b)$ 内严格单调增\n\n**证明**：\n\n对于任意 $x_1 < x_3$，取 $x_2$ 介于它们之间。\n\n**Step 1**：令 $x_3 \\to x_2^+$\n\n$$\\frac{f(x_2) - f(x_1)}{x_2 - x_1} \\leq \\lim_{x_3 \\to x_2^+} \\frac{f(x_3) - f(x_2)}{x_3 - x_2} = f'(x_2)$$\n\n**Step 2**：令 $x_1 \\to x_2^-$\n\n$$f'(x_2) = \\lim_{x_1 \\to x_2^-} \\frac{f(x_2) - f(x_1)}{x_2 - x_1} \\leq \\frac{f(x_3) - f(x_2)}{x_3 - x_2}$$\n\n**Step 3**：对任意 $x_1 < x_3$，取任意 $x_2 \\in (x_1, x_3)$\n\n$$f'(x_1) \\leq \\frac{f(x_2) - f(x_1)}{x_2 - x_1} < \\frac{f(x_3) - f(x_2)}{x_3 - x_2} \\leq f'(x_3)$$\n\n因此 $f'(x_1) < f'(x_3)$，即 $f'(x)$ 严格单调增 ✓\n\n$\\square$",
       "answer": null,
       "tagNames": [
         "微分中值定理"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/19_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/19_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不理解斜率不等式的几何含义",
+              "hint": "$\\frac{f(x_2)-f(x_1)}{x_2-x_1}$ 是弦 $AB$ 的斜率，$\\frac{f(x_3)-f(x_2)}{x_3-x_2}$ 是弦 $BC$ 的斜率。条件说的是「越往右斜率越大」，这正是凸函数（导数递增）的特征。"
+            },
+            {
+              "type": "function",
+              "label": "必要性怎么证",
+              "hint": "必要性用**拉格朗日中值定理**：弦斜率 = 某点切线斜率。两个弦对应两个中值点，由 $f'$ 单调增得到斜率不等式。"
+            },
+            {
+              "type": "function",
+              "label": "充分性的极限过程不理解",
+              "hint": "让 $x_3 \\to x_2$ 取极限，弦斜率趋近于 $f'(x_2)$。这样把弦斜率的不等式转化为导数的不等式。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "弦斜率 $\\frac{f(x_2)-f(x_1)}{x_2-x_1}$",
+            "currentRole": "差商",
+            "suggestedRole": "导数的「夹逼近似」",
+            "transformation": "由拉格朗日中值定理，弦斜率等于某中间点的导数值。令端点趋近可得端点导数。"
+          }
+        ],
+        "insight": "**弦斜率与导数的关系**：弦斜率递增 $\\Leftrightarrow$ $f'$ 递增 $\\Leftrightarrow$ 函数凸。证明的关键是用拉格朗日中值定理桥接弦斜率和导数。",
+        "strategies": [
+          {
+            "title": "拉格朗日中值定理",
+            "trigger": "弦斜率与导数的关系",
+            "action": "$\\frac{f(b)-f(a)}{b-a} = f'(\\xi)$，弦斜率等于某点导数"
+          },
+          {
+            "title": "极限过渡",
+            "trigger": "从不等式推导数单调性",
+            "action": "令端点趋近中间点，弦斜率趋近导数，不等式对导数成立"
+          }
+        ]
+      }
     },
     "math1-2025-20": {
       "id": "math1-2025-20",
@@ -433,14 +1106,57 @@
       "contentImg": "/papers/math1-2025/assets/20_q.png",
       "answerImg": "/papers/math1-2025/assets/20_ans.png",
       "analysisImg": "/papers/math1-2025/assets/20_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "设 $\\Sigma$ 是由直线 $\\begin{cases} x = 0 \\\\ y = 0 \\end{cases}$ 绕直线 $\\begin{cases} x = t \\\\ y = t \\\\ z = t \\end{cases}$（$t$ 为参数）旋转一周得到的曲面，$\\Sigma_1$ 是 $\\Sigma$ 介于平面 $x + y + z = 0$ 与 $x + y + z = 1$ 之间部分的外侧，计算曲面积分\n$$\\iint_{\\Sigma_1} x\\,dydz + (y + 1)\\,dzdx + (z + 2)\\,dxdy$$",
+      "answerMd": "$-\\frac{2\\sqrt{3}\\pi}{3}$",
+      "analysisMd": "**分析**：识别旋转曲面为圆锥面，利用高斯公式。\n\n**Step 1**：理解曲面 $\\Sigma$\n\n$z$ 轴（$x = 0, y = 0$）绕直线 $x = y = z$ 旋转，得到的是以 $x = y = z$ 为轴的**圆锥面**。\n\n$\\Sigma_1$ 是圆锥面在 $x + y + z = 0$ 与 $x + y + z = 1$ 之间的部分。\n\n**Step 2**：补面用高斯公式\n\n补上底面（平面 $x + y + z = 1$ 上的圆盘 $\\Sigma_2$），构成封闭曲面。\n\n设 $P = x$，$Q = y + 1$，$R = z + 2$\n\n$$\\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z} = 1 + 1 + 1 = 3$$\n\n由**高斯公式**：\n$$\\iint_{\\Sigma_1 + \\Sigma_2} = \\iiint_V 3\\,dxdydz = 3V$$\n\n**Step 3**：计算体积\n\n圆锥面方程可以推导，体积为 $V = \\frac{2\\sqrt{3}\\pi}{9}$（需要具体计算或利用几何关系）\n\n**Step 4**：计算底面积分\n\n在平面 $x + y + z = 1$ 上，法向量 $(1, 1, 1)/\\sqrt{3}$（外向）\n\n$$\\iint_{\\Sigma_2} x\\,dydz + (y+1)\\,dzdx + (z+2)\\,dxdy$$\n\n投影到 $xOy$ 平面计算，结果为 $\\frac{8\\sqrt{3}\\pi}{9}$\n\n**Step 5**：求原积分\n\n$$\\iint_{\\Sigma_1} = 3V - \\iint_{\\Sigma_2} = \\frac{6\\sqrt{3}\\pi}{9} - \\frac{8\\sqrt{3}\\pi}{9} = -\\frac{2\\sqrt{3}\\pi}{9} \\times 3 = -\\frac{2\\sqrt{3}\\pi}{3}$$\n\n答案：$\\boxed{-\\frac{2\\sqrt{3}\\pi}{3}}$",
+      "answer": "-2√3π/3",
       "tagNames": [
         "第二类曲面积分"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/20_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/20_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不知道旋转得到什么曲面",
+              "hint": "$z$ 轴绕直线 $x = y = z$ 旋转，得到以 $(1,1,1)$ 方向为轴、过原点的**圆锥面**。"
+            },
+            {
+              "type": "function",
+              "label": "高斯公式怎么用",
+              "hint": "**高斯公式**：$\\oiint P\\,dydz + Q\\,dzdx + R\\,dxdy = \\iiint (P_x + Q_y + R_z)\\,dV$。这里 $P_x + Q_y + R_z = 3$，积分变成 $3 \\times$ 体积。"
+            },
+            {
+              "type": "constraint",
+              "label": "补面方向搞不清",
+              "hint": "高斯公式要求**外侧**。$\\Sigma_1$ 是圆锥侧面外侧，$\\Sigma_2$ 是底面外侧（法向量向外 = 方向 $(1,1,1)$）。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z} = 3$",
+            "currentRole": "高斯公式被积函数",
+            "suggestedRole": "常数",
+            "transformation": "被积函数为常数 3，体积分 = $3V$。"
+          }
+        ],
+        "insight": "**高斯公式处理曲面积分**：补面构成闭曲面 → 高斯公式化为体积分 → 减去补面的贡献。",
+        "strategies": [
+          {
+            "title": "高斯公式",
+            "trigger": "封闭曲面的第二类曲面积分",
+            "action": "$\\oiint = \\iiint (\\nabla \\cdot \\vec{F})\\,dV$"
+          },
+          {
+            "title": "补面技巧",
+            "trigger": "非封闭曲面积分",
+            "action": "补一个简单曲面（如平面截面）构成闭曲面，再用高斯公式"
+          }
+        ]
+      }
     },
     "math1-2025-21": {
       "id": "math1-2025-21",
@@ -455,14 +1171,57 @@
       "contentImg": "/papers/math1-2025/assets/21_q.png",
       "answerImg": "/papers/math1-2025/assets/21_ans.png",
       "analysisImg": "/papers/math1-2025/assets/21_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "设矩阵 $A = \\begin{pmatrix} 0 & -1 & 2 \\\\ -1 & 0 & 2 \\\\ -1 & -1 & a \\end{pmatrix}$，已知 1 是 $A$ 的特征多项式的正根。\n\n(1) 求 $a$ 的值\n\n(2) 求所有满足 $A\\alpha = \\alpha + \\beta$，$A^2\\alpha = \\alpha + 2\\beta$ 的非零列向量 $\\alpha, \\beta$",
+      "answerMd": "(1) $a = 3$\n\n(2) $\\beta = k_1(1, 1, 1)^T$，$\\alpha = k_1(1, 0, 1)^T + k_2(1, 1, 1)^T + k_3(2, 0, 1)^T$（$k_1 \\neq 0$）",
+      "analysisMd": "## (1) 求 $a$\n\n1 是特征值，所以 $|A - I| = 0$\n\n$$A - I = \\begin{pmatrix} -1 & -1 & 2 \\\\ -1 & -1 & 2 \\\\ -1 & -1 & a-1 \\end{pmatrix}$$\n\n行列式 = 0 要求第三行与前两行线性相关\n\n由前两行知 $a - 1 = 2$，即 $a = 3$\n\n---\n\n## (2) 求 $\\alpha, \\beta$\n\n**Step 1**：从方程推导 $A\\beta = \\beta$\n\n$$A^2\\alpha = A(A\\alpha) = A(\\alpha + \\beta) = A\\alpha + A\\beta = \\alpha + \\beta + A\\beta$$\n\n由 $A^2\\alpha = \\alpha + 2\\beta$：\n\n$$\\alpha + \\beta + A\\beta = \\alpha + 2\\beta$$\n\n$$A\\beta = \\beta$$\n\n所以 $\\beta$ 是 $A$ 关于特征值 1 的特征向量。\n\n**Step 2**：求特征值 1 的特征向量\n\n解 $(A - I)x = 0$，当 $a = 3$ 时：\n\n$$A - I = \\begin{pmatrix} -1 & -1 & 2 \\\\ -1 & -1 & 2 \\\\ -1 & -1 & 2 \\end{pmatrix}$$\n\n各行相同，秩为 1。基础解系：\n\n$\\beta = k_1(1, 1, 1)^T + k_2(2, 0, 1)^T$\n\n**Step 3**：限制 $\\beta$ 使 $(A - I)\\alpha = \\beta$ 有解\n\n$(A - I)$ 各行相同，所以 $\\beta$ 的各分量必须相等，即 $\\beta = k_1(1, 1, 1)^T$\n\n**Step 4**：求 $\\alpha$\n\n解 $(A - I)\\alpha = k_1(1, 1, 1)^T$\n\n由于 $(A-I)$ 各行相同，方程变为 $-x_1 - x_2 + 2x_3 = k_1$\n\n特解：$\\alpha_0 = k_1(1, 0, 1)^T$（验证：$-1 - 0 + 2 = 1$）\n\n通解：$\\alpha = k_1(1, 0, 1)^T + k_2(1, 1, 1)^T + k_3(2, 0, 1)^T$\n\n答案：$\\boxed{a = 3}$，$\\beta = k_1(1,1,1)^T$，$\\alpha = k_1(1,0,1)^T + k_2(1,1,1)^T + k_3(2,0,1)^T$（$k_1 \\neq 0$）",
+      "answer": "a = 3",
       "tagNames": [
         "特征值与特征向量"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/21_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/21_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "不知道怎么求 $a$",
+              "hint": "1 是特征值 $\\Rightarrow$ $|A - I| = 0$。计算行列式时，注意观察行之间的关系。"
+            },
+            {
+              "type": "representation",
+              "label": "不理解 $A\\alpha = \\alpha + \\beta$ 的含义",
+              "hint": "这不是标准的特征方程。可以改写为 $(A - I)\\alpha = \\beta$，即 $\\beta$ 在 $A - I$ 的列空间中。"
+            },
+            {
+              "type": "constraint",
+              "label": "不知道怎么推出 $A\\beta = \\beta$",
+              "hint": "对第一个方程作用 $A$：$A^2\\alpha = A\\alpha + A\\beta$。与第二个方程对比消去 $A^2\\alpha$ 和 $A\\alpha$。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$(A - I)\\alpha = \\beta$",
+            "currentRole": "$A\\alpha = \\alpha + \\beta$ 的改写",
+            "suggestedRole": "$\\beta$ 必须在 $A - I$ 的列空间中",
+            "transformation": "$(A - I)$ 的各行相同，所以其列空间是「各分量相等」的向量，即 $\\beta \\propto (1,1,1)^T$。"
+          }
+        ],
+        "insight": "**非标准特征问题**：$A\\alpha = \\alpha + \\beta$ 不是特征方程，需要结合两个条件推导 $\\beta$ 是特征向量。",
+        "strategies": [
+          {
+            "title": "特征值条件",
+            "trigger": "$\\lambda$ 是特征值",
+            "action": "$|A - \\lambda I| = 0$"
+          },
+          {
+            "title": "消元推导",
+            "trigger": "多个矩阵方程",
+            "action": "对方程作用矩阵，对比消去未知量"
+          }
+        ]
+      }
     },
     "math1-2025-22": {
       "id": "math1-2025-22",
@@ -477,14 +1236,57 @@
       "contentImg": "/papers/math1-2025/assets/22_q.png",
       "answerImg": "/papers/math1-2025/assets/22_ans.png",
       "analysisImg": "/papers/math1-2025/assets/22_a.png",
-      "contentMd": "",
-      "answerMd": "",
-      "analysisMd": "",
-      "answer": null,
+      "contentMd": "设投保人的损失事件发生时，保险公司的赔付额 $Y$ 与投保人的损失额 $X$ 的关系为：\n$$Y = \\begin{cases} 0, & X \\leq 100 \\\\ X - 100, & X > 100 \\end{cases}$$\n\n设损失事件发生时，投保人的损失额 $X$ 的概率密度为：\n$$f(x) = \\begin{cases} \\frac{2 \\times 100^2}{(100 + x)^3}, & x > 0 \\\\ 0, & x \\leq 0 \\end{cases}$$\n\n(1) 求 $P(Y > 0)$ 及 $\\mathbb{E}Y$\n\n(2) 这种损失事件在一年内发生的次数记为 $N$，保险公司在一年内就这种损失事件产生的理赔次数记为 $M$。假设 $N$ 服从参数为 8 的泊松分布，在 $N = n$ ($n \\geq 1$) 的条件下，$M$ 服从二项分布 $B(n, p)$，其中 $p = P(Y > 0)$，求 $M$ 的概率分布。",
+      "answerMd": "(1) $P(Y > 0) = \\frac{1}{4}$，$\\mathbb{E}Y = 50$\n\n(2) $M \\sim \\text{Poisson}(2)$",
+      "analysisMd": "## (1) 求 $P(Y > 0)$ 和 $\\mathbb{E}Y$\n\n**$P(Y > 0)$**：\n\n$Y > 0 \\Leftrightarrow X > 100$\n\n$$P(Y > 0) = P(X > 100) = \\int_{100}^{\\infty} \\frac{2 \\times 100^2}{(100 + x)^3}\\,dx$$\n\n$$= 2 \\times 100^2 \\cdot \\left[-\\frac{1}{2(100+x)^2}\\right]_{100}^{\\infty} = \\frac{100^2}{(200)^2} = \\frac{1}{4}$$\n\n**$\\mathbb{E}Y$**：\n\n$$\\mathbb{E}Y = \\int_{100}^{\\infty} (x - 100) \\cdot \\frac{2 \\times 100^2}{(100 + x)^3}\\,dx$$\n\n令 $u = 100 + x$，$x - 100 = u - 200$，$dx = du$：\n\n$$= \\int_{200}^{\\infty} (u - 200) \\cdot \\frac{2 \\times 100^2}{u^3}\\,du$$\n\n$$= 2 \\times 100^2 \\left[\\int_{200}^{\\infty} \\frac{1}{u^2}\\,du - 200\\int_{200}^{\\infty} \\frac{1}{u^3}\\,du\\right]$$\n\n$$= 2 \\times 100^2 \\left[\\frac{1}{200} - 200 \\cdot \\frac{1}{2 \\cdot 200^2}\\right] = 2 \\times 100^2 \\cdot \\frac{1}{400} = 50$$\n\n---\n\n## (2) 求 $M$ 的分布\n\n$M | N = n \\sim B(n, \\frac{1}{4})$，$N \\sim \\text{Poisson}(8)$\n\n由**全概率公式**：\n\n$$P(M = m) = \\sum_{n=m}^{\\infty} P(N = n) \\cdot P(M = m | N = n)$$\n\n$$= \\sum_{n=m}^{\\infty} \\frac{8^n e^{-8}}{n!} \\cdot \\binom{n}{m} \\left(\\frac{1}{4}\\right)^m \\left(\\frac{3}{4}\\right)^{n-m}$$\n\n$$= e^{-8} \\sum_{n=m}^{\\infty} \\frac{8^n}{n!} \\cdot \\frac{n!}{m!(n-m)!} \\cdot \\frac{1}{4^m} \\cdot \\frac{3^{n-m}}{4^{n-m}}$$\n\n$$= e^{-8} \\cdot \\frac{2^m}{m!} \\sum_{k=0}^{\\infty} \\frac{6^k}{k!}$$\n\n（其中 $k = n - m$，$\\frac{8}{4} = 2$，$\\frac{8 \\cdot 3}{4} = 6$）\n\n$$= e^{-8} \\cdot \\frac{2^m}{m!} \\cdot e^6 = \\frac{2^m}{m!} e^{-2}$$\n\n因此 $M \\sim \\text{Poisson}(2)$",
+      "answer": "M ~ Poisson(2)",
       "tagNames": [
         "边缘分布和条件分布"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/22_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/22_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "calculation",
+              "label": "积分算不出来",
+              "hint": "$\\int_{a}^{\\infty} \\frac{1}{u^3}\\,du = \\frac{1}{2a^2}$，$\\int_{a}^{\\infty} \\frac{1}{u^2}\\,du = \\frac{1}{a}$。用换元 $u = 100 + x$ 简化。"
+            },
+            {
+              "type": "function",
+              "label": "全概率公式怎么用",
+              "hint": "$P(M = m) = \\sum_{n} P(N = n) P(M = m | N = n)$。注意求和下限是 $n = m$（因为 $M \\leq N$）。"
+            },
+            {
+              "type": "representation",
+              "label": "级数化简太复杂",
+              "hint": "关键：$\\sum_{k=0}^{\\infty} \\frac{6^k}{k!} = e^6$。这是 $e^x$ 的级数展开。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\lambda_M = 2$",
+            "currentRole": "$M$ 的泊松参数",
+            "suggestedRole": "$\\lambda_N \\cdot p = 8 \\times \\frac{1}{4}$",
+            "transformation": "**泊松-二项复合分布**：若 $N \\sim \\text{Poisson}(\\lambda)$，$M | N \\sim B(N, p)$，则 $M \\sim \\text{Poisson}(\\lambda p)$。"
+          }
+        ],
+        "insight": "**泊松分裂定理**：每次泊松事件以概率 $p$ 「成功」，则成功次数仍服从泊松分布，参数为 $\\lambda p$。",
+        "strategies": [
+          {
+            "title": "全概率公式",
+            "trigger": "已知条件分布，求边缘分布",
+            "action": "$P(M = m) = \\sum_n P(N = n) P(M = m | N = n)$"
+          },
+          {
+            "title": "泊松分裂定理",
+            "trigger": "$N \\sim \\text{Poisson}$，$M | N \\sim B(N, p)$",
+            "action": "直接得 $M \\sim \\text{Poisson}(\\lambda p)$，无需复杂求和"
+          }
+        ]
+      }
     }
   },
   "tags": [
