@@ -313,7 +313,114 @@
             "action": "1️⃣ 标记节点和回路 → 2️⃣ 列写KCL/KVL方程 → 3️⃣ 消元得输入输出关系 → 4️⃣ 拉普拉斯变换得传递函数"
           }
         ],
-        "insight": "电路建模是控制理论与实际工程的桥梁。2025年考题特别强调先写微分方程，这要求考生不能跳步，必须展示完整的推导过程。"
+        "insight": "电路建模是控制理论与实际工程的桥梁。2025年考题特别强调先写微分方程，这要求考生不能跳步，必须展示完整的推导过程。",
+        "visualization": {
+          "type": "circuit-diagram",
+          "components": [
+            {
+              "id": "vs",
+              "type": "voltage-source",
+              "label": "uᵢ(t)",
+              "position": {
+                "x": 0,
+                "y": 100
+              }
+            },
+            {
+              "id": "r1",
+              "type": "resistor",
+              "label": "R₁",
+              "position": {
+                "x": 100,
+                "y": 50
+              }
+            },
+            {
+              "id": "c1",
+              "type": "capacitor",
+              "label": "C₁",
+              "position": {
+                "x": 100,
+                "y": 150
+              },
+              "rotation": 90
+            },
+            {
+              "id": "r2",
+              "type": "resistor",
+              "label": "R₂",
+              "position": {
+                "x": 200,
+                "y": 50
+              }
+            },
+            {
+              "id": "c2",
+              "type": "capacitor",
+              "label": "C₂",
+              "position": {
+                "x": 200,
+                "y": 150
+              },
+              "rotation": 90
+            },
+            {
+              "id": "gnd",
+              "type": "ground",
+              "position": {
+                "x": 150,
+                "y": 200
+              }
+            }
+          ],
+          "connections": [
+            {
+              "from": "vs",
+              "to": "r1"
+            },
+            {
+              "from": "r1",
+              "to": "r2"
+            },
+            {
+              "from": "r1",
+              "to": "c1",
+              "bendPoints": [
+                {
+                  "x": 100,
+                  "y": 100
+                }
+              ]
+            },
+            {
+              "from": "r2",
+              "to": "c2",
+              "bendPoints": [
+                {
+                  "x": 200,
+                  "y": 100
+                }
+              ]
+            },
+            {
+              "from": "c1",
+              "to": "gnd"
+            },
+            {
+              "from": "c2",
+              "to": "gnd"
+            }
+          ],
+          "annotations": [
+            {
+              "x": 280,
+              "y": 100,
+              "text": "uₒ(t)"
+            }
+          ],
+          "inputLabel": "uᵢ(t)",
+          "outputLabel": "uₒ(t)"
+        }
       }
     },
     "shu-836-2025-07": {
@@ -358,7 +465,59 @@
             "action": "将系统等效变换，使参数仍然作为'增益'处理，或使用广义根轨迹法则"
           }
         ],
-        "insight": "参数根轨迹是根轨迹理论的推广，它允许我们分析非增益参数对系统极点的影响，这在实际工程中非常有用（如PID参数调节）。"
+        "insight": "参数根轨迹是根轨迹理论的推广，它允许我们分析非增益参数对系统极点的影响，这在实际工程中非常有用（如PID参数调节）。",
+        "visualization": {
+          "type": "root-locus",
+          "openLoopPoles": [
+            {
+              "re": 0,
+              "im": 0
+            },
+            {
+              "re": -1,
+              "im": 0
+            },
+            {
+              "re": -2,
+              "im": 0
+            }
+          ],
+          "openLoopZeros": [
+            {
+              "re": -0.5,
+              "im": 0
+            }
+          ],
+          "asymptotes": {
+            "angles": [
+              90,
+              270
+            ],
+            "centroid": -1.25
+          },
+          "separationPoints": [
+            {
+              "re": -0.3,
+              "im": 0
+            }
+          ],
+          "imaginaryAxisCrossings": [
+            {
+              "im": 1.5,
+              "k": 3.0,
+              "label": "K*=3"
+            }
+          ],
+          "realAxisRange": [
+            -4,
+            1
+          ],
+          "imagAxisRange": [
+            -3,
+            3
+          ],
+          "showArrows": true
+        }
       }
     },
     "shu-836-2025-08": {
@@ -416,7 +575,34 @@
             "action": "超前校正：零点频率 < 极点频率；滞后校正：零点频率 > 极点频率"
           }
         ],
-        "insight": "频域校正是经典控制的核心工具，它通过调整系统的频率响应来改善性能。Bode图让我们能直观地看到校正的效果。"
+        "insight": "频域校正是经典控制的核心工具，它通过调整系统的频率响应来改善性能。Bode图让我们能直观地看到校正的效果。",
+        "visualization": {
+          "type": "bode-plot",
+          "transferFunction": {
+            "zeros": [
+              {
+                "value": 2
+              }
+            ],
+            "poles": [
+              {
+                "value": 0
+              },
+              {
+                "value": 10
+              }
+            ],
+            "gain": 20,
+            "systemType": 1
+          },
+          "omegaRange": [
+            0.1,
+            100
+          ],
+          "showAsymptotes": true,
+          "showPhaseMargin": true,
+          "showGainMargin": true
+        }
       }
     },
     "shu-836-2025-09": {
@@ -485,7 +671,132 @@
             "action": "先做前两问拿分，第3问根据时间决定是否全部展开或给出流程"
           }
         ],
-        "insight": "离散控制系统在数字控制时代至关重要。2025年考题将这个主题的分值提升到40分，明确信号：不掌握离散系统，就无法拿到高分。这也反映了工程实际中数字控制器的广泛应用。"
+        "insight": "离散控制系统在数字控制时代至关重要。2025年考题将这个主题的分值提升到40分，明确信号：不掌握离散系统，就无法拿到高分。这也反映了工程实际中数字控制器的广泛应用。",
+        "visualization": {
+          "type": "block-diagram",
+          "blocks": [
+            {
+              "id": "input",
+              "type": "input",
+              "label": "R(s)",
+              "position": {
+                "x": 0,
+                "y": 100
+              }
+            },
+            {
+              "id": "sum1",
+              "type": "summing-junction",
+              "position": {
+                "x": 100,
+                "y": 100
+              }
+            },
+            {
+              "id": "sampler1",
+              "type": "sampler",
+              "label": "T",
+              "position": {
+                "x": 160,
+                "y": 100
+              }
+            },
+            {
+              "id": "zoh",
+              "type": "zoh",
+              "label": "ZOH",
+              "position": {
+                "x": 230,
+                "y": 100
+              }
+            },
+            {
+              "id": "g1",
+              "type": "transfer-function",
+              "label": "G₁(s)",
+              "position": {
+                "x": 320,
+                "y": 100
+              }
+            },
+            {
+              "id": "sampler2",
+              "type": "sampler",
+              "label": "T",
+              "position": {
+                "x": 400,
+                "y": 100
+              }
+            },
+            {
+              "id": "output",
+              "type": "output",
+              "label": "C(z)",
+              "position": {
+                "x": 500,
+                "y": 100
+              }
+            }
+          ],
+          "connections": [
+            {
+              "from": "input",
+              "to": "sum1",
+              "label": "",
+              "signalType": "continuous"
+            },
+            {
+              "from": "sum1",
+              "to": "sampler1",
+              "label": "E(s)",
+              "signalType": "continuous"
+            },
+            {
+              "from": "sampler1",
+              "to": "zoh",
+              "label": "E*(s)",
+              "signalType": "discrete"
+            },
+            {
+              "from": "zoh",
+              "to": "g1",
+              "label": "",
+              "signalType": "continuous"
+            },
+            {
+              "from": "g1",
+              "to": "sampler2",
+              "label": "C(s)",
+              "signalType": "continuous"
+            },
+            {
+              "from": "sampler2",
+              "to": "output",
+              "label": "C(z)",
+              "signalType": "discrete"
+            },
+            {
+              "from": "sampler2",
+              "to": "sum1",
+              "fromPort": "bottom",
+              "toPort": "bottom",
+              "label": "-",
+              "sign": "-",
+              "signalType": "discrete",
+              "bendPoints": [
+                {
+                  "x": 420,
+                  "y": 180
+                },
+                {
+                  "x": 100,
+                  "y": 180
+                }
+              ]
+            }
+          ],
+          "title": "离散控制系统结构图"
+        }
       }
     }
   }
