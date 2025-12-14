@@ -22,7 +22,75 @@
       "tagNames": [
         "曲线的凹凸性、拐点及渐近线"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/01_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/01_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不知道怎么判断**极值点**和**拐点**",
+              "hint": "极值点看 $f'(x) = 0$ 且前后变号；拐点看 $f''(x) = 0$ 且前后变号。但这道题有更快的方法——**奇偶性**。"
+            },
+            {
+              "type": "function",
+              "label": "不会判断 $f(x)$ 和 $g(x)$ 的**奇偶性**",
+              "hint": "用定义：$f(-x) = f(x)$ 是偶函数，$f(-x) = -f(x)$ 是奇函数。对变上限积分，尝试换元 $t = -u$。"
+            },
+            {
+              "type": "constraint",
+              "label": "分不清**偶函数**对应极值点还是拐点",
+              "hint": "偶函数在 $x=0$ 处有**对称轴**，所以 $f'(0) = 0$，是**极值点**。奇函数在 $(0,0)$ 处有**对称中心**，所以是**拐点**。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "判断 $x=0$ 是极值点还是拐点，最快的思路是？",
+          "options": [
+            {
+              "id": "derivative",
+              "label": "直接求**导数**",
+              "formula": "$f'(x)$, $f''(x)$",
+              "isCorrect": false,
+              "feedback": "可行但**繁琐**。对复合积分函数求导再判断变号比较麻烦。"
+            },
+            {
+              "id": "parity",
+              "label": "**奇偶性**速判",
+              "formula": "**偶函数** → 极值点，**奇函数** → 拐点",
+              "isCorrect": true,
+              "feedback": "正确！**偶函数**在对称轴处有极值，**奇函数**在对称中心处有拐点。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$f(x) = \\int_0^x e^{t^2}\\sin t\\,dt$",
+            "currentRole": "**变上限积分**",
+            "suggestedRole": "**偶函数**",
+            "transformation": "$f(-x) = \\int_0^{-x} e^{t^2}\\sin t\\,dt \\stackrel{t=-u}{=} \\int_0^x e^{u^2}\\sin u\\,du = f(x)$"
+          },
+          {
+            "target": "$g(x) = \\int_0^x e^{t^2}dt \\cdot \\sin^2 x$",
+            "currentRole": "**乘积形式**",
+            "suggestedRole": "**奇函数**",
+            "transformation": "$g(-x) = -\\int_0^x e^{u^2}du \\cdot \\sin^2 x = -g(x)$"
+          }
+        ],
+        "insight": "**奇偶性速判极值/拐点**：偶函数在 $x=0$ 处有对称轴 → **极值点**；奇函数在 $(0,0)$ 处有对称中心 → **拐点**。",
+        "strategies": [
+          {
+            "title": "奇偶性速判",
+            "trigger": "判断 $x=0$ 处是**极值点**还是**拐点**",
+            "action": "先判断函数**奇偶性**：偶函数 → 极值点，奇函数 → 拐点"
+          },
+          {
+            "title": "变上限积分奇偶性",
+            "trigger": "遇到 $\\int_0^x f(t)\\,dt$",
+            "action": "用换元 $t = -u$ 判断 $F(-x)$ 与 $F(x)$ 的关系"
+          }
+        ]
+      }
     },
     "math1-2025-02": {
       "id": "math1-2025-02",
@@ -44,7 +112,80 @@
       "tagNames": [
         "常数项级数敛散性的判定"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/02_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/02_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "不会处理 $\\sin\\frac{n^3\\pi}{n^2+1}$",
+              "hint": "利用 $\\sin(\\theta - n\\pi) = (-1)^n \\sin(\\theta - n\\pi)$ 的**周期性**，把 $n^3\\pi$ 分解为 $n\\pi + \\text{余项}$。"
+            },
+            {
+              "type": "rule",
+              "label": "**搞混**了绝对收敛和条件收敛",
+              "hint": "**绝对收敛**：$\\sum|a_n|$ 收敛。**条件收敛**：$\\sum a_n$ 收敛但 $\\sum|a_n|$ 发散。绝对收敛更强。"
+            },
+            {
+              "type": "calculation",
+              "label": "**泰勒展开** $\\tan x$ 的系数记错了",
+              "hint": "$\\tan x = x + \\frac{x^3}{3} + \\frac{2x^5}{15} + o(x^5)$。关键是 $x - \\tan x \\sim -\\frac{x^3}{3}$。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "判断绝对收敛性时，应该把通项与什么级数比较？",
+          "options": [
+            {
+              "id": "p-series",
+              "label": "$p$-级数 $\\sum\\frac{1}{n^p}$",
+              "formula": "$p > 1$ 收敛，$p \\le 1$ 发散",
+              "isCorrect": true,
+              "feedback": "正确！用比较判别法，找出通项的阶数，与 $p$-级数比较。"
+            },
+            {
+              "id": "geometric",
+              "label": "几何级数 $\\sum r^n$",
+              "formula": "$|r| < 1$ 收敛",
+              "isCorrect": false,
+              "feedback": "几何级数适用于等比数列，这里是幂级数衰减，用 $p$-级数更合适。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\sin\\frac{n^3\\pi}{n^2+1}$",
+            "currentRole": "**复杂三角函数**",
+            "suggestedRole": "$(-1)^n \\sin\\frac{n\\pi}{n^2+1}$",
+            "transformation": "利用 $n^3 = n(n^2+1) - n$，得 $\\frac{n^3\\pi}{n^2+1} = n\\pi - \\frac{n\\pi}{n^2+1}$"
+          },
+          {
+            "target": "$\\frac{1}{\\sqrt[3]{n^2}} - \\tan\\frac{1}{\\sqrt[3]{n^2}}$",
+            "currentRole": "**小量之差**",
+            "suggestedRole": "$\\sim -\\frac{1}{3n^2}$",
+            "transformation": "用 $x - \\tan x \\sim -\\frac{x^3}{3}$，代入 $x = n^{-2/3}$"
+          }
+        ],
+        "insight": "**级数收敛判断**：(1) 先估计通项的阶数；(2) 判断绝对收敛用 $p$-级数比较法；(3) 条件收敛用**莱布尼茨判别法**。",
+        "strategies": [
+          {
+            "title": "周期性化简",
+            "trigger": "遇到 $\\sin(n^k\\pi / \\text{多项式})$",
+            "action": "用 $\\sin(\\theta + n\\pi) = (-1)^n \\sin\\theta$，把 $n^k$ 拆分化简"
+          },
+          {
+            "title": "p-级数比较",
+            "trigger": "判断 $\\sum |a_n|$ 是否收敛",
+            "action": "找出 $|a_n| \\sim \\frac{c}{n^p}$，若 $p > 1$ 则**绝对收敛**"
+          },
+          {
+            "title": "莱布尼茨判别法",
+            "trigger": "遇到 $\\sum (-1)^n a_n$ 且 $a_n$ 单调趋于 $0$",
+            "action": "直接得出**收敛**（不需判断绝对收敛性）"
+          }
+        ]
+      }
     },
     "math1-2025-03": {
       "id": "math1-2025-03",
@@ -66,7 +207,69 @@
       "tagNames": [
         "导数与微分的概念"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/03_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/03_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不知道各选项在说什么关系",
+              "hint": "这道题考查的是**极限存在性**的传递关系。关键是找**反例**证明错误选项，用**洛必达法则**证明正确选项。"
+            },
+            {
+              "type": "function",
+              "label": "想不到**反例**",
+              "hint": "常用反例：$f(x) = \\sin x^2 / x$（导数震荡）、$f(x) = x$（无穷大）、$f(x) = 2x\\cos x^2$（均值存在但原函数震荡）。"
+            },
+            {
+              "type": "constraint",
+              "label": "不会用**洛必达法则**证明 D",
+              "hint": "$\\lim \\frac{\\int_0^x f(t)dt}{x}$ 是 $\\frac{\\infty}{\\infty}$ 型，洛必达后得 $\\lim f(x)$。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "对于选择题中的蕴含关系，最有效的验证方法是？",
+          "options": [
+            {
+              "id": "proof",
+              "label": "对每个选项严格**证明**",
+              "formula": "逐一验证",
+              "isCorrect": false,
+              "feedback": "太慢了！应该先用**反例排除**错误选项，最后证明正确选项。"
+            },
+            {
+              "id": "counterexample",
+              "label": "**反例排除** + 证明正确项",
+              "formula": "构造反例",
+              "isCorrect": true,
+              "feedback": "正确！反例常用震荡函数（如 $\\sin x^2$）和发散函数（如 $x$）。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$\\frac{\\int_0^x f(t)dt}{x}$",
+            "currentRole": "**积分平均值**",
+            "suggestedRole": "$\\frac{\\infty}{\\infty}$ 型极限",
+            "transformation": "用**洛必达法则**：$\\lim \\frac{\\int_0^x f(t)dt}{x} = \\lim \\frac{f(x)}{1} = \\lim f(x)$"
+          }
+        ],
+        "insight": "**极限存在性的传递**：$f(x) \\to L$ 意味着 $\\frac{1}{x}\\int_0^x f(t)dt \\to L$（积分平均值趋于函数极限），但**反过来不成立**。",
+        "strategies": [
+          {
+            "title": "反例构造",
+            "trigger": "判断 A→B 型命题是否成立",
+            "action": "先尝试构造**反例**：找一个满足 A 但不满足 B 的函数"
+          },
+          {
+            "title": "洛必达法则",
+            "trigger": "$\\frac{\\int_0^x f(t)dt}{g(x)}$ 是 $\\frac{\\infty}{\\infty}$ 型",
+            "action": "$\\lim \\frac{\\int_0^x f(t)dt}{g(x)} = \\lim \\frac{f(x)}{g'(x)}$"
+          }
+        ]
+      }
     },
     "math1-2025-04": {
       "id": "math1-2025-04",
@@ -88,7 +291,69 @@
       "tagNames": [
         "交换积分次序与坐标系之间的转化"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/04_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/04_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "representation",
+              "label": "不会画**积分区域**",
+              "hint": "先画出 $y = 4 - x^2$（开口向下的抛物线，顶点在 $(0,4)$）和 $y = 4$ 这条水平线。积分区域是抛物线**上方**、$y=4$ **下方**的部分。"
+            },
+            {
+              "type": "function",
+              "label": "不理解**交换积分次序**的规则",
+              "hint": "原来是先对 $y$ 积分（固定 $x$），交换后变成先对 $x$ 积分（固定 $y$）。关键是把**边界方程**解成 $x = g(y)$ 的形式。"
+            },
+            {
+              "type": "constraint",
+              "label": "不知道为什么积分要**分两段**",
+              "hint": "因为对于固定的 $y$，积分区域在抛物线**外侧**，即 $x \\in [-2, -\\sqrt{4-y}] \\cup [\\sqrt{4-y}, 2]$，是**不连续**的两段。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "交换积分次序时，应该先做什么？",
+          "options": [
+            {
+              "id": "formula",
+              "label": "直接套**公式**",
+              "formula": "$\\int dx \\int dy \\to \\int dy \\int dx$",
+              "isCorrect": false,
+              "feedback": "**没有**通用公式！必须先画出**积分区域**，再根据区域形状确定新的积分限。"
+            },
+            {
+              "id": "graph",
+              "label": "**画图**确定区域",
+              "formula": "画出边界曲线",
+              "isCorrect": true,
+              "feedback": "正确！**画图**是交换积分次序的第一步，也是最关键的一步。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$y = 4 - x^2$",
+            "currentRole": "**积分下限**（$y$ 的）",
+            "suggestedRole": "$x = \\pm\\sqrt{4-y}$",
+            "transformation": "交换次序后，需要把 $y$ 关于 $x$ 的表达式**反解**成 $x$ 关于 $y$ 的表达式。"
+          }
+        ],
+        "insight": "**交换积分次序**：(1) 画出积分区域；(2) 把边界方程反解；(3) 确定新的积分限。注意区域可能需要**分段**。",
+        "strategies": [
+          {
+            "title": "画积分区域",
+            "trigger": "看到**二重积分**",
+            "action": "先画出**积分区域**的边界曲线，理解区域形状"
+          },
+          {
+            "title": "边界反解",
+            "trigger": "**交换积分次序**",
+            "action": "把 $y = f(x)$ 反解成 $x = g(y)$，注意多值时需要分段"
+          }
+        ]
+      }
     },
     "math1-2025-05": {
       "id": "math1-2025-05",
@@ -110,7 +375,69 @@
       "tagNames": [
         "二次型"
       ],
-      "contentImgThumb": "/papers/math1-2025/assets/05_q_thumb.png"
+      "contentImgThumb": "/papers/math1-2025/assets/05_q_thumb.png",
+      "eureka": {
+        "diagnostic": {
+          "question": "你觉得卡在哪里了？",
+          "options": [
+            {
+              "type": "function",
+              "label": "不会写**二次型**的矩阵",
+              "hint": "对于 $f = \\sum a_{ij}x_ix_j$，矩阵元素 $A_{ij} = \\frac{1}{2}(a_{ij} + a_{ji})$（对称化）。交叉项 $2x_1x_2$ 对应 $A_{12} = A_{21} = 1$。"
+            },
+            {
+              "type": "representation",
+              "label": "不理解**惯性指数**的定义",
+              "hint": "正惯性指数 = 化为**对角形**后正对角元的个数。负惯性指数 = 负对角元的个数。两者之和 = 矩阵的秩。"
+            },
+            {
+              "type": "calculation",
+              "label": "**合同变换**做错了",
+              "hint": "合同变换必须**对行列同时做**：$r_i - r_j$ 对应 $c_i - c_j$。目标是把矩阵化为对角形。"
+            }
+          ]
+        },
+        "modelLineup": {
+          "question": "求惯性指数最快的方法是？",
+          "options": [
+            {
+              "id": "eigenvalue",
+              "label": "求**特征值**",
+              "formula": "$|A - \\lambda I| = 0$",
+              "isCorrect": false,
+              "feedback": "可行但对于 $3 \\times 3$ 矩阵计算量较大。"
+            },
+            {
+              "id": "congruence",
+              "label": "**合同变换**化对角",
+              "formula": "$P^TAP = D$",
+              "isCorrect": true,
+              "feedback": "正确！通过合同变换直接得到对角元，数正负号即可。"
+            }
+          ]
+        },
+        "variableRoles": [
+          {
+            "target": "$A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 0 & 0 \\\\ 1 & 0 & 0 \\end{pmatrix}$",
+            "currentRole": "**二次型矩阵**",
+            "suggestedRole": "$\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$",
+            "transformation": "通过**合同变换**化为对角形，对角元为 $1, -1, 0$"
+          }
+        ],
+        "insight": "**惯性定理**：二次型经过任何可逆线性变换后，正、负惯性指数不变。化对角形后直接数正负对角元个数即可。",
+        "strategies": [
+          {
+            "title": "写矩阵",
+            "trigger": "看到**二次型** $f(x_1, x_2, x_3)$",
+            "action": "把交叉项**平分**到对称位置，写出对称矩阵 $A$"
+          },
+          {
+            "title": "合同变换",
+            "trigger": "求**惯性指数**",
+            "action": "对矩阵进行**合同变换**（行列同时做），化为对角形，数正负对角元"
+          }
+        ]
+      }
     },
     "math1-2025-06": {
       "id": "math1-2025-06",
