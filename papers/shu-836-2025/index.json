@@ -357,6 +357,16 @@
                 "orientation": "vertical"
               },
               {
+                "id": "gnd1",
+                "type": "node",
+                "role": "ground"
+              },
+              {
+                "id": "gnd2",
+                "type": "node",
+                "role": "ground"
+              },
+              {
                 "id": "gnd",
                 "type": "ground",
                 "role": "ground"
@@ -365,55 +375,49 @@
             "connections": [
               {
                 "from": "vs",
-                "to": "r1",
-                "label": ""
+                "to": "r1"
               },
               {
                 "from": "r1",
-                "to": "node1",
-                "label": ""
+                "to": "node1"
               },
               {
                 "from": "node1",
-                "to": "c1",
-                "label": ""
+                "to": "c1"
               },
               {
                 "from": "node1",
-                "to": "r2",
-                "label": ""
+                "to": "r2"
               },
               {
                 "from": "r2",
-                "to": "node2",
-                "label": ""
+                "to": "node2"
               },
               {
                 "from": "node2",
-                "to": "c2",
-                "label": ""
+                "to": "c2"
               },
               {
                 "from": "c1",
-                "to": "gnd",
-                "label": ""
+                "to": "gnd1"
               },
               {
                 "from": "c2",
-                "to": "gnd",
-                "label": ""
+                "to": "gnd2"
               },
               {
-                "from": "gnd",
-                "to": "vs",
-                "label": "",
-                "style": "solid"
+                "from": "gnd1",
+                "to": "gnd"
+              },
+              {
+                "from": "gnd2",
+                "to": "gnd"
               }
             ],
             "constraints": {
               "flowDirection": "left-to-right",
               "groundAtBottom": true,
-              "minSpacing": 3
+              "minSpacing": 2.5
             },
             "inputLabel": "uᵢ(t)",
             "outputLabel": "uₒ(t)",
