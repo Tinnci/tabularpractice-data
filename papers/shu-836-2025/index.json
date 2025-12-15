@@ -324,7 +324,7 @@
                 "type": "voltage-source",
                 "label": "uᵢ(t)",
                 "position": {
-                  "x": 0,
+                  "x": 20,
                   "y": 100
                 }
               },
@@ -333,8 +333,16 @@
                 "type": "resistor",
                 "label": "R₁",
                 "position": {
-                  "x": 100,
-                  "y": 60
+                  "x": 80,
+                  "y": 100
+                }
+              },
+              {
+                "id": "n1",
+                "type": "node",
+                "position": {
+                  "x": 130,
+                  "y": 100
                 }
               },
               {
@@ -342,8 +350,8 @@
                 "type": "capacitor",
                 "label": "C₁",
                 "position": {
-                  "x": 100,
-                  "y": 160
+                  "x": 130,
+                  "y": 150
                 },
                 "rotation": 90
               },
@@ -352,8 +360,16 @@
                 "type": "resistor",
                 "label": "R₂",
                 "position": {
-                  "x": 200,
-                  "y": 60
+                  "x": 190,
+                  "y": 100
+                }
+              },
+              {
+                "id": "n2",
+                "type": "node",
+                "position": {
+                  "x": 240,
+                  "y": 100
                 }
               },
               {
@@ -361,8 +377,8 @@
                 "type": "capacitor",
                 "label": "C₂",
                 "position": {
-                  "x": 200,
-                  "y": 160
+                  "x": 240,
+                  "y": 150
                 },
                 "rotation": 90
               },
@@ -370,7 +386,7 @@
                 "id": "gnd",
                 "type": "ground",
                 "position": {
-                  "x": 160,
+                  "x": 185,
                   "y": 200
                 }
               }
@@ -382,35 +398,43 @@
               },
               {
                 "from": "r1",
+                "to": "n1"
+              },
+              {
+                "from": "n1",
                 "to": "r2"
               },
               {
-                "from": "r1",
-                "to": "c1",
-                "bendPoints": [
-                  {
-                    "x": 100,
-                    "y": 100
-                  }
-                ]
+                "from": "n1",
+                "to": "c1"
               },
               {
                 "from": "r2",
-                "to": "c2",
+                "to": "n2"
+              },
+              {
+                "from": "n2",
+                "to": "c2"
+              },
+              {
+                "from": "c1",
+                "to": "gnd",
                 "bendPoints": [
                   {
-                    "x": 200,
-                    "y": 100
+                    "x": 130,
+                    "y": 200
                   }
                 ]
               },
               {
-                "from": "c1",
-                "to": "gnd"
-              },
-              {
                 "from": "c2",
-                "to": "gnd"
+                "to": "gnd",
+                "bendPoints": [
+                  {
+                    "x": 240,
+                    "y": 200
+                  }
+                ]
               }
             ],
             "annotations": [
