@@ -238,6 +238,31 @@ function validateVisualization(viz: any, paperId: string, questionId: string): v
                 checkProp(c, 'id', `component[${i}]`);
                 checkProp(c, 'type', `component[${i}]`);
                 checkProp(c, 'position', `component[${i}]`);
+
+                // Check grid alignment (20px grid)
+                if (c.position) {
+                    const GRID_SIZE = 20;
+                    const x = c.position.x;
+                    const y = c.position.y;
+                    if (x % GRID_SIZE !== 0 || y % GRID_SIZE !== 0) {
+                        warn(`${paperId}/${questionId} component[${i}] (${c.id}) position (${x}, ${y}) not aligned to ${GRID_SIZE}px grid. Run: bun scripts/fix-circuit-layout.ts`);
+                    }
+                }
+            });
+
+            // Check annotations grid alignment
+            vizConfig.annotations?.forEach((ann: any, i: number) => {
+                const GRID_SIZE = 20;
+                if (ann.x % GRID_SIZE !== 0 || ann.y % GRID_SIZE !== 0) {
+                    warn(`${paperId}/${questionId} annotation[${i}] position (${ann.x}, ${ann.y}) not aligned to ${GRID_SIZE}px grid.`);
+                }
+            });
+
+            // Check for potentially unnecessary bendPoints
+            vizConfig.connections?.forEach((conn: any, i: number) => {
+                if (conn.bendPoints && conn.bendPoints.length > 3) {
+                    warn(`${paperId}/${questionId} connection[${i}] (${conn.from} → ${conn.to}) has ${conn.bendPoints.length} bend points - consider simplifying.`);
+                }
             });
             break;
 
