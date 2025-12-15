@@ -357,16 +357,6 @@
                 "orientation": "vertical"
               },
               {
-                "id": "gnd1",
-                "type": "node",
-                "role": "ground"
-              },
-              {
-                "id": "gnd2",
-                "type": "node",
-                "role": "ground"
-              },
-              {
                 "id": "gnd",
                 "type": "ground",
                 "role": "ground"
@@ -399,18 +389,10 @@
               },
               {
                 "from": "c1",
-                "to": "gnd1"
-              },
-              {
-                "from": "c2",
-                "to": "gnd2"
-              },
-              {
-                "from": "gnd1",
                 "to": "gnd"
               },
               {
-                "from": "gnd2",
+                "from": "c2",
                 "to": "gnd"
               }
             ],
