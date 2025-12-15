@@ -237,7 +237,7 @@ function validateVisualization(viz: any, paperId: string, questionId: string): v
             vizConfig.components?.forEach((c: any, i: number) => {
                 checkProp(c, 'id', `component[${i}]`);
                 checkProp(c, 'type', `component[${i}]`);
-                checkProp(c, 'position', `component[${i}]`);
+                // position is now optional for semantic layouts
 
                 // Check grid alignment (20px grid)
                 if (c.position) {

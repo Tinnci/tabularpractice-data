@@ -323,72 +323,39 @@
                 "id": "vs",
                 "type": "voltage-source",
                 "label": "uᵢ(t)",
-                "position": {
-                  "x": 20,
-                  "y": 100
-                }
+                "role": "input"
               },
               {
                 "id": "r1",
                 "type": "resistor",
-                "label": "R₁",
-                "position": {
-                  "x": 80,
-                  "y": 100
-                }
-              },
-              {
-                "id": "n1",
-                "type": "node",
-                "position": {
-                  "x": 130,
-                  "y": 100
-                }
+                "label": "R₁"
               },
               {
                 "id": "c1",
                 "type": "capacitor",
                 "label": "C₁",
-                "position": {
-                  "x": 130,
-                  "y": 150
-                },
-                "rotation": 90
+                "orientation": "vertical"
               },
               {
                 "id": "r2",
                 "type": "resistor",
-                "label": "R₂",
-                "position": {
-                  "x": 190,
-                  "y": 100
-                }
-              },
-              {
-                "id": "n2",
-                "type": "node",
-                "position": {
-                  "x": 240,
-                  "y": 100
-                }
+                "label": "R₂"
               },
               {
                 "id": "c2",
                 "type": "capacitor",
                 "label": "C₂",
-                "position": {
-                  "x": 240,
-                  "y": 150
-                },
-                "rotation": 90
+                "orientation": "vertical"
+              },
+              {
+                "id": "out",
+                "type": "node",
+                "role": "output"
               },
               {
                 "id": "gnd",
                 "type": "ground",
-                "position": {
-                  "x": 185,
-                  "y": 200
-                }
+                "role": "ground"
               }
             ],
             "connections": [
@@ -398,52 +365,33 @@
               },
               {
                 "from": "r1",
-                "to": "n1"
-              },
-              {
-                "from": "n1",
-                "to": "r2"
-              },
-              {
-                "from": "n1",
                 "to": "c1"
               },
               {
-                "from": "r2",
-                "to": "n2"
+                "from": "r1",
+                "to": "r2"
               },
               {
-                "from": "n2",
+                "from": "r2",
                 "to": "c2"
               },
               {
+                "from": "r2",
+                "to": "out"
+              },
+              {
                 "from": "c1",
-                "to": "gnd",
-                "bendPoints": [
-                  {
-                    "x": 130,
-                    "y": 200
-                  }
-                ]
+                "to": "gnd"
               },
               {
                 "from": "c2",
-                "to": "gnd",
-                "bendPoints": [
-                  {
-                    "x": 240,
-                    "y": 200
-                  }
-                ]
+                "to": "gnd"
               }
             ],
-            "annotations": [
-              {
-                "x": 280,
-                "y": 100,
-                "text": "uₒ(t)"
-              }
-            ],
+            "constraints": {
+              "flowDirection": "left-to-right",
+              "groundAtBottom": true
+            },
             "inputLabel": "uᵢ(t)",
             "outputLabel": "uₒ(t)"
           }
