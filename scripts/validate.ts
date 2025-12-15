@@ -67,6 +67,7 @@ interface EurekaData {
         action: string;
     }>;
     insight?: string;
+    visualization?: any;  // Control theory or math visualization config
 }
 
 interface Question {
@@ -199,6 +200,80 @@ function validateEurekaFormatting(question: Question, paperId: string): void {
     // Check insight
     if (question.eureka.insight) {
         checkField(question.eureka.insight, 'insight');
+    }
+
+    // Check Visualization
+    if (question.eureka.visualization) {
+        validateVisualization(question.eureka.visualization, paperId, question.id);
+    }
+}
+
+// Validate Visualization Config
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function validateVisualization(viz: any, paperId: string, questionId: string): void {
+    if (!viz.type) {
+        error(`${paperId}/${questionId} eureka.visualization missing 'type'`);
+        return;
+    }
+
+    if (!viz.config) {
+        error(`${paperId}/${questionId} eureka.visualization missing 'config'`);
+        return;
+    }
+
+    // All visualizations now use unified nested structure: { type, title?, config: {...} }
+    const vizConfig = viz.config;
+
+    const checkProp = (obj: any, prop: string, context: string) => {
+        if (obj[prop] === undefined) {
+            error(`${paperId}/${questionId} visualization (${viz.type}) missing '${prop}' in ${context}`);
+        }
+    };
+
+    switch (viz.type) {
+        case 'circuit-diagram':
+            if (!Array.isArray(vizConfig.components)) error(`${paperId}/${questionId} circuit-diagram missing 'components' array`);
+            if (!Array.isArray(vizConfig.connections)) error(`${paperId}/${questionId} circuit-diagram missing 'connections' array`);
+            vizConfig.components?.forEach((c: any, i: number) => {
+                checkProp(c, 'id', `component[${i}]`);
+                checkProp(c, 'type', `component[${i}]`);
+                checkProp(c, 'position', `component[${i}]`);
+            });
+            break;
+
+        case 'block-diagram':
+            if (!Array.isArray(vizConfig.blocks)) error(`${paperId}/${questionId} block-diagram missing 'blocks' array`);
+            if (!Array.isArray(vizConfig.connections)) error(`${paperId}/${questionId} block-diagram missing 'connections' array`);
+            vizConfig.blocks?.forEach((b: any, i: number) => {
+                checkProp(b, 'id', `block[${i}]`);
+                checkProp(b, 'type', `block[${i}]`);
+                checkProp(b, 'position', `block[${i}]`);
+            });
+            break;
+
+        case 'root-locus':
+            if (!Array.isArray(vizConfig.openLoopPoles)) error(`${paperId}/${questionId} root-locus missing 'openLoopPoles'`);
+            if (!Array.isArray(vizConfig.openLoopZeros)) error(`${paperId}/${questionId} root-locus missing 'openLoopZeros'`);
+            break;
+
+        case 'bode-plot':
+            checkProp(vizConfig, 'transferFunction', 'config');
+            checkProp(vizConfig, 'omegaRange', 'config');
+            break;
+
+        case 'step-response':
+            checkProp(vizConfig, 'tRange', 'config');
+            break;
+
+        // --- Math Visualization (Nested in 'config') ---
+        case 'function-plot':
+        case 'enhanced-function-plot':
+            if (!Array.isArray(vizConfig.functions)) {
+                error(`${paperId}/${questionId} function-plot missing 'functions' array`);
+            }
+            break;
+
+        // Add other types as needed
     }
 }
 
