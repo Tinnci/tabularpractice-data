@@ -155,11 +155,12 @@ function parseComponent(
     y: number
 ): { id: string; component: CircuitComponent } {
     const match = def.match(/^([a-z0-9]+)(?:\((.+?)\))?$/);
-    if (!match) {
+    if (!match || !match[1]) {
         throw new Error(`Invalid component definition: ${def}`);
     }
 
-    const [, rawId, label] = match;
+    const rawId = match[1];
+    const label = match[2];
 
     // Determine component type from ID prefix
     const typePrefix = rawId.replace(/[0-9]+$/, ""); // Remove trailing numbers
