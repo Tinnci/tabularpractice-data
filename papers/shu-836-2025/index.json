@@ -331,6 +331,10 @@
                 "label": "R₁"
               },
               {
+                "id": "node1",
+                "type": "node"
+              },
+              {
                 "id": "c1",
                 "type": "capacitor",
                 "label": "C₁",
@@ -342,15 +346,15 @@
                 "label": "R₂"
               },
               {
+                "id": "node2",
+                "type": "node",
+                "role": "output"
+              },
+              {
                 "id": "c2",
                 "type": "capacitor",
                 "label": "C₂",
                 "orientation": "vertical"
-              },
-              {
-                "id": "out",
-                "type": "node",
-                "role": "output"
               },
               {
                 "id": "gnd",
@@ -361,39 +365,66 @@
             "connections": [
               {
                 "from": "vs",
-                "to": "r1"
+                "to": "r1",
+                "label": ""
               },
               {
                 "from": "r1",
-                "to": "c1"
+                "to": "node1",
+                "label": ""
               },
               {
-                "from": "r1",
-                "to": "r2"
+                "from": "node1",
+                "to": "c1",
+                "label": ""
+              },
+              {
+                "from": "node1",
+                "to": "r2",
+                "label": ""
               },
               {
                 "from": "r2",
-                "to": "c2"
+                "to": "node2",
+                "label": ""
               },
               {
-                "from": "r2",
-                "to": "out"
+                "from": "node2",
+                "to": "c2",
+                "label": ""
               },
               {
                 "from": "c1",
-                "to": "gnd"
+                "to": "gnd",
+                "label": ""
               },
               {
                 "from": "c2",
-                "to": "gnd"
+                "to": "gnd",
+                "label": ""
+              },
+              {
+                "from": "gnd",
+                "to": "vs",
+                "label": "",
+                "style": "solid"
               }
             ],
             "constraints": {
               "flowDirection": "left-to-right",
-              "groundAtBottom": true
+              "groundAtBottom": true,
+              "minSpacing": 3
             },
             "inputLabel": "uᵢ(t)",
-            "outputLabel": "uₒ(t)"
+            "outputLabel": "uₒ(t)",
+            "annotations": [
+              {
+                "text": "uₒ(t)",
+                "position": "custom",
+                "x": 0,
+                "y": 0
+              }
+            ]
           }
         }
       }
